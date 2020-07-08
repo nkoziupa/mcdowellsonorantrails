@@ -1,0 +1,1058 @@
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+/* cookie banner */
+
+#cookiebanner {
+  z-index: 950;
+  position: fixed;
+  bottom: 70px;
+  left: 30%;
+  right: 30%;
+  width: 40%;
+  padding: 14px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+  #cookiebanner {
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+  }
+}
+
+#cookietext {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #ffffff;
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  #cookietext {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* splash screen */
+
+#splashscreen {
+  z-index: 900;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  width:100%;
+  background-color: #000000;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url("https://nickkoziupa.com/wp-content/uploads/2020/07/tomsthumbtrail.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#splashcontainer {
+  height: 100%;
+}
+
+#splashheader {
+  font-family: 'Lato', sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+@media only screen and (max-width: 767px) {
+  #splashheader {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 300;
+  }
+}
+
+#splashsubheader {
+  font-family: 'Lato', sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  #splashsubheader {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+}
+
+#splashloading {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 44px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+@media only screen and (max-width: 767px) {
+  #splashloading {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 34px;
+  }
+}
+
+#splashbuttondiv {
+  text-align: center;
+}
+
+#splash-button {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  padding: 10px 20px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 767px) {
+  #splash-button {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 6px 14px;
+    font-weight: 700;
+  }
+}
+
+#splashcopyright {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #e5e5e3;
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  #splashcopyright {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    mamn-top: 70px;
+    margin-bottom: 30px;
+  }
+}
+
+/* set desktop info container width */
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    -ms-flex: 0 0 400px;
+    flex: 0 0 400px;
+    max-width: 400px;
+  }
+}
+
+.navbar-brand {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #120a06!important;
+}
+
+.navbar-nav a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #2e1a0e!important;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-brand {
+    font-size: 16px!important;
+    line-height: 16px!important;
+  }
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  color: #e5e5e3;
+  /* letter-spacing: 1px; */
+  margin: 0;
+}
+
+/* map zoom controls and attributions */
+
+.leaflet-top, .leaflet-bottom {
+  z-index: 800;
+}
+
+/* modal button label */
+
+.modal-button-label {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+}
+
+/* routeplan modal styles */
+
+.modal-routeplan-title {
+  font-family: 'Lato', sans-serif;
+  /* text-transform: uppercase; */
+  font-weight: 700;
+}
+
+.modal-routeplan-body {
+  font-family: 'Lato', sans-serif;
+  /* text-transform: uppercase; */
+}
+
+#routeplan {
+  /* text-transform: uppercase; */
+}
+
+/* reset map modal styles */
+
+.modal-resetmap-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.modal-resetmap-body {
+  font-family: 'Lato', sans-serif;
+}
+
+#resetmap {
+}
+
+/* main height */
+
+.mainheight {
+}
+
+/* info container  */
+
+/* desktop */
+
+#infocontainer {
+  background: rgb(46,26,14);
+  background: -moz-linear-gradient(180deg, rgba(46,26,14,1) 0%, rgba(18,10,6,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(46,26,14,1) 0%, rgba(18,10,6,1) 100%);
+  background: linear-gradient(180deg, rgba(46,26,14,1) 0%, rgba(18,10,6,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2e1a0e",endColorstr="#120a06",GradientType=1);
+  /* background-color: #27160c; */
+}
+
+/* mobile */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #infocontainer {
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #infocontainer {
+    height: 220px;
+  }
+}
+
+/* -- marker container 0 -- */
+
+#markercontainer-0 {
+  text-align: center;
+}
+
+/* desktop */
+
+#markercontainer-0-message-line-1 {
+  /* text-transform: uppercase; */
+  font-size: 27px;
+  line-height: 40px;
+  font-weight: 400;
+  /* word-spacing: 1px; */
+  /* margin-bottom: 5px; */
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #markercontainer-0-message-line-1 {
+  /* text-transform: uppercase; */
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  /* word-spacing: 1px; */
+  margin-bottom: 3px;
+  }
+}
+
+/* desktop */
+
+#markercontainer-0-message-line-2 {
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  /* word-spacing: 1px; */
+  margin-bottom: 20px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #markercontainer-0-message-line-2 {
+  /* text-transform: uppercase; */
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  /* word-spacing: 1px; */
+  margin-bottom: 15px;
+  }
+}
+
+#infocontainer-0-button {
+  margin-top: 27px;
+}
+
+@media only screen and (max-width: 767px) {
+  #infocontainer-0-button {
+  margin-top: 22px;
+  }
+}
+
+/* -- marker container 1 -- */
+
+#markercontainer-1 {
+  text-align: center;
+  display: none;
+}
+
+/* desktop */
+
+
+/* #markertitle { */
+  /* font-size: 17px; */
+  /* line-height: 20px; */
+  /* font-weight: 400; */
+/* } */
+
+#markername {
+  /* text-transform: uppercase; */
+  /* font-size: 50px; */
+  /* line-height: 52px; */
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 900;
+}
+
+#markerelev {
+  /* text-transform: uppercase; */
+  font-size: 27px;
+  line-height: 29px;
+  font-weight: 300;
+  margin-left: 6px;
+}
+
+/* mobile */
+
+/* @media only screen and (max-width: 767px) {
+  #markertitle { */
+    /* font-size: 12px; */
+    /* line-height: 15px; */
+    /* font-weight: 400; */
+  /* } */
+/* } */
+
+@media only screen and (max-width: 767px) {
+  #markername {
+    /* text-transform: uppercase; */
+    /* font-size: 32px; */
+    /* line-height: 34px; */
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #markerelev {
+    /* text-transform: uppercase; */
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 300;
+    margin-left: 5px;
+  }
+}
+
+/* -- info container 1 instructions -- */
+
+/* desktop */
+
+#infocontainer-1-instructions {
+  text-align: center;
+}
+
+#infocontainer-1-instructions-1 {
+  /* text-transform: uppercase; */
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#infocontainer-1-instructions-2 {
+  /* text-transform: uppercase; */
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.infocontainerhr {
+  border-color: #c7c7c5;
+  width: 33%;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #infocontainer-1-instructions {
+    /* padding-top: 15px; */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #infocontainer-1-instructions-1 {
+    /* text-transform: uppercase; */
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #infocontainer-1-instructions-2 {
+    /* text-transform: uppercase; */
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .infocontainerhr {
+    border-color: #c7c7c5;
+    width: 33%;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+}
+
+/* -- info container 2 instructions -- */
+
+/* desktop */
+
+#infocontainer-2-instructions {
+  text-align: center;
+}
+
+#infocontainer-2-instructions-1 {
+  /* text-transform: uppercase; */
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#infocontainer-2-instructions-2 {
+  /* text-transform: uppercase; */
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #infocontainer-2-instructions {
+    /* padding-top: 15px; */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #infocontainer-2-instructions-1 {
+    /* text-transform: uppercase; */
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #infocontainer-2-instructions-2 {
+    /* text-transform: uppercase; */
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+}
+
+/* -- info container 2 marker container 2 -- */
+
+/* desktop */
+
+#infocontainer-2-markercontainer-2 {
+  text-align: center;
+  display: none;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #infocontainer-2-markercontainer-2 {
+    text-align: center;
+    margin-bottom: 10px;
+    display: none;
+  }
+}
+
+/* -- marker container 2 -- */
+
+/* desktop */
+
+#markercontainer-2 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #markercontainer-2 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* ---- marker from ---- */
+
+/* desktop */
+
+#markerfromcontainer {
+  text-align: center;
+  /* width: 160px; */
+}
+
+/* #markerfromtitle { */
+  /* font-size: 12px; */
+  /* line-height: 15px; */
+  /* font-weight: 400; */
+/* } */
+
+#markerfromname {
+  /* text-transform: uppercase; */
+  /* font-size: 34px; */
+  /* line-height: 36px; */
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 900;
+}
+
+#markerfromelev {
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+  margin-left: 4px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #markerfromcontainer {
+    text-align: center;
+    /* width: 130px; */
+  }
+}
+
+/* @media only screen and (max-width: 767px) {
+  #markerfromtitle { */
+    /* font-size: 10px; */
+    /* line-height: 13px; */
+    /* font-weight: 400; */
+  /* } */
+/* } */
+
+@media only screen and (max-width: 767px) {
+  #markerfromname {
+    /* text-transform: uppercase; */
+    /* font-size: 28px; */
+    /* line-height: 30px; */
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #markerfromelev {
+    /* text-transform: uppercase; */
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 300;
+    margin-left: 4px;
+  }
+}
+
+/* ---- marker separator ---- */
+
+/* desktop */
+
+#markerseparatorcontainer {
+  text-align: center;
+  margin-left: 17px;
+  margin-right: 15px;
+}
+
+#markerseparatortext {
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #markerseparatorcontainer {
+    text-align: center;
+    margin-left: 12px;
+    margin-right: 11px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #markerseparatortext {
+    /* text-transform: uppercase; */
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+  }
+}
+
+/* ---- marker to ---- */
+
+/* desktop */
+
+#markertocontainer {
+  text-align: center;
+  /* width: 160px; */
+}
+
+/* #markertotitle { */
+  /* font-size: 12px; */
+  /* line-height: 15px; */
+  /* font-weight: 400; */
+/* } */
+
+#markertoname {
+  /* text-transform: uppercase; */
+  /* font-size: 34px; */
+  /* line-height: 36px; */
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 900;
+}
+
+#markertoelev {
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+  margin-left: 4px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #markertocontainer {
+    text-align: center;
+    /* width: 130px; */
+  }
+}
+
+/* @media only screen and (max-width: 767px) {
+  #markertotitle { */
+    /* font-size: 10px; */
+    /* line-height: 13px; */
+    /* font-weight: 400; */
+  /* } */
+/* } */
+
+@media only screen and (max-width: 767px) {
+  #markertoname {
+    /* text-transform: uppercase; */
+    /* font-size: 28px; */
+    /* line-height: 30px; */
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #markertoelev {
+    /* text-transform: uppercase; */
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 300;
+    margin-left: 4px;
+  }
+}
+
+/* -- segment container -- */
+
+/* desktop */
+
+#segmentcontainer {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 6px;
+}
+
+#segmentvia {
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+#segmentname {
+  /* text-transform: uppercase; */
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 900;
+}
+
+#segmentinfo {
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+  margin-top: 2px;
+}
+
+#segmentinfoseparator {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#segmentlength {
+}
+
+#segmentelevgain {
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #segmentcontainer {
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 6px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #segmentvia {
+    /* text-transform: uppercase; */
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #segmentname {
+    /* text-transform: uppercase; */
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #segmentinfo {
+    /* text-transform: uppercase; */
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #segmentinfoseparator {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #segmentlength {
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #segmentelevgain {
+  }
+}
+
+/* -- route container -- */
+
+/* desktop */
+
+#routecontainer {
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#routetitle {
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+#routeinfo {
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+#routeinfoseparator {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#routelength {
+}
+
+#routeelevgain {
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #routecontainer {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 2px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #routetitle {
+    /* text-transform: uppercase; */
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #routeinfo {
+    /* text-transform: uppercase; */
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #routeinfoseparator {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #routelength {
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #routeelevgain {
+  }
+}
+
+/* map container*/
+
+#mapcontainer {
+}
+
+
+#mapoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #020001;
+  /* background-color: #140b05; */
+  opacity: 0;
+  overflow: hidden;
+  z-index: 999;
+  visibility: hidden;
+}
+
+
+
+/* display classes */
+
+.display-visible {
+  display: flex!important;
+}
+
+.display-invisible {
+  display: none!important;
+}
+
+/* carousel controls */
+
+.carousel-inner {
+  width: 180px;
+}
+
+@media only screen and (max-width: 767px) {
+  .carousel-control-prev {
+  margin-left: -10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .carousel-control-next {
+  margin-right: -10px;
+  }
+}
+
+/* carousel trailhead */
+
+.carouseltrailhead {
+  font-family: 'Lato', sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  /* text-transform: uppercase; */
+}
+
+@media only screen and (max-width: 767px) {
+  .carouseltrailhead {
+  font-size: 20px;
+  line-height: 24px;
+  }
+}
+
+/* locate button */
+
+.leaflet-bar a {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    color: #444;
+    display: block;
+    height: 26px;
+    width: 26px;
+    /* line-height: 1.45 !important; */
+    line-height: 1.45 !important;
+    text-align: center;
+    text-decoration: none;
+    /* font: bold 18px'Lucida Console', Monaco, monospace; */
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lucida Console', Monaco, monospace;
+}
+
+@media only screen and (max-width: 767px) {
+.leaflet-bar a {
+    line-height: 1.4 !important;
+}
+}
+
+.locatebuttonicon {
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 767px) {
+  .locatebuttonicon {
+    font-size: 13px;
+    line-height: 30px!important;
+  }
+}
+
+.animated-location-icon {
+  background-color: rgba(20,44,255,1);
+  border-radius: 50%;
+  /* transition: all 1s; */
+}

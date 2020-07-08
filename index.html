@@ -1,1 +1,211 @@
-<h1>Hello world!</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>McDowell Sonoran Trails</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+    <script src="https://kit.fontawesome.com/6ac0335f5a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body onload="checkCookie()">
+    <div id="cookiebanner" style="display: none">
+      <p id="cookietext">By using this website, you agree to our cookie policy.</p>
+      <div id="cookiebuttondiv"><button type="button" id="cookie-button" class="btn btn-info modal-button-label shadow" onclick="policyAccepted()">Ok</button></div>
+    </div>
+    <div id="splashscreen">
+      <div id="splashcontainer" class="d-flex flex-column justify-content-end">
+        <h1 id="splashheader">McDowell Sonoran Trails</h1>
+        <h2 id="splashsubheader">Route Planner</h2>
+        <div id="splashbuttondiv"><button type="button" id="splash-button" class="btn btn-success modal-button-label shadow">Let's Go!</button></div>
+        <div id="splashcopyright">Copyright © 2020 Nick Koziupa. All rights reserved.</div>
+      </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">McDowell Sonoran Trails</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Privacy Policy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Terms of Use</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid mainheight d-flex flex-column">
+      <div id="main" class="row flex-grow-1">
+        <div id="infocontainer" class="col-lg-4 d-flex flex-column flex-wrap justify-content-center align-items-center flex-grow-1">
+          <div id="infocontainer-0">
+            <div id="markercontainer-0">
+              <p id="markercontainer-0-message-line-1">Select a Trailhead</p>
+              <p id="markercontainer-0-message-line-2">or zoom in and select any map marker</p>
+              <div id="trailheadCarousel" class="carousel slide d-flex flex-column flex-wrap justify-content-center align-items-center" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <p id="th-brownsranch" class="d-block w-100 carouseltrailhead">Brown's Ranch</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-fraesfield" class="d-block w-100 carouseltrailhead">Fraesfield</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-gateway" class="d-block w-100 carouseltrailhead">Gateway</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-granitemountain" class="d-block w-100 carouseltrailhead">Granite Mountain</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-lostdogwash" class="d-block w-100 carouseltrailhead">Lost Dog Wash</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-pimadynamite" class="d-block w-100 carouseltrailhead">Pima Dynamite</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-quartz" class="d-block w-100 carouseltrailhead">Quartz</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-ringtail" class="d-block w-100 carouseltrailhead">Ringtail</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-sunrise" class="d-block w-100 carouseltrailhead">Sunrise</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-tomsthumb" class="d-block w-100 carouseltrailhead">Tom's Thumb</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-westworld" class="d-block w-100 carouseltrailhead">WestWorld</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-104thandbell" class="d-block w-100 carouseltrailhead">104th and Bell</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p id="th-136thst" class="d-block w-100 carouseltrailhead">136th St.</p>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#trailheadCarousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#trailheadCarousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <button type="button" id="infocontainer-0-button" class="btn btn-success modal-button-label">Go</button>
+            </div>
+          </div>
+          <div id="infocontainer-1" class="d-inline-flex flex-column justify-content-center align-items-center">
+            <div id="markercontainer-1">
+              <!-- <p id="markertitle">marker</p> -->
+              <p id="markername">Marker Name</p>
+              <p id="markerelev">Marker Elev</p>
+            </div>
+            <div id="infocontainer-1-instructions">
+              <p id="infocontainer-1-instructions-1">Select highlighted markers to create a route</p>
+              <hr id="infocontainer-1-hr-1" class="infocontainerhr">
+              <p id="infocontainer-1-instructions-2">Select the current marker at any time to undo</p>
+              <button type="button" id="infocontainer-1-instructions-button" class="btn btn-info modal-button-label">Ok</button>
+            </div>
+          </div>
+          <div id="infocontainer-2" class="d-inline-flex flex-column justify-content-center align-items-center">
+            <div id="infocontainer-2-instructions">
+              <p id="infocontainer-2-instructions-1">Select this info panel at any time to view your route plan or reset the map</p>
+              <hr id="infocontainer-2-hr-1" class="infocontainerhr">
+              <p id="infocontainer-2-instructions-2">You can view these instructions again on the About page</p>
+              <button type="button" id="infocontainer-2-instructions-button" class="btn btn-info modal-button-label" onclick="tutorialViewed()">Ok</button>
+            </div>
+            <div id="infocontainer-2-markercontainer-2">
+              <div id="markercontainer-2" class="d-inline-flex justify-content-center align-items-center">
+                <div id="markerfromcontainer">
+                  <!-- <p id="markerfromtitle">marker</p> -->
+                  <p id="markerfromname">Marker Name</p>
+                  <p id="markerfromelev">Marker Elev</p>
+                </div>
+                <div id="markerseparatorcontainer">
+                  <p id="markerseparatortext">to</p>
+                </div>
+                <div id="markertocontainer">
+                  <!-- <p id="markertotitle">marker</p> -->
+                  <p id="markertoname">Marker Name</p>
+                  <p id="markertoelev">Marker Elev</p>
+                </div>
+              </div>
+              <div id="segmentcontainer">
+                <p id="segmentvia">via</p>
+                <p id="segmentname">Segment Name</p>
+                <p id="segmentinfo"><span id="segmentlength">Segment Length</span><span id="segmentinfoseparator"></span><span id="segmentelevgain">9999' elev gain</span></p>
+              </div>
+              <div id="routecontainer">
+                <p id="routetitle">Route Totals</p>
+                <p id="routeinfo"><span id="routelength">Route Length</span><span id="routeinfoseparator"></span><span id="routeelevgain">9999' elev gain</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="mapcontainer" class="col-lg-auto flex-grow-1">
+          <div id="mapoverlay">
+        </div>
+        </div>
+        <div class="modal fade" id="modalRoutePlan" tabindex="-1" role="dialog" aria-labelledby="routePlanTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal-routeplan-title" id="routePlanTitle">Route Plan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body modal-routeplan-body" id="routeplan"></div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger modal-button-label" data-toggle="modal" data-target="#modalResetMap" data-dismiss="modal">Reset</button>
+                <button type="button" class="btn btn-info modal-button-label" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modalResetMap" tabindex="-1" role="dialog" aria-labelledby="resetmapTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal-resetmap-title" id="resetmapTitle">Are you sure?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body modal-resetmap-body" id="resetmap">This will clear the trails like an Arizona monsoon.</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success modal-button-label" data-dismiss="modal">Keep Route</button>
+                <button type="button" class="btn btn-danger modal-button-label" data-dismiss="modal" onclick="resetMap()">Reset Map</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/segments.js"></script>
+    <script src="scripts/segments-northernregion.js"></script>
+    <script src="scripts/segments-centralregion.js"></script>
+    <script src="scripts/segments-southernregion.js"></script>
+  </body>
+</html>

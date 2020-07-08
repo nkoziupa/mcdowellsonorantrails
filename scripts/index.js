@@ -251,7 +251,7 @@ var options = {
       pane: 'labels-nr',
       tms: false
 };
-layerNR = L.tileLayer('https://nickkoziupa.com/wp-content/uploads/maptiles/northernregion/{z}/{x}/{y}.png', options).addTo(map);
+layerNR = L.tileLayer('../maptiles/northernregion/{z}/{x}/{y}.png', options).addTo(map);
 
 map.createPane('labels-cr');
 map.getPane('labels-cr').style.zIndex = 650;
@@ -264,7 +264,7 @@ var options = {
       pane: 'labels-cr',
       tms: false
 };
-layerCR = L.tileLayer('https://nickkoziupa.com/wp-content/uploads/maptiles/centralregion/{z}/{x}/{y}.png', options).addTo(map);
+layerCR = L.tileLayer('../maptiles/centralregion/{z}/{x}/{y}.png', options).addTo(map);
 
 map.createPane('labels-sr');
 map.getPane('labels-sr').style.zIndex = 650;
@@ -277,7 +277,7 @@ var options = {
       pane: 'labels-sr',
       tms: false
 };
-layerSR = L.tileLayer('https://nickkoziupa.com/wp-content/uploads/maptiles/southernregion/{z}/{x}/{y}.png', options).addTo(map);
+layerSR = L.tileLayer('../maptiles/southernregion/{z}/{x}/{y}.png', options).addTo(map);
 
 // marker list
 
@@ -343,7 +343,7 @@ CreateMarkerTrailhead.prototype.renderer = myRenderer;
               markerBP1X.setLatLng(e.latlng);
             });
           }
-       }); 
+       });
        map.on('mouseup',function(e){
          map.removeEventListener('mousemove');
          alert(e.latlng);
@@ -835,132 +835,24 @@ var markerWWTX = L.circle([33.630502, -111.870109], new CreateMarkerTrailhead("W
 
 var mapZoomLevel;
 map.on("zoomend", function () {
-  mapZoomLevel = map.getZoom();  
+  mapZoomLevel = map.getZoom();
   switch (mapZoomLevel) {
     case 10:
-      
+
       // change marker styles
       for (var i = 0; i < markerList.length; i++) {
       markerListElement = "marker" + markerList[i];
       window[markerListElement].setRadius(90);
       window[markerListElement].setStyle({weight: 1});
       }
-      
+
       // change trailhead marker styles
       for (var i = 0; i < trailheadList.length; i++) {
       trailheadListElement = "marker" + trailheadList[i];
       window[trailheadListElement].setRadius(94);
       window[trailheadListElement].setStyle({weight: 1});
       }
-      
-      // change segment styles
-      for (var i = 0; i < segmentList.length; i++) {
-      segmentListElement = "segment" + segmentList[i] + "polyline";
-      window[segmentListElement].setStyle({weight: 1});
-      }
-      
-      // change maricopa trail segment styles
-      for (var i = 0; i < segmentMTList.length; i++) {
-      segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
-      window[segmentMTListElement].setStyle({weight: 0, dashArray: '1,1'});
-      }
-      
-      // change tech trail segment styles
-      for (var i = 0; i < segmentTechList.length; i++) {
-      segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
-      window[segmentTechListElement].setStyle({dashArray: '1,1'});
-      }
-      
-      break;
-      
-    case 11:
-      
-      // change marker styles
-      for (var i = 0; i < markerList.length; i++) {
-      markerListElement = "marker" + markerList[i];
-      window[markerListElement].setRadius(100);
-      window[markerListElement].setStyle({weight: 1});
-      }
-      
-      // change trailhead marker styles
-      for (var i = 0; i < trailheadList.length; i++) {
-      trailheadListElement = "marker" + trailheadList[i];
-      window[trailheadListElement].setRadius(104);
-      window[trailheadListElement].setStyle({weight: 1});
-      }
-      
-      // change segment styles
-      for (var i = 0; i < segmentList.length; i++) {
-      segmentListElement = "segment" + segmentList[i] + "polyline";
-      window[segmentListElement].setStyle({weight: 1});
-      }
-      
-      // change maricopa trail segment styles
-      for (var i = 0; i < segmentMTList.length; i++) {
-      segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
-      window[segmentMTListElement].setStyle({weight: 0, dashArray: '1,1'});
-      }
-      
-      // change tech trail segment styles
-      for (var i = 0; i < segmentTechList.length; i++) {
-      segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
-      window[segmentTechListElement].setStyle({dashArray: '1,1'});
-      }
-      
-      break;
-      
-    case 12:
-      
-      // change marker styles
-      for (var i = 0; i < markerList.length; i++) {
-      markerListElement = "marker" + markerList[i];
-      window[markerListElement].setRadius(110);
-      window[markerListElement].setStyle({weight: 1});
-      }
-      
-      // change trailhead marker styles
-      for (var i = 0; i < trailheadList.length; i++) {
-      trailheadListElement = "marker" + trailheadList[i];
-      window[trailheadListElement].setRadius(104);
-      window[trailheadListElement].setStyle({weight: 1});
-      }
-      
-      // change segment styles
-      for (var i = 0; i < segmentList.length; i++) {
-      segmentListElement = "segment" + segmentList[i] + "polyline";
-      window[segmentListElement].setStyle({weight: 1});
-      }
-      
-      // change maricopa trail segment styles
-      for (var i = 0; i < segmentMTList.length; i++) {
-      segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
-      window[segmentMTListElement].setStyle({weight: 0, dashArray: '1,1'});
-      }
-      
-      // change tech trail segment styles
-      for (var i = 0; i < segmentTechList.length; i++) {
-      segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
-      window[segmentTechListElement].setStyle({dashArray: '1,1'});
-      }
-      
-      break;
-      
-    case 13:
-      
-      // change marker styles
-      for (var i = 0; i < markerList.length; i++) {
-      markerListElement = "marker" + markerList[i];
-      window[markerListElement].setRadius(60);
-      window[markerListElement].setStyle({weight: 1});
-      }
-      
-      // change trailhead marker styles
-      for (var i = 0; i < trailheadList.length; i++) {
-      trailheadListElement = "marker" + trailheadList[i];
-      window[trailheadListElement].setRadius(64);
-      window[trailheadListElement].setStyle({weight: 1});
-      }
-      
+
       // change segment styles
       for (var i = 0; i < segmentList.length; i++) {
       segmentListElement = "segment" + segmentList[i] + "polyline";
@@ -972,31 +864,139 @@ map.on("zoomend", function () {
       segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
       window[segmentMTListElement].setStyle({weight: 0, dashArray: '1,1'});
       }
-      
+
       // change tech trail segment styles
       for (var i = 0; i < segmentTechList.length; i++) {
       segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
       window[segmentTechListElement].setStyle({dashArray: '1,1'});
       }
-      
+
       break;
-      
+
+    case 11:
+
+      // change marker styles
+      for (var i = 0; i < markerList.length; i++) {
+      markerListElement = "marker" + markerList[i];
+      window[markerListElement].setRadius(100);
+      window[markerListElement].setStyle({weight: 1});
+      }
+
+      // change trailhead marker styles
+      for (var i = 0; i < trailheadList.length; i++) {
+      trailheadListElement = "marker" + trailheadList[i];
+      window[trailheadListElement].setRadius(104);
+      window[trailheadListElement].setStyle({weight: 1});
+      }
+
+      // change segment styles
+      for (var i = 0; i < segmentList.length; i++) {
+      segmentListElement = "segment" + segmentList[i] + "polyline";
+      window[segmentListElement].setStyle({weight: 1});
+      }
+
+      // change maricopa trail segment styles
+      for (var i = 0; i < segmentMTList.length; i++) {
+      segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
+      window[segmentMTListElement].setStyle({weight: 0, dashArray: '1,1'});
+      }
+
+      // change tech trail segment styles
+      for (var i = 0; i < segmentTechList.length; i++) {
+      segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
+      window[segmentTechListElement].setStyle({dashArray: '1,1'});
+      }
+
+      break;
+
+    case 12:
+
+      // change marker styles
+      for (var i = 0; i < markerList.length; i++) {
+      markerListElement = "marker" + markerList[i];
+      window[markerListElement].setRadius(110);
+      window[markerListElement].setStyle({weight: 1});
+      }
+
+      // change trailhead marker styles
+      for (var i = 0; i < trailheadList.length; i++) {
+      trailheadListElement = "marker" + trailheadList[i];
+      window[trailheadListElement].setRadius(104);
+      window[trailheadListElement].setStyle({weight: 1});
+      }
+
+      // change segment styles
+      for (var i = 0; i < segmentList.length; i++) {
+      segmentListElement = "segment" + segmentList[i] + "polyline";
+      window[segmentListElement].setStyle({weight: 1});
+      }
+
+      // change maricopa trail segment styles
+      for (var i = 0; i < segmentMTList.length; i++) {
+      segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
+      window[segmentMTListElement].setStyle({weight: 0, dashArray: '1,1'});
+      }
+
+      // change tech trail segment styles
+      for (var i = 0; i < segmentTechList.length; i++) {
+      segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
+      window[segmentTechListElement].setStyle({dashArray: '1,1'});
+      }
+
+      break;
+
+    case 13:
+
+      // change marker styles
+      for (var i = 0; i < markerList.length; i++) {
+      markerListElement = "marker" + markerList[i];
+      window[markerListElement].setRadius(60);
+      window[markerListElement].setStyle({weight: 1});
+      }
+
+      // change trailhead marker styles
+      for (var i = 0; i < trailheadList.length; i++) {
+      trailheadListElement = "marker" + trailheadList[i];
+      window[trailheadListElement].setRadius(64);
+      window[trailheadListElement].setStyle({weight: 1});
+      }
+
+      // change segment styles
+      for (var i = 0; i < segmentList.length; i++) {
+      segmentListElement = "segment" + segmentList[i] + "polyline";
+      window[segmentListElement].setStyle({weight: 1});
+      }
+
+      // change maricopa trail segment styles
+      for (var i = 0; i < segmentMTList.length; i++) {
+      segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
+      window[segmentMTListElement].setStyle({weight: 0, dashArray: '1,1'});
+      }
+
+      // change tech trail segment styles
+      for (var i = 0; i < segmentTechList.length; i++) {
+      segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
+      window[segmentTechListElement].setStyle({dashArray: '1,1'});
+      }
+
+      break;
+
     case 14:
-      
+
       // change marker styles
       for (var i = 0; i < markerList.length; i++) {
       markerListElement = "marker" + markerList[i];
       window[markerListElement].setRadius(54);
       window[markerListElement].setStyle({weight: 2});
       }
-      
+
       // change trailhead marker styles
       for (var i = 0; i < trailheadList.length; i++) {
       trailheadListElement = "marker" + trailheadList[i];
       window[trailheadListElement].setRadius(59);
       window[trailheadListElement].setStyle({weight: 2});
       }
-      
+
       // change segment styles
       for (var i = 0; i < segmentList.length; i++) {
       segmentListElement = "segment" + segmentList[i] + "polyline";
@@ -1008,67 +1008,67 @@ map.on("zoomend", function () {
       segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
       window[segmentMTListElement].setStyle({weight: 1, dashArray: '0.1,2'});
       }
-      
+
       // change tech trail segment styles
       for (var i = 0; i < segmentTechList.length; i++) {
       segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
       window[segmentTechListElement].setStyle({dashArray: '4,3'});
       }
-      
+
       break;
-      
+
     case 15:
-      
+
       // change marker styles
       for (var i = 0; i < markerList.length; i++) {
       markerListElement = "marker" + markerList[i];
       window[markerListElement].setRadius(54);
       window[markerListElement].setStyle({weight: 3});
       }
-      
+
       // change trailhead marker styles
       for (var i = 0; i < trailheadList.length; i++) {
       trailheadListElement = "marker" + trailheadList[i];
       window[trailheadListElement].setRadius(58);
       window[trailheadListElement].setStyle({weight: 3});
       }
-      
+
       // change segment styles
       for (var i = 0; i < segmentList.length; i++) {
       segmentListElement = "segment" + segmentList[i] + "polyline";
       window[segmentListElement].setStyle({weight: 3});
       }
-      
+
       // change maricopa trail segment styles
       for (var i = 0; i < segmentMTList.length; i++) {
       segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
       window[segmentMTListElement].setStyle({weight: 2, dashArray: '0.1,3'});
       }
-      
+
       // change tech trail segment styles
       for (var i = 0; i < segmentTechList.length; i++) {
       segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
       window[segmentTechListElement].setStyle({dashArray: '6,5'});
       }
-      
+
       break;
-      
+
     case 16:
-      
+
       // change marker styles
       for (var i = 0; i < markerList.length; i++) {
       markerListElement = "marker" + markerList[i];
       window[markerListElement].setRadius(30);
       window[markerListElement].setStyle({weight: 4});
       }
-      
+
       // change trailhead marker styles
       for (var i = 0; i < trailheadList.length; i++) {
       trailheadListElement = "marker" + trailheadList[i];
       window[trailheadListElement].setRadius(34);
       window[trailheadListElement].setStyle({weight: 4});
-      }  
-      
+      }
+
       // change segment styles
       for (var i = 0; i < segmentList.length; i++) {
       segmentListElement = "segment" + segmentList[i] + "polyline";
@@ -1080,15 +1080,15 @@ map.on("zoomend", function () {
       segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
       window[segmentMTListElement].setStyle({weight: 3, dashArray: '0.1,5'});
       }
-      
+
       // change tech trail segment styles
       for (var i = 0; i < segmentTechList.length; i++) {
       segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
       window[segmentTechListElement].setStyle({dashArray: '8,7'});
       }
-      
+
       break;
-      
+
     case 17:
 
       // change marker styles
@@ -1097,14 +1097,14 @@ map.on("zoomend", function () {
       window[markerListElement].setRadius(18);
       window[markerListElement].setStyle({weight: 5});
       }
-      
+
       // change trailhead marker styles
       for (var i = 0; i < trailheadList.length; i++) {
       trailheadListElement = "marker" + trailheadList[i];
       window[trailheadListElement].setRadius(22);
       window[trailheadListElement].setStyle({weight: 5});
       }
-      
+
       // change segment styles
       for (var i = 0; i < segmentList.length; i++) {
       segmentListElement = "segment" + segmentList[i] + "polyline";
@@ -1116,25 +1116,25 @@ map.on("zoomend", function () {
       segmentMTListElement = "segment" + segmentMTList[i] + "polyline";
       window[segmentMTListElement].setStyle({weight: 4, dashArray: '0.1,10'});
       }
-      
+
       // change tech trail segment styles
       for (var i = 0; i < segmentTechList.length; i++) {
       segmentTechListElement = "segment" + segmentTechList[i] + "polyline";
       window[segmentTechListElement].setStyle({dashArray: '10,9'});
       }
-      
+
       break;
 
-/*      
+/*
     case 18:
-      
+
       // change marker styles
       for (var i = 0; i < markerList.length; i++) {
       markerListElement = "marker" + markerList[i];
       window[markerListElement].setRadius(10);
       window[markerListElement].setStyle({weight: 6});
       }
-      
+
       // change segment styles
       for (var i = 0; i < segmentList.length; i++) {
       segmentListElement = "segment" + segmentList[i] + "polyline";
@@ -1142,24 +1142,24 @@ map.on("zoomend", function () {
       }
 
       break;
-      
+
       case 19:
-      
+
       // change marker styles
       for (var i = 0; i < markerList.length; i++) {
       markerListElement = "marker" + markerList[i];
       window[markerListElement].setRadius(10);
       window[markerListElement].setStyle({weight: 7});
       }
-      
+
       // change segment styles
       for (var i = 0; i < segmentList.length; i++) {
       segmentListElement = "segment" + segmentList[i] + "polyline";
       window[segmentListElement].setStyle({weight: 7});
       }
-      
+
       break;
-      
+
       case 20:
 
       // change marker styles
@@ -1168,16 +1168,16 @@ map.on("zoomend", function () {
       window[markerListElement].setRadius(5);
       window[markerListElement].setStyle({weight: 8});
       }
-      
+
       // change segment styles
       for (var i = 0; i < segmentList.length; i++) {
       segmentListElement = "segment" + segmentList[i] + "polyline";
       window[segmentListElement].setStyle({weight: 8});
       }
-      
+
       break;
 */
-      
+
     default:
   }
 });
@@ -1198,88 +1198,88 @@ $("#infocontainer-0-button").on("click", function() {
       markerBRTX.fire('click');
       map.flyTo([33.761545, -111.842328], 17, {animate: true, duration: 0.1});
     break;
-      
+
     case 1:
       markerFTX.fire('click');
       map.flyTo([33.746523, -111.795308], 17, {animate: true, duration: 0.1});
     break;
-    
+
     case 2:
       markerGTX.fire('click');
       map.flyTo([33.649484, -111.858415], 17, {animate: true, duration: 0.1});
     break;
-      
+
     case 3:
       markerGMTX.fire('click');
       map.flyTo([33.770558, -111.789568], 17, {animate: true, duration: 0.1});
-    break;      
-      
+    break;
+
     case 4:
       markerLDTX.fire('click');
       map.flyTo([33.600348, -111.811841], 17, {animate: true, duration: 0.1});
     break;
-      
+
     case 5:
       markerPDTX.fire('click');
       map.flyTo([33.74337985, -111.887773], 16, {animate: true, duration: 0.1});
-    break;      
-      
+    break;
+
     case 6:
       markerQT1X.fire('click');
       map.flyTo([33.627011, -111.857127], 16, {animate: true, duration: 0.1});
     break;
-      
+
     case 7:
       markerRTX.fire('click');
       map.flyTo([33.598084, -111.804753], 17, {animate: true, duration: 0.1});
-    break;      
-      
+    break;
+
     case 8:
       markerSTX.fire('click');
       map.flyTo([33.596214, -111.768246], 17, {animate: true, duration: 0.1});
     break;
-      
+
     case 9:
       markerTTTX.fire('click');
       map.flyTo([33.694507, -111.801702], 16, {animate: true, duration: 0.1});
     break;
-      
+
     case 10:
       markerWWTX.fire('click');
       map.flyTo([33.630502, -111.870109], 17, {animate: true, duration: 0.1});
-    break;      
+    break;
 
     case 11:
       markerBTX.fire('click');
       map.flyTo([33.640358, -111.856724], 15, {animate: true, duration: 0.1});
-    break;      
-      
+    break;
+
     case 12:
       marker136X.fire('click');
       map.flyTo([33.594952, -111.786379], 15, {animate: true, duration: 0.1});
     break;
-      
+
     default:
       alert("Incorrect trailhead carousel index number!");
-      
+
   }
-      
+
 });
 
 
 // if the user selects the info panel and it's currently displaying a single marker, fly to the current marker
 
 $("#markercontainer-1").on("click", function() {
-  
+
   if (markerArray.length == 1 && infoContainer2MapOverlayShown === true && $("#infocontainer-1").hasClass("display-visible")) {
     var czl = map.getZoom();
-    
+
     var cme = window["marker" + markerArray[0]];
-    
+
     var cll = cme.getLatLng();
     var clat = cll.lat;
     var clng = cll.lng;
-    
+
     map.flyTo([clat, clng], czl, {animate: true, duration: 0.1});
   };
 
@@ -1288,28 +1288,28 @@ $("#markercontainer-1").on("click", function() {
 
 
 $("#infocontainer").on("click", function() {
-  
+
   // if the second info overlay has been shown and segments are showing in the info panel, show the route plan modal
-  
+
   if (infoContainer2MapOverlayShown === true && infoContainer2Visible === true) {
-    
+
     $("#modalRoutePlan").modal("show");
-  
+
     var routePlanArrayHTML = "";
     var x = 0;
-  
+
     for (var i = 0; i < routePlanArray.length / 5; i++) {
     routePlanArrayHTML = routePlanArrayHTML + "<span style='font-weight: 700;'>" + routePlanArray[x] + "</span>" + " " + "<span style='font-size: 14px;'>to</span>" + " " + "<span style='font-weight: 700;'>" + routePlanArray[x + 1] + "</span>" + " " + "<span style='font-size: 14px;'>via</span>" + " " + "<span style='font-weight: 700;'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span style='font-size: 16px;'>" + routePlanArray[x + 3] + "</span>" + "&nbsp;&nbsp;&nbsp;" + "<span style='font-size: 16px;'>" + routePlanArray[x + 4] + "</span>" + "<br>" + "<br>";
     x = x + 5;
     };
-  
+
     if (routeLength === 1) {
       routePlanArrayHTML = routePlanArrayHTML + "<hr style='margin-top: 0;'>" + "<span style='font-weight: 700;'>Route Totals</span>" + "<br>" + Math.abs(routeLength).toFixed(2) + " mile" + "&nbsp;&nbsp;&nbsp;" + Math.abs(routeElevGain).toFixed(2) + "' elev gain";
     }
     else {
       routePlanArrayHTML = routePlanArrayHTML + "<hr style='margin-top: 0;'>" + "<span style='font-weight: 700;'>Route Totals</span>" + "<br>" + Math.abs(routeLength).toFixed(2) + " miles" + "&nbsp;&nbsp;&nbsp;" + Math.abs(routeElevGain).toFixed(2) + "' elev gain";
     }
-  
+
     $("#routeplan").html(routePlanArrayHTML);
   };
 });
@@ -1319,56 +1319,56 @@ $("#infocontainer").on("click", function() {
 // reset map when user selects reset map from the route plan modal
 
 function resetMap() {
-  
+
   // make all of the markers 'selectable'
 
   for (var i = 0; i < markerList.length; i++) {
     markerListElement = "marker" + markerList[i];
     window[markerListElement].setStyle({status: "selectable", color: markerColorSelectable, fillColor: markerFillColorSelectable, fillOpacity: markerFillOpacitySelectable});
   }
-  
+
   // make all of the trailheads their own selectable color
 
   for (var i = 0; i < trailheadList.length; i++) {
     markerListElement = "marker" + trailheadList[i];
     window[markerListElement].setStyle({status: "selectable", color: trailheadColorSelectable, fillColor: trailheadFillColorSelectable, fillOpacity: trailheadFillOpacitySelectable});
-  } 
-      
+  }
+
   // empty markerArray
-    
+
   markerArray.length = 0;
-    
+
   // show markerArray values in the console for debugging
-    
+
   console.log(markerArray);
-    
+
   // make all of the segments 'selectable'
-    
+
   for (var i = 0; i < segmentList.length; i++) {
     segmentListElement = "segment" + segmentList[i] + "polyline";
     window[segmentListElement].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
   }
-  
+
   // empty segmentArray
-    
+
   segmentArray.length = 0;
-    
+
   // show segmentArray values in the console for debugging
-    
+
   console.log(segmentArray);
-    
+
   // reset route length
-  
+
   routeLength = 0;
-  
+
   // reset route elev gain
 
   routeElevGain = 0;
-  
+
   // reset route plan
 
   routePlanArray.length = 0;
-  
+
   // show/hide info containers
 
   $("#infocontainer-0").addClass("display-visible");
@@ -1377,11 +1377,11 @@ function resetMap() {
   $("#infocontainer-1").removeClass("display-visible");
   $("#infocontainer-2").addClass("display-invisible");
   $("#infocontainer-2").removeClass("display-visible");
-    
+
   infoContainer2Visible = false;
-  
+
   // reset map view
-  
+
   if ($(window).height() >= 900) {
     markerRadiusInitial = 110;
     trailheadRadiusInitial = 110;
@@ -1397,7 +1397,7 @@ function resetMap() {
       trailheadRadiusInitial = 50;
       map.setView([33.702662, -111.829247], 10);
   };
-  
+
 }
 
 
@@ -1415,18 +1415,18 @@ var locationIcon = L.divIcon({
 });
 
 function onLocationFound(e) {
-  
+
   if (locationMarker != undefined) {
     map.removeLayer(locationMarker);
     map.removeLayer(locationCircle);
   };
-  
+
   var radius = e.accuracy / 2;
   // locationMarker = L.marker(e.latlng, {interactive: false}).addTo(map);
-  
+
   locationMarker = L.marker(e.latlng, {icon: locationIcon, interactive: false}).addTo(map);
   locationCircle = L.circle(e.latlng, radius, {interactive: false, className: "locationCircleHide"}).addTo(map);
-  
+
   setTimeout (function() {
     $(".locationCircleHide").animate({ opacity: 0 }, 1000, function() {
        // Animation complete.
@@ -1436,13 +1436,13 @@ function onLocationFound(e) {
   // setTimeout (function() {
   //   myLocationIcon.style.opacity = 0
   // }, 5000);
-  
+
     setTimeout (function() {
     $(".my-location-icon").animate({ opacity: 0 }, 1000, function() {
        // Animation complete.
     });
   }, 10000);
-  
+
 }
 
 function onLocationError(e) {
@@ -1527,10 +1527,10 @@ function onMapClick(e) {
   var segmentPolyline;
   var infoFadeOutTime = 200;
   var infoFadeInTime = 200;
-  
+
   // center map to selected marker
   // if user selects current marker, center map to previous marker
-    
+
   if ($(window).width() >= 992) {
     panAnimateSpeed = 0.5;
   }
@@ -1540,7 +1540,7 @@ function onMapClick(e) {
   else {
     panAnimateSpeed = 0.25;
   };
-   
+
   function centerMarker() {
     map.dragging.disable();
     map.doubleClickZoom.disable();
@@ -1554,27 +1554,27 @@ function onMapClick(e) {
       map.scrollWheelZoom.enable();
     });
   };
-  
+
   function centerPreviousMarker() {
     map.dragging.disable();
     map.doubleClickZoom.disable();
     map.scrollWheelZoom.disable();
     map.panTo(L.latLng(window[previousMarker].getLatLng()), {animate: true, duration: panAnimateSpeed, easeLinearity: 0.25});
-  
+
     map.on('moveend', function() {
       map.dragging.enable();
       map.doubleClickZoom.enable();
       map.scrollWheelZoom.enable();
     });
   };
-  
+
   // case 1: if markerArray is empty --------------------------------------------------------------------------
   // i.e., the user chooses the very first marker -------------------------------------------------------------
-  
+
   if (markerArray.length === 0) {
-    
+
     // if they haven't been shown yet, show focused instructions 1
-    
+
     if (infoContainer1MapOverlayShown === false) {
       $("#mapoverlay").css("visibility", "visible");
       $("#mapoverlay").fadeTo(500, 0.7);
@@ -1589,39 +1589,39 @@ function onMapClick(e) {
     }
 
     infoContainer2Visible = false;
-    
+
     // center the selected marker on the map
-    
+
     centerMarker();
-    
+
     // make all of the markers 'unselectable'
 
     for (var i = 0; i < markerList.length; i++) {
       markerListElement = "marker" + markerList[i];
       window[markerListElement].setStyle({status: "unselectable", color: markerColorUnselectable, fillColor: markerFillColorUnselectable, fillOpacity: markerFillOpacityUnselectable});
     }
-    
+
     // make the chosen marker the 'current' marker
-    
+
     marker.setStyle({status: "current", color: markerColorCurrent, fillColor: markerFillColorCurrent, fillOpacity: markerFillOpacityCurrent});
-    
+
     // make the neighbor markers 'selectable'
-    
+
     for (var i = 0; i < marker.options.neighbors.length; i++) {
       neighborMarkers = "marker" + marker.options.neighbors[i];
       window[neighborMarkers].setStyle({status: "selectable", color: markerColorSelectable, fillColor: markerFillColorSelectable, fillOpacity: markerFillOpacitySelectable});
     }
 
     // make the neighbor segments 'selectable'
-    
+
     for (var i = 0; i < marker.options.neighbors.length; i++) {
-      
+
       // create a segmentID based on the current marker and neighbor markers, one at a time
       segmentID = "segment" + markerID + marker.options.neighbors[i];
-      
+
       // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
       // then run the appropriate statements
-      
+
       try {
         if (window[segmentID].segmentMarkerA === markerID) {
           // change the segment to selectable
@@ -1629,7 +1629,7 @@ function onMapClick(e) {
           window[segmentPolyline].setStyle({color: segmentColorSelectable, opacity: segmentOpacitySelectable});
         }
       }
-    
+
       catch(err) {
         segmentID = "segment" + marker.options.neighbors[i] + markerID;
         // change the segment to selectable
@@ -1637,21 +1637,21 @@ function onMapClick(e) {
         window[segmentPolyline].setStyle({color: segmentColorSelectable, opacity: segmentOpacitySelectable});
       }
     }
-    
+
     // add the current marker to markerArray
-    
+
     markerArray.push(markerID);
-    
+
     // show markerArray values in the console for debugging
-    
+
     console.log(markerArray);
-    
+
     // empty segmentArray
-    
+
     segmentArray.length = 0;
-    
+
     // show segmentArray values in the console for debugging
-    
+
     console.log(segmentArray);
 
     // show/hide info containers
@@ -1662,33 +1662,33 @@ function onMapClick(e) {
     $("#infocontainer-1").removeClass("display-invisible");
     $("#infocontainer-2").addClass("display-invisible");
     $("#infocontainer-2").removeClass("display-visible");
-    
+
     // update info
-    
+
     $("#markername").text(marker.options.name);
     $("#markerelev").text(marker.options.elev + "'");
-    
+
     // reset route elev gain
-    
+
     routeElevGain = 0;
 
   }
-  
+
   // case 2: if markerArray has one element and the user chooses the 'current' marker ---------------
   // i.e., the user immediately chooses the first marker again or backtracks to the first marker ----
-  
+
   else if (markerArray.length === 1 && marker.options.status === "current") {
-    
+
     // make the neighbor segments 'unselected'
-    
+
     for (var i = 0; i < marker.options.neighbors.length; i++) {
-      
+
       // create a segmentID based on the current marker and neighbor markers, one at a time
       segmentID = "segment" + markerID + marker.options.neighbors[i];
-      
+
       // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
       // then run the appropriate statements
-      
+
       try {
         if (window[segmentID].segmentMarkerA === markerID) {
           // change the segment to 'unselected'
@@ -1696,7 +1696,7 @@ function onMapClick(e) {
           window[segmentPolyline].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
         }
       }
-    
+
       catch(err) {
         segmentID = "segment" + marker.options.neighbors[i] + markerID;
         // change the segment to 'unselected'
@@ -1704,41 +1704,41 @@ function onMapClick(e) {
         window[segmentPolyline].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
       }
     }
-    
+
     // make all of the markers 'selectable'
-    
+
     for (var i = 0; i < markerList.length; i++) {
       markerListElement = "marker" + markerList[i];
       window[markerListElement].setStyle({status: "selectable", color: markerColorSelectable, fillColor: markerFillColorSelectable, fillOpacity: markerFillOpacitySelectable});
     }
-    
+
     // make all of the trailheads their own selectable color
 
     for (var i = 0; i < trailheadList.length; i++) {
       markerListElement = "marker" + trailheadList[i];
       window[markerListElement].setStyle({status: "selectable", color: trailheadColorSelectable, fillColor: trailheadFillColorSelectable, fillOpacity: trailheadFillOpacitySelectable});
-    } 
-    
+    }
+
     // remove the current marker from markerArray
-    
+
     markerArray.pop();
-    
+
     // show markerArray values in the console for debugging
-    
+
     console.log(markerArray);
-    
+
     // empty segmentArray
-    
+
     segmentArray.length = 0;
-    
+
     // show segmentArray values in the console for debugging
-    
+
     console.log(segmentArray);
-    
+
     // reset route elev gain
-    
+
     routeElevGain = 0;
-    
+
     // show/hide info containers
 
     $("#infocontainer-0").addClass("display-visible");
@@ -1747,18 +1747,18 @@ function onMapClick(e) {
     $("#infocontainer-1").removeClass("display-visible");
     $("#infocontainer-2").addClass("display-invisible");
     $("#infocontainer-2").removeClass("display-visible");
-    
+
     infoContainer2Visible = false;
-    
+
   }
-  
+
   // case 3: if markerArray has at least one element and the user chooses a 'selectable' marker -----------------
   // ------------------------------------------------------------------------------------------------------------
-  
+
   else if (markerArray.length > 0 && marker.options.status === "selectable" || marker.options.status === "selectableselected") {
-    
+
     // if they haven't been shown yet, show focused instructions 2
-    
+
     if (infoContainer2MapOverlayShown === false) {
       $("#mapoverlay").css("visibility", "visible");
       $("#mapoverlay").fadeTo(500, 0.7);
@@ -1771,11 +1771,11 @@ function onMapClick(e) {
         });
       });
     };
-    
+
     infoContainer2Visible = true;
-    
+
     // make the previous neighbors 'unselectable'
-    
+
     previousMarker = "marker" + markerArray[markerArray.length - 1];
 
     for (var i = 0; i < window[previousMarker].options.neighbors.length; i++) {
@@ -1784,15 +1784,15 @@ function onMapClick(e) {
     }
 
     // make the previous selectable neighbor segments 'unselected'
-    
+
     for (var i = 0; i < window[previousMarker].options.neighbors.length; i++) {
-      
+
       // create a segmentID based on the current marker and neighbor markers, one at a time
       segmentID = "segment" + markerArray[markerArray.length - 1] + window[previousMarker].options.neighbors[i];
-      
+
       // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
       // then run the appropriate statements
-      
+
       try {
         if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 1]) {
           // change the segment to unselected
@@ -1800,7 +1800,7 @@ function onMapClick(e) {
           window[segmentPolyline].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
         }
       }
-    
+
       catch(err) {
         segmentID = "segment" + window[previousMarker].options.neighbors[i] + markerArray[markerArray.length - 1];
         // change the segment to unselected
@@ -1831,15 +1831,15 @@ function onMapClick(e) {
     }
 
     // make the new neighbor segments 'selectable'
-    
+
     for (var i = 0; i < marker.options.neighbors.length; i++) {
-      
+
       // create a segmentID based on the current marker and neighbor markers, one at a time
       segmentID = "segment" + markerID + marker.options.neighbors[i];
-      
+
       // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
       // then run the appropriate statements
-      
+
       try {
         if (window[segmentID].segmentMarkerA === markerID) {
           // change the segment to selectable
@@ -1847,7 +1847,7 @@ function onMapClick(e) {
           window[segmentPolyline].setStyle({color: segmentColorSelectable, opacity: segmentOpacitySelectable});
         }
       }
-    
+
       catch(err) {
         segmentID = "segment" + marker.options.neighbors[i] + markerID;
         // change the segment to selectable
@@ -1857,7 +1857,7 @@ function onMapClick(e) {
     }
 
     // if a new neighbor marker was previously selected, make it 'selectableselected'
-    
+
     for (var i = 0; i < markerArray.length; i++) {
       for (var j = 0; j < marker.options.neighbors.length; j++) {
         neighborMarkers = "marker" + marker.options.neighbors[j];
@@ -1870,24 +1870,24 @@ function onMapClick(e) {
     // if a new neighbor segment was previously selected, make it 'selectableselected'
 
     // first, through try and catch, determine the segmentID
-    
+
     for (var i = 0; i < marker.options.neighbors.length; i++) {
-      
+
       // create a segmentID based on the current marker and neighbor markers, one at a time
       segmentID = "segment" + markerID + marker.options.neighbors[i];
-      
+
       try {
         if (window[segmentID].segmentMarkerA === markerID) {
         }
       }
-    
+
       catch(err) {
         segmentID = "segment" + marker.options.neighbors[i] + markerID;
       }
-      
+
       // now compare the segmentID to all of the elements in segmentArray
       // if there's a match, change the segment to selectableselected
-      
+
       for (var j = 0; j < segmentArray.length; j++) {
         if (segmentID === segmentArray[j]) {
           segmentPolyline = segmentID + "polyline";
@@ -1895,37 +1895,37 @@ function onMapClick(e) {
         }
       }
     }
-    
+
     // make the previous marker 'previous'
-    
+
     window[previousMarker].setStyle({status: "selectableselected", color: markerColorPrevious, fillColor: markerFillColorPrevious, fillOpacity: markerFillOpacityPrevious});
-    
+
     // make the chosen marker the 'current' marker
-    
+
     marker.setStyle({status: "current", color: markerColorCurrent, fillColor: markerFillColorCurrent, fillOpacity: markerFillOpacityCurrent});
-    
+
     // center the selected marker on the map
-    
+
     centerMarker();
-    
+
     // add the new current marker to markerArray
-    
+
     markerArray.push(markerID);
-    
+
     // add the previous marker to routePlanArray
-    
+
     previousMarkerName = "marker" + markerArray[markerArray.length - 2];
-    
+
     routePlanArray.push(window[previousMarkerName].options.name);
-    
+
     // add the new current marker to routePlanArray
-    
+
     routePlanArray.push(markerName);
-    
+
     // show markerArray values in the console for debugging
-    
+
     console.log(markerArray);
-    
+
     // show/hide info containers
 
     $("#infocontainer-0").addClass("display-invisible");
@@ -1934,102 +1934,102 @@ function onMapClick(e) {
     $("#infocontainer-1").removeClass("display-visible");
     $("#infocontainer-2").addClass("display-visible");
     $("#infocontainer-2").removeClass("display-invisible");
-    
+
     // update info
-    
+
     previousMarker = "marker" + markerArray[markerArray.length - 2];
-    
+
     $("#markerfromname").text(window[previousMarker].options.name);
     $("#markerfromelev").text(window[previousMarker].options.elev + "'");
-    
+
     $("#markertoname").text(marker.options.name);
     $("#markertoelev").text(marker.options.elev + "'");
 
     // create a segmentID based on the previous and current markers
-        
+
     segmentID = "segment" + markerArray[markerArray.length - 2] + markerArray[markerArray.length - 1];
-    
+
     // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
     // then run the appropriate statements (this also defines how segment elevation gain is calculated)
-    
+
     try {
-      
+
       if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 2]) {
         $("#segmentname").text(window[segmentID].segmentName);
-        
+
         // add the new current segment to segmentArray
-        
+
         segmentArray.push(segmentID);
-        
+
         // add the new current segment to routePlanArray
-        
+
         routePlanArray.push(window[segmentID].segmentName);
-        
+
         // change the segment to current
-        
+
         segmentPolyline = segmentID + "polyline";
-        
+
         window[segmentPolyline].setStyle({color: segmentColorCurrent, opacity: segmentOpacityCurrent});
-        
+
         // show segmentArray values in the console for debugging
-        
+
         console.log(segmentArray);
-        
+
         // show segmentLength
-        
+
         if (window[segmentID].segmentLength === 1) {
           $("#segmentlength").text(window[segmentID].segmentLength.toFixed(2) + " mile");
           // add the segmentlength to routePlanArray
-          routePlanArray.push(window[segmentID].segmentLength.toFixed(2) + " mile"); 
+          routePlanArray.push(window[segmentID].segmentLength.toFixed(2) + " mile");
         }
         else {
           $("#segmentlength").text(window[segmentID].segmentLength.toFixed(2) + " miles");
           // add the segmentlength to routePlanArray
           routePlanArray.push(window[segmentID].segmentLength.toFixed(2) + " miles");
         }
-        
+
         // show segmentElevGainA
-        
+
         $("#segmentelevgain").text(window[segmentID].segmentElevGainA.toFixed(2) + "' elev gain");
-        
+
         // add segmentElevGainA to routePlanArray
-        
+
         routePlanArray.push(window[segmentID].segmentElevGainA.toFixed(2) + "' elev gain");
-        
+
         // update route elev gain
-      
+
         routeElevGain = routeElevGain + window[segmentID].segmentElevGainA;
-      
+
         $("#routeelevgain").text(routeElevGain.toFixed(2) + "' elev gain");
-        
+
       }
-      
+
     }
-    
+
     catch(err) {
       segmentID = "segment" + markerArray[markerArray.length - 1] + markerArray[markerArray.length - 2];
       $("#segmentname").text(window[segmentID].segmentName);
-      
+
       // add the new current segment to segmentArray
-        
+
       segmentArray.push(segmentID);
-      
+
       // add the new current segment to routePlanArray
-        
+
       routePlanArray.push(window[segmentID].segmentName);
 
       // change the segment to current
-        
+
       segmentPolyline = segmentID + "polyline";
-              
+
       window[segmentPolyline].setStyle({color: segmentColorCurrent, opacity: segmentOpacityCurrent});
 
       // show segmentArray values in the console for debugging
-        
+
       console.log(segmentArray);
-      
+
       // show segmentLength
-      
+
       if (window[segmentID].segmentLength === 1) {
         $("#segmentlength").text(window[segmentID].segmentLength.toFixed(2) + " mile");
         // add the segmentlength to routePlanArray
@@ -2040,58 +2040,58 @@ function onMapClick(e) {
         // add the segmentlength to routePlanArray
         routePlanArray.push(window[segmentID].segmentLength.toFixed(2) + " miles");
       }
-      
+
       // show segmentElevGainB
-       
+
       $("#segmentelevgain").text(window[segmentID].segmentElevGainB.toFixed(2) + "' elev gain");
-      
+
       // add segmentElevGainB to routePlanArray
-        
+
       routePlanArray.push(window[segmentID].segmentElevGainB.toFixed(2) + "' elev gain");
-      
+
       // update route elev gain
-      
+
       routeElevGain = routeElevGain + window[segmentID].segmentElevGainB;
-      
+
       $("#routeelevgain").text(routeElevGain.toFixed(2) + "' elev gain");
-      
+
     }
-    
+
     // update route length
-    
+
     routeLength = (routeLength * 10 + window[segmentID].segmentLength * 10) / 10;
-    
+
     if (routeLength === 1) {
       $("#routelength").text(routeLength.toFixed(2) + " mile");
     }
     else {
       $("#routelength").text(routeLength.toFixed(2) + " miles");
     }
-        
+
   }
-   
+
   // case 4: if markerArray has more than one element and the user chooses the 'current' marker -----------------
   // ------------------------------------------------------------------------------------------------------------
-  
+
   else if (markerArray.length > 1 && marker.options.status === "current") {
-    
+
     // make the current neighbor markers 'unselectable'
-    
+
     for (var i = 0; i < marker.options.neighbors.length; i++) {
       newNeighborMarkers = "marker" + marker.options.neighbors[i];
       window[newNeighborMarkers].setStyle({status: "unselectable", color: markerColorUnselectable, fillColor: markerFillColorUnselectable, fillOpacity: markerFillOpacityUnselectable});
     }
 
     // make the current neighbor segments 'unselected'
-    
+
     for (var i = 0; i < marker.options.neighbors.length; i++) {
-      
+
       // create a segmentID based on the current marker and neighbor markers, one at a time
       segmentID = "segment" + markerID + marker.options.neighbors[i];
-      
+
       // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
       // then run the appropriate statements
-      
+
       try {
         if (window[segmentID].segmentMarkerA === markerID) {
           // change the segment to unselected
@@ -2099,7 +2099,7 @@ function onMapClick(e) {
           window[segmentPolyline].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
         }
       }
-    
+
       catch(err) {
         segmentID = "segment" + marker.options.neighbors[i] + markerID;
         // change the segment to unselected
@@ -2107,19 +2107,19 @@ function onMapClick(e) {
         window[segmentPolyline].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
       }
     }
-    
+
     // make the 'current' marker a neighbor
-    
+
     marker.setStyle({status: "selectable", color: markerColorSelectable, fillColor: markerFillColorSelectable, fillOpacity: markerFillOpacitySelectable});
 
     // make the previous neighbors 'selectable'
-    
+
     previousMarker = "marker" + markerArray[markerArray.length - 2];
     for (var i = 0; i < window[previousMarker].options.neighbors.length; i++) {
       previousNeighborMarkers = "marker" + window[previousMarker].options.neighbors[i];
       window[previousNeighborMarkers].setStyle({status: "selectable", color: markerColorSelectable, fillColor: markerFillColorSelectable, fillOpacity: markerFillOpacitySelectable});
     }
-    
+
     // make all of the markers up to the current marker 'selected'
 
     for (var i = 0; i < markerArray.length - 2; i++) {
@@ -2135,7 +2135,7 @@ function onMapClick(e) {
     }
 
     // if any neighbors were previously chosen, make them 'selectableselected'
-    
+
     for (var i = 0; i < markerArray.length - 2; i++) {
       for (var j = 0; j < window[previousMarker].options.neighbors.length; j++) {
         neighborMarkers = "marker" + window[previousMarker].options.neighbors[j];
@@ -2144,75 +2144,75 @@ function onMapClick(e) {
         }
       }
     }
-    
+
     // make the previous marker the 'current' marker
-    
+
     previousMarker = "marker" + markerArray[markerArray.length - 2];
     window[previousMarker].setStyle({status: "current", color: markerColorCurrent, fillColor: markerFillColorCurrent, fillOpacity: markerFillOpacityCurrent});
-    
+
     // center the new current marker on the map
-    
+
     centerPreviousMarker();
-    
+
     // make the previous previous marker 'previous'
-    
+
     if (markerArray.length > 2) {
       previousPreviousMarker = "marker" + markerArray[markerArray.length - 3];
       window[previousPreviousMarker].setStyle({status: "selectableselected", color: markerColorPrevious, fillColor: markerFillColorPrevious, fillOpacity: markerFillOpacityPrevious});
     }
 
     // create a segmentID based on the previous and current markers
-    
+
     segmentID = "segment" + markerArray[markerArray.length - 2] + markerArray[markerArray.length - 1];
-    
+
     // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
     // then run the appropriate statements (this also defines how segment elevation gain is calculated)
-    
+
     try {
-      
+
       if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 2]) {
-        
+
         // update route length
-        
+
         routeLength = (routeLength * 10 - window[segmentID].segmentLength * 10) / 10;
-        
+
         // update route elev gain
-      
+
         routeElevGain = routeElevGain - window[segmentID].segmentElevGainA;
-      
+
         $("#routeelevgain").text(routeElevGain.toFixed(2) + "' elev gain");
 
       }
-      
+
     }
-    
+
     catch(err) {
       segmentID = "segment" + markerArray[markerArray.length - 1] + markerArray[markerArray.length - 2];
-      
+
       // update route length
-        
+
       routeLength = (routeLength * 10 - window[segmentID].segmentLength * 10) / 10;
-        
+
       // update route elev gain
-      
+
       routeElevGain = routeElevGain - window[segmentID].segmentElevGainB;
-      
+
       $("#routeelevgain").text(routeElevGain.toFixed(2) + "' elev gain");
-      
+
     }
-    
+
     // remove the current marker from markerArray
-    
+
     markerArray.pop();
-    
+
     // remove last five elements from routePlanArray
-    
+
     routePlanArray.splice(-5);
-    
+
     // show markerArray values in the console for debugging
-    
+
     console.log(markerArray);
-    
+
     // show/hide info containers
 
     if (markerArray.length > 1) {
@@ -2233,31 +2233,31 @@ function onMapClick(e) {
       $("#infocontainer-2").removeClass("display-visible");
       infoContainer2Visible = false;
     }
-    
+
     // update info
-    
+
     currentMarker = "marker" + markerArray[markerArray.length - 1];
     previousMarker = "marker" + markerArray[markerArray.length - 2];
-    
-    // if markerArray.length > 1 update the visible info panel, otherwise don't 
-    
+
+    // if markerArray.length > 1 update the visible info panel, otherwise don't
+
     if (markerArray.length > 1) {
-    
+
       $("#markerfromname").text(window[previousMarker].options.name);
       $("#markerfromelev").text(window[previousMarker].options.elev + "'");
-    
+
       $("#markertoname").text(window[currentMarker].options.name);
       $("#markertoelev").text(window[currentMarker].options.elev + "'");
-      
+
       // create a segmentID based on the previous and current markers
-    
+
       segmentID = "segment" + markerArray[markerArray.length - 2] + markerArray[markerArray.length - 1];
-      
+
       // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
       // then run the appropriate statements (this also defines how segment elevation gain is calculated)
-      
+
       try {
-      
+
         if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 2]) {
           $("#segmentname").text(window[segmentID].segmentName);
 
@@ -2267,19 +2267,19 @@ function onMapClick(e) {
           else {
             $("#segmentlength").text(window[segmentID].segmentLength.toFixed(2) + " miles");
           }
-          
+
           // show segmentElevGainA
-        
+
           $("#segmentelevgain").text(window[segmentID].segmentElevGainA.toFixed(2) + "' elev gain");
 
           // change the segment to unselected
-                
+
           segmentPolyline = segmentArray[segmentArray.length - 1] + "polyline";
-          
+
           window[segmentPolyline].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
-          
+
           // if the segment was previously selected, change it back to selected
-          
+
           for (var i = 0; i < segmentArray.length - 1; i++) {
             if (segmentArray[segmentArray.length - 1] === segmentArray[i]) {
               window[segmentPolyline].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
@@ -2292,10 +2292,10 @@ function onMapClick(e) {
 
             // create a segmentID based on the current marker and neighbor markers, one at a time
             segmentID = "segment" + markerArray[markerArray.length - 1] + window[currentMarker].options.neighbors[i];
-      
+
             // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
             // then run the appropriate statements
-      
+
             try {
               if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 1]) {
                 // change the segment to selectable
@@ -2303,7 +2303,7 @@ function onMapClick(e) {
                 window[segmentPolyline].setStyle({color: segmentColorSelectable, opacity: segmentOpacitySelectable});
               }
             }
-    
+
             catch(err) {
               segmentID = "segment" + window[currentMarker].options.neighbors[i] + markerArray[markerArray.length - 1];
               // change the segment to selectable
@@ -2315,24 +2315,24 @@ function onMapClick(e) {
           // if a new neighbor segment was previously selected, make it 'selectableselected'
 
           // first, through try and catch, determine the segmentID
-    
+
           for (var i = 0; i < window[currentMarker].options.neighbors.length; i++) {
-      
+
             // create a segmentID based on the current marker and neighbor markers, one at a time
             segmentID = "segment" + markerArray[markerArray.length - 1] + window[currentMarker].options.neighbors[i];
-      
+
             try {
               if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 1]) {
               }
             }
-    
+
             catch(err) {
               segmentID = "segment" + window[currentMarker].options.neighbors[i] + markerArray[markerArray.length - 1];
             }
-      
+
             // now compare the segmentID to all of the elements in segmentArray
             // if there's a match, change the segment to selectableselected
-      
+
             for (var j = 0; j < segmentArray.length - 2; j++) {
               if (segmentID === segmentArray[j]) {
                 segmentPolyline = segmentID + "polyline";
@@ -2342,46 +2342,46 @@ function onMapClick(e) {
           }
 
           // remove the new current segment from segmentArray
-          
+
           segmentArray.pop();
-          
+
           // change the segment to current
-        
+
           segmentPolyline = segmentArray[segmentArray.length - 1] + "polyline";
-        
+
           window[segmentPolyline].setStyle({color: segmentColorCurrent, opacity: segmentOpacityCurrent});
-         
+
           // show segmentArray values in the console for debugging
-      
+
           console.log(segmentArray);
 
         }
-      
+
       }
-    
+
       catch(err) {
         segmentID = "segment" + markerArray[markerArray.length - 1] + markerArray[markerArray.length - 2];
-        
-        $("#segmentname").text(window[segmentID].segmentName);      
+
+        $("#segmentname").text(window[segmentID].segmentName);
         if (window[segmentID].segmentLength === 1) {
           $("#segmentlength").text(window[segmentID].segmentLength.toFixed(2) + " mile");
         }
         else {
           $("#segmentlength").text(window[segmentID].segmentLength.toFixed(2) + " miles");
         }
-        
+
         // show segmentElevGainB
-        
+
         $("#segmentelevgain").text(window[segmentID].segmentElevGainB.toFixed(2) + "' elev gain");
-        
+
         // change the segment to unselected
-          
+
         segmentPolyline = segmentArray[segmentArray.length - 1] + "polyline";
-        
+
         window[segmentPolyline].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
-        
+
         // if the segment was previously selected, change it back to selected
-          
+
         for (var i = 0; i < segmentArray.length - 1; i++) {
           if (segmentArray[segmentArray.length - 1] === segmentArray[i]) {
             window[segmentPolyline].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
@@ -2394,10 +2394,10 @@ function onMapClick(e) {
 
             // create a segmentID based on the current marker and neighbor markers, one at a time
             segmentID = "segment" + markerArray[markerArray.length - 1] + window[currentMarker].options.neighbors[i];
-      
+
             // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
             // then run the appropriate statements
-      
+
             try {
               if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 1]) {
                 // change the segment to selectable
@@ -2405,7 +2405,7 @@ function onMapClick(e) {
                 window[segmentPolyline].setStyle({color: segmentColorSelectable, opacity: segmentOpacitySelectable});
               }
             }
-    
+
             catch(err) {
               segmentID = "segment" + window[currentMarker].options.neighbors[i] + markerArray[markerArray.length - 1];
               // change the segment to selectable
@@ -2417,24 +2417,24 @@ function onMapClick(e) {
           // if a neighbor segment was previously selected, make it 'selectableselected'
 
           // first, through try and catch, determine the segmentID
-    
+
           for (var i = 0; i < window[currentMarker].options.neighbors.length; i++) {
-      
+
             // create a segmentID based on the current marker and neighbor markers, one at a time
             segmentID = "segment" + markerArray[markerArray.length - 1] + window[currentMarker].options.neighbors[i];
-      
+
             try {
               if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 1]) {
               }
             }
-    
+
             catch(err) {
               segmentID = "segment" + window[currentMarker].options.neighbors[i] + markerArray[markerArray.length - 1];
             }
-      
+
             // now compare the segmentID to all of the elements in segmentArray
             // if there's a match, change the segment to selectableselected
-      
+
             for (var j = 0; j < segmentArray.length - 2; j++) {
               if (segmentID === segmentArray[j]) {
                 segmentPolyline = segmentID + "polyline";
@@ -2444,21 +2444,21 @@ function onMapClick(e) {
           }
 
           // remove the new current segment from segmentArray
-          
+
           segmentArray.pop();
-          
+
           // change the segment to current
-        
+
           segmentPolyline = segmentArray[segmentArray.length - 1] + "polyline";
-        
+
           window[segmentPolyline].setStyle({color: segmentColorCurrent, opacity: segmentOpacityCurrent});
-         
+
           // show segmentArray values in the console for debugging
-      
+
           console.log(segmentArray);
-        
+
       }
-    
+
       if (routeLength === 1) {
         $("#routelength").text(routeLength.toFixed(2) + " mile");
       }
@@ -2466,28 +2466,28 @@ function onMapClick(e) {
         $("#routelength").text(routeLength.toFixed(2) + " miles");
       }
     }
-    
+
     else {
-      
+
       // create a segmentID based on the previous and current markers
-      
+
       segmentID = "segment" + markerArray[markerArray.length - 2] + markerArray[markerArray.length - 1];
-      
+
       // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
       // then run the appropriate statements (this also defines how segment elevation gain is calculated)
-      
+
       try {
-      
+
         if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 2]) {
-          
+
           // change the segment to unselected
-                
+
           segmentPolyline = segmentArray[segmentArray.length - 1] + "polyline";
-          
+
           window[segmentPolyline].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
 
           // if the segment was previously selected, change it back to selected
-          
+
           for (var i = 0; i < segmentArray.length - 1; i++) {
             if (segmentArray[segmentArray.length - 1] === segmentArray[i]) {
               window[segmentPolyline].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
@@ -2500,10 +2500,10 @@ function onMapClick(e) {
 
             // create a segmentID based on the current marker and neighbor markers, one at a time
             segmentID = "segment" + markerArray[markerArray.length - 1] + window[currentMarker].options.neighbors[i];
-      
+
             // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
             // then run the appropriate statements
-      
+
             try {
               if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 1]) {
                 // change the segment to selectable
@@ -2511,7 +2511,7 @@ function onMapClick(e) {
                 window[segmentPolyline].setStyle({color: segmentColorSelectable, opacity: segmentOpacitySelectable});
               }
             }
-    
+
             catch(err) {
               segmentID = "segment" + window[currentMarker].options.neighbors[i] + markerArray[markerArray.length - 1];
               // change the segment to selectable
@@ -2523,24 +2523,24 @@ function onMapClick(e) {
           // if a neighbor segment was previously selected, make it 'selectableselected'
 
           // first, through try and catch, determine the segmentID
-    
+
           for (var i = 0; i < window[currentMarker].options.neighbors.length; i++) {
-      
+
             // create a segmentID based on the current marker and neighbor markers, one at a time
             segmentID = "segment" + markerArray[markerArray.length - 1] + window[currentMarker].options.neighbors[i];
-      
+
             try {
               if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 1]) {
               }
             }
-    
+
             catch(err) {
               segmentID = "segment" + window[currentMarker].options.neighbors[i] + markerArray[markerArray.length - 1];
             }
-      
+
             // now compare the segmentID to all of the elements in segmentArray
             // if there's a match, change the segment to selectableselected
-      
+
             for (var j = 0; j < segmentArray.length - 2; j++) {
               if (segmentID === segmentArray[j]) {
                 segmentPolyline = segmentID + "polyline";
@@ -2550,29 +2550,29 @@ function onMapClick(e) {
           }
 
           // remove the new current segment from segmentArray
-          
+
           segmentArray.pop();
 
           // show segmentArray values in the console for debugging
-      
+
           console.log(segmentArray);
-          
+
         }
-      
+
       }
-    
+
       catch(err) {
-        
+
         segmentID = "segment" + markerArray[markerArray.length - 1] + markerArray[markerArray.length - 2];
-        
+
         // change the segment to unselected
-                          
+
         segmentPolyline = segmentArray[segmentArray.length - 1] + "polyline";
-        
+
         window[segmentPolyline].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
 
         // if the segment was previously selected, change it back to selected
-          
+
         for (var i = 0; i < segmentArray.length - 1; i++) {
           if (segmentArray[segmentArray.length - 1] === segmentArray[i]) {
             window[segmentPolyline].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
@@ -2585,10 +2585,10 @@ function onMapClick(e) {
 
             // create a segmentID based on the current marker and neighbor markers, one at a time
             segmentID = "segment" + markerArray[markerArray.length - 1] + window[currentMarker].options.neighbors[i];
-      
+
             // through try and catch, determine if the segmentID correctly matches its variable name or if the marker names should be flipped
             // then run the appropriate statements
-      
+
             try {
               if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 1]) {
                 // change the segment to selectable
@@ -2596,37 +2596,37 @@ function onMapClick(e) {
                 window[segmentPolyline].setStyle({color: segmentColorSelectable, opacity: segmentOpacitySelectable});
               }
             }
-    
+
             catch(err) {
               segmentID = "segment" + window[currentMarker].options.neighbors[i] + markerArray[markerArray.length - 1];
               // change the segment to selectable
               segmentPolyline = segmentID + "polyline";
               window[segmentPolyline].setStyle({color: segmentColorSelectable, opacity: segmentOpacitySelectable});
             }
-      
+
           }
 
           // if a neighbor segment was previously selected, make it 'selectableselected'
 
           // first, through try and catch, determine the segmentID
-    
+
           for (var i = 0; i < window[currentMarker].options.neighbors.length; i++) {
-      
+
             // create a segmentID based on the current marker and neighbor markers, one at a time
             segmentID = "segment" + markerArray[markerArray.length - 1] + window[currentMarker].options.neighbors[i];
-      
+
             try {
               if (window[segmentID].segmentMarkerA === markerArray[markerArray.length - 1]) {
               }
             }
-    
+
             catch(err) {
               segmentID = "segment" + window[currentMarker].options.neighbors[i] + markerArray[markerArray.length - 1];
             }
-      
+
             // now compare the segmentID to all of the elements in segmentArray
             // if there's a match, change the segment to selectableselected
-      
+
             for (var j = 0; j < segmentArray.length - 2; j++) {
               if (segmentID === segmentArray[j]) {
                 segmentPolyline = segmentID + "polyline";
@@ -2636,13 +2636,13 @@ function onMapClick(e) {
           }
 
           // remove the new current segment from segmentArray
-          
+
           segmentArray.pop();
 
           // show segmentArray values in the console for debugging
-      
+
           console.log(segmentArray);
-        
+
       }
     }
   }

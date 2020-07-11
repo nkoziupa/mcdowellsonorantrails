@@ -151,19 +151,19 @@ body {
 }
 
 .spinner-border-sm {
-    width: 18px!important;
-    height: 18px!important;
-    border-width: 2px!important;
+    width: 18px;
+    height: 18px;
+    border-width: 2px;
 }
 
 .spinner-border {
-    display: inline-block!important;
-    vertical-align: text-bottom!important;
-    border: 4px solid currentColor!important;
-    border-right-color: transparent!important;
-    border-radius: 50%!important;
-    -webkit-animation: spinner-border 2s linear infinite!important;
-    animation: spinner-border 2s linear infinite!important;
+    display: inline-block;
+    vertical-align: text-bottom;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border 2s linear infinite;
+    animation: spinner-border 2s linear infinite;
 }
 
 #splashcopyright {

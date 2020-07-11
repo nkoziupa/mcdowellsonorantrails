@@ -5,7 +5,7 @@ $("#splash-button").on("click", function() {
 // set info container status
 
 var infoContainer1MapOverlayShown = true;
-var infoContainer2MapOverlayShown = false;
+var infoContainer2MapOverlayShown = true;
 var infoContainer2Visible = false;
 
 // cookie code
@@ -1595,8 +1595,6 @@ function onMapClick(e) {
         infoContainer1MapOverlayShown = true;
       }
 
-
-
     infoContainer2Visible = false;
 
     // center the selected marker on the map
@@ -1779,7 +1777,13 @@ function onMapClick(e) {
           infoContainer2MapOverlayShown = true;
         });
       });
-    };
+    }
+      else {
+        $("#mapoverlay").css("visibility", "hidden");
+        $("#infocontainer-2-instructions").css("display", "none");
+        $("#infocontainer-2-markercontainer-2").css("display", "block");
+        infoContainer2MapOverlayShown = true;
+      }
 
     infoContainer2Visible = true;
 

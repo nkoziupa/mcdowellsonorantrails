@@ -4,8 +4,8 @@ $("#splash-button").on("click", function() {
 
 // set info container status
 
-var infoContainer1MapOverlayShown = true;
-var infoContainer2MapOverlayShown = true;
+var infoContainer1MapOverlayShown = false;
+var infoContainer2MapOverlayShown = false;
 var infoContainer2Visible = false;
 
 // cookie code
@@ -1585,7 +1585,15 @@ function onMapClick(e) {
           $("#markercontainer-1").css("display", "block");
           infoContainer1MapOverlayShown = true;
         });
-      });
+      })
+
+      else {
+        $("#mapoverlay").css("visibility", "hidden");
+        $("#infocontainer-1-instructions").css("display", "none");
+        $("#markercontainer-1").css("display", "block");
+        infoContainer1MapOverlayShown = true;
+      }
+
     }
 
     infoContainer2Visible = false;

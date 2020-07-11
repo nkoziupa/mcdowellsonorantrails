@@ -1595,7 +1595,7 @@ function onMapClick(e) {
         infoContainer1MapOverlayShown = true;
       }
 
-    }
+
 
     infoContainer2Visible = false;
 

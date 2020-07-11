@@ -154,6 +154,13 @@ body {
     width: 18px;
     height: 18px;
     border-width: 2px;
+    margin-bottom: 4px;
+}
+
+@media only screen and (max-width: 767px) {
+  .spinner-border-sm {
+      margin-bottom: 0;
+  }
 }
 
 .spinner-border {

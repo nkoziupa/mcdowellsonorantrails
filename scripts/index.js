@@ -1585,7 +1585,7 @@ function onMapClick(e) {
           $("#markercontainer-1").css("display", "block");
           infoContainer1MapOverlayShown = true;
         });
-      };
+      });
     }
 
       else {

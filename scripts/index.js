@@ -1273,7 +1273,7 @@ $("#infocontainer-0-button").on("click", function() {
 
 $("#markercontainer-1").on("click", function() {
 
-  if (markerArray.length == 1 && infoContainer2MapOverlayShown === true && $("#infocontainer-1").hasClass("display-visible")) {
+  if (markerArray.length == 1 && $("#infocontainer-1").hasClass("display-visible")) {
     var czl = map.getZoom();
 
     var cme = window["marker" + markerArray[0]];

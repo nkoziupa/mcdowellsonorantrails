@@ -51,7 +51,7 @@ body {
 }
 
 .underlinedtext {
-  text-decoration-line: underline;
+  text-decoration-line: underline!important;
 }
 
 /* splash screen */

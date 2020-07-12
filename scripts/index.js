@@ -283,7 +283,7 @@ layerSR = L.tileLayer('../maptiles/southernregion/{z}/{x}/{y}.png', options).add
 
 // remove attributions
 
-L.control.attribution({attributionControl: false});
+map.attributionControl.remove();
 
 // marker list
 

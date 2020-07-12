@@ -229,6 +229,13 @@ h5.modal-title {
     color: #212529;
 }
 
+@media (min-width: 992px) {
+  #modalRoutePlan.modal-dialog {
+    position: absolute;
+    left: 12px;
+  }
+}
+
 /* set desktop info container width */
 
 @media (min-width: 992px) {

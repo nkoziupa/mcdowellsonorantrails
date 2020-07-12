@@ -198,6 +198,15 @@ body {
   }
 }
 
+.modal-title {
+    font-family: 'Lato', sans-serif;
+}
+
+.h5 {
+  font-size: 50px;
+  line-height: 56px;
+}
+
 .modalp {
     font-size: 16px;
     line-height: 20px;
@@ -207,7 +216,7 @@ body {
 }
 
 .modalh {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 400;
     margin-bottom: 8px;
@@ -246,7 +255,6 @@ body {
 p {
   font-family: 'Lato', sans-serif;
   color: #e5e5e3;
-  /* letter-spacing: 1px; */
   margin: 0;
 }
 

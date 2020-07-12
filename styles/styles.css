@@ -199,8 +199,19 @@ body {
 }
 
 .modalp {
-  font-weight: 300;
-  color: #212529;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 8px;
+    color: #212529;
+}
+
+.modalh {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #212529;
 }
 
 /* set desktop info container width */

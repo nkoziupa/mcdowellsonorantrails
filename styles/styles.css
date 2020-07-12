@@ -1083,3 +1083,7 @@ p {
   border-radius: 50%;
   /* transition: all 1s; */
 }
+
+#attributionslink {
+  color: #0078A8;
+}

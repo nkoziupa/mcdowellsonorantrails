@@ -230,7 +230,7 @@ h5.modal-title {
 }
 
 @media (min-width: 992px) {
-  #modalRoutePlan.modal-dialog {
+  #modalRoutePlan .modal-dialog {
     position: absolute;
     left: 12px;
   }

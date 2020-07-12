@@ -198,6 +198,11 @@ body {
   }
 }
 
+.modalp {
+  font-weight: 300;
+  color: #212529;
+}
+
 /* set desktop info container width */
 
 @media (min-width: 992px) {
@@ -1082,8 +1087,4 @@ p {
   background-color: rgba(20,44,255,1);
   border-radius: 50%;
   /* transition: all 1s; */
-}
-
-#attributionslink {
-  color: #0078A8;
 }

@@ -230,7 +230,6 @@ if ($(window).height() >= 900) {
 // add basemap tiles
 
 L.tileLayer('https://api.mapbox.com/styles/v1/nkoziupa/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: '<a id="attributionslink" data-toggle="modal" data-target="#aboutModal">Additional attributions and credits</a>',
     minZoom: 10,
     maxZoom: 17,
     id: 'cjxqb3a8c5eaf1cqqf5y44qej',

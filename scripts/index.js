@@ -1251,15 +1251,15 @@ $("#infocontainer").on("click", function() {
     var x = 0;
 
     for (var i = 0; i < routePlanArray.length / 5; i++) {
-    routePlanArrayHTML = routePlanArrayHTML + "<span class='routeplanmarker'>" + routePlanArray[x] + "</span>" + " " + "<span class='routeplanseparator'>to</span>" + " " + "<span class='routeplanmarker'>" + routePlanArray[x + 1] + "</span>" + "<br>" + "<span class='routeplanseparator'>via</span>" + " " + "<span class='routeplansegment'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span class='routeplanmiles'>" + routePlanArray[x + 3] + "</span>" + "<span class="routeplanelevgain">" + routePlanArray[x + 4] + "</span>" + "<br>" + "<br>";
+    routePlanArrayHTML = routePlanArrayHTML + "<span class='routeplanmarker'>" + routePlanArray[x] + "</span>" + " " + "<span class='routeplanseparator'>to</span>" + " " + "<span class='routeplanmarker'>" + routePlanArray[x + 1] + "</span>" + "<br>" + "<span class='routeplanseparator'>via</span>" + " " + "<span class='routeplansegment'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span class='routeplanmiles'>" + routePlanArray[x + 3] + "</span>" + "<span class='routeplanelevgain'>" + routePlanArray[x + 4] + "</span>" + "<br>" + "<br>";
     x = x + 5;
     };
 
     if (routeLength === 1) {
-      routePlanArrayHTML = routePlanArrayHTML + "<hr style='margin-top: 0;'>" + "<span style='font-weight: 700;'>Route Totals</span>" + "<br>" + Math.abs(routeLength).toFixed(2) + " mile" + "&nbsp;&nbsp;&nbsp;" + Math.abs(routeElevGain).toFixed(2) + "' elev gain";
+      routePlanArrayHTML = routePlanArrayHTML + "<hr class='routeplanhr'>" + "<span class='routeplantotals'>Route Totals</span>" + "<br>" + Math.abs(routeLength).toFixed(2) + "<span class='routeplantotalmiles'> mile</span>" + Math.abs(routeElevGain).toFixed(2) + "' elev gain";
     }
     else {
-      routePlanArrayHTML = routePlanArrayHTML + "<hr style='margin-top: 0;'>" + "<span style='font-weight: 700;'>Route Totals</span>" + "<br>" + Math.abs(routeLength).toFixed(2) + " miles" + "&nbsp;&nbsp;&nbsp;" + Math.abs(routeElevGain).toFixed(2) + "' elev gain";
+      routePlanArrayHTML = routePlanArrayHTML + "<hr class='routeplanhr'>" + "<span class='routeplantotals'>Route Totals</span>" + "<br>" + Math.abs(routeLength).toFixed(2) + "<span class='routeplantotalmiles'> miles</span>" + Math.abs(routeElevGain).toFixed(2) + "' elev gain";
     }
 
     $("#routeplan").html(routePlanArrayHTML);

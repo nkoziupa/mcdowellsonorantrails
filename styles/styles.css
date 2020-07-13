@@ -164,10 +164,13 @@ a {
 
 #splashsocialicons {
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .splashsocialicon {
-  margin: 0;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .spinner-border-sm {
@@ -200,7 +203,6 @@ a {
   font-weight: 400;
   color: #e5e5e3;
   text-align: center;
-  margin-top: 110px;
   margin-bottom: 30px;
 }
 
@@ -209,7 +211,6 @@ a {
     font-size: 10px;
     line-height: 14px;
     font-weight: 400;
-    mamn-top: 70px;
     margin-bottom: 30px;
   }
 }

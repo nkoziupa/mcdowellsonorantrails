@@ -1130,59 +1130,6 @@ map.on("zoomend", function () {
 
       break;
 
-/*
-    case 18:
-
-      // change marker styles
-      for (var i = 0; i < markerList.length; i++) {
-      markerListElement = "marker" + markerList[i];
-      window[markerListElement].setRadius(10);
-      window[markerListElement].setStyle({weight: 6});
-      }
-
-      // change segment styles
-      for (var i = 0; i < segmentList.length; i++) {
-      segmentListElement = "segment" + segmentList[i] + "polyline";
-      window[segmentListElement].setStyle({weight: 6});
-      }
-
-      break;
-
-      case 19:
-
-      // change marker styles
-      for (var i = 0; i < markerList.length; i++) {
-      markerListElement = "marker" + markerList[i];
-      window[markerListElement].setRadius(10);
-      window[markerListElement].setStyle({weight: 7});
-      }
-
-      // change segment styles
-      for (var i = 0; i < segmentList.length; i++) {
-      segmentListElement = "segment" + segmentList[i] + "polyline";
-      window[segmentListElement].setStyle({weight: 7});
-      }
-
-      break;
-
-      case 20:
-
-      // change marker styles
-      for (var i = 0; i < markerList.length; i++) {
-      markerListElement = "marker" + markerList[i];
-      window[markerListElement].setRadius(5);
-      window[markerListElement].setStyle({weight: 8});
-      }
-
-      // change segment styles
-      for (var i = 0; i < segmentList.length; i++) {
-      segmentListElement = "segment" + segmentList[i] + "polyline";
-      window[segmentListElement].setStyle({weight: 8});
-      }
-
-      break;
-*/
-
     default:
   }
 });
@@ -1304,7 +1251,7 @@ $("#infocontainer").on("click", function() {
     var x = 0;
 
     for (var i = 0; i < routePlanArray.length / 5; i++) {
-    routePlanArrayHTML = routePlanArrayHTML + "<span style='font-weight: 700;'>" + routePlanArray[x] + "</span>" + " " + "<span style='font-size: 14px;'>to</span>" + " " + "<span style='font-weight: 700;'>" + routePlanArray[x + 1] + "</span>" + " " + "<span style='font-size: 14px;'>via</span>" + " " + "<span style='font-weight: 700;'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span style='font-size: 16px;'>" + routePlanArray[x + 3] + "</span>" + "&nbsp;&nbsp;&nbsp;" + "<span style='font-size: 16px;'>" + routePlanArray[x + 4] + "</span>" + "<br>" + "<br>";
+    routePlanArrayHTML = routePlanArrayHTML + "<span class='routeplanmarker'>" + routePlanArray[x] + "</span>" + " " + "<span class='routeplanseparator'>to</span>" + " " + "<span class='routeplanmarker'>" + routePlanArray[x + 1] + "</span>" + "<br>" + "<span class='routeplanseparator'>via</span>" + " " + "<span class='routeplansegment'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span style='font-size: 16px;'>" + routePlanArray[x + 3] + "</span>" + "&nbsp;&nbsp;&nbsp;" + "<span style='font-size: 16px;'>" + routePlanArray[x + 4] + "</span>" + "<br>" + "<br>";
     x = x + 5;
     };
 

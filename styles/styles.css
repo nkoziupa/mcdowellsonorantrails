@@ -233,6 +233,7 @@ h5.modal-title {
   #modalRoutePlan .modal-dialog {
     position: absolute;
     left: 12px;
+    width: 376px;
   }
 }
 
@@ -285,7 +286,7 @@ p {
   /* text-transform: uppercase; */
 }
 
-/* routeplan modal styles */
+/* routeplan modal */
 
 .modal-routeplan-title {
   font-family: 'Lato', sans-serif;
@@ -296,6 +297,18 @@ p {
 .modal-routeplan-body {
   font-family: 'Lato', sans-serif;
   /* text-transform: uppercase; */
+}
+
+.routeplanmarker {
+  font-weight: 700px;
+}
+
+.routeplansegment {
+  font-weight: 700px;
+}
+
+.routeplanseparator {
+  font-size: 14px;
 }
 
 #routeplan {

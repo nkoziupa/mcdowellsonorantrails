@@ -311,6 +311,15 @@ p {
   font-size: 14px;
 }
 
+.routeplanmiles {
+  font-size: 16px;
+  margin-right: 50px;
+}
+
+.routeplanelevgain {
+  font-size: 16px;
+}
+
 #routeplan {
   /* text-transform: uppercase; */
 }

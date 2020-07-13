@@ -1251,7 +1251,7 @@ $("#infocontainer").on("click", function() {
     var x = 0;
 
     for (var i = 0; i < routePlanArray.length / 5; i++) {
-    routePlanArrayHTML = routePlanArrayHTML + "<span class='routeplanmarker'>" + routePlanArray[x] + "</span>" + " " + "<span class='routeplanseparator'>to</span>" + " " + "<span class='routeplanmarker'>" + routePlanArray[x + 1] + "</span>" + "<br>" + "<span class='routeplanseparator'>via</span>" + " " + "<span class='routeplansegment'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span style='font-size: 16px;'>" + routePlanArray[x + 3] + "</span>" + "&nbsp;&nbsp;&nbsp;" + "<span style='font-size: 16px;'>" + routePlanArray[x + 4] + "</span>" + "<br>" + "<br>";
+    routePlanArrayHTML = routePlanArrayHTML + "<span class='routeplanmarker'>" + routePlanArray[x] + "</span>" + " " + "<span class='routeplanseparator'>to</span>" + " " + "<span class='routeplanmarker'>" + routePlanArray[x + 1] + "</span>" + "<br>" + "<span class='routeplanseparator'>via</span>" + " " + "<span class='routeplansegment'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span class='routeplanmiles'>" + routePlanArray[x + 3] + "</span>" + "<span class="routeplanelevgain">" + routePlanArray[x + 4] + "</span>" + "<br>" + "<br>";
     x = x + 5;
     };
 

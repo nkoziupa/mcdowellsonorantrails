@@ -21,7 +21,7 @@ a {
 #cookiebanner {
   z-index: 950;
   position: fixed;
-  bottom: 70px;
+  bottom: 64px;
   left: 30%;
   right: 30%;
   width: 40%;
@@ -35,7 +35,7 @@ a {
 
 @media only screen and (max-width: 767px) {
   #cookiebanner {
-    bottom: 20px;
+    bottom: 30px;
     left: 10%;
     right: 10%;
     width: 80%;

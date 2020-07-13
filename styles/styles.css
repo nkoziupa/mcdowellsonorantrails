@@ -313,7 +313,7 @@ p {
 
 .routeplanmiles {
   font-size: 16px;
-  margin-right: 50px;
+  margin-right: 12px;
 }
 
 .routeplanelevgain {
@@ -329,7 +329,7 @@ p {
 }
 
 .routeplantotalmiles {
-  margin-right: 50px;
+  margin-right: 12px;
 }
 
 #routeplan {

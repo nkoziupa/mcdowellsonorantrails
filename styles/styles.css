@@ -162,6 +162,14 @@ a {
   }
 }
 
+#splashsocialicons {
+  text-align: center;
+}
+
+.splashsocialicon {
+  margin: 0;
+}
+
 .spinner-border-sm {
     width: 18px;
     height: 18px;

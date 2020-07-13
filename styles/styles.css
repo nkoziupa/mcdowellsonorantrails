@@ -14,6 +14,7 @@ a {
 
 .btn-info {
     font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
 
 /* cookie banner */
@@ -1131,11 +1132,9 @@ p {
     display: block;
     height: 26px;
     width: 26px;
-    /* line-height: 1.45 !important; */
     line-height: 1.45 !important;
     text-align: center;
     text-decoration: none;
-    /* font: bold 18px'Lucida Console', Monaco, monospace; */
     font-size: 18px;
     font-weight: bold;
     font-family: 'Lucida Console', Monaco, monospace;

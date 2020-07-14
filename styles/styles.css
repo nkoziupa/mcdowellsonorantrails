@@ -12,6 +12,10 @@ a {
   color: #17a2b8;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .btn-info {
     font-family: 'Lato', sans-serif;
     font-weight: 700;

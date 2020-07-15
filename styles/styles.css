@@ -15,7 +15,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 9999;
 }
 
 .mobiledeviceicon {
@@ -48,12 +47,13 @@ body {
 
 @media only screen and (max-device-width: 812px) and (orientation: landscape) {
   .mobilescreen {
-    background: rgba(0,0,0,0.8);
+    color: rgba(0,0,0,0.8);
   }
 }
 
 @media only screen and (max-device-width: 812px) and (orientation: landscape) {
   .mobiledeviceicon, .mobilerotatemessage {
+    z-index: 999;
     display: block;
   }
 }

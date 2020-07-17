@@ -21,6 +21,74 @@ a {
     font-weight: 700;
 }
 
+/* rotate device message */
+
+#rotatemessage {
+  z-index: 990;
+  position: fixed;
+  bottom: 30%;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rotatemessagedevice {
+  height: 50px;
+  width: 100px;
+  border: 3px solid white;
+  border-radius: 10px;
+  animation: rotatedevice 1.5s ease-in-out infinite alternate;
+  display: none;
+}
+
+.rotatemessagetext {
+  font-family: 'Lato', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 21px;
+  margin-top: 40px;
+  display: none;
+}
+
+@keyframes rotatedevice {
+  0% {
+		transform: rotate(0deg)
+	}
+	50% {
+		transform: rotate(-90deg)
+	}
+	100% {
+		transform: rotate(-90deg)
+	}
+}
+
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+  #rotatemessage {
+    z-index: 990;
+    position: fixed;
+    bottom: 30%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+  .rotatemessagedevice, .rotatemessagetext {
+    display: block;
+  }
+}
+
+
+
 /* cookie banner */
 
 #cookiebanner {

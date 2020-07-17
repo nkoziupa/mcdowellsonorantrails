@@ -24,7 +24,7 @@ a {
 /* rotate device message */
 
 #rotatemessage {
-  z-index: 990;
+  z-index: 9999;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -70,7 +70,7 @@ a {
 
 @media only screen and (max-device-width: 812px) and (orientation: landscape) {
   #rotatemessage {
-    z-index: 990;
+    z-index: 9999;
     position: fixed;
     bottom: 0;
     left: 0;

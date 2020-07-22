@@ -454,6 +454,17 @@ p {
   /* background-color: #27160c; */
 }
 
+/* display background image on desktop */
+
+@media only screen and (min-width: 992px) {
+  #infocontainer {
+    background-image: url("../images/tomsthumbtrail.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 /* mobile */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {

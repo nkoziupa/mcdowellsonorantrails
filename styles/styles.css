@@ -458,7 +458,7 @@ p {
 
 @media only screen and (min-width: 992px) {
   #infocontainer {
-    background-image: url("../images/infobackground-brownsmountain-test.jpg");
+    background-image: url("../images/infopanelbkg-brownsmountain-test.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

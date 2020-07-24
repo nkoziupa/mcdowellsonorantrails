@@ -400,7 +400,7 @@ var markerTT1X = L.circle([33.697573, -111.804472], new CreateMarker("TT1X", "Ac
 
 // central region trailheads
 
-var markerTTTX = L.circle([33.694461, -111.801725], new CreateMarkerTrailhead("TTTX", "Trailhead", 2813, ["TT1X", "ML1", "TT1"])).addTo(map).on("click", onMapClick);
+var markerTTTX = L.circle([33.694461, -111.801725], new CreateMarkerTrailhead("TTTX", "Trailhead", 2806, ["TT1X", "ML1", "TT1"])).addTo(map).on("click", onMapClick);
 
 // northern region markers
 
@@ -700,10 +700,10 @@ var markerYT1 = L.circle([33.769937, -111.816252], new CreateMarker("YT1", "YT1"
 
 // northern region trailheads
 
-var markerBRTX = L.circle([33.761545, -111.842328], new CreateMarkerTrailhead("BRTX", "Trailhead", 2710, ["BP1X", "JRCX", "BSTX", "BP4X", "SVBX"])).addTo(map).on("click", onMapClick);
-var markerFTX = L.circle([33.746574, -111.795351], new CreateMarkerTrailhead("FTX", "Trailhead", 2540, ["BH1X", "FTAX", "WB8"])).addTo(map).on("click", onMapClick);
-var markerGMTX = L.circle([33.77047, -111.789601], new CreateMarkerTrailhead("GMTX", "Trailhead", 2570, ["GMHX", "GT3X", "TP1X"])).addTo(map).on("click", onMapClick);
-var markerPDTX = L.circle([33.743416, -111.887740], new CreateMarkerTrailhead("PDTX", "Trailhead", 2310, ["HV75", "PR2X"])).addTo(map).on("click", onMapClick);
+var markerBRTX = L.circle([33.761545, -111.842328], new CreateMarkerTrailhead("BRTX", "Trailhead", 2722, ["BP1X", "JRCX", "BSTX", "BP4X", "SVBX"])).addTo(map).on("click", onMapClick);
+var markerFTX = L.circle([33.746574, -111.795351], new CreateMarkerTrailhead("FTX", "Trailhead", 2550, ["BH1X", "FTAX", "WB8"])).addTo(map).on("click", onMapClick);
+var markerGMTX = L.circle([33.77047, -111.789601], new CreateMarkerTrailhead("GMTX", "Trailhead", 2586, ["GMHX", "GT3X", "TP1X"])).addTo(map).on("click", onMapClick);
+var markerPDTX = L.circle([33.743416, -111.887740], new CreateMarkerTrailhead("PDTX", "Trailhead", 2315, ["HV75", "PR2X"])).addTo(map).on("click", onMapClick);
 
 // southern region markers
 
@@ -829,14 +829,14 @@ var markerWW5 = L.circle([33.620438, -111.864400], new CreateMarker("WW5", "WW5"
 
 // southern region trailheads and overflow parking
 
-var marker136X = L.circle([33.594952, -111.786379], new CreateMarkerTrailhead("136X", "Trailhead", 1771, ["SR15"])).addTo(map).on("click", onMapClick);
-var markerBTX = L.circle([33.640531, -111.856722], new CreateMarkerTrailhead("BTX", "Trailhead", 1690, ["LT1"])).addTo(map).on("click", onMapClick);
-var markerGTX = L.circle([33.649484, -111.858415], new CreateMarkerTrailhead("GTX", "Trailhead", 1720, ["DP11", "G02X", "G01X"])).addTo(map).on("click", onMapClick);
+var marker136X = L.circle([33.594952, -111.786379], new CreateMarkerTrailhead("136X", "Trailhead", 1773, ["SR15"])).addTo(map).on("click", onMapClick);
+var markerBTX = L.circle([33.640531, -111.856722], new CreateMarkerTrailhead("BTX", "Trailhead", 1694, ["LT1"])).addTo(map).on("click", onMapClick);
+var markerGTX = L.circle([33.649484, -111.858415], new CreateMarkerTrailhead("GTX", "Trailhead", 1723, ["DP11", "G02X", "G01X"])).addTo(map).on("click", onMapClick);
 var markerLDTX = L.circle([33.600439, -111.811906], new CreateMarkerTrailhead("LDTX", "Trailhead", 1755, ["LD1", "LDHX"])).addTo(map).on("click", onMapClick);
-var markerQT1X = L.circle([33.627011, -111.857127], new CreateMarkerTrailhead("QT1X", "Trailhead", 1584, ["QT1"])).addTo(map).on("click", onMapClick);
-var markerRTX = L.circle([33.598084, -111.804753], new CreateMarkerTrailhead("RTX", "Trailhead", 1739, ["RT1"])).addTo(map).on("click", onMapClick);
-var markerSTX = L.circle([33.596212, -111.768089], new CreateMarkerTrailhead("STX", "Trailhead", 1923, ["SR5", "SR2", "STOX"])).addTo(map).on("click", onMapClick);
-var markerWWTX = L.circle([33.630502, -111.870109], new CreateMarkerTrailhead("WWTX", "Trailhead", 1530, ["WW1"])).addTo(map).on("click", onMapClick);
+var markerQT1X = L.circle([33.627011, -111.857127], new CreateMarkerTrailhead("QT1X", "Trailhead", 1586, ["QT1"])).addTo(map).on("click", onMapClick);
+var markerRTX = L.circle([33.598084, -111.804753], new CreateMarkerTrailhead("RTX", "Trailhead", 1708, ["RT1"])).addTo(map).on("click", onMapClick);
+var markerSTX = L.circle([33.596212, -111.768089], new CreateMarkerTrailhead("STX", "Trailhead", 1943, ["SR5", "SR2", "STOX"])).addTo(map).on("click", onMapClick);
+var markerWWTX = L.circle([33.630502, -111.870109], new CreateMarkerTrailhead("WWTX", "Trailhead", 1529, ["WW1"])).addTo(map).on("click", onMapClick);
 
 var mapZoomLevel;
 map.on("zoomend", function () {

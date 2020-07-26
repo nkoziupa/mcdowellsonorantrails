@@ -21,6 +21,12 @@ a {
     font-weight: 700;
 }
 
+.inlinemodallink a {
+  display: inline-block;
+  padding: 0;
+  color: #17a2b8;
+}
+
 /* rotate device message */
 
 #rotatemessage {

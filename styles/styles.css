@@ -110,7 +110,7 @@ a {
   border-radius: 5px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   #cookiebanner {
     bottom: 30px;
     left: 10%;

@@ -118,9 +118,9 @@ a {
 @media only screen and (max-width: 991px) {
   #cookiebanner {
     bottom: 30px;
-    left: 10%;
-    right: 10%;
-    width: 80%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
   }
 }
 

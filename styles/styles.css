@@ -27,7 +27,7 @@ a {
   color: #17a2b8!important;
 }
 
-.inlinemodallink a:hover {
+a.inlinemodallink:hover {
   color: #007bff!important;
   text-decoration-line: underline!important;
 }

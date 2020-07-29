@@ -394,7 +394,7 @@ var markerSV3 = L.circle([33.720422, -111.808045], new CreateMarker("SV3", "SV3"
 var markerSV7 = L.circle([33.726450, -111.817358], new CreateMarker("SV7", "SV7", 2683, ["RB5"])).addTo(map).on("click", onMapClick);
 var markerTH3X = L.circle([33.696607, -111.799892], new CreateMarker("TH3X", "Intersection", 2739, ["TH1X", "ML1", "ML5"])).addTo(map).on("click", onMapClick);
 var markerTH1X = L.circle([33.696816, -111.800602], new CreateMarker("TH1X", "Access Point", 2751, ["TH3X"])).addTo(map).on("click", onMapClick);
-var markerML1 = L.circle([33.694407, -111.801052], new CreateMarker("ML1", "ML1", 2776, ["TH3X", "TTTX", "ML3"])).addTo(map).on("click", onMapClick);
+var markerML1 = L.circle([33.694407, -111.801052], new CreateMarker("ML1", "ML1", 2787, ["TH3X", "TTTX", "ML3"])).addTo(map).on("click", onMapClick);
 var markerTT1 = L.circle([33.692924, -111.802534], new CreateMarker("TT1", "TT1", 2840, ["TTTX", "TT2", "FS1"])).addTo(map).on("click", onMapClick);
 var markerTT1X = L.circle([33.697573, -111.804472], new CreateMarker("TT1X", "Access Point", 2785, ["TTTX"])).addTo(map).on("click", onMapClick);
 

@@ -9749,7 +9749,7 @@ var segmentSL2XSL3Xlatlngs = [
 ];
 var segmentSL2XSL3Xpolyline = L.polyline(segmentSL2XSL3Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentSR10SR11 = new CreateSegment("SR10", "SR11", "Sunrise Trail", 0.13, 13, 140);
+var segmentSR10SR11 = new CreateSegment("SR10", "SR11", "Sunrise Trail", 0.13, 4, 167);
 var segmentSR10SR11latlngs = [
     [33.610445, -111.782059],
     [33.610483, -111.782077],
@@ -9801,7 +9801,7 @@ var segmentSR10SR11polyline = L.polyline(segmentSR10SR11latlngs, segmentPolyline
 
 
 
-var segmentSR10SSPX = new CreateSegment("SR10", "SSPX", "Sunrise Peak Spur", 0.1, 20, 21.1);
+var segmentSR10SSPX = new CreateSegment("SR10", "SSPX", "Sunrise Peak Spur", 0.1, 61, 0);
 var segmentSR10SSPXlatlngs = [
     [33.610445, -111.782059],
     [33.610463, -111.782098],
@@ -9839,7 +9839,7 @@ var segmentSR10SSPXpolyline = L.polyline(segmentSR10SSPXlatlngs, segmentPolyline
 
 
 
-var segmentSR11SR13 = new CreateSegment("SR11", "SR13", "Sunrise Trail", 0.17, 21.3, 62);
+var segmentSR11SR13 = new CreateSegment("SR11", "SR13", "Sunrise Trail", 0.17, 4, 60);
 var segmentSR11SR13latlngs = [
     [33.611692, -111.783040],
     [33.611724, -111.783067],
@@ -9893,7 +9893,7 @@ var segmentSR11SR13polyline = L.polyline(segmentSR11SR13latlngs, segmentPolyline
 
 
 
-var segmentSR13SR15 = new CreateSegment("SR13", "SR15", "Sunrise Trail", 0.64, 248, 494);
+var segmentSR13SR15 = new CreateSegment("SR13", "SR15", "Sunrise Trail", 0.64, 6, 221);
 var segmentSR13SR15latlngs = [
     [33.613720, -111.784122],
     [33.613750, -111.784170],
@@ -10062,7 +10062,7 @@ var segmentSR13SR15polyline = L.polyline(segmentSR13SR15latlngs, segmentPolyline
 
 
 
-var segmentSR15SR17 = new CreateSegment("SR15", "SR17", "Sunrise Trail", 1.29, 81.3, 697);
+var segmentSR15SR17 = new CreateSegment("SR15", "SR17", "Sunrise Trail", 1.29, 4, 654);
 var segmentSR15SR17latlngs = [
     [33.611948, -111.790956],
     [33.611926, -111.791004],
@@ -10366,7 +10366,7 @@ var segmentSR15SR17polyline = L.polyline(segmentSR15SR17latlngs, segmentPolyline
 
 
 
-var segmentSR9SR10 = new CreateSegment("SR9", "SR10", "Sunrise Trail", 0.18, 135, 33.8);
+var segmentSR9SR10 = new CreateSegment("SR9", "SR10", "Sunrise Trail", 0.18, 151, 1);
 var segmentSR9SR10latlngs = [
     [33.610380, -111.780219],
     [33.610363, -111.780268],
@@ -10452,7 +10452,7 @@ var segmentSR9SR10polyline = L.polyline(segmentSR9SR10latlngs, segmentPolylineOp
 
 
 
-var segmentSR9SR11 = new CreateSegment("SR9", "SR11", "Sunrise Trail", 0.19, 157, 183);
+var segmentSR9SR11 = new CreateSegment("SR9", "SR11", "Sunrise Trail", 0.19, 3, 20);
 var segmentSR9SR11latlngs = [
     [33.610380, -111.780219],
     [33.610402, -111.780265],
@@ -10565,7 +10565,7 @@ var segmentSR1SR2polyline = L.polyline(segmentSR1SR2latlngs, segmentPolylineOpti
 
 
 
-var segmentSR2STX = new CreateSegment("SR2", "STX", "Wash Trail", 0.3, 77, 0);
+var segmentSR2STX = new CreateSegment("SR2", "STX", "Wash Trail", 0.3, 67, 0);
 var segmentSR2STXlatlngs = [
     [33.593376, -111.767314],
     [33.593500, -111.767294],
@@ -10859,7 +10859,7 @@ var segmentSR5SR7polyline = L.polyline(segmentSR5SR7latlngs, segmentPolylineOpti
 
 
 
-var segmentSR7SSVX = new CreateSegment("SR7", "SSVX", "Connector Trail", 0.01, 0.07, 0.8);
+var segmentSR7SSVX = new CreateSegment("SR7", "SSVX", "Connector Trail", 0.01, 0, 14);
 var segmentSR7SSVXlatlngs = [
     [33.605071, -111.778062],
     [33.605033, -111.778068],
@@ -10870,7 +10870,7 @@ var segmentSR7SSVXpolyline = L.polyline(segmentSR7SSVXlatlngs, segmentPolylineOp
 
 
 
-var segmentSR7SR9 = new CreateSegment("SR7", "SR9", "Sunrise Trail", 0.57, 523, 92.5);
+var segmentSR7SR9 = new CreateSegment("SR7", "SR9", "Sunrise Trail", 0.57, 391, 7);
 var segmentSR7SR9latlngs = [
     [33.605071, -111.778063],
     [33.605100, -111.778100],
@@ -10986,7 +10986,7 @@ var segmentSR7SR9polyline = L.polyline(segmentSR7SR9latlngs, segmentPolylineOpti
 
 
 
-var segmentSTOXSTX = new CreateSegment("STOX", "STX", "Connector Path", 0.25, 77, 13.8);
+var segmentSTOXSTX = new CreateSegment("STOX", "STX", "Connector Path", 0.25, 53, 0);
 var segmentSTOXSTXlatlngs = [
     [33.593524, -111.768022],
     [33.593528, -111.768140],
@@ -11040,7 +11040,7 @@ var segmentSTOXSTXpolyline = L.polyline(segmentSTOXSTXlatlngs, segmentPolylineOp
 
 
 
-var segmentTL1TT7 = new CreateSegment("TL1", "TT7", "Tom's Thumb Trail", 0.11, 38.7, 36.5);
+var segmentTL1TT7 = new CreateSegment("TL1", "TT7", "Tom's Thumb Trail", 0.11, 15, 7);
 var segmentTL1TT7latlngs = [
     [33.678136, -111.809372],
     [33.678181, -111.809319],
@@ -11089,7 +11089,7 @@ var segmentTL1TT7polyline = L.polyline(segmentTL1TT7latlngs, segmentPolylineOpti
 
 
 
-var segmentTL1TL3 = new CreateSegment("TL1", "TL3", "Lookout Trail", 0.45, 214, 140);
+var segmentTL1TL3 = new CreateSegment("TL1", "TL3", "Lookout Trail", 0.45, 165, 52);
 var segmentTL1TL3latlngs = [
     [33.678136, -111.809372],
     [33.678112, -111.809363],
@@ -11237,7 +11237,7 @@ var segmentTL1TL3latlngs = [
 var segmentTL1TL3polyline = L.polyline(segmentTL1TL3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTL1TT9 = new CreateSegment("TL1", "TT9", "Tom's Thumb Trail", 0.48, 147, 400);
+var segmentTL1TT9 = new CreateSegment("TL1", "TT9", "Tom's Thumb Trail", 0.48, 34, 256);
 var segmentTL1TT9latlngs = [
     [33.678136, -111.809372],
     [33.678132, -111.809415],
@@ -11421,7 +11421,7 @@ var segmentTL1TT9latlngs = [
 var segmentTL1TT9polyline = L.polyline(segmentTL1TT9latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTT17WP3 = new CreateSegment("TT17", "WP3", "Windgate Pass Trail", 0.39, 21.7, 300);
+var segmentTT17WP3 = new CreateSegment("TT17", "WP3", "Windgate Pass Trail", 0.39, 0, 269);
 var segmentTT17WP3latlngs = [
     [33.666997, -111.829631],
     [33.667005, -111.829668],
@@ -11535,8 +11535,7 @@ var segmentTT17WP3latlngs = [
 var segmentTT17WP3polyline = L.polyline(segmentTT17WP3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-
-var segmentTT17WP5 = new CreateSegment("TT17", "WP5", "Windgate Pass Trail", 0.2, 174, 34.4);
+var segmentTT17WP5 = new CreateSegment("TT17", "WP5", "Windgate Pass Trail", 0.2, 156, 0);
 var segmentTT17WP5latlngs = [
     [33.666997, -111.829630],
     [33.666984, -111.829537],
@@ -11602,8 +11601,7 @@ var segmentTT17WP5latlngs = [
 var segmentTT17WP5polyline = L.polyline(segmentTT17WP5latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-
-var segmentTT2TTV1 = new CreateSegment("TT2", "TTV1", "Tom's Thumb Trail", 0.16, 157, 23.5);
+var segmentTT2TTV1 = new CreateSegment("TT2", "TTV1", "Tom's Thumb Trail", 0.16, 154, 1);
 var segmentTT2TTV1latlngs = [
     [33.689228, -111.805364],
     [33.689172, -111.805417],
@@ -11652,8 +11650,7 @@ var segmentTT2TTV1latlngs = [
 var segmentTT2TTV1polyline = L.polyline(segmentTT2TTV1latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-
-var segmentTT7TTX = new CreateSegment("TT7", "TTX", "Tom's Thumb Trail", 0.25, 87.7, 52.2);
+var segmentTT7TTX = new CreateSegment("TT7", "TTX", "Tom's Thumb Trail", 0.25, 99, 0);
 var segmentTT7TTXlatlngs = [
     [33.679552, -111.808839],
     [33.679599, -111.808832],
@@ -11735,7 +11732,7 @@ var segmentTT7TTXlatlngs = [
 var segmentTT7TTXpolyline = L.polyline(segmentTT7TTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTT9TT15 = new CreateSegment("TT9", "TT15", "Tom's Thumb Trail", 1.82, 194, 1247);
+var segmentTT9TT15 = new CreateSegment("TT9", "TT15", "Tom's Thumb Trail", 1.82, 42, 1108);
 var segmentTT9TT15latlngs = [
     [33.677587, -111.815980],
     [33.677558, -111.815972],
@@ -12295,7 +12292,7 @@ var segmentTT9TT15latlngs = [
 var segmentTT9TT15polyline = L.polyline(segmentTT9TT15latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTT15TT17 = new CreateSegment("TT15", "TT17", "Tom's Thumb Trail", 0.38, 223, 95.7);
+var segmentTT15TT17 = new CreateSegment("TT15", "TT17", "Tom's Thumb Trail", 0.38, 124, 3);
 var segmentTT15TT17latlngs = [
     [33.671391, -111.828500],
     [33.671371, -111.828524],

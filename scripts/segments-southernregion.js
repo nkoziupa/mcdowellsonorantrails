@@ -10626,7 +10626,7 @@ var segmentSR2STXpolyline = L.polyline(segmentSR2STXlatlngs, segmentPolylineOpti
 
 
 
-var segmentSR5STX = new CreateSegment("SR5", "STX", "Connector Trail", 0.03, 0.6, 7.74);
+var segmentSR5STX = new CreateSegment("SR5", "STX", "Connector Trail", 0.03, 0, 7);
 var segmentSR5STXlatlngs = [
    [[33.596360, -111.768514],
     [33.596324, -111.768477],

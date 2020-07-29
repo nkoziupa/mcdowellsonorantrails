@@ -12425,7 +12425,7 @@ var segmentTT15TT17latlngs = [
 var segmentTT15TT17polyline = L.polyline(segmentTT15TT17latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTTV1TTV2 = new CreateSegment("TTV1", "TTV2", "Tom's Thumb Trail", 0.21, 283, 58.9);
+var segmentTTV1TTV2 = new CreateSegment("TTV1", "TTV2", "Tom's Thumb Trail", 0.21, 221, 0);
 var segmentTTV1TTV2latlngs = [
     [33.687998, -111.804961],
     [33.687976, -111.804929],
@@ -12499,8 +12499,7 @@ var segmentTTV1TTV2latlngs = [
 var segmentTTV1TTV2polyline = L.polyline(segmentTTV1TTV2latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-
-var segmentTTV2TTV3 = new CreateSegment("TTV2", "TTV3", "Tom's Thumb Trail", 0.4, 460, 125);
+var segmentTTV2TTV3 = new CreateSegment("TTV2", "TTV3", "Tom's Thumb Trail", 0.4, 336, 0);
 var segmentTTV2TTV3latlngs = [
     [33.686290, -111.804024],
     [33.686251, -111.804005],
@@ -12690,7 +12689,7 @@ var segmentTTV2TTV3polyline = L.polyline(segmentTTV2TTV3latlngs, segmentPolyline
 
 
 
-var segmentTTV3TTV4 = new CreateSegment("TTV3", "TTV4", "Tom's Thumb Trail", 0.17, 70.6, 68.9);
+var segmentTTV3TTV4 = new CreateSegment("TTV3", "TTV4", "Tom's Thumb Trail", 0.17, 18, 7);
 var segmentTTV3TTV4latlngs = [
     [33.683196, -111.803916],
     [33.683172, -111.803872],
@@ -12745,7 +12744,7 @@ var segmentTTV3TTV4latlngs = [
 var segmentTTV3TTV4polyline = L.polyline(segmentTTV3TTV4latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTTV3VVSX = new CreateSegment("TTV3", "VVSX", "Connector Trail", 0.04, 0.8, 48);
+var segmentTTV3VVSX = new CreateSegment("TTV3", "VVSX", "Connector Trail", 0.04, 0, 58);
 var segmentTTV3VVSXlatlngs = [
     [33.683196, -111.803916],
     [33.683186, -111.803961],
@@ -12762,7 +12761,7 @@ var segmentTTV3VVSXlatlngs = [
 var segmentTTV3VVSXpolyline = L.polyline(segmentTTV3VVSXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWP1WP3 = new CreateSegment("WP1", "WP3", "Windgate Pass Trail", 0.69, 245, 134);
+var segmentWP1WP3 = new CreateSegment("WP1", "WP3", "Windgate Pass Trail", 0.69, 152, 38);
 var segmentWP1WP3latlngs = [
     [33.659134, -111.839423],
     [33.659166, -111.839355],
@@ -12941,7 +12940,7 @@ var segmentWP1WP3polyline = L.polyline(segmentWP1WP3latlngs, segmentPolylineOpti
 
 
 
-var segmentWP5WP7 = new CreateSegment("WP5", "WP7", "Windgate Pass Trail", 0.91, 534, 207);
+var segmentWP5WP7 = new CreateSegment("WP5", "WP7", "Windgate Pass Trail", 0.91, 346, 43);
 var segmentWP5WP7latlngs = [
     [33.667931, -111.827829],
     [33.667926, -111.827787],
@@ -13206,7 +13205,7 @@ var segmentWP5WP7latlngs = [
 var segmentWP5WP7polyline = L.polyline(segmentWP5WP7latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWW1WW1X = new CreateSegment("WW1", "WW1X", "WestWorld Trail", 0.28, 23, 35.9);
+var segmentWW1WW1X = new CreateSegment("WW1", "WW1X", "WestWorld Trail", 0.28, 0, 10);
 var segmentWW1WW1Xlatlngs = [
     [33.630119, -111.869872],
     [33.630105, -111.869905],
@@ -13242,7 +13241,7 @@ var segmentWW1WW1Xlatlngs = [
 var segmentWW1WW1Xpolyline = L.polyline(segmentWW1WW1Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWW1WWTX = new CreateSegment("WW1", "WWTX", "Connector Trail", 0.04, 6.5, 2.62);
+var segmentWW1WWTX = new CreateSegment("WW1", "WWTX", "Connector Trail", 0.04, 3, 0);
 var segmentWW1WWTXlatlngs = [
     [33.630118, -111.869872],
     [33.630193, -111.869923],
@@ -13257,7 +13256,7 @@ var segmentWW1WWTXlatlngs = [
 var segmentWW1WWTXpolyline = L.polyline(segmentWW1WWTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWW1XWW5 = new CreateSegment("WW1X", "WW5", "WestWorld Trail", 0.65, 55.6, 48.2);
+var segmentWW1XWW5 = new CreateSegment("WW1X", "WW5", "WestWorld Trail", 0.65, 16, 16);
 var segmentWW1XWW5latlngs = [
     [33.626384, -111.868658],
     [33.626344, -111.868620],
@@ -13303,7 +13302,7 @@ var segmentWW1XWW5latlngs = [
 var segmentWW1XWW5polyline = L.polyline(segmentWW1XWW5latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWW5WW11 = new CreateSegment("WW5", "WW11", "WestWorld Trail", 0.86, 60.1, 38.7);
+var segmentWW5WW11 = new CreateSegment("WW5", "WW11", "WestWorld Trail", 0.86, 38, 14);
 var segmentWW5WW11latlngs = [
     [33.620438, -111.864400],
     [33.619941, -111.863963],
@@ -13341,7 +13340,7 @@ var segmentWW5WW11latlngs = [
 var segmentWW5WW11polyline = L.polyline(segmentWW5WW11latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWW11WW15 = new CreateSegment("WW11", "WW15", "WestWorld Trail", 1.26, 35, 102);
+var segmentWW11WW15 = new CreateSegment("WW11", "WW15", "WestWorld Trail", 1.26, 8, 72);
 var segmentWW11WW15latlngs = [
     [33.611268, -111.855390],
     [33.611209, -111.855338],

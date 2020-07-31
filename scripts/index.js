@@ -406,7 +406,7 @@ var markerTTTX = L.circle([33.694461, -111.801725], new CreateMarkerTrailhead("T
 
 var markerAG1 = L.circle([33.780574, -111.865561], new CreateMarker("AG1", "AG1", 2563, ["AG3", "AGWX"])).addTo(map).on("click", onMapClick);
 var markerWE13 = L.circle([33.781011, -111.864981], new CreateMarker("WE13", "WE13", 2567, ["AGWX", "WE11"])).addTo(map).on("click", onMapClick);
-var markerAGWX = L.circle([33.780793, -111.865269], new CreateMarker("AGWX", "Intersection", 2570, ["AG1", "RH13", "WE13"])).addTo(map).on("click", onMapClick);
+var markerAGWX = L.circle([33.780793, -111.865269], new CreateMarker("AGWX", "Intersection", 2565, ["AG1", "RH13", "WE13"])).addTo(map).on("click", onMapClick);
 var markerAG3 = L.circle([33.779683, -111.867837], new CreateMarker("AG3", "AG3", 2549, ["AG1", "AG5", "STR9"])).addTo(map).on("click", onMapClick);
 var markerAG5 = L.circle([33.777800, -111.868984], new CreateMarker("AG5", "AG5", 2535, ["AG3", "RH11", "AG7"])).addTo(map).on("click", onMapClick);
 var markerSTR9 = L.circle([33.776927, -111.871505], new CreateMarker("STR9", "STR9", 2522, ["AG3", "AG7", "STR5"])).addTo(map).on("click", onMapClick);
@@ -426,7 +426,7 @@ var markerBA1 = L.circle([33.801331, -111.787902], new CreateMarker("BA1", "BA1"
 var markerBAX = L.circle([33.801582, -111.786954], new CreateMarker("BAX", "Stepover Gate", 2684, ["BA1"])).addTo(map).on("click", onMapClick);
 var markerBH1 = L.circle([33.754162, -111.799626], new CreateMarker("BH1", "BH1", 2593, ["DX3", "MV1", "BH4"])).addTo(map).on("click", onMapClick);
 var markerBH2 = L.circle([33.765207, -111.799466], new CreateMarker("BH2", "BH2", 2651, ["WB3", "GM1", "TP3X", "DX3"])).addTo(map).on("click", onMapClick);
-var markerBH2X = L.circle([33.746231, -111.794546], new CreateMarker("BH2X", "Intersection", 2544, ["FTAX", "BH1X", "MT1", "BH3X"])).addTo(map).on("click", onMapClick);
+var markerBH2X = L.circle([33.746231, -111.794546], new CreateMarker("BH2X", "Intersection", 2548, ["FTAX", "BH1X", "MT1", "BH3X"])).addTo(map).on("click", onMapClick);
 var markerBH3 = L.circle([33.742168, -111.788802], new CreateMarker("BH3", "BH3", 2496, ["BH4X", "MT1", "BHX"])).addTo(map).on("click", onMapClick);
 var markerBH3X = L.circle([33.744894, -111.79403], new CreateMarker("BH3X", "Access Point", 2539, ["BH2X", "BH4X"])).addTo(map).on("click", onMapClick);
 var markerBH4 = L.circle([33.752476, -111.799572], new CreateMarker("BH4", "BH4", 2596, ["DX2", "BH1", "BH1X"])).addTo(map).on("click", onMapClick);

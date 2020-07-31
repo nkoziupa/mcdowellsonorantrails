@@ -1907,7 +1907,7 @@ var segmentBP2XJRCXlatlngs = [
 var segmentBP2XJRCXpolyline = L.polyline(segmentBP2XJRCXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBP3XLG7 = new CreateSegment("BP3X", "LG7", "Brown's Ranch Trailhead Bypass", 0.21, 26, 0);
+var segmentBP3XLG7 = new CreateSegment("BP3X", "LG7", "Brown's Ranch Trailhead Bypass", 0.21, 15, 0);
 var segmentBP3XLG7latlngs = [
     [33.755660, -111.843944],
     [33.755778, -111.843797],
@@ -1937,7 +1937,7 @@ var segmentBP3XLG7latlngs = [
 var segmentBP3XLG7polyline = L.polyline(segmentBP3XLG7latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBP3XLGAX = new CreateSegment("BP3X", "LGAX", "Alma School Pkwy", 0.18, 20, 0);
+var segmentBP3XLGAX = new CreateSegment("BP3X", "LGAX", "Alma School Pkwy", 0.18, 15, 1);
 var segmentBP3XLGAXlatlngs = [
     [33.755660, -111.843944],
     [33.755874, -111.843912],
@@ -1955,7 +1955,7 @@ var segmentBP3XLGAXlatlngs = [
 var segmentBP3XLGAXpolyline = L.polyline(segmentBP3XLGAXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBP4XBTTX = new CreateSegment("BP4X", "BTTX", "Pavement", 0.02, 0, 6);
+var segmentBP4XBTTX = new CreateSegment("BP4X", "BTTX", "Pavement", 0.02, 0, 4);
 var segmentBP4XBTTXlatlngs = [
     [33.759760, -111.842477],
     [33.759796, -111.842629],
@@ -1965,7 +1965,7 @@ var segmentBP4XBTTXlatlngs = [
 var segmentBP4XBTTXpolyline = L.polyline(segmentBP4XBTTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR3UR1 = new CreateSegment("BR3", "UR1", "Brown's Ranch Road", 0.15, 0, 1);
+var segmentBR3UR1 = new CreateSegment("BR3", "UR1", "Brown's Ranch Road", 0.15, 1, 1);
 var segmentBR3UR1latlngs = [
     [33.764539, -111.842648],
     [33.764149, -111.842668],
@@ -1978,7 +1978,7 @@ var segmentBR3UR1latlngs = [
 var segmentBR3UR1polyline = L.polyline(segmentBR3UR1latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR3BR5 = new CreateSegment("BR3", "BR5", "Brown's Ranch Road", 0.16, 20, 0);
+var segmentBR3BR5 = new CreateSegment("BR3", "BR5", "Brown's Ranch Road", 0.16, 19, 2);
 var segmentBR3BR5latlngs = [
     [33.764545, -111.842648],
     [33.765004, -111.842640],
@@ -1991,7 +1991,7 @@ var segmentBR3BR5latlngs = [
 var segmentBR3BR5polyline = L.polyline(segmentBR3BR5latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR3CW11 = new CreateSegment("BR3", "CW11", "Chuckwagon Trail", 0.15, 20, 0);
+var segmentBR3CW11 = new CreateSegment("BR3", "CW11", "Chuckwagon Trail", 0.15, 28, 0);
 var segmentBR3CW11latlngs = [
     [33.764540, -111.842645],
     [33.764623, -111.842474],
@@ -2019,7 +2019,7 @@ var segmentBR5CW11latlngs = [
 var segmentBR5CW11polyline = L.polyline(segmentBR5CW11latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR5UR2 = new CreateSegment("BR5", "UR2", "Powerline Road #2", 0.26, 6, 30);
+var segmentBR5UR2 = new CreateSegment("BR5", "UR2", "Powerline Road #2", 0.26, 1, 26);
 var segmentBR5UR2latlngs = [
     [33.766615, -111.841629],
     [33.766438, -111.842099],
@@ -2035,7 +2035,7 @@ var segmentBR5UR2latlngs = [
 var segmentBR5UR2polyline = L.polyline(segmentBR5UR2latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR5BT1 = new CreateSegment("BR5", "BT1", "Brown's Ranch Road", 0.25, 18, 0);
+var segmentBR5BT1 = new CreateSegment("BR5", "BT1", "Brown's Ranch Road", 0.25, 22, 2);
 var segmentBR5BT1latlngs = [
     [33.766615, -111.841626],
     [33.767024, -111.841509],
@@ -2051,7 +2051,7 @@ var segmentBR5BT1latlngs = [
 var segmentBR5BT1polyline = L.polyline(segmentBR5BT1latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR5VT3 = new CreateSegment("BR5", "VT3", "Powerline Road #2", 0.95, 58, 18);
+var segmentBR5VT3 = new CreateSegment("BR5", "VT3", "Powerline Road #2", 0.95, 52, 12);
 var segmentBR5VT3latlngs = [
     [33.766610, -111.841613],
     [33.766798, -111.841071],
@@ -2082,7 +2082,7 @@ var segmentBR5VT3latlngs = [
 var segmentBR5VT3polyline = L.polyline(segmentBR5VT3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR6VT1 = new CreateSegment("BR6", "VT1", "Brown's Ranch Road", 0.13, 18, 0);
+var segmentBR6VT1 = new CreateSegment("BR6", "VT1", "Brown's Ranch Road", 0.13, 16, 0);
 var segmentBR6VT1latlngs = [
     [33.775474, -111.837564],
     [33.775279, -111.837584],
@@ -2097,7 +2097,7 @@ var segmentBR6VT1latlngs = [
 var segmentBR6VT1polyline = L.polyline(segmentBR6VT1latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR6CL1 = new CreateSegment("BR6", "CL1", "Brown's Ranch Road", 0.31, 0, 37);
+var segmentBR6CL1 = new CreateSegment("BR6", "CL1", "Brown's Ranch Road", 0.31, 0, 34);
 var segmentBR6CL1latlngs = [
     [33.775475, -111.837570],
     [33.775735, -111.837664],
@@ -2190,7 +2190,7 @@ var segmentBR6MV2latlngs = [
 var segmentBR6MV2polyline = L.polyline(segmentBR6MV2latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR9WE11 = new CreateSegment("BR9", "WE11", "Brown's Ranch Road", 0.34, 1, 21);
+var segmentBR9WE11 = new CreateSegment("BR9", "WE11", "Brown's Ranch Road", 0.34, 2, 25);
 var segmentBR9WE11latlngs = [
     [33.784447, -111.859156],
     [33.784449, -111.859388],
@@ -2237,7 +2237,7 @@ var segmentBR9WE11latlngs = [
 var segmentBR9WE11polyline = L.polyline(segmentBR9WE11latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR9RH15 = new CreateSegment("BR9", "RH15", "Powerline Road #1", 0.12, 0, 3);
+var segmentBR9RH15 = new CreateSegment("BR9", "RH15", "Powerline Road #1", 0.12, 0, 24);
 var segmentBR9RH15latlngs = [
     [33.784447, -111.859152],
     [33.784311, -111.859280],
@@ -2252,7 +2252,7 @@ var segmentBR9RH15latlngs = [
 var segmentBR9RH15polyline = L.polyline(segmentBR9RH15latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR9RH17 = new CreateSegment("BR9", "RH17", "Brown's Ranch Road", 0.19, 15, 0);
+var segmentBR9RH17 = new CreateSegment("BR9", "RH17", "Brown's Ranch Road", 0.19, 5, 5);
 var segmentBR9RH17latlngs = [
     [33.784446, -111.859152],
     [33.784364, -111.859002],
@@ -2297,7 +2297,7 @@ var segmentBR9WE9latlngs = [
 var segmentBR9WE9polyline = L.polyline(segmentBR9WE9latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBR9MP3 = new CreateSegment("BR9", "MP3", "Powerline Road #1", 0.32, 39, 0);
+var segmentBR9MP3 = new CreateSegment("BR9", "MP3", "Powerline Road #1", 0.32, 49, 0);
 var segmentBR9MP3latlngs = [
     [33.784447, -111.859152],
     [33.784588, -111.859052],
@@ -2322,7 +2322,7 @@ var segmentBR9MP3latlngs = [
 var segmentBR9MP3polyline = L.polyline(segmentBR9MP3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBROXHW31 = new CreateSegment("BROX", "HW31", "Basalt Ridge Trail", 0.1, 4, 6);
+var segmentBROXHW31 = new CreateSegment("BROX", "HW31", "Basalt Ridge Trail", 0.1, 3, 0);
 var segmentBROXHW31latlngs = [
     [33.783255, -111.856755],
     [33.783165, -111.856708],
@@ -2339,7 +2339,7 @@ var segmentBROXHW31latlngs = [
 var segmentBROXHW31polyline = L.polyline(segmentBROXHW31latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBRTXBSTX = new CreateSegment("BRTX", "BSTX", "Alma School Pkwy.", 0.1, 5, 0);
+var segmentBRTXBSTX = new CreateSegment("BRTX", "BSTX", "Alma School Pkwy.", 0.1, 1, 0);
 var segmentBRTXBSTXlatlngs = [
     [33.761545, -111.842328],
     [33.761384, -111.842328],
@@ -2352,7 +2352,7 @@ var segmentBRTXBSTXlatlngs = [
 ];
 var segmentBRTXBSTXpolyline = L.polyline(segmentBRTXBSTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentBP4XBRTX = new CreateSegment("BP4X", "BRTX", "Latigo Trail Connector", 0.13, 0, 12);
+var segmentBP4XBRTX = new CreateSegment("BP4X", "BRTX", "Latigo Trail Connector", 0.13, 0, 3);
 var segmentBP4XBRTXlatlngs = [
     [33.759761, -111.842477],
     [33.759872, -111.842461],
@@ -2378,7 +2378,7 @@ var segmentBP4XBRTXpolyline = L.polyline(segmentBP4XBRTXlatlngs, segmentPolyline
 
 
 
-var segmentBSTXBTTX = new CreateSegment("BSTX", "BTTX", "Alma School Pkwy.", 0.02, 1, 0);
+var segmentBSTXBTTX = new CreateSegment("BSTX", "BTTX", "Alma School Pkwy.", 0.02, 0, 2);
 var segmentBSTXBTTXlatlngs = [
     [33.760143, -111.842707],
     [33.759864, -111.842818]
@@ -2386,7 +2386,7 @@ var segmentBSTXBTTXlatlngs = [
 var segmentBSTXBTTXpolyline = L.polyline(segmentBSTXBTTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBSTXSVBX = new CreateSegment("BSTX", "SVBX", "Pavement", 0.1, 0, 10);
+var segmentBSTXSVBX = new CreateSegment("BSTX", "SVBX", "Pavement", 0.1, 0, 8);
 var segmentBSTXSVBXlatlngs = [
     [33.760142, -111.842707],
     [33.760199, -111.842968],
@@ -2399,7 +2399,7 @@ var segmentBSTXSVBXlatlngs = [
 var segmentBSTXSVBXpolyline = L.polyline(segmentBSTXSVBXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBRTXJRCX = new CreateSegment("BRTX", "JRCX", "Jane Rau Trail Connector", 0.1, 16, 0);
+var segmentBRTXJRCX = new CreateSegment("BRTX", "JRCX", "Jane Rau Trail Connector", 0.1, 9, 0);
 var segmentBRTXJRCXlatlngs = [
     [33.761543, -111.842335],
     [33.761520, -111.841968],
@@ -2411,7 +2411,7 @@ var segmentBRTXJRCXlatlngs = [
 var segmentBRTXJRCXpolyline = L.polyline(segmentBRTXJRCXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBRXRS3 = new CreateSegment("BRX", "RS3", "Connector Trail", 0.04, 0, 1);
+var segmentBRXRS3 = new CreateSegment("BRX", "RS3", "Connector Trail", 0.04, 0, 33);
 var segmentBRXRS3latlngs = [
     [33.776942, -111.813607],
     [33.776847, -111.813437],
@@ -2422,7 +2422,7 @@ var segmentBRXRS3latlngs = [
 var segmentBRXRS3polyline = L.polyline(segmentBRXRS3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBRXRS4 = new CreateSegment("BRX", "RS4", "Connector Trail", 0.04, 6, 0);
+var segmentBRXRS4 = new CreateSegment("BRX", "RS4", "Connector Trail", 0.04, 0, 21);
 var segmentBRXRS4latlngs = [
     [33.776942, -111.813606],
     [33.777021, -111.813661],
@@ -2434,7 +2434,7 @@ var segmentBRXRS4latlngs = [
 var segmentBRXRS4polyline = L.polyline(segmentBRXRS4latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBS1OC1 = new CreateSegment("BS1", "OC1", "Powerline Road #1", 0.1, 0, 9);
+var segmentBS1OC1 = new CreateSegment("BS1", "OC1", "Powerline Road #1", 0.1, 0, 6);
 var segmentBS1OC1latlngs = [
     [33.802016, -111.846830],
     [33.801906, -111.846921],
@@ -2450,7 +2450,7 @@ var segmentBS1OC1latlngs = [
 var segmentBS1OC1polyline = L.polyline(segmentBS1OC1latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBS1OC3 = new CreateSegment("BS1", "OC3", "Broken Spoke Trail", 0.1, 0, 8);
+var segmentBS1OC3 = new CreateSegment("BS1", "OC3", "Broken Spoke Trail", 0.1, 0, 5);
 var segmentBS1OC3latlngs = [
     [33.802017, -111.846830],
     [33.802022, -111.846719],
@@ -2474,7 +2474,7 @@ var segmentBS1OC3latlngs = [
 var segmentBS1OC3polyline = L.polyline(segmentBS1OC3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBS1WE5 = new CreateSegment("BS1", "WE5", "Broken Spoke Trail", 0.67, 3, 53);
+var segmentBS1WE5 = new CreateSegment("BS1", "WE5", "Broken Spoke Trail", 0.67, 4, 56);
 var segmentBS1WE5latlngs = [
     [33.802017, -111.846829],
     [33.802002, -111.846915],
@@ -2615,7 +2615,7 @@ var segmentBS1WE5latlngs = [
 var segmentBS1WE5polyline = L.polyline(segmentBS1WE5latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBS1HV51 = new CreateSegment("BS1", "HV51", "Powerline Road #1", 0.59, 59, 0);
+var segmentBS1HV51 = new CreateSegment("BS1", "HV51", "Powerline Road #1", 0.59, 60, 0);
 var segmentBS1HV51latlngs = [
     [33.802018, -111.846827],
     [33.802208, -111.846663],
@@ -2662,7 +2662,7 @@ var segmentBS1HV51latlngs = [
 var segmentBS1HV51polyline = L.polyline(segmentBS1HV51latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBT1VT1 = new CreateSegment("BT1", "VT1", "Brown's Ranch Road", 0.3, 21, 21);
+var segmentBT1VT1 = new CreateSegment("BT1", "VT1", "Brown's Ranch Road", 0.3, 20, 22);
 var segmentBT1VT1latlngs = [
     [33.770057, -111.840412],
     [33.770537, -111.839995],
@@ -2677,7 +2677,7 @@ var segmentBT1VT1latlngs = [
 var segmentBT1VT1polyline = L.polyline(segmentBT1VT1latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBT1BT2 = new CreateSegment("BT1", "BT2", "Brown's Mtn. Trail", 0.12, 24, 1);
+var segmentBT1BT2 = new CreateSegment("BT1", "BT2", "Brown's Mtn. Trail", 0.12, 26, 1);
 var segmentBT1BT2latlngs = [
     [33.770060, -111.840421],
     [33.770274, -111.840497],
@@ -2693,7 +2693,7 @@ var segmentBT1BT2latlngs = [
 var segmentBT1BT2polyline = L.polyline(segmentBT1BT2latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBT2UR4 = new CreateSegment("BT2", "UR4", "Wrangler Trail", 0.75, 38, 119);
+var segmentBT2UR4 = new CreateSegment("BT2", "UR4", "Wrangler Trail", 0.75, 44, 116);
 var segmentBT2UR4latlngs = [
     [33.771752, -111.840862],
     [33.771608, -111.840968],
@@ -2767,7 +2767,7 @@ var segmentBT2UR4latlngs = [
 var segmentBT2UR4polyline = L.polyline(segmentBT2UR4latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBT2VT1 = new CreateSegment("BT2", "VT1", "Wrangler Trail", 0.24, 0, 23);
+var segmentBT2VT1 = new CreateSegment("BT2", "VT1", "Wrangler Trail", 0.24, 3, 29);
 var segmentBT2VT1latlngs = [
     [33.771751, -111.840857],
     [33.771825, -111.840708],
@@ -2797,7 +2797,7 @@ var segmentBT2VT1latlngs = [
 var segmentBT2VT1polyline = L.polyline(segmentBT2VT1latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBT2BT4 = new CreateSegment("BT2", "BT4", "Brown's Mtn. Trail", 0.61, 315, 14);
+var segmentBT2BT4 = new CreateSegment("BT2", "BT4", "Brown's Mtn. Trail", 0.61, 301, 2);
 var segmentBT2BT4latlngs = [
     [33.771753, -111.840864],
     [33.771868, -111.840856],
@@ -2898,7 +2898,7 @@ var segmentBT2BT4latlngs = [
 var segmentBT2BT4polyline = L.polyline(segmentBT2BT4latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBT4BT6 = new CreateSegment("BT4", "BT6", "Brown's Mtn. Trail", 0.59, 4, 364);
+var segmentBT4BT6 = new CreateSegment("BT4", "BT6", "Brown's Mtn. Trail", 0.59, 3, 364);
 var segmentBT4BT6latlngs = [
     [33.775201, -111.844335],
     [33.775239, -111.844267],
@@ -2998,7 +2998,7 @@ var segmentBT4BT6latlngs = [
 var segmentBT4BT6polyline = L.polyline(segmentBT4BT6latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBT6UR7 = new CreateSegment("BT6", "UR7", "Upper Ranch Trail", 0.1, 0, 31);
+var segmentBT6UR7 = new CreateSegment("BT6", "UR7", "Upper Ranch Trail", 0.1, 0, 37);
 var segmentBT6UR7latlngs = [
     [33.778777, -111.850712],
     [33.778819, -111.850839],
@@ -3016,7 +3016,7 @@ var segmentBT6UR7latlngs = [
 var segmentBT6UR7polyline = L.polyline(segmentBT6UR7latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBT6UR8 = new CreateSegment("BT6", "UR8", "Upper Ranch Trail", 0.39, 13, 51);
+var segmentBT6UR8 = new CreateSegment("BT6", "UR8", "Upper Ranch Trail", 0.39, 4, 51);
 var segmentBT6UR8latlngs = [
     [33.778778, -111.850714],
     [33.778815, -111.850601],
@@ -3068,7 +3068,7 @@ var segmentBT6UR8latlngs = [
 var segmentBT6UR8polyline = L.polyline(segmentBT6UR8latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBTTXLGAX = new CreateSegment("BTTX", "LGAX", "Alma School Pkwy.", 0.12, 12, 0);
+var segmentBTTXLGAX = new CreateSegment("BTTX", "LGAX", "Alma School Pkwy.", 0.12, 15, 0);
 var segmentBTTXLGAXlatlngs = [
     [33.759864, -111.842817],
     [33.759671, -111.842903],
@@ -18863,7 +18863,7 @@ var segmentAG15RCAXlatlngs = [
 var segmentAG15RCAXpolyline = L.polyline(segmentAG15RCAXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentBRTXSVBX = new CreateSegment("BRTX", "SVBX", "Connector Trail", 0.12, 0, 5);
+var segmentBRTXSVBX = new CreateSegment("BRTX", "SVBX", "Connector Trail", 0.12, 0, 7);
 var segmentBRTXSVBXlatlngs = [
     [33.761542, -111.842330],
     [33.761396, -111.842337],

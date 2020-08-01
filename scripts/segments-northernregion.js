@@ -17922,7 +17922,7 @@ var segmentSTR5STR9latlngs = [
 var segmentSTR5STR9polyline = L.polyline(segmentSTR5STR9latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTD1TD2 = new CreateSegment("TD1", "TD2", "The Divide Trail", 0.1, 6.52, 9.15);
+var segmentTD1TD2 = new CreateSegment("TD1", "TD2", "The Divide Trail", 0.1, 2, 5);
 var segmentTD1TD2latlngs = [
     [33.790704, -111.817726],
     [33.790765, -111.817739],
@@ -17942,7 +17942,7 @@ var segmentTD1TD2latlngs = [
 var segmentTD1TD2polyline = L.polyline(segmentTD1TD2latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTD2TD4 = new CreateSegment("TD2", "TD4", "The Divide Trail", 0.72, 27, 59);
+var segmentTD2TD4 = new CreateSegment("TD2", "TD4", "The Divide Trail", 0.72, 2, 33);
 var segmentTD2TD4latlngs = [
     [33.791603, -111.817850],
     [33.791653, -111.817829],
@@ -18099,7 +18099,7 @@ var segmentTD2TD4latlngs = [
 var segmentTD2TD4polyline = L.polyline(segmentTD2TD4latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentUR1UR2 = new CreateSegment("UR1", "UR2", "Upper Ranch Trail", 0.28, 21.6, 31.1);
+var segmentUR1UR2 = new CreateSegment("UR1", "UR2", "Upper Ranch Trail", 0.28, 16, 26);
 var segmentUR1UR2latlngs = [
     [33.762444, -111.842416],
     [33.762812, -111.842759],
@@ -18115,7 +18115,7 @@ var segmentUR1UR2latlngs = [
 var segmentUR1UR2polyline = L.polyline(segmentUR1UR2latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentUR2UR3 = new CreateSegment("UR2", "UR3", "Upper Ranch Trail", 0.24, 19.8, 28.8);
+var segmentUR2UR3 = new CreateSegment("UR2", "UR3", "Upper Ranch Trail", 0.24, 8, 22);
 var segmentUR2UR3latlngs = [
     [33.765146, -111.845667],
     [33.765209, -111.846133],
@@ -18131,7 +18131,7 @@ var segmentUR2UR3latlngs = [
 var segmentUR2UR3polyline = L.polyline(segmentUR2UR3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentUR3UR4 = new CreateSegment("UR3", "UR4", "Upper Ranch Trail", 0.10, 9.26, 3.86);
+var segmentUR3UR4 = new CreateSegment("UR3", "UR4", "Upper Ranch Trail", 0.10, 16, 0);
 var segmentUR3UR4latlngs = [
     [33.766843, -111.848407],
     [33.766940, -111.848519],
@@ -18144,7 +18144,7 @@ var segmentUR3UR4latlngs = [
 var segmentUR3UR4polyline = L.polyline(segmentUR3UR4latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentUR4UR5 = new CreateSegment("UR4", "UR5", "Upper Ranch Trail", 0.51, 17.7, 53.9);
+var segmentUR4UR5 = new CreateSegment("UR4", "UR5", "Upper Ranch Trail", 0.51, 3, 49);
 var segmentUR4UR5latlngs = [
     [33.767635, -111.848674],
     [33.767884, -111.849034],
@@ -18173,7 +18173,7 @@ var segmentUR4UR5latlngs = [
 var segmentUR4UR5polyline = L.polyline(segmentUR4UR5latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentUR5UR7 = new CreateSegment("UR5", "UR7", "Upper Ranch Trail", 0.53, 74.1, 60.7);
+var segmentUR5UR7 = new CreateSegment("UR5", "UR7", "Upper Ranch Trail", 0.53, 53, 35);
 var segmentUR5UR7latlngs = [
     [33.773169, -111.852094],
     [33.773527, -111.852094],
@@ -18205,7 +18205,7 @@ var segmentUR5UR7latlngs = [
 var segmentUR5UR7polyline = L.polyline(segmentUR5UR7latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentVT1VT3 = new CreateSegment("VT1", "VT3", "Vaquero Trail", 0.87, 76.1, 58.7);
+var segmentVT1VT3 = new CreateSegment("VT1", "VT3", "Vaquero Trail", 0.87, 55, 35);
 var segmentVT1VT3latlngs = [
     [33.773685, -111.837659],
     [33.773727, -111.837252],
@@ -18247,7 +18247,7 @@ var segmentVT1VT3latlngs = [
 var segmentVT1VT3polyline = L.polyline(segmentVT1VT3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentVT3WB1 = new CreateSegment("VT3", "WB1", "Powerline Road #2", 0.05, 3.67, 0.49);
+var segmentVT3WB1 = new CreateSegment("VT3", "WB1", "Powerline Road #2", 0.05, 3, 0);
 var segmentVT3WB1latlngs = [
     [33.769953, -111.826039],
     [33.769961, -111.825547],
@@ -18256,7 +18256,7 @@ var segmentVT3WB1latlngs = [
 var segmentVT3WB1polyline = L.polyline(segmentVT3WB1latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWB3WB3X = new CreateSegment("WB3", "WB3X", "Whiskey Bottle Trail", 0.04, 0, 8.2);
+var segmentWB3WB3X = new CreateSegment("WB3", "WB3X", "Whiskey Bottle Trail", 0.04, 0, 7);
 var segmentWB3WB3Xlatlngs = [
     [33.756935, -111.813884],
     [33.756814, -111.813729],
@@ -18266,7 +18266,7 @@ var segmentWB3WB3Xlatlngs = [
 var segmentWB3WB3Xpolyline = L.polyline(segmentWB3WB3Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWB3XWB4 = new CreateSegment("WB3X", "WB4", "Whiskey Bottle Trail", 0.1, 1.27, 8.66);
+var segmentWB3XWB4 = new CreateSegment("WB3X", "WB4", "Whiskey Bottle Trail", 0.1, 0, 12);
 var segmentWB3XWB4latlngs = [
     [33.756585, -111.813450],
     [33.756561, -111.813321],
@@ -18291,7 +18291,7 @@ var segmentWB3XWB4latlngs = [
 var segmentWB3XWB4polyline = L.polyline(segmentWB3XWB4latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWB3YT1 = new CreateSegment("WB3", "YT1", "Yucca Trail", 1.0, 89.6, 5.95);
+var segmentWB3YT1 = new CreateSegment("WB3", "YT1", "Yucca Trail", 1.0, 85, 2);
 var segmentWB3YT1latlngs = [
     [33.756935, -111.813881],
     [33.756978, -111.814033],
@@ -18377,7 +18377,7 @@ var segmentWB3YT1latlngs = [
 var segmentWB3YT1polyline = L.polyline(segmentWB3YT1latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWE11WE13 = new CreateSegment("WE11", "WE13", "West Express", 0.12, 0.33, 13.6);
+var segmentWE11WE13 = new CreateSegment("WE11", "WE13", "West Express", 0.12, 0, 18);
 var segmentWE11WE13latlngs = [
     [33.782064, -111.863607],
     [33.781999, -111.863711],
@@ -18397,7 +18397,7 @@ var segmentWE11WE13latlngs = [
 var segmentWE11WE13polyline = L.polyline(segmentWE11WE13latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWE5WE7 = new CreateSegment("WE5", "WE7", "West Express", 0.73, 20.0, 74.8);
+var segmentWE5WE7 = new CreateSegment("WE5", "WE7", "West Express", 0.73, 7, 71);
 var segmentWE5WE7latlngs = [
     [33.799178, -111.854328],
     [33.799097, -111.854377],
@@ -18500,7 +18500,7 @@ var segmentWE5WE7latlngs = [
 var segmentWE5WE7polyline = L.polyline(segmentWE5WE7latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWE7WE9 = new CreateSegment("WE7", "WE9", "West Express", 0.36, 12.6, 45.5);
+var segmentWE7WE9 = new CreateSegment("WE7", "WE9", "West Express", 0.36, 7, 28);
 var segmentWE7WE9latlngs = [
     [33.789527, -111.857985],
     [33.789475, -111.858059],
@@ -18558,7 +18558,7 @@ var segmentWE7WE9latlngs = [
 var segmentWE7WE9polyline = L.polyline(segmentWE7WE9latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWE9WE11 = new CreateSegment("WE9", "WE11", "West Express", 0.27, 8.9, 36.9);
+var segmentWE9WE11 = new CreateSegment("WE9", "WE11", "West Express", 0.27, 4, 29);
 var segmentWE9WE11latlngs = [
     [33.785208, -111.860864],
     [33.785151, -111.860923],
@@ -22577,7 +22577,7 @@ var segmentSVBXSVTXlatlngs = [
 var segmentSVBXSVTXpolyline = L.polyline(segmentSVBXSVTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWE17WE19 = new CreateSegment("WE17", "WE19", "West Express", 0.10, 10.8, 6.55);
+var segmentWE17WE19 = new CreateSegment("WE17", "WE19", "West Express", 0.10, 3, 2);
 var segmentWE17WE19latlngs = [
     [33.770543, -111.865363],
     [33.770463, -111.865388],
@@ -22601,7 +22601,7 @@ var segmentWE17WE19latlngs = [
 var segmentWE17WE19polyline = L.polyline(segmentWE17WE19latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWE19WE21 = new CreateSegment("WE19", "WE21", "West Express", 0.61, 35.8, 43.3);
+var segmentWE19WE21 = new CreateSegment("WE19", "WE21", "West Express", 0.61, 21, 24);
 var segmentWE19WE21latlngs = [
     [33.769092, -111.865243],
     [33.769021, -111.865238],
@@ -22743,7 +22743,7 @@ var segmentWE19WE21latlngs = [
 var segmentWE19WE21polyline = L.polyline(segmentWE19WE21latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWE21WE23 = new CreateSegment("WE21", "WE23", "West Express", 0.58, 21.8, 59.5);
+var segmentWE21WE23 = new CreateSegment("WE21", "WE23", "West Express", 0.58, 15, 58);
 var segmentWE21WE23latlngs = [
     [33.762602, -111.865033],
     [33.762569, -111.865073],
@@ -23653,7 +23653,7 @@ var segmentGN1GNXlatlngs = [
 var segmentGN1GNXpolyline = L.polyline(segmentGN1GNXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWB4WB8X = new CreateSegment("WB4", "WB8X", "Whiskey Bottle Trail", 1.48, 180, 286);
+var segmentWB4WB8X = new CreateSegment("WB4", "WB8X", "Whiskey Bottle Trail", 1.48, 49, 151);
 var segmentWB4WB8Xlatlngs = [
     [33.755826, -111.812419],
     [33.755803, -111.812463],
@@ -23988,7 +23988,7 @@ var segmentWB4WB8Xlatlngs = [
 var segmentWB4WB8Xpolyline = L.polyline(segmentWB4WB8Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWB8WB8X = new CreateSegment("WB8", "WB8X", "Whiskey Bottle Trail", 0.03, 3.19, 0);
+var segmentWB8WB8X = new CreateSegment("WB8", "WB8X", "Whiskey Bottle Trail", 0.03, 7, 0);
 var segmentWB8WB8Xlatlngs = [
     [33.746556, -111.795776],
     [33.746587, -111.795794],
@@ -24833,7 +24833,7 @@ var segmentGT3XGT4Xlatlngs = [
 var segmentGT3XGT4Xpolyline = L.polyline(segmentGT3XGT4Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTP1TP2X = new CreateSegment("TP1", "TP2X", "Turpentine Trail", 0.05, 7.68, 0.58);
+var segmentTP1TP2X = new CreateSegment("TP1", "TP2X", "Turpentine Trail", 0.05, 8, 0);
 var segmentTP1TP2Xlatlngs = [
     [33.769666, -111.788891],
     [33.769655, -111.788937],
@@ -24852,7 +24852,7 @@ var segmentTP1TP2Xlatlngs = [
 var segmentTP1TP2Xpolyline = L.polyline(segmentTP1TP2Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTP1XTP2X = new CreateSegment("TP1X", "TP2X", "Connector Trail", 0.02, 2.93, 0.25);
+var segmentTP1XTP2X = new CreateSegment("TP1X", "TP2X", "Connector Trail", 0.02, 3, 0);
 var segmentTP1XTP2Xlatlngs = [
     [33.770006, -111.789613],
     [33.769935, -111.789628],
@@ -24865,7 +24865,7 @@ var segmentTP1XTP2Xlatlngs = [
 var segmentTP1XTP2Xpolyline = L.polyline(segmentTP1XTP2Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentTP2XTP3X = new CreateSegment("TP2X", "TP3X", "Turpentine Trail", 0.15, 19.1, 1.42);
+var segmentTP2XTP3X = new CreateSegment("TP2X", "TP3X", "Turpentine Trail", 0.15, 17, 0);
 var segmentTP2XTP3Xlatlngs = [
     [33.769667, -111.789675],
     [33.769671, -111.789717],

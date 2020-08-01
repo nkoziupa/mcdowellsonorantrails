@@ -1256,10 +1256,10 @@ $("#infocontainer").on("click", function() {
     };
 
     if (routeLength === 1) {
-      routePlanArrayHTML = routePlanArrayHTML + "<hr class='routeplanhr'>" + "<span class='routeplantotals'>Route Totals</span>" + "<br>" + Math.abs(routeLength).toFixed(2) + "<span class='routeplantotalmiles'> mile</span>" + Math.abs(routeElevGain).toFixed(2) + "' elev gain";
+      routePlanArrayHTML = routePlanArrayHTML + "<hr class='routeplanhr'>" + "<span class='routeplantotals'>Route Totals</span>" + "<br>" + Math.abs(routeLength).toFixed(2) + "<span class='routeplantotalmiles'> mile</span>" + Math.abs(routeElevGain).toFixed(0) + "' elev gain";
     }
     else {
-      routePlanArrayHTML = routePlanArrayHTML + "<hr class='routeplanhr'>" + "<span class='routeplantotals'>Route Totals</span>" + "<br>" + Math.abs(routeLength).toFixed(2) + "<span class='routeplantotalmiles'> miles</span>" + Math.abs(routeElevGain).toFixed(2) + "' elev gain";
+      routePlanArrayHTML = routePlanArrayHTML + "<hr class='routeplanhr'>" + "<span class='routeplantotals'>Route Totals</span>" + "<br>" + Math.abs(routeLength).toFixed(2) + "<span class='routeplantotalmiles'> miles</span>" + Math.abs(routeElevGain).toFixed(0) + "' elev gain";
     }
 
     $("#routeplan").html(routePlanArrayHTML);
@@ -1955,17 +1955,17 @@ function onMapClick(e) {
 
         // show segmentElevGainA
 
-        $("#segmentelevgain").text(window[segmentID].segmentElevGainA.toFixed(2) + "' elev gain");
+        $("#segmentelevgain").text(window[segmentID].segmentElevGainA.toFixed(0) + "' elev gain");
 
         // add segmentElevGainA to routePlanArray
 
-        routePlanArray.push(window[segmentID].segmentElevGainA.toFixed(2) + "' elev gain");
+        routePlanArray.push(window[segmentID].segmentElevGainA.toFixed(0) + "' elev gain");
 
         // update route elev gain
 
         routeElevGain = routeElevGain + window[segmentID].segmentElevGainA;
 
-        $("#routeelevgain").text(routeElevGain.toFixed(2) + "' elev gain");
+        $("#routeelevgain").text(routeElevGain.toFixed(0) + "' elev gain");
 
       }
 
@@ -2008,17 +2008,17 @@ function onMapClick(e) {
 
       // show segmentElevGainB
 
-      $("#segmentelevgain").text(window[segmentID].segmentElevGainB.toFixed(2) + "' elev gain");
+      $("#segmentelevgain").text(window[segmentID].segmentElevGainB.toFixed(0) + "' elev gain");
 
       // add segmentElevGainB to routePlanArray
 
-      routePlanArray.push(window[segmentID].segmentElevGainB.toFixed(2) + "' elev gain");
+      routePlanArray.push(window[segmentID].segmentElevGainB.toFixed(0) + "' elev gain");
 
       // update route elev gain
 
       routeElevGain = routeElevGain + window[segmentID].segmentElevGainB;
 
-      $("#routeelevgain").text(routeElevGain.toFixed(2) + "' elev gain");
+      $("#routeelevgain").text(routeElevGain.toFixed(0) + "' elev gain");
 
     }
 
@@ -2145,7 +2145,7 @@ function onMapClick(e) {
 
         routeElevGain = routeElevGain - window[segmentID].segmentElevGainA;
 
-        $("#routeelevgain").text(routeElevGain.toFixed(2) + "' elev gain");
+        $("#routeelevgain").text(routeElevGain.toFixed(0) + "' elev gain");
 
       }
 
@@ -2162,7 +2162,7 @@ function onMapClick(e) {
 
       routeElevGain = routeElevGain - window[segmentID].segmentElevGainB;
 
-      $("#routeelevgain").text(routeElevGain.toFixed(2) + "' elev gain");
+      $("#routeelevgain").text(routeElevGain.toFixed(0) + "' elev gain");
 
     }
 
@@ -2235,7 +2235,7 @@ function onMapClick(e) {
 
           // show segmentElevGainA
 
-          $("#segmentelevgain").text(window[segmentID].segmentElevGainA.toFixed(2) + "' elev gain");
+          $("#segmentelevgain").text(window[segmentID].segmentElevGainA.toFixed(0) + "' elev gain");
 
           // change the segment to unselected
 
@@ -2337,7 +2337,7 @@ function onMapClick(e) {
 
         // show segmentElevGainB
 
-        $("#segmentelevgain").text(window[segmentID].segmentElevGainB.toFixed(2) + "' elev gain");
+        $("#segmentelevgain").text(window[segmentID].segmentElevGainB.toFixed(0) + "' elev gain");
 
         // change the segment to unselected
 

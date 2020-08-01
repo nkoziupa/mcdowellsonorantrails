@@ -23588,7 +23588,7 @@ var segmentFTAXFTXlatlngs = [
 var segmentFTAXFTXpolyline = L.polyline(segmentFTAXFTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentFTAXWB8 = new CreateSegment("FTAX", "WB8", "Connector Trail", 0.1, 0, 1);
+var segmentFTAXWB8 = new CreateSegment("FTAX", "WB8", "Connector Trail", 0.1, 3, 0);
 var segmentFTAXWB8latlngs = [
     [33.746280, -111.795117],
     [33.746249, -111.795135],
@@ -23607,7 +23607,7 @@ var segmentFTAXWB8latlngs = [
 var segmentFTAXWB8polyline = L.polyline(segmentFTAXWB8latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentFTXWB8 = new CreateSegment("FTX", "WB8", "Connector Trail", 0.02, 0, 2);
+var segmentFTXWB8 = new CreateSegment("FTX", "WB8", "Connector Trail", 0.02, 2, 0);
 var segmentFTXWB8latlngs = [
     [33.746573, -111.795349],
     [33.746561, -111.795494],
@@ -23957,7 +23957,7 @@ var segmentWB4WB8Xlatlngs = [
 var segmentWB4WB8Xpolyline = L.polyline(segmentWB4WB8Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentWB8WB8X = new CreateSegment("WB8", "WB8X", "Whiskey Bottle Trail", 0.03, 1, 0);
+var segmentWB8WB8X = new CreateSegment("WB8", "WB8X", "Whiskey Bottle Trail", 0.03, 2, 0);
 var segmentWB8WB8Xlatlngs = [
   [33.746556, -111.795776],
   [33.746587, -111.795794],

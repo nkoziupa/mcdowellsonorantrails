@@ -17861,7 +17861,7 @@ var segmentSD8XTD2latlngs = [
 var segmentSD8XTD2polyline = L.polyline(segmentSD8XTD2latlngs, segmentTechPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentSTR5STR9 = new CreateSegment("STR5", "STR9", "State Land Temporary Road", 0.87, 76.4, 1.13);
+var segmentSTR5STR9 = new CreateSegment("STR5", "STR9", "State Land Temporary Road", 0.87, 76, 0);
 var segmentSTR5STR9latlngs = [
     [33.768293, -111.880861],
     [33.768496, -111.880790],
@@ -22531,7 +22531,7 @@ var segmentSP9SPPXlatlngs = [
 var segmentSP9SPPXpolyline = L.polyline(segmentSP9SPPXlatlngs, segmentTechPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentSV1XSVTX = new CreateSegment("SV1X", "SVTX", "Sunset Vista Trail", 0.03, 9.04, 0.23);
+var segmentSV1XSVTX = new CreateSegment("SV1X", "SVTX", "Sunset Vista Trail", 0.03, 8, 0);
 var segmentSV1XSVTXlatlngs = [
     [33.759443, -111.844465],
     [33.759441, -111.844381],

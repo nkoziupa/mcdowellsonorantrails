@@ -21402,7 +21402,7 @@ var segmentLG9SVTXlatlngs = [
 var segmentLG9SVTXpolyline = L.polyline(segmentLG9SVTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentLG13PR3X = new CreateSegment("LG13", "PR3X", "Powerline Road #2", 0.52, 2, 59);
+var segmentLG13PR3X = new CreateSegment("LG13", "PR3X", "Powerline Road #2", 0.52, 2, 65);
 var segmentLG13PR3Xlatlngs = [
     [33.760950, -111.856631],
     [33.760865, -111.856862],
@@ -21542,7 +21542,7 @@ var segmentLG17LG19latlngs = [
 var segmentLG17LG19polyline = L.polyline(segmentLG17LG19latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentLG19LG21 = new CreateSegment("LG19", "LG21", "Latigo Trail", 0.42, 6.91, 47.5);
+var segmentLG19LG21 = new CreateSegment("LG19", "LG21", "Latigo Trail", 0.42, 2, 38);
 var segmentLG19LG21latlngs = [
     [33.758151, -111.864755],
     [33.758103, -111.864810],
@@ -21617,7 +21617,7 @@ var segmentLG19LG21latlngs = [
 var segmentLG19LG21polyline = L.polyline(segmentLG19LG21latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentLG19PR3X = new CreateSegment("LG19", "PR3X", "Connector Trail", 0.02, 0.4, 0.69);
+var segmentLG19PR3X = new CreateSegment("LG19", "PR3X", "Connector Trail", 0.02, 0, 0);
 var segmentLG19PR3Xlatlngs = [
     [33.758151, -111.864756],
     [33.758090, -111.864695],

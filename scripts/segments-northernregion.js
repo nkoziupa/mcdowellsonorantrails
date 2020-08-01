@@ -23493,7 +23493,7 @@ var segmentFT2XFT3Xlatlngs = [
 var segmentFT2XFT3Xpolyline = L.polyline(segmentFT2XFT3Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentFT2XWB8 = new CreateSegment("FT2X", "WB8", "Gooseneck Trail", 0.1, 4, 0);
+var segmentFT2XWB8 = new CreateSegment("FT2X", "WB8", "Gooseneck Trail", 0.1, 8, 0);
 var segmentFT2XWB8latlngs = [
     [33.745506, -111.795065],
     [33.745574, -111.795104],

@@ -12961,7 +12961,7 @@ var segmentLG2LG3latlngs = [
 var segmentLG2LG3polyline = L.polyline(segmentLG2LG3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentLG24LG29 = new CreateSegment("LG24", "LG29", "Latigo Trail", 0.77, 14.6, 69.9);
+var segmentLG24LG29 = new CreateSegment("LG24", "LG29", "Latigo Trail", 0.77, 4, 60);
 var segmentLG24LG29latlngs = [
     [33.754789, -111.875112],
     [33.754747, -111.875198],
@@ -13091,7 +13091,7 @@ var segmentLG24LG29latlngs = [
 var segmentLG24LG29polyline = L.polyline(segmentLG24LG29latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentLG29PR2X = new CreateSegment("LG29", "PR2X", "Temporary Connector Trail", 0.1, 2.66, 3.05);
+var segmentLG29PR2X = new CreateSegment("LG29", "PR2X", "Temporary Connector Trail", 0.1, 1, 1);
 var segmentLG29PR2Xlatlngs = [
     [33.749975, -111.879729],
     [33.749911, -111.879562],
@@ -21627,7 +21627,7 @@ var segmentLG19PR3Xlatlngs = [
 var segmentLG19PR3Xpolyline = L.polyline(segmentLG19PR3Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentLG21LG24 = new CreateSegment("LG21", "LG24", "Latigo Trail", 0.45, 10.6, 55.1);
+var segmentLG21LG24 = new CreateSegment("LG21", "LG24", "Latigo Trail", 0.45, 4, 49);
 var segmentLG21LG24latlngs = [
     [33.759337, -111.870996],
     [33.759258, -111.870986],
@@ -21711,7 +21711,7 @@ var segmentLG21LG24latlngs = [
 var segmentLG21LG24polyline = L.polyline(segmentLG21LG24latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentLG21WE23 = new CreateSegment("LG21", "WE23", "West Express", 0.1, 9.27, 0.34);
+var segmentLG21WE23 = new CreateSegment("LG21", "WE23", "West Express", 0.1, 5, 1);
 var segmentLG21WE23latlngs = [
     [33.759338, -111.870996],
     [33.759433, -111.871001],
@@ -21733,7 +21733,7 @@ var segmentLG21WE23latlngs = [
 var segmentLG21WE23polyline = L.polyline(segmentLG21WE23latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentLG24RC1 = new CreateSegment("LG24", "RC1", "Rock Tank Trail", 0.19, 12.4, 12.1);
+var segmentLG24RC1 = new CreateSegment("LG24", "RC1", "Rock Tank Trail", 0.19, 5, 8);
 var segmentLG24RC1latlngs = [
     [33.754790, -111.875112],
     [33.754701, -111.875112],
@@ -21770,7 +21770,7 @@ var segmentLG24RC1latlngs = [
 var segmentLG24RC1polyline = L.polyline(segmentLG24RC1latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 
-var segmentLG24RC4 = new CreateSegment("LG24", "RC4", "Rock Tank Trail", 0.22, 15.1, 23.3);
+var segmentLG24RC4 = new CreateSegment("LG24", "RC4", "Rock Tank Trail", 0.22, 3, 13);
 var segmentLG24RC4latlngs = [
     [33.754790, -111.875113],
     [33.754910, -111.875120],

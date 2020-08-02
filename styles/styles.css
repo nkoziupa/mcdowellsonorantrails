@@ -10,6 +10,7 @@ body {
 
 a {
   color: #17a2b8;
+  font-weight: 400;
 }
 
 .pointer {
@@ -1136,7 +1137,7 @@ p {
 }
 
 #infoicon {
-  color: #ffffff;
+  color: #e5e5e3;
   font-size: 30px;
 }
 
@@ -1150,7 +1151,7 @@ p {
 
 @media only screen and (max-width: 767px) {
   #infoicon {
-    color: #ffffff;
+    color: #e5e5e3;
     font-size: 26px;
   }
 }

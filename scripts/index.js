@@ -179,7 +179,7 @@ if ($(window).width() >= 992) {
     $("#mapcontainer").css("height", mainContainerHeight - 320);
   }
   else {
-    $("#mapcontainer").css("height", mainContainerHeight - 220);
+    $("#mapcontainer").css("height", mainContainerHeight - 230);
   };
 
 // if window is resized, maintain header and main container height as full screen height
@@ -195,7 +195,7 @@ $(window).resize(function() {
     $("#mapcontainer").css("height", mainContainerHeightResized - 320);
   }
   else {
-    $("#mapcontainer").css("height", mainContainerHeightResized - 220);
+    $("#mapcontainer").css("height", mainContainerHeightResized - 230);
   }
 });
 

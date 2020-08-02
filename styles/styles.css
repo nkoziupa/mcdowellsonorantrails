@@ -772,7 +772,7 @@ p {
 @media only screen and (max-width: 767px) {
   #infocontainer-2-markercontainer-2 {
     text-align: center;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     display: none;
   }
 }
@@ -1144,14 +1144,14 @@ p {
 
 @media only screen and (max-width: 767px) {
   #infoiconcontainer {
-    padding-top: 10px;
+    padding-top: 5px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   #infoicon {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 

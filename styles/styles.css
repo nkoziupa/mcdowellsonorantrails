@@ -107,8 +107,6 @@ a.inlinemodallink:hover {
   }
 }
 
-
-
 /* cookie banner */
 
 #cookiebanner {
@@ -385,20 +383,17 @@ p {
 .modal-button-label {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  /* text-transform: uppercase; */
 }
 
 /* routeplan modal */
 
 .modal-routeplan-title {
   font-family: 'Lato', sans-serif;
-  /* text-transform: uppercase; */
   font-weight: 700;
 }
 
 .modal-routeplan-body {
   font-family: 'Lato', sans-serif;
-  /* text-transform: uppercase; */
 }
 
 .routeplanmarker {
@@ -435,7 +430,6 @@ p {
 }
 
 #routeplan {
-  /* text-transform: uppercase; */
 }
 
 /* reset map modal styles */
@@ -504,23 +498,18 @@ p {
 /* desktop */
 
 #markercontainer-0-message-line-1 {
-  /* text-transform: uppercase; */
   font-size: 27px;
   line-height: 40px;
   font-weight: 400;
-  /* word-spacing: 1px; */
-  /* margin-bottom: 5px; */
 }
 
 /* mobile */
 
 @media only screen and (max-width: 767px) {
   #markercontainer-0-message-line-1 {
-  /* text-transform: uppercase; */
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
-  /* word-spacing: 1px; */
   margin-bottom: 3px;
   }
 }
@@ -528,11 +517,9 @@ p {
 /* desktop */
 
 #markercontainer-0-message-line-2 {
-  /* text-transform: uppercase; */
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  /* word-spacing: 1px; */
   margin-bottom: 20px;
 }
 
@@ -540,12 +527,10 @@ p {
 
 @media only screen and (max-width: 767px) {
   #markercontainer-0-message-line-2 {
-  /* text-transform: uppercase; */
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  /* word-spacing: 1px; */
-  margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
   }
 }
 
@@ -555,7 +540,7 @@ p {
 
 @media only screen and (max-width: 767px) {
   #infocontainer-0-button {
-  margin-top: 22px;
+    margin-top: 22px;
   }
 }
 
@@ -568,27 +553,16 @@ p {
 
 /* desktop */
 
-
-/* #markertitle { */
-  /* font-size: 17px; */
-  /* line-height: 20px; */
-  /* font-weight: 400; */
-/* } */
-
 #markername {
-  /* text-transform: uppercase; */
-  /* font-size: 50px; */
-  /* line-height: 52px; */
   font-size: 36px;
   line-height: 42px;
   font-weight: 900;
 }
 
 #markerelev {
-  /* text-transform: uppercase; */
   font-size: 27px;
   line-height: 29px;
-  font-weight: 300;
+  font-weight: 400;
   margin-left: 6px;
 }
 
@@ -596,9 +570,6 @@ p {
 
 @media only screen and (max-width: 767px) {
   #markername {
-    /* text-transform: uppercase; */
-    /* font-size: 32px; */
-    /* line-height: 34px; */
     font-size: 24px;
     line-height: 28px;
     font-weight: 900;
@@ -607,10 +578,9 @@ p {
 
 @media only screen and (max-width: 767px) {
   #markerelev {
-    /* text-transform: uppercase; */
     font-size: 21px;
     line-height: 23px;
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 5px;
   }
 }
@@ -624,7 +594,6 @@ p {
 }
 
 #infocontainer-1-instructions-1 {
-  /* text-transform: uppercase; */
   text-align: center;
   font-size: 18px;
   line-height: 24px;
@@ -634,7 +603,6 @@ p {
 }
 
 #infocontainer-1-instructions-2 {
-  /* text-transform: uppercase; */
   text-align: center;
   font-size: 18px;
   line-height: 24px;
@@ -656,13 +624,11 @@ p {
 
 @media only screen and (max-width: 767px) {
   #infocontainer-1-instructions {
-    /* padding-top: 15px; */
   }
 }
 
 @media only screen and (max-width: 767px) {
   #infocontainer-1-instructions-1 {
-    /* text-transform: uppercase; */
     text-align: center;
     font-size: 16px;
     line-height: 20px;
@@ -674,7 +640,6 @@ p {
 
 @media only screen and (max-width: 767px) {
   #infocontainer-1-instructions-2 {
-    /* text-transform: uppercase; */
     text-align: center;
     font-size: 16px;
     line-height: 20px;
@@ -704,7 +669,6 @@ p {
 }
 
 #infocontainer-2-instructions-1 {
-  /* text-transform: uppercase; */
   text-align: center;
   font-size: 18px;
   line-height: 24px;
@@ -714,7 +678,6 @@ p {
 }
 
 #infocontainer-2-instructions-2 {
-  /* text-transform: uppercase; */
   text-align: center;
   font-size: 18px;
   line-height: 24px;
@@ -729,13 +692,11 @@ p {
 
 @media only screen and (max-width: 767px) {
   #infocontainer-2-instructions {
-    /* padding-top: 15px; */
   }
 }
 
 @media only screen and (max-width: 767px) {
   #infocontainer-2-instructions-1 {
-    /* text-transform: uppercase; */
     text-align: center;
     font-size: 16px;
     line-height: 20px;
@@ -747,7 +708,6 @@ p {
 
 @media only screen and (max-width: 767px) {
   #infocontainer-2-instructions-2 {
-    /* text-transform: uppercase; */
     text-align: center;
     font-size: 16px;
     line-height: 20px;
@@ -773,7 +733,6 @@ p {
 @media only screen and (max-width: 767px) {
   #infocontainer-2-markercontainer-2 {
     text-align: center;
-    /* margin-bottom: 10px; */
     display: none;
   }
 }
@@ -802,23 +761,18 @@ p {
 
 #markerfromcontainer {
   text-align: center;
-  /* width: 160px; */
 }
 
 #markerfromname {
-  /* text-transform: uppercase; */
-  /* font-size: 34px; */
-  /* line-height: 36px; */
   font-size: 22px;
   line-height: 26px;
   font-weight: 900;
 }
 
 #markerfromelev {
-  /* text-transform: uppercase; */
   font-size: 18px;
   line-height: 20px;
-  font-weight: 300;
+  font-weight: 400;
   margin-left: 4px;
 }
 
@@ -827,15 +781,11 @@ p {
 @media only screen and (max-width: 767px) {
   #markerfromcontainer {
     text-align: center;
-    /* width: 130px; */
   }
 }
 
 @media only screen and (max-width: 767px) {
   #markerfromname {
-    /* text-transform: uppercase; */
-    /* font-size: 28px; */
-    /* line-height: 30px; */
     font-size: 18px;
     line-height: 22px;
     font-weight: 900;
@@ -844,10 +794,9 @@ p {
 
 @media only screen and (max-width: 767px) {
   #markerfromelev {
-    /* text-transform: uppercase; */
     font-size: 16px;
     line-height: 18px;
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 4px;
   }
 }
@@ -863,7 +812,6 @@ p {
 }
 
 #markerseparatortext {
-  /* text-transform: uppercase; */
   font-size: 18px;
   line-height: 24px;
   font-weight: 300;
@@ -881,7 +829,6 @@ p {
 
 @media only screen and (max-width: 767px) {
   #markerseparatortext {
-    /* text-transform: uppercase; */
     font-size: 16px;
     line-height: 22px;
     font-weight: 300;
@@ -894,29 +841,18 @@ p {
 
 #markertocontainer {
   text-align: center;
-  /* width: 160px; */
 }
 
-/* #markertotitle { */
-  /* font-size: 12px; */
-  /* line-height: 15px; */
-  /* font-weight: 400; */
-/* } */
-
 #markertoname {
-  /* text-transform: uppercase; */
-  /* font-size: 34px; */
-  /* line-height: 36px; */
   font-size: 22px;
   line-height: 26px;
   font-weight: 900;
 }
 
 #markertoelev {
-  /* text-transform: uppercase; */
   font-size: 18px;
   line-height: 20px;
-  font-weight: 300;
+  font-weight: 400;
   margin-left: 4px;
 }
 
@@ -925,15 +861,11 @@ p {
 @media only screen and (max-width: 767px) {
   #markertocontainer {
     text-align: center;
-    /* width: 130px; */
   }
 }
 
 @media only screen and (max-width: 767px) {
   #markertoname {
-    /* text-transform: uppercase; */
-    /* font-size: 28px; */
-    /* line-height: 30px; */
     font-size: 18px;
     line-height: 22px;
     font-weight: 900;
@@ -942,10 +874,9 @@ p {
 
 @media only screen and (max-width: 767px) {
   #markertoelev {
-    /* text-transform: uppercase; */
     font-size: 16px;
     line-height: 18px;
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 4px;
   }
 }
@@ -961,21 +892,18 @@ p {
 }
 
 #segmentvia {
-  /* text-transform: uppercase; */
   font-size: 18px;
   line-height: 24px;
   font-weight: 300;
 }
 
 #segmentname {
-  /* text-transform: uppercase; */
   font-size: 22px;
   line-height: 26px;
   font-weight: 900;
 }
 
 #segmentinfo {
-  /* text-transform: uppercase; */
   font-size: 18px;
   line-height: 20px;
   font-weight: 300;
@@ -1005,7 +933,6 @@ p {
 
 @media only screen and (max-width: 767px) {
   #segmentvia {
-    /* text-transform: uppercase; */
     font-size: 16px;
     line-height: 22px;
     font-weight: 300;
@@ -1014,7 +941,6 @@ p {
 
 @media only screen and (max-width: 767px) {
   #segmentname {
-    /* text-transform: uppercase; */
     font-size: 18px;
     line-height: 22px;
     font-weight: 900;
@@ -1023,7 +949,6 @@ p {
 
 @media only screen and (max-width: 767px) {
   #segmentinfo {
-    /* text-transform: uppercase; */
     font-size: 16px;
     line-height: 18px;
     font-weight: 400;
@@ -1059,14 +984,12 @@ p {
 }
 
 #routetitle {
-  /* text-transform: uppercase; */
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
 }
 
 #routeinfo {
-  /* text-transform: uppercase; */
   font-size: 18px;
   line-height: 24px;
   font-weight: 300;
@@ -1095,7 +1018,6 @@ p {
 
 @media only screen and (max-width: 767px) {
   #routetitle {
-    /* text-transform: uppercase; */
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
@@ -1104,7 +1026,6 @@ p {
 
 @media only screen and (max-width: 767px) {
   #routeinfo {
-    /* text-transform: uppercase; */
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
@@ -1161,7 +1082,6 @@ p {
 #mapcontainer {
 }
 
-
 #mapoverlay {
   position: absolute;
   top: 0;
@@ -1175,8 +1095,6 @@ p {
   z-index: 999;
   visibility: hidden;
 }
-
-
 
 /* display classes */
 
@@ -1214,13 +1132,12 @@ p {
   line-height: 26px;
   font-weight: 700;
   color: #ffffff;
-  /* text-transform: uppercase; */
 }
 
 @media only screen and (max-width: 767px) {
   .carouseltrailhead {
-  font-size: 20px;
-  line-height: 24px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -1261,5 +1178,4 @@ p {
 .animated-location-icon {
   background-color: rgba(20,44,255,1);
   border-radius: 50%;
-  /* transition: all 1s; */
 }

@@ -593,14 +593,6 @@ p {
 
 /* mobile */
 
-/* @media only screen and (max-width: 767px) {
-  #markertitle { */
-    /* font-size: 12px; */
-    /* line-height: 15px; */
-    /* font-weight: 400; */
-  /* } */
-/* } */
-
 @media only screen and (max-width: 767px) {
   #markername {
     /* text-transform: uppercase; */
@@ -812,12 +804,6 @@ p {
   /* width: 160px; */
 }
 
-/* #markerfromtitle { */
-  /* font-size: 12px; */
-  /* line-height: 15px; */
-  /* font-weight: 400; */
-/* } */
-
 #markerfromname {
   /* text-transform: uppercase; */
   /* font-size: 34px; */
@@ -843,14 +829,6 @@ p {
     /* width: 130px; */
   }
 }
-
-/* @media only screen and (max-width: 767px) {
-  #markerfromtitle { */
-    /* font-size: 10px; */
-    /* line-height: 13px; */
-    /* font-weight: 400; */
-  /* } */
-/* } */
 
 @media only screen and (max-width: 767px) {
   #markerfromname {
@@ -949,14 +927,6 @@ p {
     /* width: 130px; */
   }
 }
-
-/* @media only screen and (max-width: 767px) {
-  #markertotitle { */
-    /* font-size: 10px; */
-    /* line-height: 13px; */
-    /* font-weight: 400; */
-  /* } */
-/* } */
 
 @media only screen and (max-width: 767px) {
   #markertoname {
@@ -1154,6 +1124,34 @@ p {
 
 @media only screen and (max-width: 767px) {
   #routeelevgain {
+  }
+}
+
+/* info icon container */
+
+/* desktop */
+
+#infoiconcontainer {
+  padding-top: 10px;
+}
+
+#infoicon {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #infoiconcontainer {
+    padding-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #infoicon {
+    color: #ffffff;
+    font-size: 30px;
   }
 }
 

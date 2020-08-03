@@ -1529,7 +1529,7 @@ function onMapClick(e) {
 
     if (infoContainer1MapOverlayShown === false) {
       $("#mapoverlay").css("visibility", "visible");
-      $("#mapoverlay").fadeTo(500, 0.8);
+      $("#mapoverlay").fadeTo(500, 0.85);
       $("#infocontainer-1-instructions-button").on("click", function() {
         $("#mapoverlay").fadeTo(500, 0.0, function() {
           $("#mapoverlay").css("visibility", "hidden");
@@ -1720,7 +1720,7 @@ function onMapClick(e) {
 
     if (infoContainer2MapOverlayShown === false) {
       $("#mapoverlay").css("visibility", "visible");
-      $("#mapoverlay").fadeTo(500, 0.8);
+      $("#mapoverlay").fadeTo(500, 0.85);
       $("#infocontainer-2-instructions-button").on("click", function() {
         $("#mapoverlay").fadeTo(500, 0.0, function() {
           $("#mapoverlay").css("visibility", "hidden");

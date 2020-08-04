@@ -337,6 +337,10 @@ h5.modal-title {
   }
 }
 
+.modal-backdrop {
+  background-color: #140b05!important;
+}
+
 /* set desktop info container width */
 
 @media (min-width: 992px) {

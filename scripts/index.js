@@ -63,8 +63,6 @@ if (getCookie("hasPolicyBeenAccepted") != "yes") {
   $("#cookiebanner").delay(1000).fadeIn(500);
 };
 
-
-
 // variables
 
 var myRenderer = L.canvas({ padding: 0.5 });
@@ -237,7 +235,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/nkoziupa/{id}/tiles/{z}/{x}/{y}?ac
     opacity: 1.0,
     renderer: L.canvas()
 }).addTo(map);
-
 
 // create custom map tile panes and add transparent label tiles
 
@@ -1237,8 +1234,6 @@ $("#markercontainer-1").on("click", function() {
 
 });
 
-
-
 $("#infocontainer").on("click", function() {
 
   // if the second info overlay has been shown and segments are showing in the info panel, show the route plan modal
@@ -1265,8 +1260,6 @@ $("#infocontainer").on("click", function() {
     $("#routeplan").html(routePlanArrayHTML);
   };
 });
-
-
 
 // reset map when user selects reset map from the route plan modal
 
@@ -1352,7 +1345,6 @@ function resetMap() {
 
 }
 
-
 // get, display, and remove user's location
 
 var locationMarker = {};
@@ -1404,7 +1396,6 @@ function onLocationError(e) {
 map.on('locationfound', onLocationFound);
 map.on('locationerror', onLocationError);
 
-
 // add locate button to map
 
 L.Control.zoomHome = L.Control.extend({
@@ -1447,14 +1438,6 @@ L.Control.zoomHome = L.Control.extend({
 
 var zoomHome = new L.Control.zoomHome();
 zoomHome.addTo(map);
-
-
-
-
-
-
-
-
 
 // ------------------------------------------------------------------------------------------------------------
 // the main function: the four cases when the user chooses a marker -------------------------------------------

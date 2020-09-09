@@ -84,7 +84,7 @@ a.inlinemodallink:hover {
 	}
 }
 
-@media only screen and (max-device-width: 2560px) and (orientation: landscape) {
+@media only screen and (max-device-width: 3000px) and (orientation: landscape) {
   #rotatemessage {
     z-index: 9999;
     position: fixed;
@@ -101,7 +101,7 @@ a.inlinemodallink:hover {
   }
 }
 
-@media only screen and (max-device-width: 2560px) and (orientation: landscape) {
+@media only screen and (max-device-width: 3000px) and (orientation: landscape) {
   .rotatemessagedevice, .rotatemessagetext {
     display: block;
   }

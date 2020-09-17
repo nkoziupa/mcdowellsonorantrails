@@ -146,7 +146,7 @@ var segmentOpacitySelectableSelected = 1.0;
 var segmentWeightSelectableSelected = 4.0;
 
 var segmentColorUnselected = "#f3f0e4";
-var segmentOpacityUnselected = 1.0;
+var segmentOpacityUnselected = 0.0;
 var segmentWeightUnselected = 4.0;
 
 var segmentColorCurrent = "#000000";

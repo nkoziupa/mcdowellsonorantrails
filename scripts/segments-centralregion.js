@@ -3632,7 +3632,7 @@ var segmentGN17MM1MTpolyline = L.polyline(segmentGN17MM1MTlatlngs, segmentMTPoly
 
 var segmentFS1TT2MT;
 var segmentFS1TT2MTlatlngs = [
-  [32.690476,	-111.800189],
+  [33.690476,	-111.800189],
 [33.690451,	-111.800267],
 [33.690442,	-111.800347],
 [33.690437,	-111.800424],

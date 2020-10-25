@@ -894,7 +894,7 @@ var segmentXM48XM49latlngs = [
     [0, -0],
     [0, -0]
 ];
-var segmentXM48XM49polyline = L.polyline(segmentXM48XM49atlngs, segmentPolylineOptions).addTo(map).bringToBack();
+var segmentXM48XM49polyline = L.polyline(segmentXM48XM49latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 var segmentXM50XM51 = new CreateSegment("XM50", "XM51", "Nursery Tank Trail", 0.28, 10, 20);
 var segmentXM50XM51latlngs = [

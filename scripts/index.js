@@ -1293,13 +1293,13 @@ $("#infocontainer-0-button").on("click", function() {
     break;
 
     case 3:
-      markerGMTX.fire('click');
-      map.flyTo([33.770558, -111.789568], 17, {animate: true, duration: 0.1});
+      markerXFGX.fire('click');
+      map.flyTo([33.635563, -111.768477], 17, {animate: true, duration: 0.1});
     break;
 
     case 4:
-      markerXFGX.fire('click');
-      map.flyTo([33.635563, -111.768477], 17, {animate: true, duration: 0.1});
+      markerGMTX.fire('click');
+      map.flyTo([33.770558, -111.789568], 17, {animate: true, duration: 0.1});
     break;
 
     case 5:

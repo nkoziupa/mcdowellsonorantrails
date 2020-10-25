@@ -702,7 +702,7 @@ var markerFTX = L.circle([33.746574, -111.795351], new CreateMarkerTrailhead("FT
 var markerGMTX = L.circle([33.77047, -111.789601], new CreateMarkerTrailhead("GMTX", "Trailhead", 2586, ["GMHX", "GT3X", "TP1X"])).addTo(map).on("click", onMapClick);
 var markerPDTX = L.circle([33.743416, -111.887740], new CreateMarkerTrailhead("PDTX", "Trailhead", 2315, ["HV75", "PR2X"])).addTo(map).on("click", onMapClick);
 
-// southern region markers
+// southern region markerS
 
 var markerAK4 = L.circle([33.624389, -111.784624], new CreateMarker("AK4", "AK4", 2762, ["AK5", "XF08"])).addTo(map).on("click", onMapClick);
 var markerAK5 = L.circle([33.621291, -111.791151], new CreateMarker("AK5", "AK5", 2940, ["SR13", "AK4"])).addTo(map).on("click", onMapClick);

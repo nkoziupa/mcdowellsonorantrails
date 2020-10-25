@@ -211,18 +211,18 @@ $("#infocontainer-2").removeClass("display-visible");
 if ($(window).height() >= 900) {
     markerRadiusInitial = 110;
     trailheadRadiusInitial = 110;
-    var map = L.map("mapcontainer").setView([33.702662, -111.829247], 12);
+    var map = L.map("mapcontainer").setView([33.702662, -111.786980], 12);
 
   }
   else if ($(window).height() >= 700 && $(window).height() < 900) {
     markerRadiusInitial = 100;
     trailheadRadiusInitial = 100;
-    var map = L.map("mapcontainer").setView([33.702662, -111.829247], 11);
+    var map = L.map("mapcontainer").setView([33.702662, -111.786980], 11);
   }
   else {
     markerRadiusInitial = 90;
     trailheadRadiusInitial = 90;
-    var map = L.map("mapcontainer").setView([33.702662, -111.829247], 10);
+    var map = L.map("mapcontainer").setView([33.702662, -111.786980], 10);
   };
 
 // add basemap tiles
@@ -702,7 +702,7 @@ var markerFTX = L.circle([33.746574, -111.795351], new CreateMarkerTrailhead("FT
 var markerGMTX = L.circle([33.77047, -111.789601], new CreateMarkerTrailhead("GMTX", "Trailhead", 2586, ["GMHX", "GT3X", "TP1X"])).addTo(map).on("click", onMapClick);
 var markerPDTX = L.circle([33.743416, -111.887740], new CreateMarkerTrailhead("PDTX", "Trailhead", 2315, ["HV75", "PR2X"])).addTo(map).on("click", onMapClick);
 
-// southern region markerS
+// southern region markers
 
 var markerAK4 = L.circle([33.624389, -111.784624], new CreateMarker("AK4", "AK4", 2762, ["AK5", "XF08"])).addTo(map).on("click", onMapClick);
 var markerAK5 = L.circle([33.621291, -111.791151], new CreateMarker("AK5", "AK5", 2940, ["SR13", "AK4"])).addTo(map).on("click", onMapClick);
@@ -1464,17 +1464,17 @@ function resetMap() {
   if ($(window).height() >= 900) {
     markerRadiusInitial = 110;
     trailheadRadiusInitial = 110;
-    map.setView([33.702662, -111.829247], 12);
+    map.setView([33.702662, -111.786980], 12);
     }
   else if ($(window).height() >= 700 && $(window).height() < 900) {
       markerRadiusInitial = 100;
       trailheadRadiusInitial = 100;
-      map.setView([33.702662, -111.829247], 11);
+      map.setView([33.702662, -111.786980], 11);
   }
   else {
       markerRadiusInitial = 50;
       trailheadRadiusInitial = 50;
-      map.setView([33.702662, -111.829247], 10);
+      map.setView([33.702662, -111.786980], 10);
   };
 
 }

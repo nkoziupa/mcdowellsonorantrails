@@ -21827,3 +21827,20 @@ var segmentXM81XMCSlatlngs = [
   [33.667967, -111.700476]
 ];
 var segmentXM81XMCSpolyline = L.polyline(segmentXM81XMCSlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
+
+/* maricopa trail segments ----------------------------------------*/
+
+var segmentMM1XM01MT;
+var segmentMM1XM01MTlatlngs = [
+  [33.716481,	-111.787399],
+  [33.716511,	-111.787248],
+  [33.716547,	-111.787178],
+  [33.716574,	-111.787130],
+  [33.716591,	-111.787093],
+  [33.716594,	-111.786981],
+  [33.716625,	-111.786894],
+  [33.716647,	-111.786872],
+  [33.716660,	-111.786811],
+  [33.716663,	-111.786770]
+];
+var segmentMM1XM01MTpolyline = L.polyline(segmentMM1XM01MTlatlngs, segmentMTPolylineOptions).addTo(map).bringToBack();

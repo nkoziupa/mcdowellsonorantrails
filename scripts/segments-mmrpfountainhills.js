@@ -22445,8 +22445,7 @@ var segmentXM02XM03MTlatlngs = [
   [33.718395,	-111.758325],
   [33.718377,	-111.758253],
   [33.718369,	-111.758190],
-  [33.718368,	-111.758139],
-
+  [33.718368,	-111.758139]
 ];
 var segmentXM02XM03MTpolyline = L.polyline(segmentXM02XM03MTlatlngs, segmentMTPolylineOptions).addTo(map).bringToBack();
 

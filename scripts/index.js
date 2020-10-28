@@ -929,6 +929,21 @@ var markerXMTS = L.circle([33.690353, -111.717885], new CreateMarkerTrailhead("X
 // fountain hills mcdowell mountain preserve markers
 
 var markerXF01 = L.circle([33.621368, -111.776442], new CreateMarker("XF01", "Intersection", 2477, ["XFAX", "XF02", "XF03"])).addTo(map).on("click", onMapClick);
+
+map.dragging.disable();
+
+markerXF01.on({
+          mousedown: function () {
+            map.on('mousemove', function (e) {
+              markerXF01.setLatLng(e.latlng);
+            });
+          }
+       });
+       map.on('mouseup',function(e){
+         map.removeEventListener('mousemove');
+         alert(e.latlng);
+       })
+
 var markerXF02 = L.circle([33.621534, -111.776364], new CreateMarker("XF02", "Intersection", 2487, ["XF01", "XF20", "XF06"])).addTo(map).on("click", onMapClick);
 var markerXF03 = L.circle([33.621006, -111.774359], new CreateMarker("XF03", "Intersection", 2507, ["XF01", "XF04", "XF05"])).addTo(map).on("click", onMapClick);
 var markerXF04 = L.circle([33.621038, -111.772823], new CreateMarker("XF04", "End of Trail", 2511, ["XF03"])).addTo(map).on("click", onMapClick);
@@ -968,23 +983,7 @@ var markerXF36 = L.circle([33.631171, -111.782641], new CreateMarker("XF36", "Sc
 // fountain hills mcdowell mountain preserve trailheads
 
 var markerXFAX = L.circle([33.621149, -111.776984], new CreateMarkerTrailhead("XFAX", "Trailhead", 2459, ["XF01"])).addTo(map).on("click", onMapClick);
-var markerXFGX = L.circle([33.635563, -111.768477], new CreateMarkerTrailhead("XFGX", "Trailhead", 2137, ["XM67"])).addTo(map).on("click", onMapClick);
-
-map.dragging.disable();
-
-markerXFGX.on({
-          mousedown: function () {
-            map.on('mousemove', function (e) {
-              markerXFGX.setLatLng(e.latlng);
-            });
-          }
-       });
-       map.on('mouseup',function(e){
-         map.removeEventListener('mousemove');
-         alert(e.latlng);
-       })
-
-
+var markerXFGX = L.circle([33.635479, -111.768508], new CreateMarkerTrailhead("XFGX", "Trailhead", 2137, ["XM67"])).addTo(map).on("click", onMapClick);
 
 var mapZoomLevel;
 map.on("zoomend", function () {
@@ -1311,7 +1310,7 @@ $("#infocontainer-0-button").on("click", function() {
 
     case 3:
       markerXFGX.fire('click');
-      map.flyTo([33.635563, -111.768477], 17, {animate: true, duration: 0.1});
+      map.flyTo([33.635479, -111.768508], 17, {animate: true, duration: 0.1});
     break;
 
     case 4:

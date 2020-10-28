@@ -951,14 +951,16 @@ var markerXF20 = L.circle([33.62159, -111.778455], new CreateMarker("XF20", "Int
 var markerXF21 = L.circle([33.622172, -111.778397], new CreateMarker("XF21", "Intersection", 2597, ["XF20", "XF22", "XF07"])).addTo(map).on("click", onMapClick);
 var markerXF22 = L.circle([33.622045, -111.779526], new CreateMarker("XF22", "Loop Point", 2592, ["XF21", "XF20"])).addTo(map).on("click", onMapClick);
 var markerXF23 = L.circle([33.622696, -111.778185], new CreateMarker("XF23", "Intersection", 2645, ["XF24", "XF25", "XF07"])).addTo(map).on("click", onMapClick);
-var markerXF24 = L.circle([33.622627, -111.778532], new CreateMarker("XF24", "Loop Point", 2641, ["XF25", "XF23"])).addTo(map).on("click", onMapClick);
+var markerXF24 = L.circle([33.622571, -111.778572], new CreateMarker("XF24", "Loop Point", 2641, ["XF25", "XF23"])).addTo(map).on("click", onMapClick);
+var markerXF25 = L.circle([33.622901, -111.778486], new CreateMarker("XF25", "Intersection", 2655, ["XF24", "XF08", "XF23"])).addTo(map).on("click", onMapClick);
+var markerXF26 = L.circle([33.634200, -111.782809], new CreateMarker("XF26", "Intersection", 2520, ["XF27", "XF28", "XF18"])).addTo(map).on("click", onMapClick);
 
 map.dragging.disable();
 
-markerXF24.on({
+markerXF26.on({
           mousedown: function () {
             map.on('mousemove', function (e) {
-              markerXF24.setLatLng(e.latlng);
+              markerXF26.setLatLng(e.latlng);
             });
           }
        });
@@ -967,8 +969,6 @@ markerXF24.on({
          alert(e.latlng);
        })
 
-var markerXF25 = L.circle([33.622901, -111.778486], new CreateMarker("XF25", "Intersection", 2655, ["XF24", "XF08", "XF23"])).addTo(map).on("click", onMapClick);
-var markerXF26 = L.circle([33.634200, -111.782809], new CreateMarker("XF26", "Intersection", 2520, ["XF27", "XF28", "XF18"])).addTo(map).on("click", onMapClick);
 var markerXF27 = L.circle([33.633903, -111.783741], new CreateMarker("XF27", "Intersection", 2593, ["XF31", "XF28", "XF26"])).addTo(map).on("click", onMapClick);
 var markerXF28 = L.circle([33.634096, -111.783348], new CreateMarker("XF28", "Loop Point", 2560, ["XF27", "XF26"])).addTo(map).on("click", onMapClick);
 var markerXF29 = L.circle([33.631403, -111.782565], new CreateMarker("XF29", "Intersection", 2638, ["XF36", "XF18", "XF19"])).addTo(map).on("click", onMapClick);

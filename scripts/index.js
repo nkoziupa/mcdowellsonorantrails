@@ -928,14 +928,15 @@ var markerXMTS = L.circle([33.690353, -111.717885], new CreateMarkerTrailhead("X
 
 // fountain hills mcdowell mountain preserve markers
 
-var markerXF01 = L.circle([33.621368, -111.776442], new CreateMarker("XF01", "Intersection", 2477, ["XFAX", "XF02", "XF03"])).addTo(map).on("click", onMapClick);
+var markerXF01 = L.circle([33.621258, -111.776522], new CreateMarker("XF01", "Intersection", 2477, ["XFAX", "XF02", "XF03"])).addTo(map).on("click", onMapClick);
+var markerXF02 = L.circle([33.621534, -111.776364], new CreateMarker("XF02", "Intersection", 2487, ["XF01", "XF20", "XF06"])).addTo(map).on("click", onMapClick);
 
 map.dragging.disable();
 
-markerXF01.on({
+markerXF02.on({
           mousedown: function () {
             map.on('mousemove', function (e) {
-              markerXF01.setLatLng(e.latlng);
+              markerXF02.setLatLng(e.latlng);
             });
           }
        });
@@ -944,7 +945,6 @@ markerXF01.on({
          alert(e.latlng);
        })
 
-var markerXF02 = L.circle([33.621534, -111.776364], new CreateMarker("XF02", "Intersection", 2487, ["XF01", "XF20", "XF06"])).addTo(map).on("click", onMapClick);
 var markerXF03 = L.circle([33.621006, -111.774359], new CreateMarker("XF03", "Intersection", 2507, ["XF01", "XF04", "XF05"])).addTo(map).on("click", onMapClick);
 var markerXF04 = L.circle([33.621038, -111.772823], new CreateMarker("XF04", "End of Trail", 2511, ["XF03"])).addTo(map).on("click", onMapClick);
 var markerXF05 = L.circle([33.618613, -111.771459], new CreateMarker("XF05", "End of Trail", 2512, ["XF03"])).addTo(map).on("click", onMapClick);

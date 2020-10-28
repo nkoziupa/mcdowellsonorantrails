@@ -836,22 +836,7 @@ var markerWWTX = L.circle([33.630502, -111.870109], new CreateMarkerTrailhead("W
 
 // mcdowell mountain park markers plus MM1
 
-var markerXM26 = L.circle([33.716498, -111.786635], new CreateMarker("XM26", "Intersection", 2473, ["XM01", "XM27", "XM25"])).addTo(map).on("click", onMapClick);
-
-map.dragging.disable();
-
-markerXM26.on({
-          mousedown: function () {
-            map.on('mousemove', function (e) {
-              markerXM26.setLatLng(e.latlng);
-            });
-          }
-       });
-       map.on('mouseup',function(e){
-         map.removeEventListener('mousemove');
-         alert(e.latlng);
-       })
-
+var markerXM26 = L.circle([33.716451, -111.786597], new CreateMarker("XM26", "Intersection", 2473, ["XM01", "XM27", "XM25"])).addTo(map).on("click", onMapClick);
 var markerXM02 = L.circle([33.717067, -111.786597], new CreateMarker("XM02", "Intersection", 2479, ["XM01", "MM3", "XM03"])).addTo(map).on("click", onMapClick);
 var markerXM01 = L.circle([33.716760, -111.786777], new CreateMarker("XM01", "Intersection", 2477, ["MM1", "XM02", "XM26"])).addTo(map).on("click", onMapClick);
 var markerMM1 = L.circle([33.716580, -111.787415], new CreateMarker("MM1", "MM1", 2508, ["SN11", "GN17", "XM01"])).addTo(map).on("click", onMapClick);
@@ -930,9 +915,26 @@ var markerXM75 = L.circle([33.667992, -111.701406], new CreateMarker("XM75", "Fi
 var markerXM76 = L.circle([33.668264, -111.703395], new CreateMarker("XM76", "Intersection", 1661, ["XM72", "XM77", "XM73"])).addTo(map).on("click", onMapClick);
 var markerXM77 = L.circle([33.668831, -111.702145], new CreateMarker("XM77", "Start", 1675, ["XM76", "XM70", "XMCS", "XM75"])).addTo(map).on("click", onMapClick);
 var markerXM78 = L.circle([33.661244, -111.704382], new CreateMarker("XM78", "Intersection", 1655, ["XM72", "XM74", "XM80"])).addTo(map).on("click", onMapClick);
+
+var markerXM81 = L.circle([33.667277, -111.698956], new CreateMarker("XM81", "Finish", 1649, ["XM79", "XMCS", "XM80"])).addTo(map).on("click", onMapClick);
+
+map.dragging.disable();
+
+markerXM81.on({
+          mousedown: function () {
+            map.on('mousemove', function (e) {
+              markerXM81.setLatLng(e.latlng);
+            });
+          }
+       });
+       map.on('mouseup',function(e){
+         map.removeEventListener('mousemove');
+         alert(e.latlng);
+       })
+
 var markerXM79 = L.circle([33.667087, -111.699121], new CreateMarker("XM79", "Start", 1647, ["XMCS", "XM81", "XM80"])).addTo(map).on("click", onMapClick);
 var markerXM80 = L.circle([33.660962, -111.704076], new CreateMarker("XM80", "Intersection", 1659, ["XM78", "XM79", "XM81"])).addTo(map).on("click", onMapClick);
-var markerXM81 = L.circle([33.667277, -111.698956], new CreateMarker("XM81", "Finish", 1649, ["XM79", "XMCS", "XM80"])).addTo(map).on("click", onMapClick);
+
 
 // mcdowell mountain park trailheads
 

@@ -935,14 +935,14 @@ var markerXF04 = L.circle([33.621038, -111.772823], new CreateMarker("XF04", "En
 var markerXF05 = L.circle([33.618613, -111.771459], new CreateMarker("XF05", "End of Trail", 2512, ["XF03"])).addTo(map).on("click", onMapClick);
 var markerXF06 = L.circle([33.622515, -111.777168], new CreateMarker("XF06", "Intersection", 2556, ["XF02", "XF07", "XF14"])).addTo(map).on("click", onMapClick);
 var markerXF07 = L.circle([33.622581, -111.77804], new CreateMarker("XF07", "Intersection", 2628, ["XF21", "XF23", "XF06"])).addTo(map).on("click", onMapClick);
-var markerXF08 = L.circle([33.622967, -111.778603], new CreateMarker("XF08", "Intersection", 2666, ["AK4", "XF09", "XF25"])).addTo(map).on("click", onMapClick);
+var markerXF08 = L.circle([33.623125, -111.778754], new CreateMarker("XF08", "Intersection", 2666, ["AK4", "XF09", "XF25"])).addTo(map).on("click", onMapClick);
 
 map.dragging.disable();
 
-markerXF08.on({
+markerXF07.on({
           mousedown: function () {
             map.on('mousemove', function (e) {
-              markerXF08.setLatLng(e.latlng);
+              markerXF07.setLatLng(e.latlng);
             });
           }
        });

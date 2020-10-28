@@ -936,23 +936,8 @@ var markerXF05 = L.circle([33.618613, -111.771459], new CreateMarker("XF05", "En
 var markerXF06 = L.circle([33.622515, -111.777168], new CreateMarker("XF06", "Intersection", 2556, ["XF02", "XF07", "XF14"])).addTo(map).on("click", onMapClick);
 var markerXF07 = L.circle([33.622526, -111.777864], new CreateMarker("XF07", "Intersection", 2628, ["XF21", "XF23", "XF06"])).addTo(map).on("click", onMapClick);
 var markerXF08 = L.circle([33.623125, -111.778754], new CreateMarker("XF08", "Intersection", 2666, ["AK4", "XF09", "XF25"])).addTo(map).on("click", onMapClick);
+var markerXF10 = L.circle([33.623714, -111.780524], new CreateMarker("XF10", "Scenic Point", 2836, ["XF09"])).addTo(map).on("click", onMapClick);
 var markerXF09 = L.circle([33.624045, -111.780465], new CreateMarker("XF09", "Intersection", 2863, ["XF10", "XF11", "XF08"])).addTo(map).on("click", onMapClick);
-var markerXF10 = L.circle([33.623819, -111.780498], new CreateMarker("XF10", "Scenic Point", 2836, ["XF09"])).addTo(map).on("click", onMapClick);
-
-map.dragging.disable();
-
-markerXF10.on({
-          mousedown: function () {
-            map.on('mousemove', function (e) {
-              markerXF10.setLatLng(e.latlng);
-            });
-          }
-       });
-       map.on('mouseup',function(e){
-         map.removeEventListener('mousemove');
-         alert(e.latlng);
-       })
-
 var markerXF11 = L.circle([33.625412, -111.780844], new CreateMarker("XF11", "Intersection", 3037, ["XF09", "XF13", "XF12"])).addTo(map).on("click", onMapClick);
 var markerXF12 = L.circle([33.625178, -111.78019], new CreateMarker("XF12", "Scenic Point", 3036, ["XF11"])).addTo(map).on("click", onMapClick);
 var markerXF13 = L.circle([33.628826, -111.778312], new CreateMarker("XF13", "Intersection", 2540, ["XF11", "XF19", "XF14"])).addTo(map).on("click", onMapClick);
@@ -979,6 +964,21 @@ var markerXF33 = L.circle([33.632608, -111.779348], new CreateMarker("XF33", "Sc
 var markerXF34 = L.circle([33.631565, -111.7795], new CreateMarker("XF34", "Intersection", 2474, ["XF35", "XF32", "XF19"])).addTo(map).on("click", onMapClick);
 var markerXF35 = L.circle([33.631451, -111.779233], new CreateMarker("XF35", "Scenic Point", 2457, ["XF34"])).addTo(map).on("click", onMapClick);
 var markerXF36 = L.circle([33.631171, -111.782641], new CreateMarker("XF36", "Scenic Point", 2654, ["XF29"])).addTo(map).on("click", onMapClick);
+
+map.dragging.disable();
+
+markerXF36.on({
+          mousedown: function () {
+            map.on('mousemove', function (e) {
+              markerXF36.setLatLng(e.latlng);
+            });
+          }
+       });
+       map.on('mouseup',function(e){
+         map.removeEventListener('mousemove');
+         alert(e.latlng);
+       })
+
 
 // fountain hills mcdowell mountain preserve trailheads
 

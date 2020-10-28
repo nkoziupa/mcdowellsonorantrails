@@ -916,14 +916,15 @@ var markerXM76 = L.circle([33.668264, -111.703395], new CreateMarker("XM76", "In
 var markerXM77 = L.circle([33.668831, -111.702145], new CreateMarker("XM77", "Start", 1675, ["XM76", "XM70", "XMCS", "XM75"])).addTo(map).on("click", onMapClick);
 var markerXM78 = L.circle([33.661244, -111.704382], new CreateMarker("XM78", "Intersection", 1655, ["XM72", "XM74", "XM80"])).addTo(map).on("click", onMapClick);
 
-var markerXM81 = L.circle([33.667277, -111.698956], new CreateMarker("XM81", "Finish", 1649, ["XM79", "XMCS", "XM80"])).addTo(map).on("click", onMapClick);
+var markerXM81 = L.circle([33.667336, -111.698931], new CreateMarker("XM81", "Finish", 1649, ["XM79", "XMCS", "XM80"])).addTo(map).on("click", onMapClick);
+var markerXM79 = L.circle([33.667087, -111.699121], new CreateMarker("XM79", "Start", 1647, ["XMCS", "XM81", "XM80"])).addTo(map).on("click", onMapClick);
 
 map.dragging.disable();
 
-markerXM81.on({
+markerXM79.on({
           mousedown: function () {
             map.on('mousemove', function (e) {
-              markerXM81.setLatLng(e.latlng);
+              markerXM79.setLatLng(e.latlng);
             });
           }
        });
@@ -932,7 +933,6 @@ markerXM81.on({
          alert(e.latlng);
        })
 
-var markerXM79 = L.circle([33.667087, -111.699121], new CreateMarker("XM79", "Start", 1647, ["XMCS", "XM81", "XM80"])).addTo(map).on("click", onMapClick);
 var markerXM80 = L.circle([33.660962, -111.704076], new CreateMarker("XM80", "Intersection", 1659, ["XM78", "XM79", "XM81"])).addTo(map).on("click", onMapClick);
 
 

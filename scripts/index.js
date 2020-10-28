@@ -946,21 +946,13 @@ var markerXF15 = L.circle([33.637442, -111.785731], new CreateMarker("XF15", "In
 var markerXF16 = L.circle([33.636392, -111.7875], new CreateMarker("XF16", "Intersection", 2734, ["XM68", "XF15", "XF31"])).addTo(map).on("click", onMapClick);
 var markerXF17 = L.circle([33.63456, -111.782076], new CreateMarker("XF17", "Intersection", 2474, ["XF18", "XF30", "XF32"])).addTo(map).on("click", onMapClick);
 var markerXF18 = L.circle([33.63405, -111.782644], new CreateMarker("XF18", "Intersection", 2513, ["XF29", "XF26", "XF17"])).addTo(map).on("click", onMapClick);
-var markerXF19 = L.circle([33.629652, -111.778399], new CreateMarker("XF19", "Intersection", 2522, ["XF13", "XF29", "XF34"])).addTo(map).on("click", onMapClick);
-var markerXF20 = L.circle([33.62159, -111.778455], new CreateMarker("XF20", "Intersection", 2537, ["XF22", "XF21", "XF02"])).addTo(map).on("click", onMapClick);
-var markerXF21 = L.circle([33.622172, -111.778397], new CreateMarker("XF21", "Intersection", 2597, ["XF20", "XF22", "XF07"])).addTo(map).on("click", onMapClick);
-var markerXF22 = L.circle([33.622045, -111.779526], new CreateMarker("XF22", "Loop Point", 2592, ["XF21", "XF20"])).addTo(map).on("click", onMapClick);
-var markerXF23 = L.circle([33.622696, -111.778185], new CreateMarker("XF23", "Intersection", 2645, ["XF24", "XF25", "XF07"])).addTo(map).on("click", onMapClick);
-var markerXF24 = L.circle([33.622571, -111.778572], new CreateMarker("XF24", "Loop Point", 2641, ["XF25", "XF23"])).addTo(map).on("click", onMapClick);
-var markerXF25 = L.circle([33.622901, -111.778486], new CreateMarker("XF25", "Intersection", 2655, ["XF24", "XF08", "XF23"])).addTo(map).on("click", onMapClick);
-var markerXF26 = L.circle([33.634200, -111.782809], new CreateMarker("XF26", "Intersection", 2520, ["XF27", "XF28", "XF18"])).addTo(map).on("click", onMapClick);
 
 map.dragging.disable();
 
-markerXF26.on({
+markerXF18.on({
           mousedown: function () {
             map.on('mousemove', function (e) {
-              markerXF26.setLatLng(e.latlng);
+              markerXF18.setLatLng(e.latlng);
             });
           }
        });
@@ -969,6 +961,14 @@ markerXF26.on({
          alert(e.latlng);
        })
 
+var markerXF19 = L.circle([33.629652, -111.778399], new CreateMarker("XF19", "Intersection", 2522, ["XF13", "XF29", "XF34"])).addTo(map).on("click", onMapClick);
+var markerXF20 = L.circle([33.62159, -111.778455], new CreateMarker("XF20", "Intersection", 2537, ["XF22", "XF21", "XF02"])).addTo(map).on("click", onMapClick);
+var markerXF21 = L.circle([33.622172, -111.778397], new CreateMarker("XF21", "Intersection", 2597, ["XF20", "XF22", "XF07"])).addTo(map).on("click", onMapClick);
+var markerXF22 = L.circle([33.622045, -111.779526], new CreateMarker("XF22", "Loop Point", 2592, ["XF21", "XF20"])).addTo(map).on("click", onMapClick);
+var markerXF23 = L.circle([33.622696, -111.778185], new CreateMarker("XF23", "Intersection", 2645, ["XF24", "XF25", "XF07"])).addTo(map).on("click", onMapClick);
+var markerXF24 = L.circle([33.622571, -111.778572], new CreateMarker("XF24", "Loop Point", 2641, ["XF25", "XF23"])).addTo(map).on("click", onMapClick);
+var markerXF25 = L.circle([33.622901, -111.778486], new CreateMarker("XF25", "Intersection", 2655, ["XF24", "XF08", "XF23"])).addTo(map).on("click", onMapClick);
+var markerXF26 = L.circle([33.634274, -111.782788], new CreateMarker("XF26", "Intersection", 2520, ["XF27", "XF28", "XF18"])).addTo(map).on("click", onMapClick);
 var markerXF27 = L.circle([33.633903, -111.783741], new CreateMarker("XF27", "Intersection", 2593, ["XF31", "XF28", "XF26"])).addTo(map).on("click", onMapClick);
 var markerXF28 = L.circle([33.634096, -111.783348], new CreateMarker("XF28", "Loop Point", 2560, ["XF27", "XF26"])).addTo(map).on("click", onMapClick);
 var markerXF29 = L.circle([33.631403, -111.782565], new CreateMarker("XF29", "Intersection", 2638, ["XF36", "XF18", "XF19"])).addTo(map).on("click", onMapClick);

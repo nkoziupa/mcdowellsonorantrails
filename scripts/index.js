@@ -928,18 +928,19 @@ var markerXMTS = L.circle([33.690353, -111.717885], new CreateMarkerTrailhead("X
 
 // fountain hills mcdowell mountain preserve markers
 
+var markerXF33 = L.circle([33.632639, -111.779484], new CreateMarker("XF33", "Scenic Point", 2454, ["XF32"])).addTo(map).on("click", onMapClick);
+var markerXF35 = L.circle([33.631317, -111.779215], new CreateMarker("XF35", "Scenic Point", 2457, ["XF34"])).addTo(map).on("click", onMapClick);
+var markerXF36 = L.circle([33.631156, -111.782842], new CreateMarker("XF36", "Scenic Point", 2654, ["XF29"])).addTo(map).on("click", onMapClick);
 var markerXF02 = L.circle([33.621579, -111.776394], new CreateMarker("XF02", "Intersection", 2487, ["XF01", "XF20", "XF06"])).addTo(map).on("click", onMapClick);
 var markerXF01 = L.circle([33.621258, -111.776522], new CreateMarker("XF01", "Intersection", 2477, ["XFAX", "XF02", "XF03"])).addTo(map).on("click", onMapClick);
 var markerXF03 = L.circle([33.621006, -111.774359], new CreateMarker("XF03", "Intersection", 2507, ["XF01", "XF04", "XF05"])).addTo(map).on("click", onMapClick);
 var markerXF04 = L.circle([33.621038, -111.772823], new CreateMarker("XF04", "End of Trail", 2511, ["XF03"])).addTo(map).on("click", onMapClick);
 var markerXF05 = L.circle([33.618613, -111.771459], new CreateMarker("XF05", "End of Trail", 2512, ["XF03"])).addTo(map).on("click", onMapClick);
-var markerXF06 = L.circle([33.622515, -111.777168], new CreateMarker("XF06", "Intersection", 2556, ["XF02", "XF07", "XF14"])).addTo(map).on("click", onMapClick);
-var markerXF07 = L.circle([33.622526, -111.777864], new CreateMarker("XF07", "Intersection", 2628, ["XF21", "XF23", "XF06"])).addTo(map).on("click", onMapClick);
 var markerXF08 = L.circle([33.623125, -111.778754], new CreateMarker("XF08", "Intersection", 2666, ["AK4", "XF09", "XF25"])).addTo(map).on("click", onMapClick);
 var markerXF10 = L.circle([33.623714, -111.780524], new CreateMarker("XF10", "Scenic Point", 2836, ["XF09"])).addTo(map).on("click", onMapClick);
 var markerXF09 = L.circle([33.624045, -111.780465], new CreateMarker("XF09", "Intersection", 2863, ["XF10", "XF11", "XF08"])).addTo(map).on("click", onMapClick);
-var markerXF11 = L.circle([33.625412, -111.780844], new CreateMarker("XF11", "Intersection", 3037, ["XF09", "XF13", "XF12"])).addTo(map).on("click", onMapClick);
 var markerXF12 = L.circle([33.625178, -111.78019], new CreateMarker("XF12", "Scenic Point", 3036, ["XF11"])).addTo(map).on("click", onMapClick);
+var markerXF11 = L.circle([33.625412, -111.780844], new CreateMarker("XF11", "Intersection", 3037, ["XF09", "XF13", "XF12"])).addTo(map).on("click", onMapClick);
 var markerXF13 = L.circle([33.628826, -111.778312], new CreateMarker("XF13", "Intersection", 2540, ["XF11", "XF19", "XF14"])).addTo(map).on("click", onMapClick);
 var markerXF14 = L.circle([33.625833, -111.774384], new CreateMarker("XF14", "Intersection", 2519, ["XF06", "XF13"])).addTo(map).on("click", onMapClick);
 var markerXF15 = L.circle([33.637442, -111.785731], new CreateMarker("XF15", "Intersection", 2614, ["XF16", "XM68", "XF30"])).addTo(map).on("click", onMapClick);
@@ -950,35 +951,19 @@ var markerXF19 = L.circle([33.629652, -111.778399], new CreateMarker("XF19", "In
 var markerXF20 = L.circle([33.62159, -111.778455], new CreateMarker("XF20", "Intersection", 2537, ["XF22", "XF21", "XF02"])).addTo(map).on("click", onMapClick);
 var markerXF21 = L.circle([33.622172, -111.778397], new CreateMarker("XF21", "Intersection", 2597, ["XF20", "XF22", "XF07"])).addTo(map).on("click", onMapClick);
 var markerXF22 = L.circle([33.622045, -111.779526], new CreateMarker("XF22", "Loop Point", 2592, ["XF21", "XF20"])).addTo(map).on("click", onMapClick);
-var markerXF23 = L.circle([33.622696, -111.778185], new CreateMarker("XF23", "Intersection", 2645, ["XF24", "XF25", "XF07"])).addTo(map).on("click", onMapClick);
-var markerXF24 = L.circle([33.622571, -111.778572], new CreateMarker("XF24", "Loop Point", 2641, ["XF25", "XF23"])).addTo(map).on("click", onMapClick);
 var markerXF25 = L.circle([33.622901, -111.778486], new CreateMarker("XF25", "Intersection", 2655, ["XF24", "XF08", "XF23"])).addTo(map).on("click", onMapClick);
+var markerXF23 = L.circle([33.622696, -111.778185], new CreateMarker("XF23", "Intersection", 2645, ["XF24", "XF25", "XF07"])).addTo(map).on("click", onMapClick);
+var markerXF07 = L.circle([33.622526, -111.777864], new CreateMarker("XF07", "Intersection", 2628, ["XF21", "XF23", "XF06"])).addTo(map).on("click", onMapClick);
+var markerXF06 = L.circle([33.622515, -111.777168], new CreateMarker("XF06", "Intersection", 2556, ["XF02", "XF07", "XF14"])).addTo(map).on("click", onMapClick);
+var markerXF24 = L.circle([33.622571, -111.778572], new CreateMarker("XF24", "Loop Point", 2641, ["XF25", "XF23"])).addTo(map).on("click", onMapClick);
 var markerXF26 = L.circle([33.634282, -111.782842], new CreateMarker("XF26", "Intersection", 2520, ["XF27", "XF28", "XF18"])).addTo(map).on("click", onMapClick);
-var markerXF27 = L.circle([33.633903, -111.783741], new CreateMarker("XF27", "Intersection", 2593, ["XF31", "XF28", "XF26"])).addTo(map).on("click", onMapClick);
 var markerXF28 = L.circle([33.634247, -111.783367], new CreateMarker("XF28", "Loop Point", 2560, ["XF27", "XF26"])).addTo(map).on("click", onMapClick);
+var markerXF27 = L.circle([33.633903, -111.783741], new CreateMarker("XF27", "Intersection", 2593, ["XF31", "XF28", "XF26"])).addTo(map).on("click", onMapClick);
 var markerXF29 = L.circle([33.631403, -111.782565], new CreateMarker("XF29", "Intersection", 2638, ["XF36", "XF18", "XF19"])).addTo(map).on("click", onMapClick);
 var markerXF30 = L.circle([33.635294, -111.781874], new CreateMarker("XF30", "Intersection", 2517, ["XF17", "XF31", "XF15"])).addTo(map).on("click", onMapClick);
 var markerXF31 = L.circle([33.634606, -111.784923], new CreateMarker("XF31", "Intersection", 2704, ["XF16", "XF30", "XF27"])).addTo(map).on("click", onMapClick);
 var markerXF32 = L.circle([33.632867, -111.779122], new CreateMarker("XF32", "Intersection", 2436, ["XF33", "XF17", "XF34"])).addTo(map).on("click", onMapClick);
-var markerXF33 = L.circle([33.632608, -111.779348], new CreateMarker("XF33", "Scenic Point", 2454, ["XF32"])).addTo(map).on("click", onMapClick);
-var markerXF34 = L.circle([33.631565, -111.7795], new CreateMarker("XF34", "Intersection", 2474, ["XF35", "XF32", "XF19"])).addTo(map).on("click", onMapClick);
-var markerXF35 = L.circle([33.631317, -111.779215], new CreateMarker("XF35", "Scenic Point", 2457, ["XF34"])).addTo(map).on("click", onMapClick);
-var markerXF36 = L.circle([33.631156, -111.782842], new CreateMarker("XF36", "Scenic Point", 2654, ["XF29"])).addTo(map).on("click", onMapClick);
-
-map.dragging.disable();
-
-markerXF33.on({
-          mousedown: function () {
-            map.on('mousemove', function (e) {
-              markerXF33.setLatLng(e.latlng);
-            });
-          }
-       });
-       map.on('mouseup',function(e){
-         map.removeEventListener('mousemove');
-         alert(e.latlng);
-       })
-
+var markerXF34 = L.circle([33.631565, -111.779500], new CreateMarker("XF34", "Intersection", 2474, ["XF35", "XF32", "XF19"])).addTo(map).on("click", onMapClick);
 
 // fountain hills mcdowell mountain preserve trailheads
 

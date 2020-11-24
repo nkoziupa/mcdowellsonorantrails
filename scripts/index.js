@@ -277,6 +277,19 @@ var options = {
 };
 layerSR = L.tileLayer('../maptiles/southernregion/{z}/{x}/{y}.png', options).addTo(map);
 
+map.createPane('labels-mmrp');
+map.getPane('labels-mmrp').style.zIndex = 650;
+map.getPane('labels-mmrp').style.pointerEvents = 'none';
+var layerMMRP;
+var options = {
+      minZoom: 10,
+      maxZoom: 17,
+      opacity: 1.0,
+      pane: 'labels-mmrp',
+      tms: false
+};
+layerMMRP = L.tileLayer('../maptiles/mmrp/{z}/{x}/{y}.png', options).addTo(map);
+
 // remove attributions
 
 map.attributionControl.remove();

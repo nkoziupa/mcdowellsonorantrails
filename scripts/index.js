@@ -1307,78 +1307,78 @@ $("#infocontainer-0-button").on("click", function() {
     break;
 
     case 3:
-      markerXFGX.fire('click');
-      map.flyTo([33.635479, -111.768508], 17, {animate: true, duration: 0.1});
-    break;
-
-    case 4:
       markerGMTX.fire('click');
       map.flyTo([33.770558, -111.789568], 17, {animate: true, duration: 0.1});
     break;
 
-    case 5:
+    case 4:
       markerLDTX.fire('click');
       map.flyTo([33.600348, -111.811841], 17, {animate: true, duration: 0.1});
     break;
 
-    case 6:
-      markerXMCS.fire('click');
-      map.flyTo([33.667963, -111.700476], 17, {animate: true, duration: 0.1});
-    break;
-
-    case 7:
-      markerXMFS.fire('click');
-      map.flyTo([33.672499, -111.701885], 17, {animate: true, duration: 0.1});
-    break;
-
-    case 8:
-      markerXMTS.fire('click');
-      map.flyTo([33.690353, -111.717885], 17, {animate: true, duration: 0.1});
-    break;
-
-    case 9:
+    case 5:
       markerPDTX.fire('click');
       map.flyTo([33.74337985, -111.887773], 16, {animate: true, duration: 0.1});
     break;
 
-    case 10:
+    case 6:
       markerQT1X.fire('click');
       map.flyTo([33.627011, -111.857127], 16, {animate: true, duration: 0.1});
     break;
 
-    case 11:
+    case 7:
       markerRTX.fire('click');
       map.flyTo([33.598084, -111.804753], 17, {animate: true, duration: 0.1});
     break;
 
-    case 12:
+    case 8:
       markerSTX.fire('click');
       map.flyTo([33.596214, -111.768246], 17, {animate: true, duration: 0.1});
     break;
 
-    case 13:
+    case 9:
       markerTTTX.fire('click');
       map.flyTo([33.694507, -111.801702], 16, {animate: true, duration: 0.1});
     break;
 
-    case 14:
+    case 10:
       markerWWTX.fire('click');
       map.flyTo([33.630502, -111.870109], 17, {animate: true, duration: 0.1});
     break;
 
-    case 15:
+    case 11:
       markerBTX.fire('click');
       map.flyTo([33.640358, -111.856724], 15, {animate: true, duration: 0.1});
     break;
 
-    case 16:
+    case 12:
       marker136X.fire('click');
       map.flyTo([33.594952, -111.786379], 15, {animate: true, duration: 0.1});
     break;
 
-    case 17:
+    case 13:
+      markerXFGX.fire('click');
+      map.flyTo([33.635479, -111.768508], 17, {animate: true, duration: 0.1});
+    break;
+
+    case 14:
       markerXFAX.fire('click');
       map.flyTo([33.621149, -111.776984], 15, {animate: true, duration: 0.1});
+    break;
+
+    case 15:
+      markerXMCS.fire('click');
+      map.flyTo([33.667963, -111.700476], 17, {animate: true, duration: 0.1});
+    break;
+
+    case 16:
+      markerXMFS.fire('click');
+      map.flyTo([33.672499, -111.701885], 17, {animate: true, duration: 0.1});
+    break;
+
+    case 17:
+      markerXMTS.fire('click');
+      map.flyTo([33.690353, -111.717885], 17, {animate: true, duration: 0.1});
     break;
 
     default:

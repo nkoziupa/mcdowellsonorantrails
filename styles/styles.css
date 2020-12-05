@@ -502,8 +502,8 @@ p {
 /* desktop */
 
 #markercontainer-0-message-line-1 {
-  font-size: 27px;
-  line-height: 40px;
+  font-size: 26px;
+  line-height: 36px;
   font-weight: 400;
 }
 
@@ -511,8 +511,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   #markercontainer-0-message-line-1 {
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 22px;
+  line-height: 26px;
   font-weight: 400;
   margin-bottom: 3px;
   }

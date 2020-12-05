@@ -1113,7 +1113,7 @@ p {
 /* carousel controls */
 
 .carousel-inner {
-  width: 210px;
+  width: 220px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1129,6 +1129,21 @@ p {
 }
 
 /* carousel trailhead */
+
+.carouseltrailheadlocation {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+  .carouseltrailheadlocation {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 
 .carouseltrailhead {
   font-family: 'Lato', sans-serif;

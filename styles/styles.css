@@ -1113,7 +1113,13 @@ p {
 /* carousel controls */
 
 .carousel-inner {
-  width: 220px;
+  width: 250px;
+}
+
+@media only screen and (max-width: 767px) {
+  .carousel-inner {
+    width: 220px;
+  }
 }
 
 .carousel-control-prev {

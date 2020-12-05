@@ -1116,6 +1116,14 @@ p {
   width: 220px;
 }
 
+.carousel-control-prev {
+  margin-left: -15px;
+}
+
+.carousel-control-next {
+  margin-right: -15px;
+}
+
 @media only screen and (max-width: 767px) {
   .carousel-control-prev {
   margin-left: -15px;
@@ -1136,7 +1144,7 @@ p {
   line-height: 20px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 @media only screen and (max-width: 767px) {

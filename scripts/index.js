@@ -1363,7 +1363,7 @@ $("#infocontainer-0-button").on("click", function() {
 
     case 14:
       markerXFAX.fire('click');
-      map.flyTo([33.621149, -111.776984], 15, {animate: true, duration: 0.1});
+      map.flyTo([33.621149, -111.776984], 17, {animate: true, duration: 0.1});
     break;
 
     case 15:

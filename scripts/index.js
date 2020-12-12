@@ -516,10 +516,10 @@ var markerFIBX = L.circle([33.747332, -111.798821], new CreateMarker("FIBX", "In
 var markerFIEX = L.circle([33.747912, -111.799300], new CreateMarker("FIEX", "Scenic Point", 2588, ["FIDX"])).addTo(map).on("click", onMapClick);
 var markerFIDX = L.circle([33.747944, -111.799577], new CreateMarker("FIDX", "Intersection", 2592, ["FIAX", "FIBX", "FIEX"])).addTo(map).on("click", onMapClick);
 
-markerFIAX.on({
+markerFIDX.on({
           mousedown: function () {
             map.on('mousemove', function (e) {
-              markerFIAX.setLatLng(e.latlng);
+              markerFIDX.setLatLng(e.latlng);
             });
           }
        });
@@ -527,31 +527,6 @@ markerFIAX.on({
          map.removeEventListener('mousemove');
          alert(e.latlng);
        })
-
-       markerFICX.on({
-                 mousedown: function () {
-                   map.on('mousemove', function (e) {
-                     markerFICX.setLatLng(e.latlng);
-                   });
-                 }
-              });
-              map.on('mouseup',function(e){
-                map.removeEventListener('mousemove');
-                alert(e.latlng);
-              })
-
-              markerFIEX.on({
-                        mousedown: function () {
-                          map.on('mousemove', function (e) {
-                            markerFIEX.setLatLng(e.latlng);
-                          });
-                        }
-                     });
-                     map.on('mouseup',function(e){
-                       map.removeEventListener('mousemove');
-                       alert(e.latlng);
-                     })
-
 
 var markerFT3X = L.circle([33.744772, -111.794621], new CreateMarker("FT3X", "Access Point", 2539, ["FT2X", "FT4X"])).addTo(map).on("click", onMapClick);
 var markerFT2X = L.circle([33.745507, -111.795065], new CreateMarker("FT2X", "Access Point", 2544, ["WB8", "FT3X"])).addTo(map).on("click", onMapClick);

@@ -350,7 +350,7 @@ CreateMarkerTrailhead.prototype.renderer = myRenderer;
 
 // use this code to reposition markers
 
-map.dragging.disable();
+// map.dragging.disable();
 
 /* markerBP1X.on({
           mousedown: function () {
@@ -510,24 +510,11 @@ var markerDX2 = L.circle([33.755818, -111.804269], new CreateMarker("DX2", "DX2"
 var markerDX3 = L.circle([33.755801, -111.800830], new CreateMarker("DX3", "DX3", 2605, ["DX2", "BH2", "DX5", "BH1"])).addTo(map).on("click", onMapClick);
 var markerDX5 = L.circle([33.755523, -111.788204], new CreateMarker("DX5", "DX5", 2527, ["DX3", "MG1", "DXX", "MV1"])).addTo(map).on("click", onMapClick);
 var markerDXX = L.circle([33.755934, -111.786980], new CreateMarker("DXX", "Stepover Gate", 2518, ["DX5"])).addTo(map).on("click", onMapClick);
-var markerFIAX = L.circle([33.748215, -111.798098], new CreateMarker("FIAX", "Intersection", 2571, ["FIBX", "FIDX", "WB8"])).addTo(map).on("click", onMapClick);
 var markerFICX = L.circle([33.747038, -111.798989], new CreateMarker("FICX", "Scenic Point", 2567, ["FIBX"])).addTo(map).on("click", onMapClick);
-var markerFIBX = L.circle([33.747332, -111.798821], new CreateMarker("FIBX", "Intersection", 2572, ["FICX", "FIDX", "FIAX"])).addTo(map).on("click", onMapClick);
 var markerFIEX = L.circle([33.747912, -111.799300], new CreateMarker("FIEX", "Scenic Point", 2588, ["FIDX"])).addTo(map).on("click", onMapClick);
-var markerFIDX = L.circle([33.747944, -111.799577], new CreateMarker("FIDX", "Intersection", 2592, ["FIAX", "FIBX", "FIEX"])).addTo(map).on("click", onMapClick);
-
-markerFIDX.on({
-          mousedown: function () {
-            map.on('mousemove', function (e) {
-              markerFIDX.setLatLng(e.latlng);
-            });
-          }
-       });
-       map.on('mouseup',function(e){
-         map.removeEventListener('mousemove');
-         alert(e.latlng);
-       })
-
+var markerFIAX = L.circle([33.748215, -111.798098], new CreateMarker("FIAX", "Intersection", 2571, ["FIBX", "FIDX", "WB8"])).addTo(map).on("click", onMapClick);
+var markerFIBX = L.circle([33.747332, -111.798821], new CreateMarker("FIBX", "Intersection", 2572, ["FICX", "FIDX", "FIAX"])).addTo(map).on("click", onMapClick);
+var markerFIDX = L.circle([33.747965, -111.799697], new CreateMarker("FIDX", "Intersection", 2592, ["FIAX", "FIBX", "FIEX"])).addTo(map).on("click", onMapClick);
 var markerFT3X = L.circle([33.744772, -111.794621], new CreateMarker("FT3X", "Access Point", 2539, ["FT2X", "FT4X"])).addTo(map).on("click", onMapClick);
 var markerFT2X = L.circle([33.745507, -111.795065], new CreateMarker("FT2X", "Access Point", 2544, ["WB8", "FT3X"])).addTo(map).on("click", onMapClick);
 var markerGNX = L.circle([33.743349, -111.793601], new CreateMarker("GNX", "Access Point", 2522, ["FT4X", "GN1"])).addTo(map).on("click", onMapClick);

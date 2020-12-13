@@ -228,7 +228,7 @@ a.inlinemodallink:hover {
   #splashinfo {
     font-size: 14px;
     line-height: 18px;
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 25px;
@@ -279,7 +279,7 @@ a.inlinemodallink:hover {
 
 #splashsocialicons {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 

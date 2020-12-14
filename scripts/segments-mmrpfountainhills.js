@@ -2674,7 +2674,7 @@ var segmentXF13XF19latlngs = [
 ];
 var segmentXF13XF19polyline = L.polyline(segmentXF13XF19latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF15XF16 = new CreateSegment("XF15", "XF16", "Unnamed Trail", 0.17, 10, 20);
+var segmentXF15XF16 = new CreateSegment("XF15", "XF16", "Connector Trail", 0.17, 10, 20);
 var segmentXF15XF16latlngs = [
   [33.637442, -111.785731],
   [33.637438, -111.785766],
@@ -2748,7 +2748,7 @@ var segmentXF15XF16latlngs = [
 ];
 var segmentXF15XF16polyline = L.polyline(segmentXF15XF16latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF15XF30 = new CreateSegment("XF15", "XF30", "Unnamed Trail", 0.62, 10, 20);
+var segmentXF15XF30 = new CreateSegment("XF15", "XF30", "Lower Sonoran Trail", 0.62, 10, 20);
 var segmentXF15XF30latlngs = [
   [33.637442, -111.785731],
   [33.637415, -111.785739],
@@ -2936,7 +2936,7 @@ var segmentXF15XF30latlngs = [
 ];
 var segmentXF15XF30polyline = L.polyline(segmentXF15XF30latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF15XM68 = new CreateSegment("XF15", "XM68", "Unnamed Trail", 0.51, 10, 20);
+var segmentXF15XM68 = new CreateSegment("XF15", "XM68", "Lower Sonoran Trail", 0.51, 10, 20);
 var segmentXF15XM68latlngs = [
   [33.637442, -111.785731],
   [33.637468, -111.785729],
@@ -3372,7 +3372,7 @@ var segmentXF16XM68latlngs = [
 ];
 var segmentXF16XM68polyline = L.polyline(segmentXF16XM68latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF17XF18 = new CreateSegment("XF17", "XF18", "Unnamed Trail", 0.1, 10, 20);
+var segmentXF17XF18 = new CreateSegment("XF17", "XF18", "Connector Trail", 0.1, 10, 20);
 var segmentXF17XF18latlngs = [
   [33.634560, -111.782076],
   [33.634538, -111.782100],
@@ -3400,7 +3400,7 @@ var segmentXF17XF18latlngs = [
 ];
 var segmentXF17XF18polyline = L.polyline(segmentXF17XF18latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF17XF30 = new CreateSegment("XF17", "XF30", "Unnamed Trail", 0.16, 10, 20);
+var segmentXF17XF30 = new CreateSegment("XF17", "XF30", "Lower Sonoran Trail", 0.16, 10, 20);
 var segmentXF17XF30latlngs = [
   [33.634560, -111.782076],
   [33.634576, -111.782100],
@@ -3457,7 +3457,7 @@ var segmentXF17XF30latlngs = [
 ];
 var segmentXF17XF30polyline = L.polyline(segmentXF17XF30latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF17XF32 = new CreateSegment("XF17", "XF32", "Unnamed Trail", 0.3, 10, 20);
+var segmentXF17XF32 = new CreateSegment("XF17", "XF32", "Lower Sonoran Trail", 0.3, 10, 20);
 var segmentXF17XF32latlngs = [
   [33.634560, -111.782076],
   [33.634535, -111.782070],
@@ -3851,7 +3851,7 @@ var segmentXF19XF29latlngs = [
 ];
 var segmentXF19XF29polyline = L.polyline(segmentXF19XF29latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF19XF34 = new CreateSegment("XF19", "XF34", "Unnamed Trail", 0.37, 10, 20);
+var segmentXF19XF34 = new CreateSegment("XF19", "XF34", "Lower Sonoran Trail", 0.37, 10, 20);
 var segmentXF19XF34latlngs = [
   [33.629652, -111.778399],
   [33.629669, -111.778382],
@@ -4285,7 +4285,7 @@ var segmentXF29XF36latlngs = [
 ];
 var segmentXF29XF36polyline = L.polyline(segmentXF29XF36latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF30XF31 = new CreateSegment("XF30", "XF31", "Unnamed Trail", 0.19, 10, 20);
+var segmentXF30XF31 = new CreateSegment("XF30", "XF31", "Connector Trail", 0.19, 10, 20);
 var segmentXF30XF31latlngs = [
   [33.635294, -111.781874],
   [33.635302, -111.781995],
@@ -4322,7 +4322,7 @@ var segmentXF30XF31latlngs = [
 ];
 var segmentXF30XF31polyline = L.polyline(segmentXF30XF31latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF32XF33 = new CreateSegment("XF32", "XF33", "Unnamed Trail Spur", 0.03, 10, 20);
+var segmentXF32XF33 = new CreateSegment("XF32", "XF33", "Scenic Spur", 0.03, 10, 20);
 var segmentXF32XF33latlngs = [
   [33.632867, -111.779122],
   [33.632848, -111.779159],
@@ -4339,7 +4339,7 @@ var segmentXF32XF33latlngs = [
 ];
 var segmentXF32XF33polyline = L.polyline(segmentXF32XF33latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF32XF34 = new CreateSegment("XF32", "XF34", "Unnamed Trail", 0.1, 10, 20);
+var segmentXF32XF34 = new CreateSegment("XF32", "XF34", "Lower Sonoran Trail", 0.1, 10, 20);
 var segmentXF32XF34latlngs = [
   [33.632867, -111.779122],
   [33.632850, -111.779120],
@@ -4378,7 +4378,7 @@ var segmentXF32XF34latlngs = [
 ];
 var segmentXF32XF34polyline = L.polyline(segmentXF32XF34latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF34XF35 = new CreateSegment("XF34", "XF35", "Unnamed Trail Spur", 0.04, 10, 20);
+var segmentXF34XF35 = new CreateSegment("XF34", "XF35", "Scenic Spur", 0.04, 10, 20);
 var segmentXF34XF35latlngs = [
   [33.631565, -111.779500],
   [33.631529, -111.779495],

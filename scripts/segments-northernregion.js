@@ -24410,7 +24410,7 @@ var segmentTP2XTP3Xlatlngs = [
 ];
 var segmentTP2XTP3Xpolyline = L.polyline(segmentTP2XTP3Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentFIAXWB8 = new CreateSegment("FIAX", "WB8", "Interpretive Trail", 0.2, 10, 20);
+var segmentFIAXWB8 = new CreateSegment("FIAX", "WB8", "Interpretive Trail", 0.2, 0, 22);
 var segmentFIAXWB8latlngs = [
   [33.748253, -111.798034],
   [33.748204, -111.797977],
@@ -24461,7 +24461,7 @@ var segmentFIAXWB8latlngs = [
 ];
 var segmentFIAXWB8polyline = L.polyline(segmentFIAXWB8latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentFIAXFIBX = new CreateSegment("FIAX", "FIBX", "Interpretive Trail", 0.19, 10, 20);
+var segmentFIAXFIBX = new CreateSegment("FIAX", "FIBX", "Interpretive Trail", 0.19, 14, 5);
 var segmentFIAXFIBXlatlngs = [
   [33.748253, -111.798035],
   [33.748264, -111.798146],
@@ -24508,7 +24508,7 @@ var segmentFIAXFIBXlatlngs = [
 ];
 var segmentFIAXFIBXpolyline = L.polyline(segmentFIAXFIBXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentFIAXFIDX = new CreateSegment("FIAX", "FIDX", "Interpretive Trail", 0.19, 10, 20);
+var segmentFIAXFIDX = new CreateSegment("FIAX", "FIDX", "Interpretive Trail", 0.19, 38, 8);
 var segmentFIAXFIDXlatlngs = [
   [33.748253, -111.798034],
   [33.748303, -111.798067],
@@ -24551,7 +24551,7 @@ var segmentFIAXFIDXlatlngs = [
 ];
 var segmentFIAXFIDXpolyline = L.polyline(segmentFIAXFIDXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentFIBXFICX = new CreateSegment("FIBX", "FICX", "Interpretive Trail", 0.01, 10, 20);
+var segmentFIBXFICX = new CreateSegment("FIBX", "FICX", "Interpretive Trail", 0.01, 0, 2);
 var segmentFIBXFICXlatlngs = [
   [33.747331, -111.798820],
   [33.747289, -111.798839],
@@ -24560,7 +24560,7 @@ var segmentFIBXFICXlatlngs = [
 ];
 var segmentFIBXFICXpolyline = L.polyline(segmentFIBXFICXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentFIBXFIDX = new CreateSegment("FIBX", "FIDX", "Interpretive Trail", 0.14, 10, 20);
+var segmentFIBXFIDX = new CreateSegment("FIBX", "FIDX", "Interpretive Trail", 0.14, 21, 0);
 var segmentFIBXFIDXlatlngs = [
   [33.747331, -111.798819],
   [33.747307, -111.798876],
@@ -24594,7 +24594,7 @@ var segmentFIBXFIDXlatlngs = [
 ];
 var segmentFIBXFIDXpolyline = L.polyline(segmentFIBXFIDXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentFIDXFIEX = new CreateSegment("FIDX", "FIEX", "Interpretive Trail", 0.01, 10, 20);
+var segmentFIDXFIEX = new CreateSegment("FIDX", "FIEX", "Interpretive Trail", 0.01, 0, 2);
 var segmentFIDXFIEXlatlngs = [
   [33.747943, -111.799576],
   [33.747918, -111.799509],

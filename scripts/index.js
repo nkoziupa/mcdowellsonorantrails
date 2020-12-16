@@ -211,18 +211,18 @@ $("#infocontainer-2").removeClass("display-visible");
 if ($(window).height() >= 900) {
     markerRadiusInitial = 110;
     trailheadRadiusInitial = 110;
-    var map = L.map("mapcontainer").setView([33.702662, -111.829247], 12);
+    var map = L.map("mapcontainer").setView([33.702662, -111.786980], 12);
 
   }
   else if ($(window).height() >= 700 && $(window).height() < 900) {
     markerRadiusInitial = 100;
     trailheadRadiusInitial = 100;
-    var map = L.map("mapcontainer").setView([33.702662, -111.829247], 11);
+    var map = L.map("mapcontainer").setView([33.702662, -111.786980], 11);
   }
   else {
     markerRadiusInitial = 90;
     trailheadRadiusInitial = 90;
-    var map = L.map("mapcontainer").setView([33.702662, -111.829247], 10);
+    var map = L.map("mapcontainer").setView([33.702662, -111.786980], 10);
   };
 
 // add basemap tiles
@@ -277,25 +277,38 @@ var options = {
 };
 layerSR = L.tileLayer('../maptiles/southernregion/{z}/{x}/{y}.png', options).addTo(map);
 
+map.createPane('labels-mmrp');
+map.getPane('labels-mmrp').style.zIndex = 650;
+map.getPane('labels-mmrp').style.pointerEvents = 'none';
+var layerMMRP;
+var options = {
+      minZoom: 10,
+      maxZoom: 17,
+      opacity: 1.0,
+      pane: 'labels-mmrp',
+      tms: false
+};
+layerMMRP = L.tileLayer('../maptiles/mmrp/{z}/{x}/{y}.png', options).addTo(map);
+
 // remove attributions
 
 map.attributionControl.remove();
 
 // marker list
 
-var markerList = ["AG1", "AG3", "AG5", "AG7", "AG9", "AG11", "AG13", "AG15", "AG17", "AGWX", "AGX", "AH1", "AHX", "AMPX", "BA1", "BAX", "BH1", "BH1X", "BH2", "BH2X", "BH3", "BH3X", "BH4", "BH4X", "BHX", "BL1X", "BL2", "BMSX", "BP1X", "BP2X", "BP3X", "BP4X", "BR3", "BR5", "BR6", "BR9", "BROX", "BRTX", "BRX", "BS1", "BSTX", "BT1", "BT2", "BT4", "BT6", "BTTX", "CC1", "CL1", "CL2", "CL3", "CL5", "CL6", "CM1", "CM2", "CM4", "CM5", "CM6", "CM7", "CM8", "CN3", "CN5", "CP1", "CP3", "CRX", "CW3", "CW5", "CW7", "CW11", "DS1", "DS3", "DS5", "DS7", "DS9", "DS11", "DV1", "DV2", "DV3", "DV5", "DV7", "DV8", "DV9", "DV11", "DV13", "DV17", "DV19", "DV21", "DV23", "DX1", "DX1X", "DX2", "DX3", "DX5", "DXX", "FT2X", "FT3X", "FT4X", "FTAX", "FTX", "GE1X", "GE2X", "GE3X", "GE4X", "GM1", "GM2", "GM3", "GM4", "GM5", "GM6", "GM7", "GM8X", "GM9", "GM9X", "GM10", "GMHX", "GMTX", "GN1", "GN2", "GNX", "GT1X", "GT3X", "GT4X", "HD1", "HD3", "HD5", "HT1", "HT3", "HV6", "HV9", "HV51", "HV55", "HV56", "HV57", "HV58", "HV65", "HV73", "HV75", "HW1", "HW4", "HW10", "HW12", "HW16", "HW20", "HW26", "HW28", "HW30", "HW31", "HW33", "HW35", "HW37", "HW40", "HW41", "HW42", "HW44", "JR1X", "JR2X", "JRCX", "JRTX", "LG1", "LG2", "LG3", "LG4", "LG5", "LG7", "LG9", "LG13", "LG15", "LG17", "LG19", "LG21", "LG24", "LG29", "LGAX", "MG1", "MGX", "MO1", "MP1", "MP3", "MPX", "MT1", "MTX", "MV1", "MV2", "MV3", "MV4", "MVX", "ND1", "ND1X", "ND2X", "ND3X", "ND4X", "ND5X", "ND6X", "ND7X", "ND8X", "ND9X", "ND5", "OC1", "OC3", "OC7", "OHTX", "OP1", "OP3", "OP5", "OP7", "OP9", "OP11", "PDTX", "PR1X", "PR2X", "PR3X", "RC1", "RC4", "RC5", "RCAX", "RCRX", "RG1", "RG5", "RG7", "RG9", "RG11", "RGX", "RH3", "RH7", "RH9", "RH11", "RH13", "RH15", "RH17", "RHX", "RS2", "RS3", "RS4", "SB1", "SB3", "SBX", "SC1", "SC7", "SC17", "SC27", "SD1", "SD1X", "SD2X", "SD3X", "SD4X", "SD5X", "SD6X", "SD7X", "SD8X", "SD5", "SE3", "SP1", "SP3", "SP5", "SP7", "SP9", "SP11", "SPPX", "SPX", "STR5", "STR9", "SV1X", "SV2X", "SVBX", "SVTX", "TD1", "TD2", "TD4", "TNFX", "TP1", "TP1X", "TP2X", "TP3X", "UR1", "UR2", "UR3", "UR4", "UR5", "UR7", "UR8", "VT1", "VT3", "WB1", "WB3", "WB3X", "WB4", "WB8", "WB8X", "WE11", "WE13", "WE5", "WE7", "WE9", "WE17", "WE19", "WE21", "WE23", "YT1", "FS1", "GN10", "GN12", "GN13", "GN15", "GN17", "GN19", "GN21", "GN3", "GN5", "GN7", "GN9", "JX1", "JXX", "ML1", "ML3", "ML3X", "ML5", "ML7", "MM1", "MM3", "MSPX", "RB1", "RB3", "RB5", "RB7", "RK1", "SN1", "SN11", "SN3", "SN5", "SN7", "SN9", "SV1", "SV3", "SV5", "SV7", "TH1X", "TH3X", "TT1", "TT1X", "TT2", "TTTX", "136X", "AK4", "AK5", "AS1", "AS1X", "AS3", "ASX", "BN1X", "BN2X", "BN3X", "BN4X", "BP1", "BP5", "BP7", "BP9", "BTX", "DP11", "DP3", "DP5", "DP7", "DP9", "DPTX", "EB1", "EB3", "EE1", "EE5", "G01X", "G02X", "GAMX", "GL1", "GL2", "GL3", "GL5", "GL7", "GTX", "HC3", "HHVX", "KT1X", "KT2X", "KT3X", "KT4X", "KT5X", "KT6X", "LD1", "LD4X", "LD5X", "LDAX", "LDBX", "LDHX", "LD3", "LD5", "LD7", "LD9", "LDOX", "LDTX", "LT1", "LT3", "ML1X", "ML2X", "ML25", "MLX", "PC1", "PC3", "PFOX", "PP1", "PP3", "PP5", "PT3", "PT3X", "PT4X", "PT5", "QT1", "QT1X", "QT2X", "QT3", "QT5", "QT7", "RRSX", "RT1", "RT3", "RT5", "RTX", "SL1X", "SL2X", "SL3X", "SR1", "SR2", "SR5", "SR7", "SR10", "SR11", "SR13", "SR15", "SR17", "SR19", "SR9", "SSPX", "SSVX", "STOX", "STX", "TL1", "TL3", "TOX", "TPX", "TT17", "TT7", "TT9", "TT15", "TTV1", "TTV2", "TTV3", "TTV4", "TTX", "VVSX", "WCPX", "WM1", "WP1", "WP3", "WP5", "WP7", "WW1", "WW1X", "WW11", "WW15", "WW5", "WWTX"];
+var markerList = ["AG1", "AG3", "AG5", "AG7", "AG9", "AG11", "AG13", "AG15", "AG17", "AGWX", "AGX", "AH1", "AHX", "AMPX", "BA1", "BAX", "BH1", "BH1X", "BH2", "BH2X", "BH3", "BH3X", "BH4", "BH4X", "BHX", "BL1X", "BL2", "BMSX", "BP1X", "BP2X", "BP3X", "BP4X", "BR3", "BR5", "BR6", "BR9", "BROX", "BRTX", "BRX", "BS1", "BSTX", "BT1", "BT2", "BT4", "BT6", "BTTX", "CC1", "CL1", "CL2", "CL3", "CL5", "CL6", "CM1", "CM2", "CM4", "CM5", "CM6", "CM7", "CM8", "CN3", "CN5", "CP1", "CP3", "CRX", "CW3", "CW5", "CW7", "CW11", "DS1", "DS3", "DS5", "DS7", "DS9", "DS11", "DV1", "DV2", "DV3", "DV5", "DV7", "DV8", "DV9", "DV11", "DV13", "DV17", "DV19", "DV21", "DV23", "DX1", "DX1X", "DX2", "DX3", "DX5", "DXX", "FIAX", "FIBX", "FICX", "FIDX", "FIEX", "FT2X", "FT3X", "FT4X", "FTAX", "FTX", "GE1X", "GE2X", "GE3X", "GE4X", "GM1", "GM2", "GM3", "GM4", "GM5", "GM6", "GM7", "GM8X", "GM9", "GM9X", "GM10", "GMHX", "GMTX", "GN1", "GN2", "GNX", "GT1X", "GT3X", "GT4X", "HD1", "HD3", "HD5", "HT1", "HT3", "HV6", "HV9", "HV51", "HV55", "HV56", "HV57", "HV58", "HV65", "HV73", "HV75", "HW1", "HW4", "HW10", "HW12", "HW16", "HW20", "HW26", "HW28", "HW30", "HW31", "HW33", "HW35", "HW37", "HW40", "HW41", "HW42", "HW44", "JR1X", "JR2X", "JRCX", "JRTX", "LG1", "LG2", "LG3", "LG4", "LG5", "LG7", "LG9", "LG13", "LG15", "LG17", "LG19", "LG21", "LG24", "LG29", "LGAX", "MG1", "MGX", "MO1", "MP1", "MP3", "MPX", "MT1", "MTX", "MV1", "MV2", "MV3", "MV4", "MVX", "ND1", "ND1X", "ND2X", "ND3X", "ND4X", "ND5X", "ND6X", "ND7X", "ND8X", "ND9X", "ND5", "OC1", "OC3", "OC7", "OHTX", "OP1", "OP3", "OP5", "OP7", "OP9", "OP11", "PDTX", "PR1X", "PR2X", "PR3X", "RC1", "RC4", "RC5", "RCAX", "RCRX", "RG1", "RG5", "RG7", "RG9", "RG11", "RGX", "RH3", "RH7", "RH9", "RH11", "RH13", "RH15", "RH17", "RHX", "RS2", "RS3", "RS4", "SB1", "SB3", "SBX", "SC1", "SC7", "SC17", "SC27", "SD1", "SD1X", "SD2X", "SD3X", "SD4X", "SD5X", "SD6X", "SD7X", "SD8X", "SD5", "SE3", "SP1", "SP3", "SP5", "SP7", "SP9", "SP11", "SPPX", "SPX", "STR5", "STR9", "SV1X", "SV2X", "SVBX", "SVTX", "TD1", "TD2", "TD4", "TNFX", "TP1", "TP1X", "TP2X", "TP3X", "UR1", "UR2", "UR3", "UR4", "UR5", "UR7", "UR8", "VT1", "VT3", "WB1", "WB3", "WB3X", "WB4", "WB8", "WB8X", "WE11", "WE13", "WE5", "WE7", "WE9", "WE17", "WE19", "WE21", "WE23", "YT1", "FS1", "GN10", "GN12", "GN13", "GN15", "GN17", "GN19", "GN21", "GN3", "GN5", "GN7", "GN9", "JX1", "JXX", "ML1", "ML3", "ML3X", "ML5", "ML7", "MM1", "MM3", "MSPX", "RB1", "RB3", "RB5", "RB7", "RK1", "SN1", "SN11", "SN3", "SN5", "SN7", "SN9", "SV1", "SV3", "SV5", "SV7", "TH1X", "TH3X", "TT1", "TT1X", "TT2", "TTTX", "136X", "AK4", "AK5", "AS1", "AS1X", "AS3", "ASX", "BN1X", "BN2X", "BN3X", "BN4X", "BP1", "BP5", "BP7", "BP9", "BTX", "DP11", "DP3", "DP5", "DP7", "DP9", "DPTX", "EB1", "EB3", "EE1", "EE5", "G01X", "G02X", "GAMX", "GL1", "GL2", "GL3", "GL5", "GL7", "GTX", "HC3", "HHVX", "KT1X", "KT2X", "KT3X", "KT4X", "KT5X", "KT6X", "LD1", "LD4X", "LD5X", "LDAX", "LDBX", "LDHX", "LD3", "LD5", "LD7", "LD9", "LDOX", "LDTX", "LT1", "LT3", "ML1X", "ML2X", "ML25", "MLX", "PC1", "PC3", "PFOX", "PP1", "PP3", "PP5", "PT3", "PT3X", "PT4X", "PT5", "QT1", "QT1X", "QT2X", "QT3", "QT5", "QT7", "RRSX", "RT1", "RT3", "RT5", "RTX", "SL1X", "SL2X", "SL3X", "SR1", "SR2", "SR5", "SR7", "SR10", "SR11", "SR13", "SR15", "SR17", "SR19", "SR9", "SSPX", "SSVX", "STOX", "STX", "TL1", "TL3", "TOX", "TPX", "TT17", "TT7", "TT9", "TT15", "TTV1", "TTV2", "TTV3", "TTV4", "TTX", "VVSX", "WCPX", "WM1", "WP1", "WP3", "WP5", "WP7", "WW1", "WW1X", "WW11", "WW15", "WW5", "WWTX", "XM01", "XM02", "XM03", "XM04", "XM05", "XM06", "XM07", "XM08", "XM09", "XM10", "XM11", "XM12", "XM13", "XM14", "XM15", "XM16", "XM17", "XM18", "XM19", "XM20", "XM21", "XM22", "XM23", "XM24", "XM25", "XM26", "XM27", "XM28", "XM29", "XM30", "XM31", "XM32", "XM33", "XM34", "XM35", "XM36", "XM37", "XM38", "XM39", "XM40", "XM41", "XM42", "XM43", "XM44", "XM45", "XM46", "XM47", "XM48", "XM49", "XM50", "XM51", "XM52", "XM53", "XM54", "XM55", "XM56", "XM57", "XM58", "XM59", "XM60", "XM61", "XM62", "XM63", "XM64", "XM65", "XM66", "XM67", "XM68", "XM69", "XM70", "XM71", "XM72", "XM73", "XM74", "XM75", "XM76", "XM77", "XM78", "XM79", "XM80", "XM81", "XF01", "XF02", "XF03", "XF04", "XF05", "XF06", "XF07", "XF08", "XF09", "XF10", "XF11", "XF12", "XF13", "XF14", "XF15", "XF16", "XF17", "XF18", "XF19", "XF20", "XF21", "XF22", "XF23", "XF24", "XF25", "XF26", "XF27", "XF28", "XF29", "XF30", "XF31", "XF32", "XF33", "XF34", "XF35", "XF36", "XMCS", "XMFS", "XMTS", "XFAX", "XFGX"];
 
 // trailhead list (these are already in the marker list, but they are duplicated here for specific trailhead operations)
 
-var trailheadList = ["TTTX", "BRTX", "FTX", "GMTX", "PDTX", "136X", "BTX", "GTX", "LDTX", "QT1X", "RTX", "STX", "WWTX"];
+var trailheadList = ["TTTX", "BRTX", "FTX", "GMTX", "PDTX", "136X", "BTX", "GTX", "LDTX", "QT1X", "RTX", "STX", "WWTX", "XMCS", "XMFS", "XMTS", "XFAX", "XFGX"];
 
 // segment list
 
-var segmentList = ["AG1AG3", "AG1AGWX", "AG3AG5", "AG3STR9", "AG5AG7", "AG5RH11", "AG7AG9", "AG7STR9", "AG9AG11", "AG9RH9", "AG11AG13", "AG11RH7", "AG11STR5", "AG13RCAX", "AG15AG17", "AG15RCAX", "AG15STR5", "AG17AGX", "AG17RH3", "AGWXRH13", "AGWXWE13", "AH1AHX", "AH1DV2", "AMPXCM8", "BA1BAX", "BA1HW1", "BA1OP3", "BA1OP7", "BH1BH4", "BH1DX3", "BH1MV1", "BH2DX3", "BH2GM1", "BH2WB3", "BH3BHX", "BH3MT1", "BH4DX2", "BL2GM3", "BL2GM4", "BMSXBT4", "BP1XBRTX", "BP1XJRCX", "BP1XUR1", "BP2XBP4X", "BP2XLG1", "BP2XLG7", "BP2XJRCX", "BP3XLG7", "BP3XLGAX", "BP4XBRTX", "BP4XBTTX", "BR3UR1", "BR3BR5", "BR3CW11", "BR5CW11", "BR5UR2", "BR5BT1", "BR5VT3", "BR6VT1", "BR6CL1", "BR6MV2", "BR9WE11", "BR9RH15", "BR9RH17", "BR9WE9", "BR9MP3", "BROXHW31", "BRTXBSTX", "BSTXBTTX", "BSTXSVBX", "BRTXJRCX", "BRXRS3", "BRXRS4", "BS1OC1", "BS1OC3", "BS1WE5", "BS1HV51", "BT1VT1", "BT1BT2", "BT2UR4", "BT2VT1", "BT2BT4", "BT4BT6", "BT6UR7", "BT6UR8", "BTTXLGAX", "CC1DV5", "CC1GM6", "CC1SB1", "CL1UR8", "CL1CL2", "CL2CM7", "CL2CL3", "CL3HD1", "CL3CL5", "CL5CL6", "CL5HW26", "CL6UR8", "CL6HW28", "CM1CM8", "CM1MV3", "CM1CM2", "CM2CW3", "CM2CM4", "CM4CM5", "CM4TD1", "CM5SC1", "CM5CM6", "CM6CRX", "CM6CM7", "CM7MV4", "CM8MV4", "CN5UR4", "CP1DV3", "CP1GM5", "CP1DV5", "CP1CP3", "CP3DV3", "CP3OP1", "CP3RG1", "CW3RS4", "CW3HV9", "CW5CW7", "CW5WB1", "CW5HV9", "CW5LG5", "CW7CW11", "CW7VT3", "CW7LG4", "DV1DV2", "DV1DV3", "DV11OP9", "DV11DV13", "DV13RG11", "DV13OP11", "DV13DV17", "DV17HW10", "DV17HD5", "DV17HW12", "DV19HW12", "DV19DV21", "DV19OC7", "DV2DV3", "DV21DV23", "DV23HV51", "DV23SC7", "DV23OC7", "DV5DV7", "DV7RG5", "DV7DV8", "DV7SBX", "DV8RG5", "DV8RG7", "DV8DV9", "DV9OP7", "DV9DV11", "DX1LG4", "DX1DX1X", "DX1XWB3X", "DX1XWB4", "DX2WB4", "DX2DX3", "DX3DX5", "DX5DXX", "DX5MV1", "DX5MG1", "GM1HV6", "GM1GM2", "GM10SV2X", "GM2GM3", "GM2GM9", "GM3GM4", "GM4GM10", "GM5GM6", "GM5GM10", "GM6GM7", "GM7GM9", "GM7TD1", "GM9RS2", "GN1GN2", "HD1HW20", "HD1HD3", "HD3HW16", "HD3SC1", "HD3HD5", "HD5RG11", "HD5TD4", "HV51WE5", "HV51SC7", "HV6YT1", "HV6RS2", "HV65HW35", "HV65HW37", "HV73RC5", "HV73HV75", "HV73LG29", "HV73HW44", "HV73RH3", "HV75PDTX", "HV75LG29", "HV9WB1", "HV9YT1", "HW1HW4", "HW1MO1", "HW10HW12", "HW12HW16", "HW16OC7", "HW16HW20", "HW20MP1", "HW20OC3", "HW26HW28", "HW26MP1", "HW28HW30", "HW28RH17", "HW30UR7", "HW30HW31", "HW35HW37", "HW35RH15", "HW35RH13", "HW37HW40", "HW37RH9", "HW4OP11", "HW4HW10", "HW40RH7", "HW44RC5", "JR1XJR2X", "JR1XJRTX", "JR2XJRTX", "JRCXJRTX", "LG1LG7", "LG1LG2", "LG13UR2", "LG13LG15", "LG15UR3", "LG15LG17", "LG2LG4", "LG2LG3", "LG24LG29", "LG29PR2X", "LG4LG5", "LG5WB3", "LG7LGAX", "LG9LGAX", "LG9LG13", "MG1MGX", "MG1TP1", "MP1MP3", "MP3WE7", "MPXSC27", "MT1MV1", "MT1MTX", "MV1MVX", "MV2MV4", "MV2MV3", "MV3WB1", "ND1TD4", "ND1ND1X", "ND1ND2X", "ND1XND2X", "ND1XND3X", "ND2XND3X", "ND3XND5", "ND4XND5", "ND4XND5X", "ND4XND6X", "ND5XND6X", "ND5ND7X", "ND7XND8X", "ND7XND9X", "ND8XND9X", "ND9XSD1", "OC1OC3", "OC3OC7", "OHTXSC17", "OP1OP3", "OP3RG1", "OP3OP5", "OP5RG5", "OP5OP7", "OP7OP9", "OP9OP11", "PDTXPR2X", "RG1RG5", "RG7RGX", "RG7RG9", "RG9SB1", "RG9RG11", "RGXSBX", "RGXSB3", "RH11RH13", "RH13RH15", "RH15RH17", "RH3RHX", "RH7RH9", "RH9RH11", "RS2RS3", "RS3RS4", "SB1SB3", "SB3SBX", "SC1SD1", "SC17SC27", "SC27WE7", "SC7SC17", "SC7TNFX", "SD1SD1X", "SD1XSD2X", "SD1XSD3X", "SD2XSD3X", "SD3XSD4X", "SD4XSD5X", "SD4XSD6X", "SD5SD6X", "SD5SD7X", "SD5SD8X", "SD5XSD6X", "SD7XSD8X", "SD8XTD2", "STR5STR9", "TD1TD2", "TD2TD4", "UR1UR2", "UR2UR3", "UR3UR4", "UR4UR5", "UR5UR7", "VT1VT3", "VT3WB1", "WB3WB3X", "WB3XWB4", "WB3YT1", "WE11WE13", "WE5WE7", "WE7WE9", "WE9WE11", "BRTXSVBX", "CN3CN5", "CN3HW33", "CN3UR5", "CN5HT3", "DS1DS3", "DS1RC4", "DS1SP11", "DS3DS5", "DS3WE23", "DS5DS7", "DS5SP1", "DS7DS9", "DS7WE21", "DS9DS11", "DS9SP1", "DS11SE3", "DS11WE19", "HT1HT3", "HT1LG17", "HT1WE21", "HT3WE17", "HV65SE3", "HV65WE17", "HW31HW33", "HW33HW35", "HW35WE17", "HW40HW41", "HW41SE3", "HW41SP7", "HW41HW42", "HW42HW44", "HW42SP9", "HW44RCRX", "LG9SVTX", "LG13PR3X", "LG17LG19", "LG19LG21", "LG19PR3X", "LG21LG24", "LG21WE23", "LG24RC1", "LG24RC4", "PR2XRC1", "PR3XRC1", "RC4RC5", "RC5SPPX", "RCAXRCRX", "RCRXRH3", "RCRXRH7", "SE3SP5", "SP1SP3", "SP11SPPX", "SP3SP5", "SP3SPX", "SP5SP7", "SP5SPPX", "SP7SP9", "SP9SPPX", "SV1XSVTX", "SVBXSVTX", "WE17WE19", "WE19WE21", "WE21WE23", "HV55HV56", "HV55OC1", "HV55PR1X", "HV56PR1X", "HV57PR1X", "HV57HV58", "HV58MP3", "HV58PR1X", "BH1XBH2X", "BH1XBH4", "BH1XFTX", "BH1XWB8X", "BH2XBH3X", "BH2XMT1", "BH3BH4X", "BH3XBH4X", "BH4XFT4X", "FT2XFT3X", "FT2XWB8", "FT3XFT4X", "FT4XGNX", "FTAXFTX", "FTXWB8", "GN1GNX", "WB4WB8X", "WB8WB8X", "FTAXWB8", "BH2XFTAX", "AH1GE4X", "BH2TP3X", "BL1XBL2", "BL1XGM9X", "BL1XGT4X", "GE1XGE2X", "GE1XGT1X", "GE1XTP1", "GE1XTP1X", "GE2XGE3X", "GE2XGT1X", "GE3XGE4X", "GE3XGT3X", "GE4XGT3X", "GM1GM9X", "GM8XGM9X", "GM8XGMHX", "GM8XTP1X", "GM9XTP3X", "GMHXGMTX", "GMHXGT4X", "GMHXTP1X", "GMTXGT3X", "GMTXTP1X", "GT3XGT4X", "TP1TP2X", "TP1XTP2X", "TP2XTP3X", "FS1TT1", "FS1ML3", "FS1TT2", "GN10SV1", "GN10GN12", "GN12GN13", "GN13GN15", "GN15SN11", "GN15GN17", "GN17GN19", "GN17MM1", "GN19GN21", "GN2GN3", "GN21RK1", "GN21ML7", "GN3GN5", "GN5GN7", "GN5RB3", "GN5RB1", "GN7JX1", "GN7GN9", "GN9SV3", "GN9GN10", "JXXSN3", "ML3ML3X", "ML3XML5", "ML1ML3", "ML5ML7", "ML3XMSPX", "ML5TH3X", "MM1SN11", "MM3SN9", "RB3RB5", "RB5SV7", "RB5RB7", "RB5SV3", "RB7SV5", "RB7SV3", "SN1SV1", "SN1SN3", "SN1SN11", "SN3SN5", "SN5SN7", "SN7SN9", "SN9SN11", "ML1TTTX", "TT1TT2", "TT1TTTX", "TT1XTTTX", "ML1TH3X", "TH1XTH3X", "136XSR15", "AK4AK5", "AK5SR13", "AS1AS1X", "AS1AS3", "AS1RT1", "AS1XASX", "AS1XLD4X", "AS3SR19", "AS3SR17", "BN1XBN2X", "BN1XBN4X", "BN1XG02X", "BN2XBN3X", "BN2XBN4X", "BN3XBN4X", "BP1BP5", "BP1GL3", "BP1PT5", "BP5BP7", "BP7BP9", "BP7PP5", "BP9WP7", "BP9EE5", "BTXLT1", "DP3DP5", "DP3WP3", "DP11G01X", "DP11GTX", "DP5DPTX", "DP5DP7", "DP7HC3", "DP7DP9", "DP9GL5", "DP9DP11", "EB1G01X", "EB1EB3", "EB3WCPX", "EB3PC3", "EE1TTV4", "EE1TT7", "EE1EE5", "EE5WM1", "G01XGTX", "G02XGAMX", "G02XGL7", "G02XGTX", "GL1GL2", "GL1GL7", "GL1PC1", "GL2PT5", "GL2LT3", "GL3WP1", "GL5WP1", "GL5GL7", "GL7SL1X", "HHVXTTV1", "KT1XKT2X", "KT1XKT3X", "KT1XLD1", "KT2XKT3X", "KT4XKT5X", "KT4XKT6X", "KT4XLD1", "KT5XKT6X", "LD1LDBX", "LD1LDTX", "LD3LD5", "LD3SR19", "LD3RT5", "LD4XLD5X", "LD4XLDHX", "LD5LD7", "LD5RT3", "LD7LD9", "LD7TOX", "LD9QT5", "LD9QT7", "LDAXLDBX", "LDBXSR19", "LDHXLDTX", "LDOXRT5", "LT1PC3", "LT1LT3", "LT3PT3", "ML25MLX", "ML7ML25", "ML1XMLX", "ML1XML2X", "ML2XMLX", "PC1PC3", "PFOXTTV4", "PP1PP3", "PP3PP5", "PP3TPX", "PT3PT3X", "PT3PT5", "PT3XPT4X", "PT4XQT3", "QT1WW5", "QT1QT1X", "QT1QT3", "QT2XQT7", "QT3QT5", "QT5WW11", "RRSXTTV2", "RT1RTX", "RT1SR17", "RT3RT5", "RT3SR17", "SL1XSL2X", "SL1XSL3X", "SL2XSL3X", "SR10SR11", "SR10SSPX", "SR11SR13", "SR13SR15", "SR15SR17", "SR9SR10", "SR9SR11", "SR1STOX", "SR1SR2", "SR2STX", "SR5STX", "SR5SR7", "SR7SSVX", "SR7SR9", "STOXSTX", "TL1TT7", "TL1TL3", "TL1TT9", "TT17WP3", "TT17WP5", "TT2TTV1", "TT7TTX", "TT9TT15", "TT15TT17", "TTV1TTV2", "TTV2TTV3", "TTV3TTV4", "TTV3VVSX", "WP1WP3", "WP5WP7", "WW1WW1X", "WW1WWTX", "WW1XWW5", "WW5WW11", "WW11WW15"];
+var segmentList = ["AG1AG3", "AG1AGWX", "AG3AG5", "AG3STR9", "AG5AG7", "AG5RH11", "AG7AG9", "AG7STR9", "AG9AG11", "AG9RH9", "AG11AG13", "AG11RH7", "AG11STR5", "AG13RCAX", "AG15AG17", "AG15RCAX", "AG15STR5", "AG17AGX", "AG17RH3", "AGWXRH13", "AGWXWE13", "AH1AHX", "AH1DV2", "AMPXCM8", "BA1BAX", "BA1HW1", "BA1OP3", "BA1OP7", "BH1BH4", "BH1DX3", "BH1MV1", "BH2DX3", "BH2GM1", "BH2WB3", "BH3BHX", "BH3MT1", "BH4DX2", "BL2GM3", "BL2GM4", "BMSXBT4", "BP1XBRTX", "BP1XJRCX", "BP1XUR1", "BP2XBP4X", "BP2XLG1", "BP2XLG7", "BP2XJRCX", "BP3XLG7", "BP3XLGAX", "BP4XBRTX", "BP4XBTTX", "BR3UR1", "BR3BR5", "BR3CW11", "BR5CW11", "BR5UR2", "BR5BT1", "BR5VT3", "BR6VT1", "BR6CL1", "BR6MV2", "BR9WE11", "BR9RH15", "BR9RH17", "BR9WE9", "BR9MP3", "BROXHW31", "BRTXBSTX", "BSTXBTTX", "BSTXSVBX", "BRTXJRCX", "BRXRS3", "BRXRS4", "BS1OC1", "BS1OC3", "BS1WE5", "BS1HV51", "BT1VT1", "BT1BT2", "BT2UR4", "BT2VT1", "BT2BT4", "BT4BT6", "BT6UR7", "BT6UR8", "BTTXLGAX", "CC1DV5", "CC1GM6", "CC1SB1", "CL1UR8", "CL1CL2", "CL2CM7", "CL2CL3", "CL3HD1", "CL3CL5", "CL5CL6", "CL5HW26", "CL6UR8", "CL6HW28", "CM1CM8", "CM1MV3", "CM1CM2", "CM2CW3", "CM2CM4", "CM4CM5", "CM4TD1", "CM5SC1", "CM5CM6", "CM6CRX", "CM6CM7", "CM7MV4", "CM8MV4", "CN5UR4", "CP1DV3", "CP1GM5", "CP1DV5", "CP1CP3", "CP3DV3", "CP3OP1", "CP3RG1", "CW3RS4", "CW3HV9", "CW5CW7", "CW5WB1", "CW5HV9", "CW5LG5", "CW7CW11", "CW7VT3", "CW7LG4", "DV1DV2", "DV1DV3", "DV11OP9", "DV11DV13", "DV13RG11", "DV13OP11", "DV13DV17", "DV17HW10", "DV17HD5", "DV17HW12", "DV19HW12", "DV19DV21", "DV19OC7", "DV2DV3", "DV21DV23", "DV23HV51", "DV23SC7", "DV23OC7", "DV5DV7", "DV7RG5", "DV7DV8", "DV7SBX", "DV8RG5", "DV8RG7", "DV8DV9", "DV9OP7", "DV9DV11", "DX1LG4", "DX1DX1X", "DX1XWB3X", "DX1XWB4", "DX2WB4", "DX2DX3", "DX3DX5", "DX5DXX", "DX5MV1", "DX5MG1", "FIAXWB8", "FIAXFIBX", "FIAXFIDX", "FIBXFICX", "FIBXFIDX", "FIDXFIEX", "GM1HV6", "GM1GM2", "GM10SV2X", "GM2GM3", "GM2GM9", "GM3GM4", "GM4GM10", "GM5GM6", "GM5GM10", "GM6GM7", "GM7GM9", "GM7TD1", "GM9RS2", "GN1GN2", "HD1HW20", "HD1HD3", "HD3HW16", "HD3SC1", "HD3HD5", "HD5RG11", "HD5TD4", "HV51WE5", "HV51SC7", "HV6YT1", "HV6RS2", "HV65HW35", "HV65HW37", "HV73RC5", "HV73HV75", "HV73LG29", "HV73HW44", "HV73RH3", "HV75PDTX", "HV75LG29", "HV9WB1", "HV9YT1", "HW1HW4", "HW1MO1", "HW10HW12", "HW12HW16", "HW16OC7", "HW16HW20", "HW20MP1", "HW20OC3", "HW26HW28", "HW26MP1", "HW28HW30", "HW28RH17", "HW30UR7", "HW30HW31", "HW35HW37", "HW35RH15", "HW35RH13", "HW37HW40", "HW37RH9", "HW4OP11", "HW4HW10", "HW40RH7", "HW44RC5", "JR1XJR2X", "JR1XJRTX", "JR2XJRTX", "JRCXJRTX", "LG1LG7", "LG1LG2", "LG13UR2", "LG13LG15", "LG15UR3", "LG15LG17", "LG2LG4", "LG2LG3", "LG24LG29", "LG29PR2X", "LG4LG5", "LG5WB3", "LG7LGAX", "LG9LGAX", "LG9LG13", "MG1MGX", "MG1TP1", "MP1MP3", "MP3WE7", "MPXSC27", "MT1MV1", "MT1MTX", "MV1MVX", "MV2MV4", "MV2MV3", "MV3WB1", "ND1TD4", "ND1ND1X", "ND1ND2X", "ND1XND2X", "ND1XND3X", "ND2XND3X", "ND3XND5", "ND4XND5", "ND4XND5X", "ND4XND6X", "ND5XND6X", "ND5ND7X", "ND7XND8X", "ND7XND9X", "ND8XND9X", "ND9XSD1", "OC1OC3", "OC3OC7", "OHTXSC17", "OP1OP3", "OP3RG1", "OP3OP5", "OP5RG5", "OP5OP7", "OP7OP9", "OP9OP11", "PDTXPR2X", "RG1RG5", "RG7RGX", "RG7RG9", "RG9SB1", "RG9RG11", "RGXSBX", "RGXSB3", "RH11RH13", "RH13RH15", "RH15RH17", "RH3RHX", "RH7RH9", "RH9RH11", "RS2RS3", "RS3RS4", "SB1SB3", "SB3SBX", "SC1SD1", "SC17SC27", "SC27WE7", "SC7SC17", "SC7TNFX", "SD1SD1X", "SD1XSD2X", "SD1XSD3X", "SD2XSD3X", "SD3XSD4X", "SD4XSD5X", "SD4XSD6X", "SD5SD6X", "SD5SD7X", "SD5SD8X", "SD5XSD6X", "SD7XSD8X", "SD8XTD2", "STR5STR9", "TD1TD2", "TD2TD4", "UR1UR2", "UR2UR3", "UR3UR4", "UR4UR5", "UR5UR7", "VT1VT3", "VT3WB1", "WB3WB3X", "WB3XWB4", "WB3YT1", "WE11WE13", "WE5WE7", "WE7WE9", "WE9WE11", "BRTXSVBX", "CN3CN5", "CN3HW33", "CN3UR5", "CN5HT3", "DS1DS3", "DS1RC4", "DS1SP11", "DS3DS5", "DS3WE23", "DS5DS7", "DS5SP1", "DS7DS9", "DS7WE21", "DS9DS11", "DS9SP1", "DS11SE3", "DS11WE19", "HT1HT3", "HT1LG17", "HT1WE21", "HT3WE17", "HV65SE3", "HV65WE17", "HW31HW33", "HW33HW35", "HW35WE17", "HW40HW41", "HW41SE3", "HW41SP7", "HW41HW42", "HW42HW44", "HW42SP9", "HW44RCRX", "LG9SVTX", "LG13PR3X", "LG17LG19", "LG19LG21", "LG19PR3X", "LG21LG24", "LG21WE23", "LG24RC1", "LG24RC4", "PR2XRC1", "PR3XRC1", "RC4RC5", "RC5SPPX", "RCAXRCRX", "RCRXRH3", "RCRXRH7", "SE3SP5", "SP1SP3", "SP11SPPX", "SP3SP5", "SP3SPX", "SP5SP7", "SP5SPPX", "SP7SP9", "SP9SPPX", "SV1XSVTX", "SVBXSVTX", "WE17WE19", "WE19WE21", "WE21WE23", "HV55HV56", "HV55OC1", "HV55PR1X", "HV56PR1X", "HV57PR1X", "HV57HV58", "HV58MP3", "HV58PR1X", "BH1XBH2X", "BH1XBH4", "BH1XFTX", "BH1XWB8X", "BH2XBH3X", "BH2XMT1", "BH3BH4X", "BH3XBH4X", "BH4XFT4X", "FT2XFT3X", "FT2XWB8", "FT3XFT4X", "FT4XGNX", "FTAXFTX", "FTXWB8", "GN1GNX", "WB4WB8X", "WB8WB8X", "FTAXWB8", "BH2XFTAX", "AH1GE4X", "BH2TP3X", "BL1XBL2", "BL1XGM9X", "BL1XGT4X", "GE1XGE2X", "GE1XGT1X", "GE1XTP1", "GE1XTP1X", "GE2XGE3X", "GE2XGT1X", "GE3XGE4X", "GE3XGT3X", "GE4XGT3X", "GM1GM9X", "GM8XGM9X", "GM8XGMHX", "GM8XTP1X", "GM9XTP3X", "GMHXGMTX", "GMHXGT4X", "GMHXTP1X", "GMTXGT3X", "GMTXTP1X", "GT3XGT4X", "TP1TP2X", "TP1XTP2X", "TP2XTP3X", "FS1TT1", "FS1ML3", "FS1TT2", "GN10SV1", "GN10GN12", "GN12GN13", "GN13GN15", "GN15SN11", "GN15GN17", "GN17GN19", "GN17MM1", "GN19GN21", "GN2GN3", "GN21RK1", "GN21ML7", "GN3GN5", "GN5GN7", "GN5RB3", "GN5RB1", "GN7JX1", "GN7GN9", "GN9SV3", "GN9GN10", "JXXSN3", "ML3ML3X", "ML3XML5", "ML1ML3", "ML5ML7", "ML3XMSPX", "ML5TH3X", "MM1SN11", "MM3SN9", "RB3RB5", "RB5SV7", "RB5RB7", "RB5SV3", "RB7SV5", "RB7SV3", "SN1SV1", "SN1SN3", "SN1SN11", "SN3SN5", "SN5SN7", "SN7SN9", "SN9SN11", "ML1TTTX", "TT1TT2", "TT1TTTX", "TT1XTTTX", "ML1TH3X", "TH1XTH3X", "136XSR15", "AK4AK5", "AK5SR13", "AS1AS1X", "AS1AS3", "AS1RT1", "AS1XASX", "AS1XLD4X", "AS3SR19", "AS3SR17", "BN1XBN2X", "BN1XBN4X", "BN1XG02X", "BN2XBN3X", "BN2XBN4X", "BN3XBN4X", "BP1BP5", "BP1GL3", "BP1PT5", "BP5BP7", "BP7BP9", "BP7PP5", "BP9WP7", "BP9EE5", "BTXLT1", "DP3DP5", "DP3WP3", "DP11G01X", "DP11GTX", "DP5DPTX", "DP5DP7", "DP7HC3", "DP7DP9", "DP9GL5", "DP9DP11", "EB1G01X", "EB1EB3", "EB3WCPX", "EB3PC3", "EE1TTV4", "EE1TT7", "EE1EE5", "EE5WM1", "G01XGTX", "G02XGAMX", "G02XGL7", "G02XGTX", "GL1GL2", "GL1GL7", "GL1PC1", "GL2PT5", "GL2LT3", "GL3WP1", "GL5WP1", "GL5GL7", "GL7SL1X", "HHVXTTV1", "KT1XKT2X", "KT1XKT3X", "KT1XLD1", "KT2XKT3X", "KT4XKT5X", "KT4XKT6X", "KT4XLD1", "KT5XKT6X", "LD1LDBX", "LD1LDTX", "LD3LD5", "LD3SR19", "LD3RT5", "LD4XLD5X", "LD4XLDHX", "LD5LD7", "LD5RT3", "LD7LD9", "LD7TOX", "LD9QT5", "LD9QT7", "LDAXLDBX", "LDBXSR19", "LDHXLDTX", "LDOXRT5", "LT1PC3", "LT1LT3", "LT3PT3", "ML25MLX", "ML7ML25", "ML1XMLX", "ML1XML2X", "ML2XMLX", "PC1PC3", "PFOXTTV4", "PP1PP3", "PP3PP5", "PP3TPX", "PT3PT3X", "PT3PT5", "PT3XPT4X", "PT4XQT3", "QT1WW5", "QT1QT1X", "QT1QT3", "QT2XQT7", "QT3QT5", "QT5WW11", "RRSXTTV2", "RT1RTX", "RT1SR17", "RT3RT5", "RT3SR17", "SL1XSL2X", "SL1XSL3X", "SL2XSL3X", "SR10SR11", "SR10SSPX", "SR11SR13", "SR13SR15", "SR15SR17", "SR9SR10", "SR9SR11", "SR1STOX", "SR1SR2", "SR2STX", "SR5STX", "SR5SR7", "SR7SSVX", "SR7SR9", "STOXSTX", "TL1TT7", "TL1TL3", "TL1TT9", "TT17WP3", "TT17WP5", "TT2TTV1", "TT7TTX", "TT9TT15", "TT15TT17", "TTV1TTV2", "TTV2TTV3", "TTV3TTV4", "TTV3VVSX", "WP1WP3", "WP5WP7", "WW1WW1X", "WW1WWTX", "WW1XWW5", "WW5WW11", "WW11WW15", "AK4XF08", "ML25XM21", "MM1XM01", "MM3XM02", "MM3XM36", "PP1XM64", "PP1XM65", "RK1XM23", "WM1XM69", "XF01XF02", "XF01XF03", "XF01XFAX", "XF02XF06", "XF02XF20", "XF03XF04", "XF03XF05", "XF06XF07", "XF06XF14", "XF07XF21", "XF07XF23", "XF08XF09", "XF08XF25", "XF09XF10", "XF09XF11", "XF11XF12", "XF11XF13", "XF13XF14", "XF13XF19", "XF15XF16", "XF15XF30", "XF15XM68", "XF16XF31", "XF16XM68", "XF17XF18", "XF17XF30", "XF17XF32", "XF18XF26", "XF18XF29", "XF19XF29", "XF19XF34", "XF20XF21", "XF20XF22", "XF21XF22", "XF23XF24", "XF23XF25", "XF24XF25", "XF26XF27", "XF26XF28", "XF27XF28", "XF27XF31", "XF29XF36", "XF30XF31", "XF32XF33", "XF32XF34", "XF34XF35", "XFGXXM67", "XM01XM02", "XM01XM26", "XM02XM03", "XM03XM04", "XM03XM28", "XM04XM05", "XM04XM36", "XM05XM06", "XM05XM38", "XM06XM07", "XM06XM40", "XM07XM08", "XM07XM42", "XM08XM09", "XM08XM45", "XM09XM10", "XM09XM53", "XM10XM11", "XM10XM57", "XM11XM12", "XM11XM57", "XM12XM13", "XM12XMTS", "XM13XM14", "XM13XMTS", "XM14XM15", "XM14XM31", "XM15XM16", "XM15XM59", "XM16XM17", "XM16XM32", "XM17XM18", "XM17XM33", "XM18XM19", "XM18XM22", "XM19XM20", "XM19XM64", "XM20XM21", "XM20XM69", "XM21XM22", "XM22XM23", "XM23XM24", "XM24XM25", "XM24XM34", "XM25XM26", "XM25XM35", "XM26XM27", "XM27XM28", "XM27XM35", "XM28XM29", "XM29XM30", "XM29XM32", "XM30XM31", "XM32XM33", "XM33XM34", "XM33XM35", "XM34XM35", "XM36XM37", "XM36XM38", "XM38XM39", "XM38XM40", "XM40XM41", "XM40XM42", "XM42XM43", "XM42XM45", "XM43XM44", "XM43XM47", "XM45XM46", "XM46XM47", "XM46XM48", "XM47XM48", "XM48XM49", "XM50XM51", "XM52XM53", "XM53XM54", "XM53XM58", "XM54XM55", "XM54XM56", "XM55XM56", "XM57XM58", "XM58XM59", "XM59XMFS", "XM60XM61", "XM60XMTS", "XM61XM62", "XM61XM63", "XM62XM63", "XM64XM69", "XM65XM66", "XM65XM68", "XM66XM67", "XM70XM71", "XM70XM77", "XM70XMCS", "XM71XM72", "XM71XM73", "XM72XM76", "XM72XM78", "XM73XM74", "XM73XM76", "XM74XM75", "XM74XM78", "XM75XM77", "XM75XMCS", "XM76XM77", "XM77XMCS", "XM78XM80", "XM79XM80", "XM79XM81", "XM79XMCS", "XM81XMCS", "XM80XM81"];
 
 // maricopa trail segments
 
-var segmentMTList = ["DV19DV21MT", "DV19HW12MT", "DV17HW12MT", "DV17HD5MT", "HD5TD4MT", "TD2TD4MT", "TD1TD2MT", "GM7TD1MT", "GM6GM7MT", "GM5GM6MT", "GM5GM10MT", "GM4GM10MT", "BL2GM4MT", "BL1XBL2MT", "BL1XGM9XMT", "GM9XTP3XMT", "BH2TP3XMT", "BH2DX3MT", "BH1DX3MT", "BH1BH4MT", "BH1XBH4MT", "BH1XFTXMT", "FTXWB8MT", "FT2XWB8MT", "FT2XFT3XMT", "FT3XFT4XMT", "FT4XGNXMT", "GN1GNXMT", "GN1GN2MT", "GN2GN3MT", "GN3GN5MT", "GN5GN7MT", "GN7GN9MT", "GN9GN10MT", "GN10GN12MT", "GN12GN13MT", "GN13GN15MT", "GN15GN17MT", "GN17MM1MT", "EE5WM1MT", "BP9EE5MT", "BP9WP7MT", "WP5WP7MT", "TT17WP5MT", "TT17WP3MT", "WP1WP3MT", "GL5WP1MT", "GL5GL7MT", "GL1GL7MT", "GL1GL2MT", "GL2PT5MT", "PT3PT5MT", "PT3PT3XMT", "PT3XPT4XMT", "PT4XQT3MT", "QT1QT3MT", "QT1WW5MT", "WW5WW11MT", "WW11WW15MT"];
+var segmentMTList = ["DV19DV21MT", "DV19HW12MT", "DV17HW12MT", "DV17HD5MT", "HD5TD4MT", "TD2TD4MT", "TD1TD2MT", "GM7TD1MT", "GM6GM7MT", "GM5GM6MT", "GM5GM10MT", "GM4GM10MT", "BL2GM4MT", "BL1XBL2MT", "BL1XGM9XMT", "GM9XTP3XMT", "BH2TP3XMT", "BH2DX3MT", "BH1DX3MT", "BH1BH4MT", "BH1XBH4MT", "BH1XFTXMT", "FTXWB8MT", "FT2XWB8MT", "FT2XFT3XMT", "FT3XFT4XMT", "FT4XGNXMT", "GN1GNXMT", "GN1GN2MT", "GN2GN3MT", "GN3GN5MT", "GN5GN7MT", "GN7GN9MT", "GN9GN10MT", "GN10GN12MT", "GN12GN13MT", "GN13GN15MT", "GN15GN17MT", "GN17MM1MT", "EE5WM1MT", "BP9EE5MT", "BP9WP7MT", "WP5WP7MT", "TT17WP5MT", "TT17WP3MT", "WP1WP3MT", "GL5WP1MT", "GL5GL7MT", "GL1GL7MT", "GL1GL2MT", "GL2PT5MT", "PT3PT5MT", "PT3PT3XMT", "PT3XPT4XMT", "PT4XQT3MT", "QT1QT3MT", "QT1WW5MT", "WW5WW11MT", "WW11WW15MT", "MM1XM01MT", "XM01XM02MT", "XM01XM26MT", "XM02XM03MT","XM03XM04MT", "XM04XM05MT", "XM05XM06MT", "XM06XM07MT", "XM07XM08MT", "XM08XM09MT", "XM09XM10MT", "XM10XM11MT", "XM11XM12MT", "XM12XM13MT", "XM13XM14MT", "XM14XM15MT", "XM15XM16MT", "XM16XM17MT", "XM17XM18MT", "XM18XM19MT", "XM19XM20MT", "XM20XM21MT", "XM21XM22MT", "XM22XM23MT", "XM23XM24MT", "XM24XM25MT", "XM25XM26MT", "XM14XM31MT", "XM20XM69MT", "WM1XM69MT"];
 
 // tech trail segments (these are already in the segment list, but they are duplicated here for specific operations)
 
@@ -375,13 +388,12 @@ var markerMSPX = L.circle([33.693888, -111.794929], new CreateMarker("MSPX", "Sc
 var markerML3X = L.circle([33.694233, -111.795290], new CreateMarker("ML3X", "Intersection", 2709, ["ML3", "ML5", "MSPX"])).addTo(map).on("click", onMapClick);
 var markerML5 = L.circle([33.694536, -111.794771], new CreateMarker("ML5", "ML5", 2693, ["ML7", "ML3X", "TH3X"])).addTo(map).on("click", onMapClick);
 var markerML7 = L.circle([33.694483, -111.794180], new CreateMarker("ML7", "ML7", 2681, ["GN21", "ML5", "ML25"])).addTo(map).on("click", onMapClick);
-var markerMM1 = L.circle([33.716580, -111.787415], new CreateMarker("MM1", "MM1", 2508, ["SN11", "GN17"])).addTo(map).on("click", onMapClick);
-var markerMM3 = L.circle([33.725130, -111.787282], new CreateMarker("MM3", "MM3", 2474, ["SN9"])).addTo(map).on("click", onMapClick);
+var markerMM3 = L.circle([33.725130, -111.787282], new CreateMarker("MM3", "MM3", 2474, ["SN9", "XM02", "XM36"])).addTo(map).on("click", onMapClick);
 var markerRB3 = L.circle([33.731070, -111.817036], new CreateMarker("RB3", "RB3", 2682, ["GN5", "RB5"])).addTo(map).on("click", onMapClick);
 var markerRB5 = L.circle([33.726130, -111.816333], new CreateMarker("RB5", "RB5", 2681, ["SV7", "RB3", "SV3", "RB7"])).addTo(map).on("click", onMapClick);
 var markerSV5 = L.circle([33.721990, -111.816015], new CreateMarker("SV5", "SV5", 2693, ["RB7"])).addTo(map).on("click", onMapClick);
 var markerRB7 = L.circle([33.721980, -111.815513], new CreateMarker("RB7", "RB7", 2700, ["SV5", "SV3", "RB5"])).addTo(map).on("click", onMapClick);
-var markerRK1 = L.circle([33.695025, -111.787399], new CreateMarker("RK1", "RK1", 2542, ["GN21"])).addTo(map).on("click", onMapClick);
+var markerRK1 = L.circle([33.695025, -111.787399], new CreateMarker("RK1", "RK1", 2542, ["GN21", "XM23"])).addTo(map).on("click", onMapClick);
 var markerSN11 = L.circle([33.718966, -111.791734], new CreateMarker("SN11", "SN11", 2518, ["SN9", "SN1", "MM1", "GN15"])).addTo(map).on("click", onMapClick);
 var markerSN3 = L.circle([33.724646, -111.798433], new CreateMarker("SN3", "SN3", 2559, ["JXX", "SN1", "SN5"])).addTo(map).on("click", onMapClick);
 var markerSN7 = L.circle([33.726389, -111.795466], new CreateMarker("SN7", "SN7", 2538, ["SN5", "SN9"])).addTo(map).on("click", onMapClick);
@@ -498,6 +510,11 @@ var markerDX2 = L.circle([33.755818, -111.804269], new CreateMarker("DX2", "DX2"
 var markerDX3 = L.circle([33.755801, -111.800830], new CreateMarker("DX3", "DX3", 2605, ["DX2", "BH2", "DX5", "BH1"])).addTo(map).on("click", onMapClick);
 var markerDX5 = L.circle([33.755523, -111.788204], new CreateMarker("DX5", "DX5", 2527, ["DX3", "MG1", "DXX", "MV1"])).addTo(map).on("click", onMapClick);
 var markerDXX = L.circle([33.755934, -111.786980], new CreateMarker("DXX", "Stepover Gate", 2518, ["DX5"])).addTo(map).on("click", onMapClick);
+var markerFICX = L.circle([33.747038, -111.798989], new CreateMarker("FICX", "Scenic Point", 2567, ["FIBX"])).addTo(map).on("click", onMapClick);
+var markerFIEX = L.circle([33.747912, -111.799300], new CreateMarker("FIEX", "Scenic Point", 2588, ["FIDX"])).addTo(map).on("click", onMapClick);
+var markerFIAX = L.circle([33.748215, -111.798098], new CreateMarker("FIAX", "Intersection", 2571, ["FIBX", "FIDX", "WB8"])).addTo(map).on("click", onMapClick);
+var markerFIBX = L.circle([33.747332, -111.798821], new CreateMarker("FIBX", "Intersection", 2572, ["FICX", "FIDX", "FIAX"])).addTo(map).on("click", onMapClick);
+var markerFIDX = L.circle([33.747965, -111.799697], new CreateMarker("FIDX", "Intersection", 2592, ["FIAX", "FIBX", "FIEX"])).addTo(map).on("click", onMapClick);
 var markerFT3X = L.circle([33.744772, -111.794621], new CreateMarker("FT3X", "Access Point", 2539, ["FT2X", "FT4X"])).addTo(map).on("click", onMapClick);
 var markerFT2X = L.circle([33.745507, -111.795065], new CreateMarker("FT2X", "Access Point", 2544, ["WB8", "FT3X"])).addTo(map).on("click", onMapClick);
 var markerGNX = L.circle([33.743349, -111.793601], new CreateMarker("GNX", "Access Point", 2522, ["FT4X", "GN1"])).addTo(map).on("click", onMapClick);
@@ -684,7 +701,7 @@ var markerWB3 = L.circle([33.756935, -111.813884], new CreateMarker("WB3", "WB3"
 var markerWB4 = L.circle([33.755831, -111.812405], new CreateMarker("WB4", "WB4", 2657, ["DX1X", "WB3X", "DX2", "WB8X"])).addTo(map).on("click", onMapClick);
 var markerWB8X = L.circle([33.746921, -111.795820], new CreateMarker("WB8X", "Intersection", 2554, ["WB4", "BH1X", "WB8"])).addTo(map).on("click", onMapClick);
 var markerBH1X = L.circle([33.746922, -111.795244], new CreateMarker("BH1X", "Intersection", 2544, ["WB8X", "BH4", "BH2X", "FTX"])).addTo(map).on("click", onMapClick);
-var markerWB8 = L.circle([33.746556, -111.795776], new CreateMarker("WB8", "WB8", 2552, ["WB8X", "FTX", "FTAX", "FT2X"])).addTo(map).on("click", onMapClick);
+var markerWB8 = L.circle([33.746556, -111.795776], new CreateMarker("WB8", "WB8", 2552, ["WB8X", "FTX", "FTAX", "FT2X", "FIAX"])).addTo(map).on("click", onMapClick);
 var markerWE5 = L.circle([33.799178, -111.854328], new CreateMarker("WE5", "WE5", 2695, ["HV51", "BS1", "WE7"])).addTo(map).on("click", onMapClick);
 var markerWE7 = L.circle([33.789527, -111.857987], new CreateMarker("WE7", "WE7", 2631, ["SC27", "WE5", "MP3", "WE9"])).addTo(map).on("click", onMapClick);
 var markerWE9 = L.circle([33.785208, -111.860864], new CreateMarker("WE9", "WE9", 2610, ["WE7", "BR9", "WE11"])).addTo(map).on("click", onMapClick);
@@ -704,7 +721,7 @@ var markerPDTX = L.circle([33.743416, -111.887740], new CreateMarkerTrailhead("P
 
 // southern region markers
 
-var markerAK4 = L.circle([33.624389, -111.784624], new CreateMarker("AK4", "AK4", 2762, ["AK5"])).addTo(map).on("click", onMapClick);
+var markerAK4 = L.circle([33.624389, -111.784624], new CreateMarker("AK4", "AK4", 2762, ["AK5", "XF08"])).addTo(map).on("click", onMapClick);
 var markerAK5 = L.circle([33.621291, -111.791151], new CreateMarker("AK5", "AK5", 2940, ["SR13", "AK4"])).addTo(map).on("click", onMapClick);
 var markerAS1 = L.circle([33.597739, -111.810828], new CreateMarker("AS1", "AS1", 1737, ["AS1X", "RT1", "AS3"])).addTo(map).on("click", onMapClick);
 var markerAS1X = L.circle([33.597412, -111.812037], new CreateMarker("AS1X", "Intersection", 1728, ["LD4X", "ASX", "AS1"])).addTo(map).on("click", onMapClick);
@@ -761,11 +778,11 @@ var markerLT1 = L.circle([33.643343, -111.856663], new CreateMarker("LT1", "LT1"
 var markerLT3 = L.circle([33.643478, -111.849097], new CreateMarker("LT3", "LT3", 1800, ["GL2", "PT3", "LT1"])).addTo(map).on("click", onMapClick);
 var markerML1X = L.circle([33.682019, -111.789353], new CreateMarker("ML1X", "Loop Point", 2711, ["MLX", "ML2X"])).addTo(map).on("click", onMapClick);
 var markerML2X = L.circle([33.681559, -111.78774], new CreateMarker("ML2X", "Loop Point", 2650, ["MLX", "ML1X"])).addTo(map).on("click", onMapClick);
-var markerML25 = L.circle([33.684391, -111.787525], new CreateMarker("ML25", "ML25", 2543, ["ML7", "MLX"])).addTo(map).on("click", onMapClick);
+var markerML25 = L.circle([33.684391, -111.787525], new CreateMarker("ML25", "ML25", 2543, ["ML7", "MLX", "XM21"])).addTo(map).on("click", onMapClick);
 var markerMLX = L.circle([33.682991, -111.788827], new CreateMarker("MLX", "Loop Point", 2671, ["ML25", "ML1X", "ML2X"])).addTo(map).on("click", onMapClick);
 var markerPC3 = L.circle([33.647241, -111.856708], new CreateMarker("PC3", "PC3", 1711, ["EB3", "PC1", "LT1"])).addTo(map).on("click", onMapClick);
 var markerPFOX = L.circle([33.681021, -111.804161], new CreateMarker("PFOX", "Scenic Point", 3681, ["TTV4"])).addTo(map).on("click", onMapClick);
-var markerPP1 = L.circle([33.653401, -111.787363], new CreateMarker("PP1", "PP1", 2293, ["PP3"])).addTo(map).on("click", onMapClick);
+var markerPP1 = L.circle([33.653401, -111.787363], new CreateMarker("PP1", "PP1", 2293, ["PP3", "XM64", "XM65"])).addTo(map).on("click", onMapClick);
 var markerPP3 = L.circle([33.653105, -111.792384], new CreateMarker("PP3", "PP3", 2407, ["PP5", "PP1", "TPX"])).addTo(map).on("click", onMapClick);
 var markerPP5 = L.circle([33.655017, -111.802755], new CreateMarker("PP5", "PP5", 2679, ["BP7", "PP3"])).addTo(map).on("click", onMapClick);
 var markerPT3 = L.circle([33.643619, -111.839408], new CreateMarker("PT3", "PT3", 1931, ["PT5", "PT3X", "LT3"])).addTo(map).on("click", onMapClick);
@@ -813,7 +830,7 @@ var markerTTV3 = L.circle([33.683196, -111.803916], new CreateMarker("TTV3", "TT
 var markerTTV4 = L.circle([33.681001, -111.803693], new CreateMarker("TTV4", "TTV4", 3684, ["TTV3", "EE1", "PFOX"])).addTo(map).on("click", onMapClick);
 var markerTTX = L.circle([33.681656, -111.811214], new CreateMarker("TTX", "Scenic Point", 3840, ["TT7"])).addTo(map).on("click", onMapClick);
 var markerWCPX = L.circle([33.641985, -111.861395], new CreateMarker("WCPX", "Alt. Parking", 1645, ["EB3"])).addTo(map).on("click", onMapClick);
-var markerWM1 = L.circle([33.662502, -111.787476], new CreateMarker("WM1", "WM1", 2485, ["EE5"])).addTo(map).on("click", onMapClick);
+var markerWM1 = L.circle([33.662502, -111.787476], new CreateMarker("WM1", "WM1", 2485, ["EE5", "XM69"])).addTo(map).on("click", onMapClick);
 var markerWP1 = L.circle([33.659134, -111.839423], new CreateMarker("WP1", "WP1", 2178, ["WP3", "GL3", "GL5"])).addTo(map).on("click", onMapClick);
 var markerWP3 = L.circle([33.666059, -111.834944], new CreateMarker("WP3", "WP3", 2293, ["TT17", "WP1", "DP3"])).addTo(map).on("click", onMapClick);
 var markerWP5 = L.circle([33.667931, -111.827829], new CreateMarker("WP5", "WP5", 2714, ["TT17", "WP7"])).addTo(map).on("click", onMapClick);
@@ -834,6 +851,142 @@ var markerQT1X = L.circle([33.627011, -111.857127], new CreateMarkerTrailhead("Q
 var markerRTX = L.circle([33.598084, -111.804753], new CreateMarkerTrailhead("RTX", "Trailhead", 1708, ["RT1"])).addTo(map).on("click", onMapClick);
 var markerSTX = L.circle([33.596212, -111.768089], new CreateMarkerTrailhead("STX", "Trailhead", 1933, ["SR5", "SR2", "STOX"])).addTo(map).on("click", onMapClick);
 var markerWWTX = L.circle([33.630502, -111.870109], new CreateMarkerTrailhead("WWTX", "Trailhead", 1529, ["WW1"])).addTo(map).on("click", onMapClick);
+
+// mcdowell mountain park markers plus MM1
+
+var markerXM26 = L.circle([33.716451, -111.786597], new CreateMarker("XM26", "Intersection", 2473, ["XM01", "XM27", "XM25"])).addTo(map).on("click", onMapClick);
+var markerXM02 = L.circle([33.717067, -111.786597], new CreateMarker("XM02", "Intersection", 2479, ["XM01", "MM3", "XM03"])).addTo(map).on("click", onMapClick);
+var markerXM01 = L.circle([33.716760, -111.786777], new CreateMarker("XM01", "Intersection", 2477, ["MM1", "XM02", "XM26"])).addTo(map).on("click", onMapClick);
+var markerMM1 = L.circle([33.716580, -111.787415], new CreateMarker("MM1", "MM1", 2508, ["SN11", "GN17", "XM01"])).addTo(map).on("click", onMapClick);
+var markerXM03 = L.circle([33.718468, -111.758137], new CreateMarker("XM03", "Intersection", 2267, ["XM02", "XM04", "XM28"])).addTo(map).on("click", onMapClick);
+var markerXM04 = L.circle([33.718366, -111.755815], new CreateMarker("XM04", "Intersection", 2247, ["XM03", "XM36", "XM05"])).addTo(map).on("click", onMapClick);
+var markerXM05 = L.circle([33.718534, -111.737949], new CreateMarker("XM05", "Intersection", 2097, ["XM04", "XM38", "XM06"])).addTo(map).on("click", onMapClick);
+var markerXM06 = L.circle([33.713502, -111.722842], new CreateMarker("XM06", "Intersection", 1954, ["XM05", "XM40", "XM07"])).addTo(map).on("click", onMapClick);
+var markerXM07 = L.circle([33.712573, -111.721100], new CreateMarker("XM07", "Intersection", 1939, ["XM06", "XM42", "XM08"])).addTo(map).on("click", onMapClick);
+var markerXM08 = L.circle([33.711984, -111.720593], new CreateMarker("XM08", "Intersection", 1935, ["XM07", "XM45", "XM09"])).addTo(map).on("click", onMapClick);
+var markerXM09 = L.circle([33.706518, -111.717555], new CreateMarker("XM09", "Intersection", 1902, ["XM08", "XM53", "XM10"])).addTo(map).on("click", onMapClick);
+var markerXM10 = L.circle([33.700954, -111.718648], new CreateMarker("XM10", "Intersection", 1901, ["XM09", "XM57", "XM11"])).addTo(map).on("click", onMapClick);
+var markerXM11 = L.circle([33.692096, -111.718086], new CreateMarker("XM11", "Intersection", 1874, ["XM10", "XM57", "XM12"])).addTo(map).on("click", onMapClick);
+var markerXM12 = L.circle([33.690878, -111.718416], new CreateMarker("XM12", "Access Point", 1872, ["XM11", "XMTS", "XM13"])).addTo(map).on("click", onMapClick);
+var markerXM13 = L.circle([33.690264, -111.718502], new CreateMarker("XM13", "Access Point", 1872, ["XM14", "XM12", "XMTS"])).addTo(map).on("click", onMapClick);
+var markerXM14 = L.circle([33.689900, -111.719125], new CreateMarker("XM14", "Intersection", 1877, ["XM15", "XM31", "XM13"])).addTo(map).on("click", onMapClick);
+var markerXM15 = L.circle([33.688659, -111.721008], new CreateMarker("XM15", "Intersection", 1886, ["XM16", "XM14", "XM59"])).addTo(map).on("click", onMapClick);
+var markerXM16 = L.circle([33.683491, -111.725035], new CreateMarker("XM16", "Intersection", 1897, ["XM17", "XM32", "XM15"])).addTo(map).on("click", onMapClick);
+var markerXM17 = L.circle([33.681062, -111.726933], new CreateMarker("XM17", "Intersection", 1867, ["XM18", "XM33", "XM16"])).addTo(map).on("click", onMapClick);
+var markerXM18 = L.circle([33.678221, -111.728969], new CreateMarker("XM18", "Intersection", 1864, ["XM19", "XM22", "XM17"])).addTo(map).on("click", onMapClick);
+var markerXM19 = L.circle([33.668295, -111.75516], new CreateMarker("XM19", "Intersection", 2123, ["XM64", "XM20", "XM18"])).addTo(map).on("click", onMapClick);
+var markerXM20 = L.circle([33.673448, -111.766339], new CreateMarker("XM20", "Intersection", 2187, ["XM69", "XM21", "XM19"])).addTo(map).on("click", onMapClick);
+var markerXM21 = L.circle([33.681708, -111.770795], new CreateMarker("XM21", "Intersection", 2280, ["ML25", "XM22", "XM20"])).addTo(map).on("click", onMapClick);
+var markerXM22 = L.circle([33.685305, -111.770561], new CreateMarker("XM22", "Intersection", 2304, ["XM21", "XM23", "XM18"])).addTo(map).on("click", onMapClick);
+var markerXM23 = L.circle([33.694124, -111.778492], new CreateMarker("XM23", "Intersection", 2431, ["RK1", "XM24", "XM22"])).addTo(map).on("click", onMapClick);
+var markerXM24 = L.circle([33.696787, -111.776264], new CreateMarker("XM24", "Intersection", 2391, ["XM23", "XM25", "XM34"])).addTo(map).on("click", onMapClick);
+var markerXM25 = L.circle([33.711667, -111.781379], new CreateMarker("XM25", "Intersection", 2433, ["XM26", "XM35", "XM24"])).addTo(map).on("click", onMapClick);
+var markerXM27 = L.circle([33.703136, -111.751089], new CreateMarker("XM27", "Intersection", 2172, ["XM35", "XM26", "XM28"])).addTo(map).on("click", onMapClick);
+var markerXM28 = L.circle([33.702572, -111.749646], new CreateMarker("XM28", "Intersection", 2156, ["XM27", "XM03", "XM29"])).addTo(map).on("click", onMapClick);
+var markerXM29 = L.circle([33.698599, -111.743355], new CreateMarker("XM29", "Intersection", 2101, ["XM28", "XM30", "XM32"])).addTo(map).on("click", onMapClick);
+var markerXM30 = L.circle([33.694208, -111.730947], new CreateMarker("XM30", "Access Point", 1984, ["XM29", "XM31"])).addTo(map).on("click", onMapClick);
+var markerXM31 = L.circle([33.693172, -111.729025], new CreateMarker("XM31", "Access Point", 1966, ["XM30", "XM14"])).addTo(map).on("click", onMapClick);
+var markerXM32 = L.circle([33.694504, -111.742576], new CreateMarker("XM32", "Intersection", 2083, ["XM33", "XM29", "XM16"])).addTo(map).on("click", onMapClick);
+var markerXM33 = L.circle([33.695521, -111.744553], new CreateMarker("XM33", "Intersection", 2067, ["XM34", "XM35", "XM32", "XM17"])).addTo(map).on("click", onMapClick);
+var markerXM34 = L.circle([33.696369, -111.757496], new CreateMarker("XM34", "Intersection", 2214, ["XM24", "XM35", "XM33"])).addTo(map).on("click", onMapClick);
+var markerXM35 = L.circle([33.70258, -111.751495], new CreateMarker("XM35", "Intersection", 2166, ["XM34", "XM25", "XM27", "XM33"])).addTo(map).on("click", onMapClick);
+var markerXM36 = L.circle([33.723797, -111.75732], new CreateMarker("XM36", "Intersection", 2267, ["MM3", "XM37", "XM38", "XM04"])).addTo(map).on("click", onMapClick);
+var markerXM37 = L.circle([33.726924, -111.756625], new CreateMarker("XM37", "Stepover Gate", 2262, ["XM36"])).addTo(map).on("click", onMapClick);
+var markerXM38 = L.circle([33.720327, -111.737062], new CreateMarker("XM38", "Intersection", 2094, ["XM36", "XM39", "XM40", "XM05"])).addTo(map).on("click", onMapClick);
+var markerXM39 = L.circle([33.726978, -111.739156], new CreateMarker("XM39", "Stepover Gate", 2126, ["XM38"])).addTo(map).on("click", onMapClick);
+var markerXM40 = L.circle([33.715506, -111.722358], new CreateMarker("XM40", "Intersection", 1956, ["XM38", "XM41", "XM42", "XM06"])).addTo(map).on("click", onMapClick);
+var markerXM41 = L.circle([33.727035, -111.71755], new CreateMarker("XM41", "Stepover Gate", 1938, ["XM40"])).addTo(map).on("click", onMapClick);
+var markerXM42 = L.circle([33.714936, -111.720303], new CreateMarker("XM42", "Intersection", 1936, ["XM40", "XM43", "XM45", "XM07"])).addTo(map).on("click", onMapClick);
+var markerXM43 = L.circle([33.723796, -111.696873], new CreateMarker("XM43", "Intersection", 1748, ["XM42", "XM44", "XM47"])).addTo(map).on("click", onMapClick);
+var markerXM44 = L.circle([33.727118, -111.683583], new CreateMarker("XM44", "Stepover Gate", 1663, ["XM43"])).addTo(map).on("click", onMapClick);
+var markerXM45 = L.circle([33.713647, -111.716679], new CreateMarker("XM45", "Intersection", 1901, ["XM08", "XM42", "XM46"])).addTo(map).on("click", onMapClick);
+var markerXM46 = L.circle([33.715444, -111.713922], new CreateMarker("XM46", "Intersection", 1882, ["XM45", "XM47", "XM48"])).addTo(map).on("click", onMapClick);
+var markerXM47 = L.circle([33.721445, -111.699612], new CreateMarker("XM47", "Intersection", 1775, ["XM46", "XM43", "XM48"])).addTo(map).on("click", onMapClick);
+var markerXM48 = L.circle([33.719014, -111.697693], new CreateMarker("XM48", "Intersection", 1754, ["XM46", "XM47", "XM49"])).addTo(map).on("click", onMapClick);
+var markerXM49 = L.circle([33.719171, -111.696389], new CreateMarker("XM49", "Access Point", 1745, ["XM48"])).addTo(map).on("click", onMapClick);
+var markerXM50 = L.circle([33.710279, -111.705347], new CreateMarker("XM50", "Access Point", 1803, ["XM51"])).addTo(map).on("click", onMapClick);
+var markerXM51 = L.circle([33.709812, -111.708067], new CreateMarker("XM51", "End of Trail", 1820, ["XM50"])).addTo(map).on("click", onMapClick);
+var markerXM52 = L.circle([33.709546, -111.701851], new CreateMarker("XM52", "Access Point", 1776, ["XM53"])).addTo(map).on("click", onMapClick);
+var markerXM53 = L.circle([33.709035, -111.701857], new CreateMarker("XM53", "Intersection", 1773, ["XM09", "XM52", "XM58", "XM54"])).addTo(map).on("click", onMapClick);
+var markerXM54 = L.circle([33.708321, -111.701445], new CreateMarker("XM54", "Intersection", 1764, ["XM53", "XM55", "XM56"])).addTo(map).on("click", onMapClick);
+var markerXM55 = L.circle([33.706253, -111.698088], new CreateMarker("XM55", "Loop Point", 1863, ["XM56", "XM54"])).addTo(map).on("click", onMapClick);
+var markerXM56 = L.circle([33.705455, -111.7015], new CreateMarker("XM56", "Loop Point", 2014, ["XM54", "XM55"])).addTo(map).on("click", onMapClick);
+var markerXM57 = L.circle([33.682124, -111.705157], new CreateMarker("XM57", "Intersection", 1743, ["XM11", "XM10", "XM58"])).addTo(map).on("click", onMapClick);
+var markerXM58 = L.circle([33.675303, -111.699622], new CreateMarker("XM58", "Intersection", 1686, ["XM59", "XM57", "XM53"])).addTo(map).on("click", onMapClick);
+var markerXM59 = L.circle([33.672975, -111.702127], new CreateMarker("XM59", "Access Point", 1695, ["XM15", "XM58", "XMFS"])).addTo(map).on("click", onMapClick);
+var markerXM60 = L.circle([33.689913, -111.717609], new CreateMarker("XM60", "Access Point", 1870, ["XMTS", "XM61"])).addTo(map).on("click", onMapClick);
+var markerXM61 = L.circle([33.689285, -111.714876], new CreateMarker("XM61", "Intersection", 1933, ["XM60", "XM62", "XM63"])).addTo(map).on("click", onMapClick);
+var markerXM62 = L.circle([33.689051, -111.714224], new CreateMarker("XM62", "Loop Point", 1930, ["XM61", "XM63"])).addTo(map).on("click", onMapClick);
+var markerXM63 = L.circle([33.688996, -111.714606], new CreateMarker("XM63", "Loop Point", 1932, ["XM61", "XM62"])).addTo(map).on("click", onMapClick);
+var markerXM64 = L.circle([33.655065, -111.775319], new CreateMarker("XM64", "Intersection", 2323, ["PP1", "XM69", "XM19"])).addTo(map).on("click", onMapClick);
+var markerXM65 = L.circle([33.644246, -111.775298], new CreateMarker("XM65", "Intersection", 2171, ["XM68", "PP1", "XM66"])).addTo(map).on("click", onMapClick);
+var markerXM66 = L.circle([33.639652, -111.768385], new CreateMarker("XM66", "Access Point", 2106, ["XM65", "XM67"])).addTo(map).on("click", onMapClick);
+var markerXM67 = L.circle([33.635877, -111.768485], new CreateMarker("XM67", "Access Point", 2142, ["XM66", "XFGX"])).addTo(map).on("click", onMapClick);
+var markerXM68 = L.circle([33.640088, -111.786312], new CreateMarker("XM68", "Intersection", 2502, ["XF16", "XM65", "XF15"])).addTo(map).on("click", onMapClick);
+var markerXM69 = L.circle([33.662148, -111.784781], new CreateMarker("XM69", "Intersection", 2437, ["WM1", "XM20", "XM64"])).addTo(map).on("click", onMapClick);
+var markerXM70 = L.circle([33.669187, -111.702063], new CreateMarker("XM70", "Start", 1678, ["XM77", "XM71", "XMCS"])).addTo(map).on("click", onMapClick);
+var markerXM71 = L.circle([33.668686, -111.712487], new CreateMarker("XM71", "Intersection", 1749, ["XM72", "XM70", "XM73"])).addTo(map).on("click", onMapClick);
+var markerXM72 = L.circle([33.668217, -111.71342], new CreateMarker("XM72", "Intersection", 1753, ["XM76", "XM71", "XM78"])).addTo(map).on("click", onMapClick);
+var markerXM73 = L.circle([33.666245, -111.703235], new CreateMarker("XM73", "Intersection", 1623, ["XM71", "XM76", "XM74"])).addTo(map).on("click", onMapClick);
+var markerXM74 = L.circle([33.66623, -111.702549], new CreateMarker("XM74", "Intersection", 1624, ["XM73", "XM75", "XM78"])).addTo(map).on("click", onMapClick);
+var markerXM75 = L.circle([33.667992, -111.701406], new CreateMarker("XM75", "Finish", 1664, ["XM74", "XM77", "XMCS"])).addTo(map).on("click", onMapClick);
+var markerXM76 = L.circle([33.668264, -111.703395], new CreateMarker("XM76", "Intersection", 1661, ["XM72", "XM77", "XM73"])).addTo(map).on("click", onMapClick);
+var markerXM77 = L.circle([33.668831, -111.702145], new CreateMarker("XM77", "Start", 1675, ["XM76", "XM70", "XMCS", "XM75"])).addTo(map).on("click", onMapClick);
+var markerXM78 = L.circle([33.661244, -111.704382], new CreateMarker("XM78", "Intersection", 1655, ["XM72", "XM74", "XM80"])).addTo(map).on("click", onMapClick);
+var markerXM81 = L.circle([33.667336, -111.698931], new CreateMarker("XM81", "Finish", 1649, ["XM79", "XMCS", "XM80"])).addTo(map).on("click", onMapClick);
+var markerXM79 = L.circle([33.667050, -111.699146], new CreateMarker("XM79", "Start", 1647, ["XMCS", "XM81", "XM80"])).addTo(map).on("click", onMapClick);
+var markerXM80 = L.circle([33.660962, -111.704076], new CreateMarker("XM80", "Intersection", 1659, ["XM78", "XM79", "XM81"])).addTo(map).on("click", onMapClick);
+
+
+// mcdowell mountain park trailheads
+
+var markerXMCS = L.circle([33.667963, -111.700476], new CreateMarkerTrailhead("XMCS", "Trailhead", 1662, ["XM75", "XM77", "XM70", "XM81", "XM79"])).addTo(map).on("click", onMapClick);
+var markerXMFS = L.circle([33.672499, -111.701885], new CreateMarkerTrailhead("XMFS", "Trailhead", 1689, ["XM59"])).addTo(map).on("click", onMapClick);
+var markerXMTS = L.circle([33.690353, -111.717885], new CreateMarkerTrailhead("XMTS", "Trailhead", 1870, ["XM13", "XM12", "XM60"])).addTo(map).on("click", onMapClick);
+
+// fountain hills mcdowell mountain preserve markers
+
+var markerXF33 = L.circle([33.632639, -111.779484], new CreateMarker("XF33", "Scenic Point", 2454, ["XF32"])).addTo(map).on("click", onMapClick);
+var markerXF35 = L.circle([33.631317, -111.779215], new CreateMarker("XF35", "Scenic Point", 2457, ["XF34"])).addTo(map).on("click", onMapClick);
+var markerXF36 = L.circle([33.631156, -111.782842], new CreateMarker("XF36", "Scenic Point", 2654, ["XF29"])).addTo(map).on("click", onMapClick);
+var markerXF02 = L.circle([33.621579, -111.776394], new CreateMarker("XF02", "Intersection", 2487, ["XF01", "XF20", "XF06"])).addTo(map).on("click", onMapClick);
+var markerXF01 = L.circle([33.621258, -111.776522], new CreateMarker("XF01", "Intersection", 2477, ["XFAX", "XF02", "XF03"])).addTo(map).on("click", onMapClick);
+var markerXF03 = L.circle([33.621006, -111.774359], new CreateMarker("XF03", "Intersection", 2507, ["XF01", "XF04", "XF05"])).addTo(map).on("click", onMapClick);
+var markerXF04 = L.circle([33.621038, -111.772823], new CreateMarker("XF04", "End of Trail", 2511, ["XF03"])).addTo(map).on("click", onMapClick);
+var markerXF05 = L.circle([33.618613, -111.771459], new CreateMarker("XF05", "End of Trail", 2512, ["XF03"])).addTo(map).on("click", onMapClick);
+var markerXF24 = L.circle([33.622571, -111.778572], new CreateMarker("XF24", "Loop Point", 2641, ["XF25", "XF23"])).addTo(map).on("click", onMapClick);
+var markerXF08 = L.circle([33.623125, -111.778754], new CreateMarker("XF08", "Intersection", 2666, ["AK4", "XF09", "XF25"])).addTo(map).on("click", onMapClick);
+var markerXF10 = L.circle([33.623714, -111.780524], new CreateMarker("XF10", "Scenic Point", 2836, ["XF09"])).addTo(map).on("click", onMapClick);
+var markerXF09 = L.circle([33.624045, -111.780465], new CreateMarker("XF09", "Intersection", 2863, ["XF10", "XF11", "XF08"])).addTo(map).on("click", onMapClick);
+var markerXF12 = L.circle([33.625178, -111.78019], new CreateMarker("XF12", "Scenic Point", 3036, ["XF11"])).addTo(map).on("click", onMapClick);
+var markerXF11 = L.circle([33.625412, -111.780844], new CreateMarker("XF11", "Intersection", 3037, ["XF09", "XF13", "XF12"])).addTo(map).on("click", onMapClick);
+var markerXF13 = L.circle([33.628826, -111.778312], new CreateMarker("XF13", "Intersection", 2540, ["XF11", "XF19", "XF14"])).addTo(map).on("click", onMapClick);
+var markerXF14 = L.circle([33.625833, -111.774384], new CreateMarker("XF14", "Intersection", 2519, ["XF06", "XF13"])).addTo(map).on("click", onMapClick);
+var markerXF15 = L.circle([33.637442, -111.785731], new CreateMarker("XF15", "Intersection", 2614, ["XF16", "XM68", "XF30"])).addTo(map).on("click", onMapClick);
+var markerXF16 = L.circle([33.636392, -111.7875], new CreateMarker("XF16", "Intersection", 2734, ["XM68", "XF15", "XF31"])).addTo(map).on("click", onMapClick);
+var markerXF17 = L.circle([33.63456, -111.782076], new CreateMarker("XF17", "Intersection", 2474, ["XF18", "XF30", "XF32"])).addTo(map).on("click", onMapClick);
+var markerXF18 = L.circle([33.634104, -111.782477], new CreateMarker("XF18", "Intersection", 2513, ["XF29", "XF26", "XF17"])).addTo(map).on("click", onMapClick);
+var markerXF19 = L.circle([33.629652, -111.778399], new CreateMarker("XF19", "Intersection", 2522, ["XF13", "XF29", "XF34"])).addTo(map).on("click", onMapClick);
+var markerXF20 = L.circle([33.62159, -111.778455], new CreateMarker("XF20", "Intersection", 2537, ["XF22", "XF21", "XF02"])).addTo(map).on("click", onMapClick);
+var markerXF21 = L.circle([33.622172, -111.778397], new CreateMarker("XF21", "Intersection", 2597, ["XF20", "XF22", "XF07"])).addTo(map).on("click", onMapClick);
+var markerXF22 = L.circle([33.622045, -111.779526], new CreateMarker("XF22", "Loop Point", 2592, ["XF21", "XF20"])).addTo(map).on("click", onMapClick);
+var markerXF25 = L.circle([33.622901, -111.778486], new CreateMarker("XF25", "Intersection", 2655, ["XF24", "XF08", "XF23"])).addTo(map).on("click", onMapClick);
+var markerXF23 = L.circle([33.622696, -111.778185], new CreateMarker("XF23", "Intersection", 2645, ["XF24", "XF25", "XF07"])).addTo(map).on("click", onMapClick);
+var markerXF07 = L.circle([33.622526, -111.777864], new CreateMarker("XF07", "Intersection", 2628, ["XF21", "XF23", "XF06"])).addTo(map).on("click", onMapClick);
+var markerXF06 = L.circle([33.622515, -111.777168], new CreateMarker("XF06", "Intersection", 2556, ["XF02", "XF07", "XF14"])).addTo(map).on("click", onMapClick);
+var markerXF26 = L.circle([33.634282, -111.782842], new CreateMarker("XF26", "Intersection", 2520, ["XF27", "XF28", "XF18"])).addTo(map).on("click", onMapClick);
+var markerXF28 = L.circle([33.634247, -111.783367], new CreateMarker("XF28", "Loop Point", 2560, ["XF27", "XF26"])).addTo(map).on("click", onMapClick);
+var markerXF27 = L.circle([33.633903, -111.783741], new CreateMarker("XF27", "Intersection", 2593, ["XF31", "XF28", "XF26"])).addTo(map).on("click", onMapClick);
+var markerXF29 = L.circle([33.631403, -111.782565], new CreateMarker("XF29", "Intersection", 2638, ["XF36", "XF18", "XF19"])).addTo(map).on("click", onMapClick);
+var markerXF30 = L.circle([33.635294, -111.781874], new CreateMarker("XF30", "Intersection", 2517, ["XF17", "XF31", "XF15"])).addTo(map).on("click", onMapClick);
+var markerXF31 = L.circle([33.634606, -111.784923], new CreateMarker("XF31", "Intersection", 2704, ["XF16", "XF30", "XF27"])).addTo(map).on("click", onMapClick);
+var markerXF32 = L.circle([33.632867, -111.779122], new CreateMarker("XF32", "Intersection", 2436, ["XF33", "XF17", "XF34"])).addTo(map).on("click", onMapClick);
+var markerXF34 = L.circle([33.631565, -111.779500], new CreateMarker("XF34", "Intersection", 2474, ["XF35", "XF32", "XF19"])).addTo(map).on("click", onMapClick);
+
+// fountain hills mcdowell mountain preserve trailheads
+
+var markerXFAX = L.circle([33.621149, -111.776984], new CreateMarkerTrailhead("XFAX", "Trailhead", 2459, ["XF01"])).addTo(map).on("click", onMapClick);
+var markerXFGX = L.circle([33.635479, -111.768508], new CreateMarkerTrailhead("XFGX", "Trailhead", 2137, ["XM67"])).addTo(map).on("click", onMapClick);
 
 var mapZoomLevel;
 map.on("zoomend", function () {
@@ -1208,6 +1361,31 @@ $("#infocontainer-0-button").on("click", function() {
       map.flyTo([33.594952, -111.786379], 15, {animate: true, duration: 0.1});
     break;
 
+    case 13:
+      markerXFGX.fire('click');
+      map.flyTo([33.635479, -111.768508], 17, {animate: true, duration: 0.1});
+    break;
+
+    case 14:
+      markerXFAX.fire('click');
+      map.flyTo([33.621149, -111.776984], 17, {animate: true, duration: 0.1});
+    break;
+
+    case 15:
+      markerXMCS.fire('click');
+      map.flyTo([33.667963, -111.700476], 17, {animate: true, duration: 0.1});
+    break;
+
+    case 16:
+      markerXMFS.fire('click');
+      map.flyTo([33.672499, -111.701885], 17, {animate: true, duration: 0.1});
+    break;
+
+    case 17:
+      markerXMTS.fire('click');
+      map.flyTo([33.690353, -111.717885], 17, {animate: true, duration: 0.1});
+    break;
+
     default:
       alert("Incorrect trailhead carousel index number!");
 
@@ -1330,17 +1508,17 @@ function resetMap() {
   if ($(window).height() >= 900) {
     markerRadiusInitial = 110;
     trailheadRadiusInitial = 110;
-    map.setView([33.702662, -111.829247], 12);
+    map.setView([33.702662, -111.786980], 12);
     }
   else if ($(window).height() >= 700 && $(window).height() < 900) {
       markerRadiusInitial = 100;
       trailheadRadiusInitial = 100;
-      map.setView([33.702662, -111.829247], 11);
+      map.setView([33.702662, -111.786980], 11);
   }
   else {
       markerRadiusInitial = 50;
       trailheadRadiusInitial = 50;
-      map.setView([33.702662, -111.829247], 10);
+      map.setView([33.702662, -111.786980], 10);
   };
 
 }

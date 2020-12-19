@@ -5,16 +5,14 @@ checkCookie();
 /* check url for shared route and create route if available */
 
 var m = [];
-var sharedMarker = [];
+var sharedMarkers = [];
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-urlParams.getAll('m');
-
-sharedMarker = m;
+sharedMarkers = urlParams.getAll('m');
 
 // console.log(urlParams.getAll('m'));
 
-console.log(m);
+console.log(sharedMarkers);
 
 
 

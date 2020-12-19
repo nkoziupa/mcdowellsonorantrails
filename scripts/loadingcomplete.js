@@ -7,6 +7,9 @@ checkCookie();
 var m = [];
 var sharedMarkers = [];
 var sharedMarker = "";
+var sharedSegments = [];
+var sharedSegment = "";
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 sharedMarkers = urlParams.getAll('m');
@@ -26,8 +29,19 @@ for (var i = 0; i < markerArray.length - 1; i++) {
 sharedMarker = "marker" + markerArray[markerArray.length - 1];
 window[sharedMarker].setStyle({status: "current", color: markerColorCurrent, fillColor: markerFillColorCurrent, fillOpacity: markerFillOpacityCurrent});
 
+// create segmentArray
 
 
+sharedSegments = ["LG1LG2", "LG2LG3"];
+
+segmentArray = sharedSegments;
+
+// make all of the segments up to the current segment 'selected'
+
+for (var i = 0; i < segmentArray.length; i++) {
+  sharedSegment = segmentArray[i] + "polyline";
+  window[sharedSegment].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
+}
 
 
 

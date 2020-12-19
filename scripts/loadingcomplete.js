@@ -32,13 +32,13 @@ window[sharedMarker].setStyle({status: "current", color: markerColorCurrent, fil
 // create segmentArray
 
 
-sharedSegments = ["LG1LG2", "LG2LG3"];
+sharedSegments = ["segmentLG1LG2", "segmentLG2LG3"];
 
 segmentArray = sharedSegments;
 
 // make all of the segments up to the current segment 'selected'
 
-for (var i = 0; i < segmentArray.length - 1; i++) {
+for (var i = 0; i < segmentArray.length; i++) {
   sharedSegment = segmentArray[i] + "polyline";
   window[sharedSegment].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
 }

@@ -32,7 +32,7 @@ window[sharedMarker].setStyle({status: "current", color: markerColorCurrent, fil
 // create segmentArray
 
 
-sharedSegments = ["segmentUR4CN5", "segmentCN5CN3", "segmentCN3UR5"];
+sharedSegments = ["segmentCN5UR4", "segmentCN3CN5", "segmentCN3UR5"];
 
 segmentArray = sharedSegments;
 

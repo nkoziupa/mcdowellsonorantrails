@@ -38,7 +38,7 @@ segmentArray = sharedSegments;
 
 // make all of the segments up to the current segment 'selected'
 
-for (var i = 0; i < segmentArray.length; i++) {
+for (var i = 0; i < segmentArray.length - 1; i++) {
   sharedSegment = segmentArray[i] + "polyline";
   window[sharedSegment].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
 }

@@ -4,6 +4,7 @@ checkCookie();
 
 /* check url for shared route and create route if available */
 
+var m = [];
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 console.log(urlParams.getAll('m')) // returns array of all markers;

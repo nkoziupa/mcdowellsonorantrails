@@ -9,6 +9,7 @@ var sharedMarkers = [];
 var sharedMarker = "";
 var sharedSegments = [];
 var sharedSegment = "";
+var sharedSegmentID = "";
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -32,7 +33,27 @@ window[sharedMarker].setStyle({status: "current", color: markerColorCurrent, fil
 // create segmentArray
 
 
-sharedSegments = ["segmentCN5UR4", "segmentCN3CN5", "segmentCN3UR5"];
+// make the segments 'selected'
+
+for (var i = 0; i < markerArray.length - 1; i++) {
+
+  // create a sharedSegmentID based on the current marker and the next marker, one at a time
+  sharedSegmentID = "segment" + markerArray[i] + markerArray[i + 1];
+
+  // through try and catch, determine if the sharedSegmentID correctly matches its variable name or if the marker names should be flipped
+  // then run the appropriate statement
+
+  try {
+    if (window[sharedSegmentID].segmentMarkerA === markerArray[i]) {
+      sharedSegments.push(sharedSegmentID);
+    }
+  }
+
+  catch(err) {
+    sharedSegmentID = "segment" + markerArray[i + 1] + markerArray[i];
+      sharedSegments.push(sharedSegmentID);
+  }
+}
 
 segmentArray = sharedSegments;
 

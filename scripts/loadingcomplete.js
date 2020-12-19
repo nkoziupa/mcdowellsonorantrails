@@ -14,7 +14,7 @@ sharedMarker = m;
 
 // console.log(urlParams.getAll('m'));
 
-console.log(sharedMarker);
+console.log(m);
 
 
 

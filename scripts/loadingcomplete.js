@@ -23,8 +23,8 @@ for (var i = 0; i < markerArray.length - 1; i++) {
 
 // make the last marker the 'current' marker
 
-// sharedMarker = "marker" + markerArray[markerArray.length];
-// window[sharedMarker].setStyle({status: "current", color: markerColorCurrent, fillColor: markerFillColorCurrent, fillOpacity: markerFillOpacityCurrent});
+sharedMarker = "marker" + markerArray[markerArray.length - 1];
+window[sharedMarker].setStyle({status: "current", color: markerColorCurrent, fillColor: markerFillColorCurrent, fillOpacity: markerFillOpacityCurrent});
 
 
 

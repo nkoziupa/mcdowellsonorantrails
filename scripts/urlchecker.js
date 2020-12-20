@@ -70,13 +70,13 @@ for (var i = 0; i < segmentArray.length; i++) {
 
 // create array
 
-var sharedMarkerGroupArray = [];
+var sharedMarkerGroupArray = "";
 
 for (var i = 0; i < markerArray.length; i++) {
   sharedMarkerGroupArray = sharedMarkerGroupArray + "marker" + markerArray[i] + ", ";
 }
 
-var sharedMarkerGroup = new L.featureGroup([markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6,]);
+var sharedMarkerGroup = new L.featureGroup([sharedMarkerGroupArray]);
 
 map.fitBounds(sharedMarkerGroup.getBounds());
 

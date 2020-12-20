@@ -34,15 +34,15 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  if (getCookie("hasTutorialBeenViewed") == "yes") {
+  if (getCookie("hasTutorialBeenViewed") == "yes" || isSharedRoute === true) {
     infoContainer1MapOverlayShown = true;
     infoContainer2MapOverlayShown = true;
   }
   else {
-//    infoContainer1MapOverlayShown = false;
-//    infoContainer2MapOverlayShown = false;
-    infoContainer1MapOverlayShown = true;
-    infoContainer2MapOverlayShown = true;
+    infoContainer1MapOverlayShown = false;
+    infoContainer2MapOverlayShown = false;
+//    infoContainer1MapOverlayShown = true;
+//    infoContainer2MapOverlayShown = true;
   }
   if (getCookie("hasPolicyBeenAccepted") == "yes") {
     // do something
@@ -52,6 +52,9 @@ function checkCookie() {
   }
 }
 
+if (isSharedRoute === true) {
+  infoContainer2Visible = true;
+}
 
 /* FOR TESTING -------------------------------- */
 

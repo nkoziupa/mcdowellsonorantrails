@@ -82,7 +82,12 @@ for (var i = 0; i < markerArray.length; i++) {
 
 // var sharedMarkerGroup = new L.featureGroup([sharedMarkerGroupArray]);
 
-var sharedMarkerGroup = new L.featureGroup([markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6]);
+var sharedMarkerGroup = new L.featureGroup();
+
+markerUR4.addTo(sharedMarkerGroup);
+markerCN5.addTo(sharedMarkerGroup);
+markerCN3.addTo(sharedMarkerGroup);
+markerUR5.addTo(sharedMarkerGroup);
 
 map.fitBounds(sharedMarkerGroup.getBounds());
 

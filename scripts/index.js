@@ -33,16 +33,16 @@ function getCookie(cname) {
   return "";
 }
 
-/*
-
 function checkCookie() {
   if (getCookie("hasTutorialBeenViewed") == "yes") {
     infoContainer1MapOverlayShown = true;
     infoContainer2MapOverlayShown = true;
   }
   else {
-    infoContainer1MapOverlayShown = false;
-    infoContainer2MapOverlayShown = false;
+//    infoContainer1MapOverlayShown = false;
+//    infoContainer2MapOverlayShown = false;
+    infoContainer1MapOverlayShown = true;
+    infoContainer2MapOverlayShown = true;
   }
   if (getCookie("hasPolicyBeenAccepted") == "yes") {
     // do something
@@ -52,14 +52,12 @@ function checkCookie() {
   }
 }
 
-*/
-
 
 /* FOR TESTING -------------------------------- */
 
-infoContainer1MapOverlayShown = true;
-infoContainer2MapOverlayShown = true;
-infoContainer2Visible = true;
+// infoContainer1MapOverlayShown = true;
+// infoContainer2MapOverlayShown = true;
+// infoContainer2Visible = true;
 
 /* -------------------------------------------- */
 

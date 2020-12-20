@@ -53,9 +53,9 @@ function checkCookie() {
 
 /* FOR TESTING -------------------------------- */
 
-var infoContainer1MapOverlayShown = true;
-var infoContainer2MapOverlayShown = true;
-var infoContainer2Visible = true;
+infoContainer1MapOverlayShown = true;
+infoContainer2MapOverlayShown = true;
+infoContainer2Visible = true;
 
 /* -------------------------------------------- */
 

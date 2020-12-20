@@ -4,9 +4,15 @@ $("#splash-button").on("click", function() {
 
 // set info container status
 
+/*
 var infoContainer1MapOverlayShown = false;
 var infoContainer2MapOverlayShown = false;
 var infoContainer2Visible = false;
+*/
+
+var infoContainer1MapOverlayShown = true;
+var infoContainer2MapOverlayShown = true;
+var infoContainer2Visible = true;
 
 // cookie code
 
@@ -1688,7 +1694,7 @@ function onMapClick(e) {
 
     // if they haven't been shown yet, show focused instructions 1
 
-    if (infoContainer1MapOverlayShown === false && isSharedRoute === false) {
+    if (infoContainer1MapOverlayShown === false) {
       $("#mapoverlay").css("visibility", "visible");
       $("#mapoverlay").fadeTo(500, 0.85);
       $("#infocontainer-1-instructions-button").on("click", function() {
@@ -1879,7 +1885,7 @@ function onMapClick(e) {
 
     // if they haven't been shown yet, show focused instructions 2
 
-    if (infoContainer2MapOverlayShown === false && isSharedRoute === false) {
+    if (infoContainer2MapOverlayShown === false) {
       $("#mapoverlay").css("visibility", "visible");
       $("#mapoverlay").fadeTo(500, 0.85);
       $("#infocontainer-2-instructions-button").on("click", function() {

@@ -16,6 +16,13 @@ console.log(sharedMarkers);
 
 markerArray = sharedMarkers;
 
+// make all of the markers 'unselectable'
+
+for (var i = 0; i < markerList.length; i++) {
+  markerListElement = "marker" + markerList[i];
+  window[markerListElement].setStyle({status: "unselectable", color: markerColorUnselectable, fillColor: markerFillColorUnselectable, fillOpacity: markerFillOpacityUnselectable});
+}
+
 // make all of the markers up to the last marker 'selected'
 
 for (var i = 0; i < markerArray.length - 1; i++) {

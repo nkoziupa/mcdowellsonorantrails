@@ -35,14 +35,6 @@ for (var i = 0; i < markerArray.length - 1; i++) {
 sharedMarker = "marker" + markerArray[markerArray.length - 1];
 window[sharedMarker].setStyle({status: "current", color: markerColorCurrent, fillColor: markerFillColorCurrent, fillOpacity: markerFillOpacityCurrent});
 
-// make the new neighbor markers 'selectable'
-
-for (var i = 0; i < sharedMarker.options.neighbors.length; i++) {
-  newNeighborMarkers = "marker" + sharedMarker.options.neighbors[i];
-  window[newNeighborMarkers].setStyle({status: "selectable", color: markerColorSelectable, fillColor: markerFillColorSelectable, fillOpacity: markerFillOpacitySelectable});
-}
-
-
 // make the segments 'selected'
 
 for (var i = 0; i < markerArray.length - 1; i++) {

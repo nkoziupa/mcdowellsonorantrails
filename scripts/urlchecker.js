@@ -59,11 +59,9 @@ for (var i = 0; i < segmentArray.length; i++) {
 
 // show/hide info containers
 
-$("#infocontainer-0").addClass("display-visible");
-$("#infocontainer-0").removeClass("display-invisible");
+$("#infocontainer-0").addClass("display-invisible");
+$("#infocontainer-0").removeClass("display-visible");
 $("#infocontainer-1").addClass("display-invisible");
 $("#infocontainer-1").removeClass("display-visible");
-$("#infocontainer-2").addClass("display-invisible");
-$("#infocontainer-2").removeClass("display-visible");
-
-// infoContainer2Visible = false;
+$("#infocontainer-2").addClass("display-visible");
+$("#infocontainer-2").removeClass("display-invisible");

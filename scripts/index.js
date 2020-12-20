@@ -33,6 +33,8 @@ function getCookie(cname) {
   return "";
 }
 
+/*
+
 function checkCookie() {
   if (getCookie("hasTutorialBeenViewed") == "yes") {
     infoContainer1MapOverlayShown = true;
@@ -49,6 +51,8 @@ function checkCookie() {
     // do something
   }
 }
+
+*/
 
 
 /* FOR TESTING -------------------------------- */

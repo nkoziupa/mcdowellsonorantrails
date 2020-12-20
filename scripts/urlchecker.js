@@ -1,7 +1,5 @@
 /* check url for shared route and create route if available */
 
-var isSharedRoute = true;
-
 var m = [];
 var sharedMarkers = [];
 var sharedMarker = "";

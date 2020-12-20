@@ -2,6 +2,12 @@ $("#splash-button").on("click", function() {
     $(this).parents('#splashscreen').fadeOut(1000);
 });
 
+// FOR TESTING
+
+var isSharedRoute = true;
+
+
+
 // set info container status
 
 var infoContainer1MapOverlayShown = false;

@@ -61,16 +61,12 @@ for (var i = 0; i < segmentArray.length; i++) {
 
 // show/hide info containers
 
-/*
-
 $("#infocontainer-0").addClass("display-invisible");
 $("#infocontainer-0").removeClass("display-visible");
 $("#infocontainer-1").addClass("display-invisible");
 $("#infocontainer-1").removeClass("display-visible");
 $("#infocontainer-2").addClass("display-visible");
 $("#infocontainer-2").removeClass("display-invisible");
-
-*/
 
 // hide tutorial overlays
 

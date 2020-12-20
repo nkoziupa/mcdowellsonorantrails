@@ -34,7 +34,7 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  if (getCookie("hasTutorialBeenViewed") == "yes" || isSharedRoute === true) {
+  if (getCookie("hasTutorialBeenViewed") == "yes") {
     infoContainer1MapOverlayShown = true;
     infoContainer2MapOverlayShown = true;
   }
@@ -52,6 +52,8 @@ function checkCookie() {
 
 if (isSharedRoute = true) {
   infoContainer2Visible = true;
+  infoContainer1MapOverlayShown = true;
+  infoContainer2MapOverlayShown = true;
 }
 else {
   infoContainer2Visible = false;

@@ -73,7 +73,7 @@ for (var i = 0; i < segmentArray.length; i++) {
 var sharedMarkerGroupArray = [];
 
 for (var i = 0; i < markerArray.length; i++) {
-  sharedMarkerGroupArray = sharedMarkerGroupArray + "marker" + markerArray[i];
+  sharedMarkerGroupArray = sharedMarkerGroupArray + "marker" + markerArray[i] + ", ";
 }
 
 var sharedMarkerGroup = new L.featureGroup([sharedMarkerGroupArray]);

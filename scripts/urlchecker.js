@@ -61,12 +61,12 @@ for (var i = 0; i < segmentArray.length; i++) {
 
 // hide tutorial overlays
 
-var infoContainer1MapOverlayShown = true;
-var infoContainer2MapOverlayShown = true;
-var infoContainer2Visible = true;
+infoContainer1MapOverlayShown = true;
+infoContainer2MapOverlayShown = true;
+infoContainer2Visible = true;
 
-$("#infocontainer-2-instructions").css("display", "none");
-$("#infocontainer-2-markercontainer-2").css("display", "block");
+// $("#infocontainer-2-instructions").css("display", "none");
+// $("#infocontainer-2-markercontainer-2").css("display", "block");
 
 // show/hide info containers
 

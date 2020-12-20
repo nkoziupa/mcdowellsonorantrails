@@ -55,7 +55,7 @@ if (isSharedRoute === true) {
 }
 else {
   infoContainer2Visible = false;
-}
+};
 
 /* FOR TESTING -------------------------------- */
 

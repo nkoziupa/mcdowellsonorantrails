@@ -68,7 +68,7 @@ for (var i = 0; i < segmentArray.length; i++) {
 
 // zoom in on shared route
 
-var sharedMarkerGroup = new L.featureGroup([markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6]);
+var sharedMarkerGroup = new L.featureGroup([markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6, markerGM4]);
 
 map.fitBounds(sharedMarkerGroup.getBounds());
 

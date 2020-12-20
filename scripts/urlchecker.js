@@ -70,7 +70,7 @@ for (var i = 0; i < segmentArray.length; i++) {
 
 // create array
 
-var sharedMarkerGroupArray = {markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6};
+// var sharedMarkerGroupArray = {markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6};
 
 /*
 for (var i = 0; i < markerArray.length; i++) {
@@ -80,9 +80,9 @@ for (var i = 0; i < markerArray.length; i++) {
 
 // var testgroup = "[markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6]";
 
-var sharedMarkerGroup = new L.featureGroup([sharedMarkerGroupArray]);
+// var sharedMarkerGroup = new L.featureGroup([sharedMarkerGroupArray]);
 
-// var sharedMarkerGroup = new L.featureGroup([markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6]);
+var sharedMarkerGroup = new L.featureGroup([markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6]);
 
 map.fitBounds(sharedMarkerGroup.getBounds());
 

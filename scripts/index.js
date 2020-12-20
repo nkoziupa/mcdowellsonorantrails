@@ -56,7 +56,7 @@ function checkCookie() {
   }
 }
 
-if (isSharedRoute === 1) {
+if (isSharedRoute == 1) {
   infoContainer2Visible = true;
   infoContainer1MapOverlayShown = true;
   infoContainer2MapOverlayShown = true;

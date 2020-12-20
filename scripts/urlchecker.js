@@ -59,15 +59,6 @@ for (var i = 0; i < segmentArray.length; i++) {
   window[sharedSegment].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
 }
 
-// hide tutorial overlays
-
-infoContainer1MapOverlayShown = true;
-infoContainer2MapOverlayShown = true;
-infoContainer2Visible = true;
-
-// $("#infocontainer-2-instructions").css("display", "none");
-// $("#infocontainer-2-markercontainer-2").css("display", "block");
-
 // show/hide info containers
 
 $("#infocontainer-0").addClass("display-invisible");
@@ -76,3 +67,12 @@ $("#infocontainer-1").addClass("display-invisible");
 $("#infocontainer-1").removeClass("display-visible");
 $("#infocontainer-2").addClass("display-visible");
 $("#infocontainer-2").removeClass("display-invisible");
+
+// hide tutorial overlays
+
+infoContainer1MapOverlayShown = true;
+infoContainer2MapOverlayShown = true;
+infoContainer2Visible = true;
+
+// $("#infocontainer-2-instructions").css("display", "none");
+// $("#infocontainer-2-markercontainer-2").css("display", "block");

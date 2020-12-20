@@ -80,7 +80,7 @@ for (var i = 0; i < markerArray.length; i++) {
 
 // var testgroup = "[markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6]";
 
-var sharedMarkerGroup = new L.featureGroup([sharedMarkerGroupArray]);
+var sharedMarkerGroup = new L.featureGroup(sharedMarkerGroupArray);
 
 // var sharedMarkerGroup = new L.featureGroup([markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6]);
 

@@ -26,9 +26,6 @@ for (var i = 0; i < markerArray.length - 1; i++) {
 sharedMarker = "marker" + markerArray[markerArray.length - 1];
 window[sharedMarker].setStyle({status: "current", color: markerColorCurrent, fillColor: markerFillColorCurrent, fillOpacity: markerFillOpacityCurrent});
 
-// create segmentArray
-
-
 // make the segments 'selected'
 
 for (var i = 0; i < markerArray.length - 1; i++) {
@@ -59,3 +56,14 @@ for (var i = 0; i < segmentArray.length; i++) {
   sharedSegment = segmentArray[i] + "polyline";
   window[sharedSegment].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
 }
+
+// show/hide info containers
+
+$("#infocontainer-0").addClass("display-visible");
+$("#infocontainer-0").removeClass("display-invisible");
+$("#infocontainer-1").addClass("display-invisible");
+$("#infocontainer-1").removeClass("display-visible");
+$("#infocontainer-2").addClass("display-invisible");
+$("#infocontainer-2").removeClass("display-visible");
+
+// infoContainer2Visible = false;

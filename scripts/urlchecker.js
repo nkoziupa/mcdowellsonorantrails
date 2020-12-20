@@ -68,34 +68,12 @@ for (var i = 0; i < segmentArray.length; i++) {
 
 // zoom in on shared route
 
-// create array
-
-// var sharedMarkerGroupArray = {markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6};
-
-/*
-for (var i = 0; i < markerArray.length; i++) {
-  sharedMarkerGroupArray = sharedMarkerGroupArray + "marker" + markerArray[i] + ", ";
-}
-*/
-
-// var testgroup = "[markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6]";
-
-// var sharedMarkerGroup = new L.featureGroup([sharedMarkerGroupArray]);
-
 var sharedMarkerGroup = new L.featureGroup();
-var tmarker = "";
 
 for (var i = 0; i < markerArray.length; i++) {
-  tmarker = "marker" + markerArray[i];
-  window[tmarker].addTo(sharedMarkerGroup);
+  sharedMarker = "marker" + markerArray[i];
+  window[sharedMarker].addTo(sharedMarkerGroup);
 }
-
-/*
-markerUR4.addTo(sharedMarkerGroup);
-markerCN5.addTo(sharedMarkerGroup);
-markerCN3.addTo(sharedMarkerGroup);
-markerUR5.addTo(sharedMarkerGroup);
-*/
 
 map.fitBounds(sharedMarkerGroup.getBounds());
 

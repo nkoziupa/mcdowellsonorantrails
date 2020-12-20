@@ -57,6 +57,11 @@ for (var i = 0; i < segmentArray.length; i++) {
   window[sharedSegment].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
 }
 
+// hide tutorial overlays
+
+infoContainer1MapOverlayShown = true;
+infoContainer2MapOverlayShown = true;
+
 // show/hide info containers
 
 $("#infocontainer-0").addClass("display-invisible");

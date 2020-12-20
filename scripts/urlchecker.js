@@ -66,6 +66,14 @@ for (var i = 0; i < segmentArray.length; i++) {
   window[sharedSegment].setStyle({color: segmentColorSelected, opacity: segmentOpacitySelected});
 }
 
+// zoom in on shared route
+
+var sharedMarkerGroup = new L.featureGroup([markerUR4, markerCN5, markerCN3, markerUR5, markerUR7, markerBT6, markerUR8, markerCL1, markerBR6]);
+
+map.fitBounds(sharedMarkerGroup.getBounds());
+
+
+
 // show/hide info containers
 
 $("#infocontainer-0").addClass("display-invisible");

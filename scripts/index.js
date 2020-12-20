@@ -4,7 +4,7 @@ $("#splash-button").on("click", function() {
 
 // FOR TESTING
 
-var isSharedRoute = true;
+var isSharedRoute = 1;
 
 
 
@@ -56,7 +56,7 @@ function checkCookie() {
   }
 }
 
-if (isSharedRoute === true) {
+if (isSharedRoute === 1) {
   infoContainer2Visible = true;
   infoContainer1MapOverlayShown = true;
   infoContainer2MapOverlayShown = true;

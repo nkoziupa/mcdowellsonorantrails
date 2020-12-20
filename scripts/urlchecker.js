@@ -87,7 +87,7 @@ var tmarker = "";
 
 for (var i = 0; i < markerArray.length; i++) {
   tmarker = "marker" + markerArray[i];
-  tmarker.addTo(sharedMarkerGroup);
+  window[tmarker].addTo(sharedMarkerGroup);
 }
 
 /*

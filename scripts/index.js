@@ -4,15 +4,9 @@ $("#splash-button").on("click", function() {
 
 // set info container status
 
-/*
 var infoContainer1MapOverlayShown = false;
 var infoContainer2MapOverlayShown = false;
 var infoContainer2Visible = false;
-*/
-
-var infoContainer1MapOverlayShown = true;
-var infoContainer2MapOverlayShown = true;
-var infoContainer2Visible = true;
 
 // cookie code
 
@@ -55,6 +49,17 @@ function checkCookie() {
     // do something
   }
 }
+
+
+/* FOR TESTING -------------------------------- */
+
+var infoContainer1MapOverlayShown = true;
+var infoContainer2MapOverlayShown = true;
+var infoContainer2Visible = true;
+
+/* -------------------------------------------- */
+
+
 
 function tutorialViewed() {
   setCookie("hasTutorialBeenViewed", "yes", 30);

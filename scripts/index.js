@@ -52,9 +52,8 @@ function checkCookie() {
   }
 }
 
-if (isSharedRoute === true) {
-  infoContainer2Visible = true;
-};
+infoContainer2Visible = true;
+
 
 /* FOR TESTING -------------------------------- */
 

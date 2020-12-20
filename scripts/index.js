@@ -1701,28 +1701,6 @@ function onMapClick(e) {
 
   if (markerArray.length === 0) {
 
-    // if they haven't been shown yet, show focused instructions 1
-
-    if (infoContainer1MapOverlayShown === false) {
-      $("#mapoverlay").css("visibility", "visible");
-      $("#mapoverlay").fadeTo(500, 0.85);
-      $("#infocontainer-1-instructions-button").on("click", function() {
-        $("#mapoverlay").fadeTo(500, 0.0, function() {
-          $("#mapoverlay").css("visibility", "hidden");
-          $("#infocontainer-1-instructions").css("display", "none");
-          $("#markercontainer-1").css("display", "block");
-          infoContainer1MapOverlayShown = true;
-        });
-      });
-    }
-
-      else {
-        $("#mapoverlay").css("visibility", "hidden");
-        $("#infocontainer-1-instructions").css("display", "none");
-        $("#markercontainer-1").css("display", "block");
-        infoContainer1MapOverlayShown = true;
-      }
-
     infoContainer2Visible = false;
 
     // center the selected marker on the map
@@ -1797,6 +1775,28 @@ function onMapClick(e) {
     $("#infocontainer-1").removeClass("display-invisible");
     $("#infocontainer-2").addClass("display-invisible");
     $("#infocontainer-2").removeClass("display-visible");
+
+    // if they haven't been shown yet, show focused instructions 1
+
+    if (infoContainer1MapOverlayShown === false) {
+      $("#mapoverlay").css("visibility", "visible");
+      $("#mapoverlay").fadeTo(500, 0.85);
+      $("#infocontainer-1-instructions-button").on("click", function() {
+        $("#mapoverlay").fadeTo(500, 0.0, function() {
+          $("#mapoverlay").css("visibility", "hidden");
+          $("#infocontainer-1-instructions").css("display", "none");
+          $("#markercontainer-1").css("display", "block");
+          infoContainer1MapOverlayShown = true;
+        });
+      });
+    }
+
+      else {
+        $("#mapoverlay").css("visibility", "hidden");
+        $("#infocontainer-1-instructions").css("display", "none");
+        $("#markercontainer-1").css("display", "block");
+        infoContainer1MapOverlayShown = true;
+      }
 
     // update info
 
@@ -1891,27 +1891,6 @@ function onMapClick(e) {
   // ------------------------------------------------------------------------------------------------------------
 
   else if (markerArray.length > 0 && marker.options.status === "selectable" || marker.options.status === "selectableselected") {
-
-    // if they haven't been shown yet, show focused instructions 2
-
-    if (infoContainer2MapOverlayShown === false) {
-      $("#mapoverlay").css("visibility", "visible");
-      $("#mapoverlay").fadeTo(500, 0.85);
-      $("#infocontainer-2-instructions-button").on("click", function() {
-        $("#mapoverlay").fadeTo(500, 0.0, function() {
-          $("#mapoverlay").css("visibility", "hidden");
-          $("#infocontainer-2-instructions").css("display", "none");
-          $("#infocontainer-2-markercontainer-2").css("display", "block");
-          infoContainer2MapOverlayShown = true;
-        });
-      });
-    }
-      else {
-        $("#mapoverlay").css("visibility", "hidden");
-        $("#infocontainer-2-instructions").css("display", "none");
-        $("#infocontainer-2-markercontainer-2").css("display", "block");
-        infoContainer2MapOverlayShown = true;
-      }
 
     infoContainer2Visible = true;
 
@@ -2075,6 +2054,27 @@ function onMapClick(e) {
     $("#infocontainer-1").removeClass("display-visible");
     $("#infocontainer-2").addClass("display-visible");
     $("#infocontainer-2").removeClass("display-invisible");
+
+    // if they haven't been shown yet, show focused instructions 2
+
+    if (infoContainer2MapOverlayShown === false) {
+      $("#mapoverlay").css("visibility", "visible");
+      $("#mapoverlay").fadeTo(500, 0.85);
+      $("#infocontainer-2-instructions-button").on("click", function() {
+        $("#mapoverlay").fadeTo(500, 0.0, function() {
+          $("#mapoverlay").css("visibility", "hidden");
+          $("#infocontainer-2-instructions").css("display", "none");
+          $("#infocontainer-2-markercontainer-2").css("display", "block");
+          infoContainer2MapOverlayShown = true;
+        });
+      });
+    }
+      else {
+        $("#mapoverlay").css("visibility", "hidden");
+        $("#infocontainer-2-instructions").css("display", "none");
+        $("#infocontainer-2-markercontainer-2").css("display", "block");
+        infoContainer2MapOverlayShown = true;
+      }
 
     // update info
 

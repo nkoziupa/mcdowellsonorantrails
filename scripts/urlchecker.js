@@ -1,5 +1,7 @@
 /* check url for shared route and create route if available */
 
+var isSharedRoute = true;
+
 var m = [];
 var sharedMarkers = [];
 var sharedMarker = "";
@@ -59,11 +61,12 @@ for (var i = 0; i < segmentArray.length; i++) {
 
 // hide tutorial overlays
 
-$("#infocontainer-2-instructions").css("display", "none");
-$("#infocontainer-2-markercontainer-2").css("display", "block");
-
 var infoContainer1MapOverlayShown = true;
 var infoContainer2MapOverlayShown = true;
+var infoContainer2Visible = true;
+
+$("#infocontainer-2-instructions").css("display", "none");
+$("#infocontainer-2-markercontainer-2").css("display", "block");
 
 // show/hide info containers
 

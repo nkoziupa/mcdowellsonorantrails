@@ -76,7 +76,7 @@ for (var i = 0; i < markerArray.length; i++) {
   sharedMarkerGroupArray = sharedMarkerGroupArray + "marker" + markerArray[i];
 }
 
-var sharedMarkerGroup = new L.featureGroup(sharedMarkerGroupArray);
+var sharedMarkerGroup = new L.featureGroup([sharedMarkerGroupArray]);
 
 map.fitBounds(sharedMarkerGroup.getBounds());
 

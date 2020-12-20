@@ -57,16 +57,6 @@ else {
   infoContainer2Visible = false;
 };
 
-/* FOR TESTING -------------------------------- */
-
-// infoContainer1MapOverlayShown = true;
-// infoContainer2MapOverlayShown = true;
-// infoContainer2Visible = true;
-
-/* -------------------------------------------- */
-
-
-
 function tutorialViewed() {
   setCookie("hasTutorialBeenViewed", "yes", 30);
 }

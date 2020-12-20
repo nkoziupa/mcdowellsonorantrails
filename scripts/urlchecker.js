@@ -83,11 +83,19 @@ for (var i = 0; i < markerArray.length; i++) {
 // var sharedMarkerGroup = new L.featureGroup([sharedMarkerGroupArray]);
 
 var sharedMarkerGroup = new L.featureGroup();
+var tmarker = "";
 
+for (var i = 0; i < markerArray.length; i++) {
+  tmarker = "marker" + markerArray[i];
+  tmarker.addTo(sharedMarkerGroup);
+}
+
+/*
 markerUR4.addTo(sharedMarkerGroup);
 markerCN5.addTo(sharedMarkerGroup);
 markerCN3.addTo(sharedMarkerGroup);
 markerUR5.addTo(sharedMarkerGroup);
+*/
 
 map.fitBounds(sharedMarkerGroup.getBounds());
 

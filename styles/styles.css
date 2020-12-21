@@ -471,6 +471,13 @@ p {
   font-family: 'Lato', sans-serif;
 }
 
+.sharerouteurlp {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #212529;
+}
+
 #sharerouteurl {
 }
 

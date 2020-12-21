@@ -52,8 +52,6 @@ map.fitBounds(sharedGroup.getBounds());
 
 window.history.pushState({}, document.title, "/");
 
-}
-
 /* replace loading button with lets go button */
 
 $("#splash-button").prop("disabled", false).html(

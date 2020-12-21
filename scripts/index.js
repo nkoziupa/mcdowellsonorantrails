@@ -1444,11 +1444,18 @@ $("#infocontainer").on("click", function() {
 // copy link to clipboard
 
 function copyToClipboard() {
-  var copyText = document.getElementById("sharerouteurl");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-}
+  var copyTextarea = document.querySelector('.sharerouteurl');
+  copyTextarea.focus();
+  copyTextarea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+});
 
 // reset map when user selects reset map from the route plan modal
 

@@ -25,6 +25,8 @@ sharedMarkers = urlParams.getAll('m');
 infoContainer1MapOverlayShown = true;
 infoContainer2MapOverlayShown = true;
 
+// fire the markers
+
 for (var i = 0; i < sharedMarkers.length; i++) {
   fireMarker = "marker" + sharedMarkers[i];
   window[fireMarker].fire('click');

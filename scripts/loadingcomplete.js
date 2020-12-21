@@ -2,9 +2,6 @@
 
 checkCookie();
 
-
-
-
 // check url for shared route and create route if available
 
 var m = [];
@@ -13,6 +10,11 @@ var sharedMarkers = [];
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 sharedMarkers = urlParams.getAll('m');
+
+// don't show the tutorials
+
+infoContainer1MapOverlayShown = true;
+infoContainer2MapOverlayShown = true;
 
 for (var i = 0; i < sharedMarkers.length; i++) {
   fireMarker = "marker" + sharedMarkers[i];
@@ -36,11 +38,6 @@ for (var i = 0; i < segmentArray.length; i++) {
 }
 
 map.fitBounds(sharedGroup.getBounds());
-
-// don't show the tutorials
-
-infoContainer1MapOverlayShown = true;
-infoContainer2MapOverlayShown = true;
 
 /* replace loading button with lets go button */
 

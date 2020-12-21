@@ -4,6 +4,8 @@ checkCookie();
 
 // check url for shared route and create route if available
 
+if (URLSearchParams.has('m')) {
+
 var m = [];
 var sharedMarkers = [];
 
@@ -43,20 +45,7 @@ map.fitBounds(sharedGroup.getBounds());
 
 window.history.pushState({}, document.title, "/");
 
-/*
-function ChangeUrl(title, url) {
-    if (typeof(history.pushState) != "undefined") {
-        var obj = { Title: title, Url: url };
-        history.pushState(obj, obj.Title, obj.Url);
-    } else {
-        alert("Browser does not support HTML5.");
-    }
 }
-
-<input type="button" value="Page1" onclick="ChangeUrl('Page1', 'Page1.htm');" />
-<input type="button" value="Page2" onclick="ChangeUrl('Page2', 'Page2.htm');" />
-<input type="button" value="Page3" onclick="ChangeUrl('Page3', 'Page3.htm');" /> 
-*/
 
 /* replace loading button with lets go button */
 

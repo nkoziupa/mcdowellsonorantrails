@@ -476,6 +476,7 @@ p {
   line-height: 18px;
   font-weight: 400;
   color: #212529;
+  overflow-wrap: break-word;
 }
 
 #sharerouteurl {

@@ -1444,7 +1444,7 @@ $("#infocontainer").on("click", function() {
 // copy link to clipboard
 
 function copyToClipboard() {
-  var copyTextarea = document.querySelector('.sharerouteurl');
+  var copyTextarea = document.querySelector('sharerouteurl');
   copyTextarea.focus();
   copyTextarea.select();
 

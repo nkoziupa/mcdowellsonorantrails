@@ -4,7 +4,14 @@ checkCookie();
 
 // check url for shared route and create route if available
 
-if (URLSearchParams.has('m')) {
+/*
+let url = new URL('https://example.com?foo=1&bar=2');
+let params = new URLSearchParams(url.search.slice(1));
+
+params.has('bar') === true; //true
+*/
+
+
 
 var m = [];
 var sharedMarkers = [];

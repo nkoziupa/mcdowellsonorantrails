@@ -1455,7 +1455,7 @@ function copyToClipboard() {
   } catch (err) {
     console.log('Oops, unable to copy');
   }
-});
+}
 
 // reset map when user selects reset map from the route plan modal
 

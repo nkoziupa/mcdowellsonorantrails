@@ -1443,11 +1443,10 @@ $("#infocontainer").on("click", function() {
 
 // copy link to clipboard
 
-function shareRoute(element) {
-  alert("hi");
+function copyToClipboard(element) {
   var $temp = $("<input>");
   $("body").append($temp);
-  $temp.val($(element).html()).select();
+  $temp.val($(element).text()).select();
   document.execCommand("copy");
   $temp.remove();
 }

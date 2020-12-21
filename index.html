@@ -249,8 +249,25 @@
               </div>
               <div class="modal-body modal-routeplan-body" id="routeplan"></div>
               <div class="modal-footer">
+                <button type="button" class="btn btn-success modal-button-label" data-toggle="modal" data-target="#modalShareRoute" data-dismiss="modal">Share</button>
                 <button type="button" class="btn btn-danger modal-button-label" data-toggle="modal" data-target="#modalResetMap" data-dismiss="modal">Reset</button>
                 <button type="button" class="btn btn-info modal-button-label" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modalShareRoute" tabindex="-1" role="dialog" aria-labelledby="sharerouteTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal-shareroute-title" id="sharerouteTitle">Share Route</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body modal-shareroute-body" id="shareroute">https://mcdowellsonorantrails.com/?m=UR4&m=CN5&m=CN3&m=UR5&m=UR7&m=BT6&m=UR8&m=CL1&m=BR6</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success modal-button-label" data-dismiss="modal" onclick="resetMap()">Copy Link to Clipboard</button>
               </div>
             </div>
           </div>
@@ -431,7 +448,6 @@
     <script src="scripts/segments-centralregion.js"></script>
     <script src="scripts/segments-southernregion.js"></script>
     <script src="scripts/segments-mmrpfountainhills.js"></script>
-    <!-- <script src="scripts/urlchecker.js" defer></script> -->
     <script src="scripts/loadingcomplete.js" defer></script>
   </body>
 </html>

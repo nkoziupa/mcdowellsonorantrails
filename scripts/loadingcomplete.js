@@ -28,7 +28,7 @@ for (var i = 0; i < markerArray.length; i++) {
 }
 
 for (var i = 0; i < segmentArray.length; i++) {
-  sharedSegment = segmentArray[i];
+  sharedSegment = segmentArray[i] + "polyline";
   window[sharedSegment].addTo(sharedGroup);
 }
 

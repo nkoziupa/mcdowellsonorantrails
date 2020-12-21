@@ -1444,7 +1444,7 @@ $("#infocontainer").on("click", function() {
 // copy link to clipboard
 
 function copyToClipboard(element) {
-  var $temp = $("<input>");
+  var $temp = $("<textarea>");
   $("body").append($temp);
   $temp.val($(element).text()).select();
   document.execCommand("copy");

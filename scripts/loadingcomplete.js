@@ -17,7 +17,16 @@ markerUR8.fire('click');
 markerCL1.fire('click');
 markerBR6.fire('click');
 
+// zoom in to show the route
 
+var sharedMarkerGroup = new L.featureGroup();
+
+for (var i = 0; i < markerArray.length; i++) {
+  sharedMarker = "marker" + markerArray[i];
+  window[sharedMarker].addTo(sharedMarkerGroup);
+}
+
+map.fitBounds(sharedMarkerGroup.getBounds());
 
 
 

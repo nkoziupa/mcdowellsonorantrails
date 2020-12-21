@@ -11,7 +11,7 @@ let params = new URLSearchParams(url.search.slice(1));
 params.has('bar') === true; //true
 */
 
-
+try {
 
 var m = [];
 var sharedMarkers = [];
@@ -51,6 +51,12 @@ map.fitBounds(sharedGroup.getBounds());
 // change URL to mcdowellsonorantrails.com
 
 window.history.pushState({}, document.title, "/");
+
+}
+
+catch(err) {
+
+}
 
 /* replace loading button with lets go button */
 

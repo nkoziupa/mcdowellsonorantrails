@@ -41,8 +41,7 @@ map.fitBounds(sharedGroup.getBounds());
 
 // change URL to mcdowellsonorantrails.com
 
-var obj = { Title: 'McDowell Sonoran Trails', Url: 'https://mcdowellsonorantrails.com' };  
-history.pushState(obj, obj.Title, obj.Url);
+window.history.pushState({}, document.title, "/");
 
 /*
 function ChangeUrl(title, url) {

@@ -1443,8 +1443,14 @@ $("#infocontainer").on("click", function() {
 
 // copy link to clipboard
 
-function copyToClipboard() {
+$.fn.modal.Constructor.prototype._enforceFocus = function() {};
 
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
 }
 
 // reset map when user selects reset map from the route plan modal

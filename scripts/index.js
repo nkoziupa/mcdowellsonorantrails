@@ -1441,6 +1441,12 @@ $("#infocontainer").on("click", function() {
   };
 });
 
+// copy link to clipboard
+
+function shareRoute() {
+  alert("Hi!");
+}
+
 // reset map when user selects reset map from the route plan modal
 
 function resetMap() {

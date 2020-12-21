@@ -1444,6 +1444,7 @@ $("#infocontainer").on("click", function() {
 // copy link to clipboard
 
 function shareRoute(element) {
+  alert("hi");
   var $temp = $("<input>");
   $("body").append($temp);
   $temp.val($(element).html()).select();

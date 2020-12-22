@@ -20,7 +20,7 @@ try {
   var segmentCheckerReportA;
   var segmentCheckerReportB;
 
-  for (var i = 0; i < sharedMarkers.length; i++) {
+  for (var i = 0; i < sharedMarkers.length - 1; i++) {
     segmentCheckerA = sharedMarkers[i] + sharedMarkers[i + 1];
     segmentCheckerB = sharedMarkers[i + 1] + sharedMarkers[i];
     segmentCheckerReportA = segmentList.includes(segmentCheckerA);

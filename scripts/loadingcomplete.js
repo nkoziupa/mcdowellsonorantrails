@@ -20,10 +20,7 @@ try {
 
   if (sharedMarkers.length == 0) {
     finalSegmentCheckerReport = false;
-    alert ("There are no marker parameters.");
   }
-
-  // if there aren't any marker parameters, the code should bail to catch at this point
 
   // check all segments to see if they're valid
 

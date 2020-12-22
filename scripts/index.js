@@ -1420,6 +1420,19 @@ $("#infocontainer").on("click", function() {
 
   if (infoContainer2MapOverlayShown === true && infoContainer2Visible === true) {
 
+    // create shareable route link
+
+    var sharerouteurlmarkers = "";
+    var sharerouteurlstring = "";
+    for (var i = 0; i < markerArray.length; i++) {
+      sharerouteurlmarkers = sharerouteurlmarkers + "m=" + markerArray[i] + "&";
+    }
+    sharerouteurlmarkers = sharerouteurlmarkers.slice(0, -1);
+    sharerouteurlstring = "https://mcdowellsonorantrails.com/?" + sharerouteurlmarkers;
+    $("p#sharerouteurl").text(sharerouteurlstring);
+
+    // show the modal
+
     $("#modalRoutePlan").modal("show");
 
     var routePlanArrayHTML = "";
@@ -1446,22 +1459,11 @@ $("#infocontainer").on("click", function() {
 $.fn.modal.Constructor.prototype._enforceFocus = function() {};
 
 function copyToClipboard(element) {
-
-  var sharerouteurlmarkers = "";
-  var sharerouteurlstring = "";
-  for (var i = 0; i < markerArray.length; i++) {
-    sharerouteurlmarkers = sharerouteurlmarkers + "m=" + markerArray[i] + "&";
-  }
-  sharerouteurlmarkers = sharerouteurlmarkers.slice(0, -1);
-  sharerouteurlstring = "https://mcdowellsonorantrails.com/?" + sharerouteurlmarkers;
-  $("p#sharerouteurl").text(sharerouteurlstring);
-
   var $temp = $("<input>");
   $("body").append($temp);
   $temp.val($(element).text()).select();
   document.execCommand("copy");
   $temp.remove();
-
 }
 
 // reset map when user selects reset map from the route plan modal

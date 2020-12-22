@@ -8,20 +8,24 @@ try {
 
   var m = [];
   var sharedMarkers = [];
-
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  sharedMarkers = urlParams.getAll('m');
-
-  // if there aren't any marker parameters, the code should bail to catch at this point
-
-  // check all segments to see if they're valid
-
   var segmentCheckerA = "";
   var segmentCheckerB = "";
   var segmentCheckerReportA;
   var segmentCheckerReportB;
   var finalSegmentCheckerReport = true;
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  sharedMarkers = urlParams.getAll('m');
+
+  if (sharedMarkers.length == 0) {
+    finalSegmentCheckerReport = false;
+    alert ("There are no marker parameters.")
+  }
+
+  // if there aren't any marker parameters, the code should bail to catch at this point
+
+  // check all segments to see if they're valid
 
   for (var i = 0; i < sharedMarkers.length - 1; i++) {
     segmentCheckerA = sharedMarkers[i] + sharedMarkers[i + 1];
@@ -43,8 +47,8 @@ try {
 
     // don't show the tutorials
 
-    // infoContainer1MapOverlayShown = true;
-    // infoContainer2MapOverlayShown = true;
+    infoContainer1MapOverlayShown = true;
+    infoContainer2MapOverlayShown = true;
 
     // fire the markers
 

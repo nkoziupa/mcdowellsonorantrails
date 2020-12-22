@@ -29,10 +29,10 @@ try {
     segmentCheckerReportA = segmentList.includes(segmentCheckerA);
     segmentCheckerReportB = segmentList.includes(segmentCheckerB);
     if (segmentCheckerReportA === true || segmentCheckerReportB === true) {
-      alert (segmentCheckerA + " or " + segmentCheckerB + " is a valid segment.");
+      console (segmentCheckerA + " or " + segmentCheckerB + " is a valid segment.");
     }
     else {
-      alert (segmentCheckerA + " and " + segmentCheckerB + " are nonexistent segments.");
+      console (segmentCheckerA + " and " + segmentCheckerB + " are nonexistent segments.");
       finalSegmentCheckerReport = false;
     }
   }

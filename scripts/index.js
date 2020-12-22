@@ -1452,10 +1452,9 @@ function copyToClipboard(element) {
   for (var i = 0; i < markerArray.length; i++) {
     sharerouteurlmarkers = sharerouteurlmarkers + "m=" + markerArray[i] + "&";
   }
-  sharerouteurlmarkers.slice(0,-1)
-  sharerouteurlstring = "https://mcdowellsonorantrail.com/?" + sharerouteurlmarkers;
-
-  alert(sharerouteurlstring);
+  sharerouteurlmarkers = sharerouteurlmarkers.slice(0, -1);
+  sharerouteurlstring = "https://mcdowellsonorantrails.com/?" + sharerouteurlmarkers;
+  $("p#sharerouteurl").text(sharerouteurlstring);
 
   var $temp = $("<input>");
   $("body").append($temp);

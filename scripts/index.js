@@ -1464,6 +1464,7 @@ function copyToClipboard(element) {
   $temp.val($(element).text()).select();
   document.execCommand("copy");
   $temp.remove();
+  $("#copytoclipboardbutton").text("Link copied!");
 }
 
 // reset map when user selects reset map from the route plan modal

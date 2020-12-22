@@ -13,12 +13,15 @@ try {
   const urlParams = new URLSearchParams(queryString);
   sharedMarkers = urlParams.getAll('m');
 
-  // check all segments to see if they're valid, if not then bail to catch
+  // if there aren't any marker parameters, the code should bail to catch at this point
+
+  // check all segments to see if they're valid
 
   var segmentCheckerA = "";
   var segmentCheckerB = "";
   var segmentCheckerReportA;
   var segmentCheckerReportB;
+  var finalSegmentCheckerReport = true;
 
   for (var i = 0; i < sharedMarkers.length - 1; i++) {
     segmentCheckerA = sharedMarkers[i] + sharedMarkers[i + 1];
@@ -30,50 +33,53 @@ try {
     }
     else {
       alert (segmentCheckerA + " and " + segmentCheckerB + " are nonexistent segments.");
+      finalSegmentCheckerReport = false;
     }
   }
 
+  // create the route if all segments are valid, otherwise skip
 
+  if (finalSegmentCheckerReport === true) {
 
+    // don't show the tutorials
 
+    infoContainer1MapOverlayShown = true;
+    infoContainer2MapOverlayShown = true;
 
+    // fire the markers
 
+    for (var i = 0; i < sharedMarkers.length; i++) {
+      fireMarker = "marker" + sharedMarkers[i];
+      window[fireMarker].fire('click');
+    }
 
-  // all segments are valid, so continue
+    // zoom in to show the route
 
-  // don't show the tutorials
+    var sharedMarker;
+    var sharedSegment;
+    var sharedGroup = new L.featureGroup();
 
-  infoContainer1MapOverlayShown = true;
-  infoContainer2MapOverlayShown = true;
+    for (var i = 0; i < markerArray.length; i++) {
+      sharedMarker = "marker" + markerArray[i];
+      window[sharedMarker].addTo(sharedGroup);
+    }
 
-  // fire the markers
+    for (var i = 0; i < segmentArray.length; i++) {
+      sharedSegment = segmentArray[i] + "polyline";
+      window[sharedSegment].addTo(sharedGroup);
+    }
 
-  for (var i = 0; i < sharedMarkers.length; i++) {
-    fireMarker = "marker" + sharedMarkers[i];
-    window[fireMarker].fire('click');
+    map.fitBounds(sharedGroup.getBounds());
+
+    // change URL to mcdowellsonorantrails.com
+
+    window.history.pushState({}, document.title, "/");
+
   }
 
-  // zoom in to show the route
-
-  var sharedMarker;
-  var sharedSegment;
-  var sharedGroup = new L.featureGroup();
-
-  for (var i = 0; i < markerArray.length; i++) {
-    sharedMarker = "marker" + markerArray[i];
-    window[sharedMarker].addTo(sharedGroup);
+  else {
+    window.history.pushState({}, document.title, "/");
   }
-
-  for (var i = 0; i < segmentArray.length; i++) {
-    sharedSegment = segmentArray[i] + "polyline";
-    window[sharedSegment].addTo(sharedGroup);
-  }
-
-  map.fitBounds(sharedGroup.getBounds());
-
-  // change URL to mcdowellsonorantrails.com
-
-  window.history.pushState({}, document.title, "/");
 
 }
 

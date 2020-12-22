@@ -41,8 +41,6 @@ function checkCookie() {
   else {
     infoContainer1MapOverlayShown = false;
     infoContainer2MapOverlayShown = false;
-//    infoContainer1MapOverlayShown = true;
-//    infoContainer2MapOverlayShown = true;
   }
   if (getCookie("hasPolicyBeenAccepted") == "yes") {
     // do something

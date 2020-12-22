@@ -12,7 +12,7 @@
     </script>
     <title>McDowell Sonoran Trails</title>
     <meta charset="utf-8">
-    <meta name="description" content="Plan your hiking, biking, and horseback riding routes through the McDowell Sonoran Preserve and around the McDowell Mountains">
+    <meta name="description" content="Plan and share your hiking, biking, and horseback riding routes through the McDowell Sonoran Preserve and around the McDowell Mountains">
     <meta name="keywords" content="mcdowell, sonoran, trails, preserve, arizona, scottsdale, maricopa, hiking, biking, horseback, riding, route, planning, map">
     <meta name="author" content="Nick Koziupa">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -202,9 +202,9 @@
           </div>
           <div id="infocontainer-2" class="d-inline-flex flex-column justify-content-center align-items-center">
             <div id="infocontainer-2-instructions">
-              <p id="infocontainer-2-instructions-1">Select this info panel at any time to view your route plan or reset the map</p>
+              <p id="infocontainer-2-instructions-1">Select this info panel at any time to view and share your route plan or&nbsp;reset&nbsp;the&nbsp;map</p>
               <hr id="infocontainer-2-hr-1" class="infocontainerhr">
-              <p id="infocontainer-2-instructions-2">You can view these instructions again on the About page</p>
+              <p id="infocontainer-2-instructions-2">You can view these instructions again on&nbsp;the&nbsp;About&nbsp;page</p>
               <button type="button" id="infocontainer-2-instructions-button" class="btn btn-info modal-button-label" onclick="tutorialViewed()">Ok</button>
             </div>
             <div id="infocontainer-2-markercontainer-2">
@@ -249,8 +249,25 @@
               </div>
               <div class="modal-body modal-routeplan-body" id="routeplan"></div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger modal-button-label" data-toggle="modal" data-target="#modalResetMap" data-dismiss="modal">Reset</button>
+                <button type="button" class="btn btn-danger modal-button-label mr-auto" data-toggle="modal" data-target="#modalResetMap" data-dismiss="modal">Reset</button>
+                <button type="button" class="btn btn-success modal-button-label" data-toggle="modal" data-target="#modalShareRoute" data-dismiss="modal">Share</button>
                 <button type="button" class="btn btn-info modal-button-label" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modalShareRoute" tabindex="-1" role="dialog" aria-labelledby="sharerouteTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal-shareroute-title" id="sharerouteTitle">Share Route</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body modal-shareroute-body" id="shareroute"><p class="modalp" id="sharerouteinstructions">Link to copy:</p><p class="sharerouteurlp" id="sharerouteurl"></p></div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success modal-button-label" id="copytoclipboardbutton" onclick="copyToClipboard('#sharerouteurl')">Copy Link to Clipboard</button>
               </div>
             </div>
           </div>
@@ -282,14 +299,14 @@
                 </button>
               </div>
               <div class="modal-body">
-                <p class="modalp">This site will help you plan your hiking, biking, and horseback riding routes in and around the McDowell Mountains.</p>
+                <p class="modalp">This site will help you plan and share your hiking, biking, and horseback riding routes in and around the McDowell Mountains.</p>
                 <p class="modalp">The map features trails in the McDowell Sonoran Preserve, McDowell Mountain Regional Park, and the Fountain Hills McDowell Mountain Preserve.</p>
-                <p class="modalp">Please note that this site is not affiliated with the McDowell Sonoran Conservancy, Sonoran Conservancy of Fountain Hills, the City of Scottsdale, the Town of Fountain Hills, or Maricopa County. Visit the <a class="inlinemodallink pointer" data-toggle="modal" data-target="#resourcesModal" data-dismiss="modal">Resources</a> page for official city and county maps and information.</p>
+                <p class="modalp">Please note that this site is not affiliated with the McDowell Sonoran Conservancy, Sonoran Conservancy of Fountain Hills, the City of Scottsdale, the Town of Fountain Hills, or Maricopa County. Be sure to visit the <a class="inlinemodallink pointer" data-toggle="modal" data-target="#resourcesModal" data-dismiss="modal">Resources</a> page for official city and county maps and information.</p>
                 <p class="modalh">How to Use the Site</p>
                 <p class="modalp">On the main screen, select a trailhead or zoom in and select any map marker.</p>
                 <p class="modalp">Select highlighted markers to create a route.</p>
                 <p class="modalp">Select the current marker at any time to undo.</p>
-                <p class="modalp">Select the info panel at any time to view your route plan or reset the map.</p>
+                <p class="modalp">Select the info panel at any time to view and share your route plan or reset the map.</p>
                 <p class="modalp"><strong>Tips</strong></p>
                 <p class="modalp">Zoom in to more easily select crowded markers.</p>
                 <p class="modalp">Select the location icon on the map to temporarily display your current location.</p>

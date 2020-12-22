@@ -460,6 +460,28 @@ p {
 #routeplan {
 }
 
+/* share route modal styles */
+
+.modal-shareroute-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.modal-shareroute-body {
+  font-family: 'Lato', sans-serif;
+}
+
+.sharerouteurlp {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #212529;
+  overflow-wrap: break-word;
+}
+
+#sharerouteurl {
+}
+
 /* reset map modal styles */
 
 .modal-resetmap-title {

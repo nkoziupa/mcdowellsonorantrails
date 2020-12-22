@@ -25,7 +25,7 @@ try {
     segmentCheckerB = "segment" + sharedMarkers[i + 1] + sharedMarkers[i];
     segmentCheckerReportA = segmentList.includes(segmentCheckerA);
     segmentCheckerReportB = segmentList.includes(segmentCheckerB);
-    if (segmentCheckerReport === true || segmentCheckerReport === true) {
+    if (segmentCheckerReport == true || segmentCheckerReport == true) {
       alert ("This segment exists.");
     }
     else {
@@ -33,7 +33,7 @@ try {
     }
   }
 
-  
+
 
 
 

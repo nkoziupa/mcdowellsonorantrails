@@ -43,8 +43,8 @@ try {
 
     // don't show the tutorials
 
-    infoContainer1MapOverlayShown = true;
-    infoContainer2MapOverlayShown = true;
+    // infoContainer1MapOverlayShown = true;
+    // infoContainer2MapOverlayShown = true;
 
     // fire the markers
 

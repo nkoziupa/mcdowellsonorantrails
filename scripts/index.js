@@ -1446,11 +1446,23 @@ $("#infocontainer").on("click", function() {
 $.fn.modal.Constructor.prototype._enforceFocus = function() {};
 
 function copyToClipboard(element) {
+
+  var sharerouteurlmarkers = "";
+  var sharerouteurlstring = "";
+  for (var i = 0; i < markerArray.length; i++) {
+    sharerouteurlmarkers = sharerouteurlmarkers + "m=" + markerArray[i] + "&";
+  }
+  sharerouteurlmarkers.slice(0,-1)
+  sharerouteurlstring = "https://mcdowellsonorantrail.com/?" + sharerouteurlmarkers;
+
+  alert(sharerouteurlstring);
+
   var $temp = $("<input>");
   $("body").append($temp);
   $temp.val($(element).text()).select();
   document.execCommand("copy");
   $temp.remove();
+
 }
 
 // reset map when user selects reset map from the route plan modal

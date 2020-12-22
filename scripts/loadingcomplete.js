@@ -21,8 +21,8 @@ try {
   var segmentCheckerReportB;
 
   for (var i = 0; i < sharedMarkers.length; i++) {
-    segmentCheckerA = "segment" + sharedMarkers[i] + sharedMarkers[i + 1];
-    segmentCheckerB = "segment" + sharedMarkers[i + 1] + sharedMarkers[i];
+    segmentCheckerA = sharedMarkers[i] + sharedMarkers[i + 1];
+    segmentCheckerB = sharedMarkers[i + 1] + sharedMarkers[i];
     segmentCheckerReportA = segmentList.includes(segmentCheckerA);
     segmentCheckerReportB = segmentList.includes(segmentCheckerB);
     if (segmentCheckerReport == true || segmentCheckerReport == true) {

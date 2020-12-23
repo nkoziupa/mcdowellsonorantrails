@@ -1463,6 +1463,9 @@ function copyToClipboard(element) {
   document.execCommand("copy");
   $temp.remove();
   $("#copytoclipboardbutton").text("Link copied!");
+  $('#modalShareRoute').on('hidden.bs.modal', function (e) {
+    $("#copytoclipboardbutton").text("Copy Link to Clipboard");
+  })
 }
 
 // reset map when user selects reset map from the route plan modal

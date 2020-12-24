@@ -1262,6 +1262,10 @@ p {
   border-radius: 50%;
 }
 
+.form-group {
+  margin-bottom: 0;
+}
+
 .modaldropdowntext {
   font-family: 'Lato', sans-serif;
 }
@@ -1278,7 +1282,7 @@ p {
 .suggestedroutemodaltrailhead {
     font-size: 16px;
     line-height: 20px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 10px;
     color: #212529;
 }

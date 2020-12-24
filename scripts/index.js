@@ -1558,8 +1558,8 @@ $("select.filterby").change(function(){
     var filters = $.map($("select.filterby").toArray(), function(e){
         return $(e).val();
     }).join(".");
-    $("div#FilterContainer").find("div").hide();
-    $("div#FilterContainer").find("div." + filters).show();
+    $("div#suggestedroutes").find("div").hide();
+    $("div#suggestedroutes").find("div." + filters).show();
 });
 
 // get, display, and remove user's location

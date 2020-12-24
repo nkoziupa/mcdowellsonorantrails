@@ -1265,3 +1265,28 @@ p {
 .modaldropdowntext {
   font-family: 'Lato', sans-serif;
 }
+
+.suggestedroutemodalregion {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 16px;
+    margin-bottom: 2px;
+    color: #212529;
+}
+
+.suggestedroutemodaltrailhead {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 2px;
+    color: #212529;
+}
+
+.suggestedroutemodalinfo {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #212529;
+}

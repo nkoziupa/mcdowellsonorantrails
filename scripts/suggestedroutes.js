@@ -1,6 +1,10 @@
 // suggested routes
 
-function viewSuggestedRoute() {
+function viewSuggestedRoute(suggestedroute) {
+
+  alert(suggestedroute);
+
+
   // don't show the tutorials
 
   infoContainer1MapOverlayShown = true;

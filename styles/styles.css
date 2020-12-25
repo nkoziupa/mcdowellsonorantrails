@@ -1291,9 +1291,6 @@ p {
     color: #212529;
 }
 
-.suggestedroutemodallink {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 300;
+.viewroutebutton {
   margin-bottom: 20px;
 }

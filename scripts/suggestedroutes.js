@@ -40,4 +40,13 @@ function viewSuggestedRoute() {
   }
 
   map.fitBounds(suggestedGroup.getBounds());
+
+  // collapse the nav bar
+
+  $('.navbar-collapse').collapse('hide');
+
+  // close the modal
+
+  $('#suggestedroutesModal').modal('hide');
+
 }

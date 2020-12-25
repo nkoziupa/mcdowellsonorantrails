@@ -12,7 +12,7 @@ function viewSuggestedRoute() {
 
   // create the marker Array
 
-  var suggestedMarkers = [“BRTX”, “BP1X”, “UR1”, “UR2”, “BR5”, “BR3”, “UR1”, “BP1X”, “BRTX”];
+  var suggestedMarkers = [BRTX, BP1X, UR1, UR2, BR5, BR3, UR1, BP1X, BRTX];
   var fireMarker = "";
 
   // fire the markers

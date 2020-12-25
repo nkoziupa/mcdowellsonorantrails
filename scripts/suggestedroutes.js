@@ -24,19 +24,19 @@ function viewSuggestedRoute() {
 
   // zoom in to show the route
 
-  var sharedMarker;
-  var sharedSegment;
-  var sharedGroup = new L.featureGroup();
+  var suggestedMarker;
+  var suggestedSegment;
+  var suggestedGroup = new L.featureGroup();
 
   for (var i = 0; i < markerArray.length; i++) {
-    sharedMarker = "marker" + markerArray[i];
-    window[sharedMarker].addTo(sharedGroup);
+    suggestedMarker = "marker" + markerArray[i];
+    window[suggestedMarker].addTo(suggestedGroup);
   }
 
   for (var i = 0; i < segmentArray.length; i++) {
-    sharedSegment = segmentArray[i] + "polyline";
-    window[sharedSegment].addTo(sharedGroup);
+    suggestedSegment = segmentArray[i] + "polyline";
+    window[suggestedSegment].addTo(suggestedGroup);
   }
 
-  map.fitBounds(sharedGroup.getBounds());
+  map.fitBounds(suggestedGroup.getBounds());
 }

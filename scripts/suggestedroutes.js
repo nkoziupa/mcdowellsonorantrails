@@ -12,7 +12,7 @@ function viewSuggestedRoute(suggestedroute) {
 
 }
 
-function displaySuggestedRoute(suggestedroute) {
+function displaySuggestedRoute() {
 
   // don't show the tutorials
 

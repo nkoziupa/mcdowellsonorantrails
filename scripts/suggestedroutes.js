@@ -4,6 +4,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   // check to see if there are segments clicked out
 
+/*
+
   if (segmentArray.length > 0) {
     $('#suggestedroutesModal').modal('hide'); // hide the suggested routes modal
     $('#modalSuggestedRoutesResetMap').modal('show'); // show the confirmation modal
@@ -18,6 +20,8 @@ function viewSuggestedRoute(suggestedroute) {
 
     }
   }
+
+  */
 
   // create the suggestedMarkers array
 

@@ -1315,6 +1315,6 @@ p {
 
 @media only screen and (max-width: 767px) {
   .modaldialogbottom {
-    top: calc(100% - 450px);
+    top: 140px;
   }
 }

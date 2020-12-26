@@ -1313,6 +1313,10 @@ p {
   font-weight: 700;
 }
 
+.modaldialogbottom {
+  top: 50%;
+}
+
 @media only screen and (max-width: 767px) {
   .modaldialogbottom {
     top: 140px;

@@ -1295,3 +1295,11 @@ p {
   margin-top: 4px;
   margin-bottom: 24px;
 }
+
+.suggestedroutesmodalh {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #212529;
+}

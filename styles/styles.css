@@ -1314,11 +1314,11 @@ p {
 }
 
 .modaldialogbottom {
-  top: 50%;
+  top: 48%;
 }
 
 @media only screen and (max-width: 767px) {
   .modaldialogbottom {
-    top: 140px;
+    top: calc(100% - 82px);
   }
 }

@@ -113,12 +113,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   // hide current modal and show loading route modal
 
-  function showandhidemodals() {
-    $('#suggestedroutesModal').modal('hide');
-    $('#modalLoadingRoute').modal('show');
-  }
-
-  setTimeout(showandhidemodals, 1000);
+  $('#suggestedroutesModal').modal('hide');
+  $('#modalLoadingRoute').modal('show');
 
   // reset the map
 

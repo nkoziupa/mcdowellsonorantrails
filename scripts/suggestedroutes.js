@@ -2,6 +2,10 @@
 
 function viewSuggestedRoute(suggestedroute) {
 
+  if (segmentArray.length > 0) {
+    $('#modalSuggestedRoutesResetMap').modal('show');
+  }
+
   // don't show the tutorials
 
   infoContainer1MapOverlayShown = true;

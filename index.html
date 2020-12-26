@@ -451,6 +451,25 @@
         </div>
       </div>
 
+
+      <div class="modal fade" id="modalSuggestedRoutesResetMap" tabindex="-1" role="dialog" aria-labelledby="suggestedroutesresetmapTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title modal-resetmap-title" id="suggestedroutesresetmapTitle">Clear your current route?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body modal-resetmap-body" id="suggestedroutesresetmap">Viewing this route will replace your current route.</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info modal-button-label" data-dismiss="modal">Keep Current Route</button>
+              <button type="button" class="btn btn-success modal-button-label" data-dismiss="modal" onclick="resetMap()">View Suggested Route</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
         <div class="modal fade" id="resourcesModal" tabindex="-1" role="dialog" aria-labelledby="resourcesModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">

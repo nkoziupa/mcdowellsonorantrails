@@ -15,7 +15,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   var suggestedMarkers = [];
 
-  switch(suggestedrouteselection) {
+  switch(suggestedroute) {
 
   case
    "srbrownsmountainsummit":

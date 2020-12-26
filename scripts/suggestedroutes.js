@@ -148,6 +148,6 @@ function viewSuggestedRoute(suggestedroute) {
 
   }
 
-  setTimeout(testTimeout, 3000);
+  setTimeout(testTimeout, 1000);
 
 }

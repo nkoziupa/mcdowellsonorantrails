@@ -2,28 +2,6 @@
 
 function viewSuggestedRoute(suggestedroute) {
 
-  if (segmentArray.length > 0) {
-    $('#suggestedroutesModal').modal('hide');
-    $('#modalSuggestedRoutesResetMap').modal('show');
-    return suggestedroute;
-  }
-  else {
-    displaySuggestedRoute(suggestedroute);
-  }
-
-}
-
-function displaySuggestedRoute(suggestedroute) {
-
-  // don't show the tutorials
-
-  infoContainer1MapOverlayShown = true;
-  infoContainer2MapOverlayShown = true;
-
-  // reset the map
-
-  resetMap();
-
   // create suggestedMarkers array
 
   var suggestedMarkers = [];
@@ -40,6 +18,29 @@ function displaySuggestedRoute(suggestedroute) {
       suggestedMarkers = ["LG1", "LG2", "LG4"]
       break;
   }
+
+  return suggestedMarkers;
+
+  if (segmentArray.length > 0) {
+    $('#suggestedroutesModal').modal('hide');
+    $('#modalSuggestedRoutesResetMap').modal('show');
+  }
+  else {
+    displaySuggestedRoute();
+  }
+
+}
+
+function displaySuggestedRoute() {
+
+  // don't show the tutorials
+
+  infoContainer1MapOverlayShown = true;
+  infoContainer2MapOverlayShown = true;
+
+  // reset the map
+
+  resetMap();
 
   // fire the markers
 

@@ -2,7 +2,24 @@
 
 function viewSuggestedRoute(suggestedroute) {
 
-  // create suggestedMarkers array
+  // check to see if there are segments clicked out
+
+  if (segmentArray.length > 0) {
+    $('#suggestedroutesModal').modal('hide'); // hide the suggested routes modal
+    $('#modalSuggestedRoutesResetMap').modal('show'); // show the confirmation modal
+    $('#exitsrbutton').click(function(){
+      $('#modalSuggestedRoutesResetMap').modal('hide'); // hide the confirmation modal
+      $('.navbar-collapse').collapse('hide'); // collapse the nav bar
+    }
+    $('#continuesrbutton').click(function(){
+
+    }
+    else {
+
+    }
+  }
+
+  // create the suggestedMarkers array
 
   var suggestedMarkers = [];
 
@@ -18,25 +35,6 @@ function viewSuggestedRoute(suggestedroute) {
       suggestedMarkers = ["LG1", "LG2", "LG4"]
       break;
   }
-
-
-alert(suggestedMarkers);
-
-  return suggestedMarkers;
-
-
-
-  if (segmentArray.length > 0) {
-    $('#suggestedroutesModal').modal('hide');
-    $('#modalSuggestedRoutesResetMap').modal('show');
-  }
-  else {
-    displaySuggestedRoute();
-  }
-
-}
-
-function displaySuggestedRoute() {
 
   // don't show the tutorials
 
@@ -55,8 +53,6 @@ function displaySuggestedRoute() {
     fireMarker = "marker" + suggestedMarkers[i];
     window[fireMarker].fire('click');
   }
-
-  // zoom in to show the route
 
   var suggestedMarker;
   var suggestedSegment;
@@ -82,8 +78,4 @@ function displaySuggestedRoute() {
 
   $('#suggestedroutesModal').modal('hide');
 
-}
-
-function collapseNavbar() {
-  $('.navbar-collapse').collapse('hide');
 }

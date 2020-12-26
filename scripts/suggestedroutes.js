@@ -111,8 +111,13 @@ function viewSuggestedRoute(suggestedroute) {
 
   resetMap();
 
+  // hide current modal and show loading route modal
+
+  $('#suggestedroutesModal').modal('hide');
+  $('#modalLoadingRoute').modal('show');
 
   function testTimeout() {
+
   // fire the markers
 
   var fireMarker = "";
@@ -144,7 +149,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   // close the modal
 
-  $('#suggestedroutesModal').modal('hide');
+  $('#modalLoadingRoute').modal('hide');
 
   }
 

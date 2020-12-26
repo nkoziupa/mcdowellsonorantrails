@@ -5,6 +5,7 @@ function viewSuggestedRoute(suggestedroute) {
   if (segmentArray.length > 0) {
     $('#suggestedroutesModal').modal('hide');
     $('#modalSuggestedRoutesResetMap').modal('show');
+    return suggestedroute;
   }
   else {
     displaySuggestedRoute(suggestedroute);
@@ -12,7 +13,7 @@ function viewSuggestedRoute(suggestedroute) {
 
 }
 
-function displaySuggestedRoute() {
+function displaySuggestedRoute(suggestedroute) {
 
   // don't show the tutorials
 

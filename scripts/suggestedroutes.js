@@ -111,6 +111,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   resetMap();
 
+
+  function testTimeout() {
   // fire the markers
 
   var fireMarker = "";
@@ -143,5 +145,9 @@ function viewSuggestedRoute(suggestedroute) {
   // close the modal
 
   $('#suggestedroutesModal').modal('hide');
+
+  }
+
+  setTimeout(testTimeout, 3000);
 
 }

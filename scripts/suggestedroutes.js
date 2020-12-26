@@ -2,12 +2,6 @@
 
 function viewSuggestedRoute(suggestedroute) {
 
-  // var srbrownsmountainsummit = ["BRTX", "BP1X", "UR1", "UR2"];
-  // var srbrownsranchloop = ["LG1", "LG2", "LG4"];
-
-  alert(suggestedroute);
-
-
   // don't show the tutorials
 
   infoContainer1MapOverlayShown = true;
@@ -17,13 +11,26 @@ function viewSuggestedRoute(suggestedroute) {
 
   resetMap();
 
-  // create the marker Array
+  // create suggestedMarkers array
 
+  var suggestedMarkers = [];
 
-  var suggestedMarkers = ["BRTX", "BP1X", "UR1", "UR2"];
-  var fireMarker = "";
+  switch(suggestedrouteselection) {
+
+  case
+   "srbrownsmountainsummit":
+      suggestedMarkers = ["BRTX", "BP1X", "UR1", "UR2"]
+      break;
+
+  case
+   "srbrownsranchloop":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+  }
 
   // fire the markers
+
+  var fireMarker = "";
 
   for (var i = 0; i < suggestedMarkers.length; i++) {
     fireMarker = "marker" + suggestedMarkers[i];

@@ -38,7 +38,69 @@ function viewSuggestedRoute(suggestedroute) {
    "srbrownsranchloop":
       suggestedMarkers = ["LG1", "LG2", "LG4"]
       break;
+
+  case
+   "srsunrisepeak":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srpembertonloop":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srtomsthumbsummit":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srjanerautrailloop":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srfraesfieldinterpretivetrailloop":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srgranitemountainloop":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srwhiskeybottleloop":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srgatewayloop":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srinspirationpoint":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srbellpassloop":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srscenictrailloop":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
+  case
+   "srwesterntrailloop":
+      suggestedMarkers = ["LG1", "LG2", "LG4"]
+      break;
+
   }
+
 
   // don't show the tutorials
 

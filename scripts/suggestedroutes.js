@@ -21,6 +21,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   return suggestedMarkers;
 
+  alert(suggestedMarkers);
+
   if (segmentArray.length > 0) {
     $('#suggestedroutesModal').modal('hide');
     $('#modalSuggestedRoutesResetMap').modal('show');

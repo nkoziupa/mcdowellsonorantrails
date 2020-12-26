@@ -2,12 +2,8 @@
 
 function viewSuggestedRoute(suggestedroute) {
 
-  var srbrownsmountainsummit = ["BRTX", "BP1X", "UR1", "UR2"];
-  var srbrownsranchloop = ["LG1", "LG2", "LG4"];
-
-  
-
-
+  // var srbrownsmountainsummit = ["BRTX", "BP1X", "UR1", "UR2"];
+  // var srbrownsranchloop = ["LG1", "LG2", "LG4"];
 
   alert(suggestedroute);
 

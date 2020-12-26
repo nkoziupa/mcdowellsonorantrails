@@ -107,14 +107,18 @@ function viewSuggestedRoute(suggestedroute) {
   infoContainer1MapOverlayShown = true;
   infoContainer2MapOverlayShown = true;
 
-  // reset the map
+  // collapse the nav bar
 
-  resetMap();
+  $('.navbar-collapse').collapse('hide');
 
   // hide current modal and show loading route modal
 
   $('#suggestedroutesModal').modal('hide');
   $('#modalLoadingRoute').modal('show');
+
+  // reset the map
+
+  resetMap();
 
   function testTimeout() {
 
@@ -142,10 +146,6 @@ function viewSuggestedRoute(suggestedroute) {
   }
 
   map.fitBounds(suggestedGroup.getBounds());
-
-  // collapse the nav bar
-
-  $('.navbar-collapse').collapse('hide');
 
   // close the modal
 

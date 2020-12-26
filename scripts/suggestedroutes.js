@@ -118,7 +118,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   // reset the map
 
-  resetMap();
+  setTimeout(resetMap, 1000);
 
   function testTimeout() {
 

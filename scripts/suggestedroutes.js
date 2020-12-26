@@ -120,7 +120,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   setTimeout(resetMap, 1000);
 
-  function testTimeout() {
+  function createRoute() {
 
   // fire the markers
 
@@ -153,6 +153,6 @@ function viewSuggestedRoute(suggestedroute) {
 
   }
 
-  setTimeout(testTimeout, 1000);
+  setTimeout(createRoute, 2000);
 
 }

@@ -76,3 +76,7 @@ function displaySuggestedRoute(suggestedroute) {
   $('#suggestedroutesModal').modal('hide');
 
 }
+
+function collapseNavbar() {
+  $('.navbar-collapse').collapse('hide');
+}

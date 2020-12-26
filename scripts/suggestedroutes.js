@@ -3,6 +3,7 @@
 function viewSuggestedRoute(suggestedroute) {
 
   if (segmentArray.length > 0) {
+    $('#suggestedroutesModal').modal('hide');
     $('#modalSuggestedRoutesResetMap').modal('show');
   }
   else {

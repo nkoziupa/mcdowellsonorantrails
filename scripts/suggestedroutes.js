@@ -2,6 +2,12 @@
 
 function viewSuggestedRoute(suggestedroute) {
 
+  var fireMarker = "";
+  var suggestedMarkers = [];
+  var suggestedMarker = "";
+  var suggestedSegment = "";
+  var suggestedGroup = new L.featureGroup();
+
   // check to see if there are segments clicked out
 
 /*
@@ -31,7 +37,7 @@ function viewSuggestedRoute(suggestedroute) {
   // hide current modal and show loading route modal
 
   $('#suggestedroutesModal').modal('hide');
-  // $('#modalLoadingRoute').modal('show');
+  $('#modalLoadingRoute').modal('show');
 
   // collapse the nav bar
 
@@ -119,8 +125,6 @@ function viewSuggestedRoute(suggestedroute) {
 
   // create the suggestedMarkers array
 
-  var suggestedMarkers = [];
-
   switch(suggestedroute) {
 
   case
@@ -197,16 +201,10 @@ function viewSuggestedRoute(suggestedroute) {
 
   // fire the markers
 
-  var fireMarker = "";
-
   for (var i = 0; i < suggestedMarkers.length; i++) {
     fireMarker = "marker" + suggestedMarkers[i];
     window[fireMarker].fire('click');
   }
-
-  var suggestedMarker;
-  var suggestedSegment;
-  var suggestedGroup = new L.featureGroup();
 
   for (var i = 0; i < markerArray.length; i++) {
     suggestedMarker = "marker" + markerArray[i];
@@ -222,6 +220,6 @@ function viewSuggestedRoute(suggestedroute) {
 
   // close the modal
 
-  // $('#modalLoadingRoute').modal('hide');
+  $('#modalLoadingRoute').modal('hide');
 
 }

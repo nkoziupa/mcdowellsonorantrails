@@ -31,7 +31,7 @@ function viewSuggestedRoute(suggestedroute) {
   // hide current modal and show loading route modal
 
   $('#suggestedroutesModal').modal('hide');
-  $('#modalLoadingRoute').modal('show');
+  // $('#modalLoadingRoute').modal('show');
 
   // collapse the nav bar
 
@@ -222,6 +222,6 @@ function viewSuggestedRoute(suggestedroute) {
 
   // close the modal
 
-  $('#modalLoadingRoute').modal('hide');
+  // $('#modalLoadingRoute').modal('hide');
 
 }

@@ -23,6 +23,100 @@ function viewSuggestedRoute(suggestedroute) {
 
   */
 
+  // don't show the tutorials
+
+  infoContainer1MapOverlayShown = true;
+  infoContainer2MapOverlayShown = true;
+
+  // hide current modal and show loading route modal
+
+  $('#suggestedroutesModal').modal('hide');
+  $('#modalLoadingRoute').modal('show');
+
+  // collapse the nav bar
+
+  $('.navbar-collapse').collapse('hide');
+
+  // reset the map
+
+  // make all of the markers 'selectable'
+
+  for (var i = 0; i < markerList.length; i++) {
+    markerListElement = "marker" + markerList[i];
+    window[markerListElement].setStyle({status: "selectable", color: markerColorSelectable, fillColor: markerFillColorSelectable, fillOpacity: markerFillOpacitySelectable});
+  }
+
+  // make all of the trailheads their own selectable color
+
+  for (var i = 0; i < trailheadList.length; i++) {
+    markerListElement = "marker" + trailheadList[i];
+    window[markerListElement].setStyle({status: "selectable", color: trailheadColorSelectable, fillColor: trailheadFillColorSelectable, fillOpacity: trailheadFillOpacitySelectable});
+  }
+
+  // empty markerArray
+
+  markerArray.length = 0;
+
+  // show markerArray values in the console for debugging
+
+  console.log(markerArray);
+
+  // make all of the segments 'selectable'
+
+  for (var i = 0; i < segmentList.length; i++) {
+    segmentListElement = "segment" + segmentList[i] + "polyline";
+    window[segmentListElement].setStyle({color: segmentColorUnselected, opacity: segmentOpacityUnselected});
+  }
+
+  // empty segmentArray
+
+  segmentArray.length = 0;
+
+  // show segmentArray values in the console for debugging
+
+  console.log(segmentArray);
+
+  // reset route length
+
+  routeLength = 0;
+
+  // reset route elev gain
+
+  routeElevGain = 0;
+
+  // reset route plan
+
+  routePlanArray.length = 0;
+
+  // show/hide info containers
+
+  $("#infocontainer-0").addClass("display-visible");
+  $("#infocontainer-0").removeClass("display-invisible");
+  $("#infocontainer-1").addClass("display-invisible");
+  $("#infocontainer-1").removeClass("display-visible");
+  $("#infocontainer-2").addClass("display-invisible");
+  $("#infocontainer-2").removeClass("display-visible");
+
+  infoContainer2Visible = false;
+
+  // reset map view
+
+  if ($(window).height() >= 900) {
+    markerRadiusInitial = 110;
+    trailheadRadiusInitial = 110;
+    map.setView([33.702662, -111.786980], 12);
+    }
+  else if ($(window).height() >= 700 && $(window).height() < 900) {
+      markerRadiusInitial = 100;
+      trailheadRadiusInitial = 100;
+      map.setView([33.702662, -111.786980], 11);
+  }
+  else {
+      markerRadiusInitial = 50;
+      trailheadRadiusInitial = 50;
+      map.setView([33.702662, -111.786980], 10);
+  };
+
   // create the suggestedMarkers array
 
   var suggestedMarkers = [];
@@ -101,27 +195,6 @@ function viewSuggestedRoute(suggestedroute) {
 
   }
 
-
-  // don't show the tutorials
-
-  infoContainer1MapOverlayShown = true;
-  infoContainer2MapOverlayShown = true;
-
-  // collapse the nav bar
-
-  $('.navbar-collapse').collapse('hide');
-
-  // hide current modal and show loading route modal
-
-  $('#suggestedroutesModal').modal('hide');
-  $('#modalLoadingRoute').modal('show');
-
-  // reset the map
-
-  setTimeout(resetMap, 1000);
-
-  function createRoute() {
-
   // fire the markers
 
   var fireMarker = "";
@@ -150,9 +223,5 @@ function viewSuggestedRoute(suggestedroute) {
   // close the modal
 
   $('#modalLoadingRoute').modal('hide');
-
-  }
-
-  setTimeout(createRoute, 2000);
 
 }

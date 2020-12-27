@@ -104,6 +104,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   // reset map view
 
+  /*
+
   if ($(window).height() >= 900) {
     markerRadiusInitial = 110;
     trailheadRadiusInitial = 110;
@@ -119,6 +121,8 @@ function viewSuggestedRoute(suggestedroute) {
       trailheadRadiusInitial = 50;
       map.setView([33.702662, -111.786980], 10);
   };
+
+  */
 
   // create the suggestedMarkers array
 

@@ -117,6 +117,10 @@ function viewSuggestedRoute(suggestedroute) {
       map.setView([33.702662, -111.786980], 10);
   };
 
+  alert("Done with reset");
+
+  return;
+
   // create the suggestedMarkers array
 
   var suggestedMarkers = [];

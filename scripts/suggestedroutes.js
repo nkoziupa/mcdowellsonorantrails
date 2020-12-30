@@ -264,4 +264,18 @@ function viewSuggestedRoute(suggestedroute) {
 
   infoContainer2Visible = false;
 
+  // add map overlay and remove when button is selected
+
+  $("#mapoverlay").css("visibility", "visible");
+  $("#mapoverlay").fadeTo(500, 0.85);
+  $("#infocontainer-suggestedroute-button").on("click", function() {
+    $("#mapoverlay").fadeTo(500, 0.0, function() {
+      $("#mapoverlay").css("visibility", "hidden");
+      $("#infocontainer-suggestedroute").addClass("display-invisible");
+      $("#infocontainer-suggestedroute").removeClass("display-visible");
+      $("#infocontainer-2").addClass("display-visible");
+      $("#infocontainer-2").removeClass("display-invisible");
+    });
+  });
+
 }

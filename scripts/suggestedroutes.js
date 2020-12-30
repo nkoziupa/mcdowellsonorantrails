@@ -7,6 +7,8 @@ function viewSuggestedRoute(suggestedroute) {
   var suggestedMarker = "";
   var suggestedSegment = "";
   var suggestedGroup = new L.featureGroup();
+  var suggestedroutelength;
+  var suggestedrouteelevgain;
 
   // check to see if there are segments clicked out
 
@@ -230,6 +232,11 @@ function viewSuggestedRoute(suggestedroute) {
   // hide current modal and show loading route modal
 
   $('#suggestedroutesModal').modal('hide');
+
+  // make suggested route length and elev gain equal route length and gain
+
+  suggestedroutelength = routelength;
+  suggestedrouteelevgain = routeelevgain;
 
   // show/hide info containers
 

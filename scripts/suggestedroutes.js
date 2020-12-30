@@ -7,8 +7,8 @@ function viewSuggestedRoute(suggestedroute) {
   var suggestedMarker = "";
   var suggestedSegment = "";
   var suggestedGroup = new L.featureGroup();
-  var suggestedroutelength;
-  var suggestedrouteelevgain;
+  var suggestedRouteLength = 0;
+  var suggestedRouteElevGain = 0;
 
   // check to see if there are segments clicked out
 
@@ -235,8 +235,21 @@ function viewSuggestedRoute(suggestedroute) {
 
   // make suggested route length and elev gain equal route length and gain
 
-  suggestedroutelength = routelength;
-  suggestedrouteelevgain = routeelevgain;
+  suggestedRouteLength = routeLength;
+  suggestedRouteElevGain = routeElevGain;
+
+  // update suggested route elev gain
+
+  $("#suggestedrouteelevgain").text(suggestedRouteElevGain.toFixed(0) + "' elev gain");
+
+  // update suggested route length
+
+  if (suggestedRouteLength === 1) {
+    $("#suggestedroutelength").text(suggestedRouteLength.toFixed(2) + " mile");
+  }
+  else {
+    $("#suggestedroutelength").text(suggestedRouteLength.toFixed(2) + " miles");
+  }
 
   // show/hide info containers
 

@@ -93,6 +93,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   // show/hide info containers
 
+  /*
+
   $("#infocontainer-0").addClass("display-invisible");
   $("#infocontainer-0").removeClass("display-visible");
   $("#infocontainer-1").addClass("display-invisible");
@@ -103,6 +105,8 @@ function viewSuggestedRoute(suggestedroute) {
   $("#infocontainer-suggestedroute").removeClass("display-invisible");
 
   infoContainer2Visible = false;
+
+  */
 
   // reset map view
 
@@ -227,6 +231,17 @@ function viewSuggestedRoute(suggestedroute) {
 
   $('#suggestedroutesModal').modal('hide');
 
-  // $('#modalLoadingRoute').modal('hide');
+  // show/hide info containers
+
+  $("#infocontainer-0").addClass("display-invisible");
+  $("#infocontainer-0").removeClass("display-visible");
+  $("#infocontainer-1").addClass("display-invisible");
+  $("#infocontainer-1").removeClass("display-visible");
+  $("#infocontainer-2").addClass("display-invisible");
+  $("#infocontainer-2").removeClass("display-visible");
+  $("#infocontainer-suggestedroute").addClass("display-visible");
+  $("#infocontainer-suggestedroute").removeClass("display-invisible");
+
+  infoContainer2Visible = false;
 
 }

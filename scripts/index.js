@@ -205,6 +205,8 @@ $("#infocontainer-1").addClass("display-invisible");
 $("#infocontainer-1").removeClass("display-visible");
 $("#infocontainer-2").addClass("display-invisible");
 $("#infocontainer-2").removeClass("display-visible");
+$("#infocontainer-suggestedroute").addClass("display-invisible");
+$("#infocontainer-suggestedroute").removeClass("display-visible");
 
 // set initial marker radii and map view
 
@@ -1529,6 +1531,8 @@ function resetMap() {
   $("#infocontainer-1").removeClass("display-visible");
   $("#infocontainer-2").addClass("display-invisible");
   $("#infocontainer-2").removeClass("display-visible");
+  $("#infocontainer-suggestedroute").addClass("display-invisible");
+  $("#infocontainer-suggestedroute").removeClass("display-visible");
 
   infoContainer2Visible = false;
 
@@ -1821,6 +1825,8 @@ function onMapClick(e) {
     $("#infocontainer-1").removeClass("display-invisible");
     $("#infocontainer-2").addClass("display-invisible");
     $("#infocontainer-2").removeClass("display-visible");
+    $("#infocontainer-suggestedroute").addClass("display-invisible");
+    $("#infocontainer-suggestedroute").removeClass("display-visible");
 
     // update info
 
@@ -1906,6 +1912,8 @@ function onMapClick(e) {
     $("#infocontainer-1").removeClass("display-visible");
     $("#infocontainer-2").addClass("display-invisible");
     $("#infocontainer-2").removeClass("display-visible");
+    $("#infocontainer-suggestedroute").addClass("display-invisible");
+    $("#infocontainer-suggestedroute").removeClass("display-visible");
 
     infoContainer2Visible = false;
 
@@ -2099,6 +2107,8 @@ function onMapClick(e) {
     $("#infocontainer-1").removeClass("display-visible");
     $("#infocontainer-2").addClass("display-visible");
     $("#infocontainer-2").removeClass("display-invisible");
+    $("#infocontainer-suggestedroute").addClass("display-invisible");
+    $("#infocontainer-suggestedroute").removeClass("display-visible");
 
     // update info
 
@@ -2387,6 +2397,8 @@ function onMapClick(e) {
       $("#infocontainer-1").removeClass("display-visible");
       $("#infocontainer-2").addClass("display-visible");
       $("#infocontainer-2").removeClass("display-invisible");
+      $("#infocontainer-suggestedroute").addClass("display-invisible");
+      $("#infocontainer-suggestedroute").removeClass("display-visible");
       infoContainer2Visible = true;
     }
     else {
@@ -2396,6 +2408,8 @@ function onMapClick(e) {
       $("#infocontainer-1").removeClass("display-invisible");
       $("#infocontainer-2").addClass("display-invisible");
       $("#infocontainer-2").removeClass("display-visible");
+      $("#infocontainer-suggestedroute").addClass("display-invisible");
+      $("#infocontainer-suggestedroute").removeClass("display-visible");
       infoContainer2Visible = false;
     }
 

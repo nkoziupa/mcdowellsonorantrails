@@ -1322,3 +1322,15 @@ p {
     top: calc(100% - 82px);
   }
 }
+
+// infocontainer suggested route
+
+#infocontainer-suggestedroute-button {
+  margin-top: 27px;
+}
+
+@media only screen and (max-width: 767px) {
+  #infocontainer-suggestedroute-button {
+    margin-top: 22px;
+  }
+}

@@ -93,12 +93,14 @@ function viewSuggestedRoute(suggestedroute) {
 
   // show/hide info containers
 
-  $("#infocontainer-0").addClass("display-visible");
-  $("#infocontainer-0").removeClass("display-invisible");
+  $("#infocontainer-0").addClass("display-invisible");
+  $("#infocontainer-0").removeClass("display-visible");
   $("#infocontainer-1").addClass("display-invisible");
   $("#infocontainer-1").removeClass("display-visible");
   $("#infocontainer-2").addClass("display-invisible");
   $("#infocontainer-2").removeClass("display-visible");
+  $("#infocontainer-suggestedroute").addClass("display-visible");
+  $("#infocontainer-suggestedroute").removeClass("display-invisible");
 
   infoContainer2Visible = false;
 

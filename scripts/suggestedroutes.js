@@ -275,9 +275,8 @@ function viewSuggestedRoute(suggestedroute) {
       $("#infocontainer-suggestedroute").removeClass("display-visible");
       $("#infocontainer-2").addClass("display-visible");
       $("#infocontainer-2").removeClass("display-invisible");
+      infoContainer2Visible = true;
     });
   });
-
-  infoContainer2Visible = true;
 
 }

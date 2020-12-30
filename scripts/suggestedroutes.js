@@ -278,4 +278,6 @@ function viewSuggestedRoute(suggestedroute) {
     });
   });
 
+  infoContainer2Visible = true;
+
 }

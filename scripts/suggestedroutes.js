@@ -26,6 +26,7 @@ function viewSuggestedRoute(suggestedroute) {
    "srbrownsranchloop":
       suggestedMarkers = ["BRTX", "BSTX", "BTTX", "LGAX", "LG9", "LG13", "LG15", "LG17", "HT1", "HT3", "CN5", "CN3", "UR5", "UR7", "BT6", "UR8", "CL6", "CL5", "CL3", "CL2", "CM7", "CM6", "CM5", "CM4", "TD1", "GM7", "GM6", "GM5", "GM10", "GM4", "GM3", "GM2", "GM9", "RS2", "RS3", "RS4", "CW3", "CM2", "CM1", "CM8", "MV4", "MV2", "BR6", "VT1", "BT1", "BR5", "BR3", "UR1", "BP1X", "BRTX"]
       suggestedRouteName = "Brown's Ranch Loop";
+      suggestedRouteButton = "#srbrownsranchloopbtn";
       break;
 
   case
@@ -190,6 +191,11 @@ function viewSuggestedRoute(suggestedroute) {
   // hide current modal
 
   $('#suggestedroutesModal').modal('hide');
+
+  // change selected button text back to View Route
+
+  $(suggestedRouteButton).html(
+    "View Route");
 
   // make suggested route length and elev gain equal route length and gain
 

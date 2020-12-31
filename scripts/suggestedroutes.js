@@ -185,7 +185,7 @@ function viewSuggestedRoute(suggestedroute) {
     window[suggestedSegment].addTo(suggestedGroup);
   }
 
-  map.fitBounds(suggestedGroup.getBounds());
+  // map.fitBounds(suggestedGroup.getBounds());
 
   // hide current modal
 

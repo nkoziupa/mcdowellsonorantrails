@@ -117,8 +117,6 @@ function viewSuggestedRoute(suggestedroute) {
 
   $('.navbar-collapse').collapse('hide');
 
-  return;
-
   // reset the map
 
   // make all of the markers 'selectable'
@@ -169,6 +167,9 @@ function viewSuggestedRoute(suggestedroute) {
   // reset route plan
 
   routePlanArray.length = 0;
+
+
+  return;
 
   // fire the markers
 

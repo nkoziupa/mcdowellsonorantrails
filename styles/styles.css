@@ -1434,9 +1434,9 @@ p {
   }
 }
 
-/* infocontainer suggested route hr */
+/* infocontainer suggested route panel hr */
 
-.suggestedroutehr {
+.suggestedroutepanelhr {
   border-color: #c7c7c5;
   width: 33%;
   margin-top: 28px;
@@ -1444,7 +1444,7 @@ p {
 }
 
 @media only screen and (max-width: 767px) {
-  .suggestedroutehr {
+  .suggestedroutepanelhr {
     border-color: #c7c7c5;
     width: 33%;
     margin-top: 14px;

@@ -12,7 +12,7 @@ function viewSuggestedRoute(suggestedroute) {
   var suggestedRouteLength = 0;
   var suggestedRouteElevGain = 0;
 
-  // assign variables
+  // assign values
 
   switch(suggestedroute) {
 
@@ -104,9 +104,18 @@ function viewSuggestedRoute(suggestedroute) {
 
   }
 
-  // change selected button text to spinner and loading text
 
-  $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
+  async function firstFunction(){
+    // change selected button text to spinner and loading text
+
+    $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
+
+    return;
+
+  };
+
+  async function secondFunction(){
+    await firstFunction();
 
   // don't show the tutorials
 
@@ -168,7 +177,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   routePlanArray.length = 0;
 
-  return;
+
+
 
   // fire the markers
 
@@ -176,6 +186,8 @@ function viewSuggestedRoute(suggestedroute) {
     fireMarker = "marker" + suggestedMarkers[i];
     window[fireMarker].fire('click');
   }
+
+  // determine selected marker and segment extents and zoom in to fit
 
   for (var i = 0; i < markerArray.length; i++) {
     suggestedMarker = "marker" + markerArray[i];
@@ -189,7 +201,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   map.fitBounds(suggestedGroup.getBounds());
 
-  // hide current modal
+  // hide modal
 
   $('#suggestedroutesModal').modal('hide');
 
@@ -246,5 +258,7 @@ function viewSuggestedRoute(suggestedroute) {
       infoContainer2Visible = true;
     });
   });
+
+  };
 
 }

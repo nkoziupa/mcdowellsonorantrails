@@ -106,15 +106,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   // change selected button text to spinner and loading text
 
-  // $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
-
-  function sugRtBtn() {
-    $(suggestedRouteButton).html(
-      "<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
-  }
-
-  setTimeout(sugRtBtn, 1000);
-
+  $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
 
   // don't show the tutorials
 

@@ -194,7 +194,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   // change selected button text back to View Route
 
-  $(suggestedRouteButton).html("View Route");
+  // $(suggestedRouteButton).html("View Route");
 
   // make suggested route length and elev gain equal route length and gain
 

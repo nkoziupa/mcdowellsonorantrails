@@ -108,8 +108,6 @@ function viewSuggestedRoute(suggestedroute) {
 
   $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
 
-  return;
-
   // don't show the tutorials
 
   infoContainer1MapOverlayShown = true;
@@ -118,6 +116,8 @@ function viewSuggestedRoute(suggestedroute) {
   // collapse the nav bar
 
   $('.navbar-collapse').collapse('hide');
+
+  return;
 
   // reset the map
 

@@ -11,6 +11,11 @@ function viewSuggestedRoute(suggestedroute) {
   var suggestedRouteLength = 0;
   var suggestedRouteElevGain = 0;
 
+  // change selected button text to spinner and loading text
+
+  $("#srjanerautrailloopbtn").html(
+    "<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Loading...");
+
   // don't show the tutorials
 
   infoContainer1MapOverlayShown = true;

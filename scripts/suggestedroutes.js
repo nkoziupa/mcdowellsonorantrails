@@ -11,33 +11,10 @@ function viewSuggestedRoute(suggestedroute) {
   var suggestedRouteLength = 0;
   var suggestedRouteElevGain = 0;
 
-  // check to see if there are segments clicked out
-
-/*
-
-  if (segmentArray.length > 0) {
-    $('#suggestedroutesModal').modal('hide'); // hide the suggested routes modal
-    $('#modalSuggestedRoutesResetMap').modal('show'); // show the confirmation modal
-    $('#exitsrbutton').click(function(){
-      $('#modalSuggestedRoutesResetMap').modal('hide'); // hide the confirmation modal
-      $('.navbar-collapse').collapse('hide'); // collapse the nav bar
-    }
-    $('#continuesrbutton').click(function(){
-
-    }
-    else {
-
-    }
-  }
-
-  */
-
   // don't show the tutorials
 
   infoContainer1MapOverlayShown = true;
   infoContainer2MapOverlayShown = true;
-
-  // $('#modalLoadingRoute').modal('show');
 
   // collapse the nav bar
 
@@ -93,45 +70,6 @@ function viewSuggestedRoute(suggestedroute) {
   // reset route plan
 
   routePlanArray.length = 0;
-
-  // show/hide info containers
-
-  /*
-
-  $("#infocontainer-0").addClass("display-invisible");
-  $("#infocontainer-0").removeClass("display-visible");
-  $("#infocontainer-1").addClass("display-invisible");
-  $("#infocontainer-1").removeClass("display-visible");
-  $("#infocontainer-2").addClass("display-invisible");
-  $("#infocontainer-2").removeClass("display-visible");
-  $("#infocontainer-suggestedroute").addClass("display-visible");
-  $("#infocontainer-suggestedroute").removeClass("display-invisible");
-
-  infoContainer2Visible = false;
-
-  */
-
-  // reset map view
-
-  /*
-
-  if ($(window).height() >= 900) {
-    markerRadiusInitial = 110;
-    trailheadRadiusInitial = 110;
-    map.setView([33.702662, -111.786980], 12);
-    }
-  else if ($(window).height() >= 700 && $(window).height() < 900) {
-      markerRadiusInitial = 100;
-      trailheadRadiusInitial = 100;
-      map.setView([33.702662, -111.786980], 11);
-  }
-  else {
-      markerRadiusInitial = 50;
-      trailheadRadiusInitial = 50;
-      map.setView([33.702662, -111.786980], 10);
-  };
-
-  */
 
   // create the suggestedMarkers array
 
@@ -242,9 +180,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   map.fitBounds(suggestedGroup.getBounds());
 
-  // close the modal
-
-  // hide current modal and show loading route modal
+  // hide current modal
 
   $('#suggestedroutesModal').modal('hide');
 

@@ -2,9 +2,7 @@
 
 function viewSuggestedRoute(suggestedroute) {
 
-  // hide current modal
-
-  $('#suggestedroutesModal').modal('hide');
+  alert("hi");
 
   var fireMarker = "";
   var suggestedMarkers = [];
@@ -193,7 +191,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   // hide current modal
 
-  // $('#suggestedroutesModal').modal('hide');
+  $('#suggestedroutesModal').modal('hide');
 
   // change selected button text back to View Route
 

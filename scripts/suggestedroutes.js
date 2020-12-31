@@ -151,7 +151,7 @@ function viewSuggestedRoute(suggestedroute) {
 
     case
      "srfraesfieldtogranitemountainloop":
-        suggestedMarkers = ["FTX", "FTAX", "BH2X", "MT1", "MV1", "DX5", "MG1", "TP1", "TP2X", "TP3X", "BH2", "DX3", "BH1", "BH4", "BH1", "FTX"]
+        suggestedMarkers = ["FTX", "FTAX", "BH2X", "MT1", "MV1", "DX5", "MG1", "TP1", "TP2X", "TP3X", "BH2", "DX3", "BH1", "BH4", "BH1X", "FTX"]
         suggestedRouteName = "Fraesfield to Granite Mountain Loop";
         suggestedRouteButton = "#srfraesfieldtogranitemountainloopbtn";
         break;

@@ -104,18 +104,9 @@ function viewSuggestedRoute(suggestedroute) {
 
   }
 
+  // change selected button text to spinner and loading text
 
-  async function firstFunction(){
-    // change selected button text to spinner and loading text
-
-    $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
-
-    return;
-
-  };
-
-  async function secondFunction(){
-    await firstFunction();
+  $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
 
   // don't show the tutorials
 
@@ -176,9 +167,6 @@ function viewSuggestedRoute(suggestedroute) {
   // reset route plan
 
   routePlanArray.length = 0;
-
-
-
 
   // fire the markers
 
@@ -258,11 +246,5 @@ function viewSuggestedRoute(suggestedroute) {
       infoContainer2Visible = true;
     });
   });
-
-  };
-
-firstFunction();
-
-secondFunction();
 
 }

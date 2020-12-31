@@ -108,6 +108,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
 
+  return;
+
   // don't show the tutorials
 
   infoContainer1MapOverlayShown = true;
@@ -170,8 +172,6 @@ function viewSuggestedRoute(suggestedroute) {
 
   // fire the markers
 
-/*
-
   for (var i = 0; i < suggestedMarkers.length; i++) {
     fireMarker = "marker" + suggestedMarkers[i];
     window[fireMarker].fire('click');
@@ -188,8 +188,6 @@ function viewSuggestedRoute(suggestedroute) {
   }
 
   map.fitBounds(suggestedGroup.getBounds());
-
-*/
 
   // hide current modal
 

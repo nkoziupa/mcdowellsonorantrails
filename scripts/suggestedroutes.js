@@ -261,4 +261,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   };
 
+firstFunction();
+
+secondFunction();
+
 }

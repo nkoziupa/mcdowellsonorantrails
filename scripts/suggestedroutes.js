@@ -170,6 +170,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   // fire the markers
 
+/*
+
   for (var i = 0; i < suggestedMarkers.length; i++) {
     fireMarker = "marker" + suggestedMarkers[i];
     window[fireMarker].fire('click');
@@ -185,7 +187,9 @@ function viewSuggestedRoute(suggestedroute) {
     window[suggestedSegment].addTo(suggestedGroup);
   }
 
-  // map.fitBounds(suggestedGroup.getBounds());
+  map.fitBounds(suggestedGroup.getBounds());
+
+*/
 
   // hide current modal
 

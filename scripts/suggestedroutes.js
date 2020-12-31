@@ -8,13 +8,105 @@ function viewSuggestedRoute(suggestedroute) {
   var suggestedSegment = "";
   var suggestedGroup = new L.featureGroup();
   var suggestedRouteName = "";
+  var suggestedRouteButton = "";
   var suggestedRouteLength = 0;
   var suggestedRouteElevGain = 0;
 
+  // assign variables
+
+  switch(suggestedroute) {
+
+  case
+   "srbrownsmountainsummit":
+      suggestedMarkers = ["BRTX", "BP1X", "UR1", "BR3", "BR5", "BT1", "BT2", "BT4", "BMSX", "BT4", "BT2", "BT1", "BR5", "BR3", "UR1", "BP1X", "BRTX"]
+      suggestedRouteName = "Brown's Mountain Summit";
+      break;
+
+  case
+   "srbrownsranchloop":
+      suggestedMarkers = ["BRTX", "BSTX", "BTTX", "LGAX", "LG9", "LG13", "LG15", "LG17", "HT1", "HT3", "CN5", "CN3", "UR5", "UR7", "BT6", "UR8", "CL6", "CL5", "CL3", "CL2", "CM7", "CM6", "CM5", "CM4", "TD1", "GM7", "GM6", "GM5", "GM10", "GM4", "GM3", "GM2", "GM9", "RS2", "RS3", "RS4", "CW3", "CM2", "CM1", "CM8", "MV4", "MV2", "BR6", "VT1", "BT1", "BR5", "BR3", "UR1", "BP1X", "BRTX"]
+      suggestedRouteName = "Brown's Ranch Loop";
+      break;
+
+  case
+   "srsunrisepeak":
+      suggestedMarkers = ["STX", "SR5", "SR7", "SR9", "SR10", "SSPX", "SR10", "SR9", "SR7", "SR5", "STX"]
+      suggestedRouteName = "Sunrise Peak";
+      break;
+
+  case
+   "srpembertonloop":
+      suggestedMarkers = ["XMTS", "XM13", "XM14", "XM15", "XM16", "XM17", "XM18", "XM19", "XM20", "XM21", "XM22", "XM23", "XM24", "XM25", "XM26", "XM01", "XM02", "XM03", "XM04", "XM05", "XM06", "XM07", "XM08", "XM09", "XM10", "XM11", "XM12", "XMTS"]
+      suggestedRouteName = "Pemberton Loop";
+      break;
+
+  case
+   "srtomsthumbsummit":
+      suggestedMarkers = ["TTTX", "TT1", "TT2", "TTV1", "TTV2", "TTV3", "TTV4", "EE1", "TT7", "TTX", "TT7", "EE1", "TTV4", "TTV3", "TTV2", "TTV1", "TT2", "TT1", "TTTX"]
+      suggestedRouteName = "Tom's Thumb Summit";
+      break;
+
+  case
+   "srjanerautrailloop":
+      suggestedMarkers = ["BRTX", "JRCX", "JRTX", "JR2X", "JR1X", "JRTX", "JRCX", "BRTX"]
+      suggestedRouteName = "Jane Rau Trail Loop";
+      suggestedRouteButton = "#srjanerautrailloopbtn";
+      break;
+
+  case
+   "srfraesfieldinterpretivetrailloop":
+      suggestedMarkers = ["FTX", "WB8", "FIAX", "FIDX", "FIBX", "FIAX", "WB8", "FTX"]
+      suggestedRouteName = "Fraesfield Interpretive Trail Loop";
+      break;
+
+  case
+   "srgranitemountainloop":
+      suggestedMarkers = ["GMTX", "GT3X", "GT4X", "BL1X", "BL2", "GM3", "GM2", "GM9", "GM7", "GM6", "GM5", "GM10", "GM4", "BL2", "BL1X", "GT4X", "GT3X", "GMTX"]
+      suggestedRouteName = "Granite Mountain Loop";
+      break;
+
+  case
+   "srwhiskeybottleloop":
+      suggestedMarkers = ["FTX", "WB8", "WB8X", "WB4", "DX2", "DX3", "BH1", "BH4", "BH1X", "FTX"]
+      suggestedRouteName = "Whiskey Bottle Loop";
+      break;
+
+  case
+   "srgatewayloop":
+      suggestedMarkers = ["GTX", "G02X", "GL7", "GL1", "GL2", "PT5", "BP1", "GL3", "WP1", "GL5", "GL7", "G02X", "GTX"]
+      suggestedRouteName = "Gateway Loop";
+      break;
+
+  case
+   "srinspirationviewpoint":
+      suggestedMarkers = ["GTX", "G02X", "GL7", "GL5", "WP1", "WP3", "TT17", "WP5", "TT17", "WP3", "WP1", "GL5", "GL7", "G02X", "GTX"]
+      suggestedRouteName = "Inspiration Viewpoint";
+      break;
+
+  case
+   "srbellpassloop":
+      suggestedMarkers = ["GTX", "G02X", "GL7", "GL1", "GL2", "PT5", "BP1", "BP5", "BP7", "BP9", "WP7", "WP5", "TT17", "WP3", "WP1", "GL5", "GL7", "G02X", "GTX"]
+      suggestedRouteName = "Bell Pass Loop";
+      break;
+
+  case
+   "srscenictrailloop":
+      suggestedMarkers = ["XMTS", "XM12", "XM11", "XM10", "XM57", "XM11", "XM12", "XMTS"]
+      suggestedRouteName = "Scenic Trail Loop";
+      break;
+
+  case
+   "srwesterntrailloop":
+      suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF07", "XF23", "XF25", "XF08", "XF09", "XF11", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
+      suggestedRouteName = "Western Trail Loop";
+      break;
+
+  }
+
   // change selected button text to spinner and loading text
 
-  $("#srjanerautrailloopbtn").html(
-    "<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Loading...");
+  $(suggestedRouteButton).html(
+    "<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
 
   // don't show the tutorials
 
@@ -75,96 +167,6 @@ function viewSuggestedRoute(suggestedroute) {
   // reset route plan
 
   routePlanArray.length = 0;
-
-  // create the suggestedMarkers array
-
-  switch(suggestedroute) {
-
-  case
-   "srbrownsmountainsummit":
-      suggestedMarkers = ["BRTX", "BP1X", "UR1", "BR3", "BR5", "BT1", "BT2", "BT4", "BMSX", "BT4", "BT2", "BT1", "BR5", "BR3", "UR1", "BP1X", "BRTX"]
-      suggestedRouteName = "Brown's Mountain Summit";
-      break;
-
-  case
-   "srbrownsranchloop":
-      suggestedMarkers = ["BRTX", "BSTX", "BTTX", "LGAX", "LG9", "LG13", "LG15", "LG17", "HT1", "HT3", "CN5", "CN3", "UR5", "UR7", "BT6", "UR8", "CL6", "CL5", "CL3", "CL2", "CM7", "CM6", "CM5", "CM4", "TD1", "GM7", "GM6", "GM5", "GM10", "GM4", "GM3", "GM2", "GM9", "RS2", "RS3", "RS4", "CW3", "CM2", "CM1", "CM8", "MV4", "MV2", "BR6", "VT1", "BT1", "BR5", "BR3", "UR1", "BP1X", "BRTX"]
-      suggestedRouteName = "Brown's Ranch Loop";
-      break;
-
-  case
-   "srsunrisepeak":
-      suggestedMarkers = ["STX", "SR5", "SR7", "SR9", "SR10", "SSPX", "SR10", "SR9", "SR7", "SR5", "STX"]
-      suggestedRouteName = "Sunrise Peak";
-      break;
-
-  case
-   "srpembertonloop":
-      suggestedMarkers = ["XMTS", "XM13", "XM14", "XM15", "XM16", "XM17", "XM18", "XM19", "XM20", "XM21", "XM22", "XM23", "XM24", "XM25", "XM26", "XM01", "XM02", "XM03", "XM04", "XM05", "XM06", "XM07", "XM08", "XM09", "XM10", "XM11", "XM12", "XMTS"]
-      suggestedRouteName = "Pemberton Loop";
-      break;
-
-  case
-   "srtomsthumbsummit":
-      suggestedMarkers = ["TTTX", "TT1", "TT2", "TTV1", "TTV2", "TTV3", "TTV4", "EE1", "TT7", "TTX", "TT7", "EE1", "TTV4", "TTV3", "TTV2", "TTV1", "TT2", "TT1", "TTTX"]
-      suggestedRouteName = "Tom's Thumb Summit";
-      break;
-
-  case
-   "srjanerautrailloop":
-      suggestedMarkers = ["BRTX", "JRCX", "JRTX", "JR2X", "JR1X", "JRTX", "JRCX", "BRTX"]
-      suggestedRouteName = "Jane Rau Trail Loop";
-      break;
-
-  case
-   "srfraesfieldinterpretivetrailloop":
-      suggestedMarkers = ["FTX", "WB8", "FIAX", "FIDX", "FIBX", "FIAX", "WB8", "FTX"]
-      suggestedRouteName = "Fraesfield Interpretive Trail Loop";
-      break;
-
-  case
-   "srgranitemountainloop":
-      suggestedMarkers = ["GMTX", "GT3X", "GT4X", "BL1X", "BL2", "GM3", "GM2", "GM9", "GM7", "GM6", "GM5", "GM10", "GM4", "BL2", "BL1X", "GT4X", "GT3X", "GMTX"]
-      suggestedRouteName = "Granite Mountain Loop";
-      break;
-
-  case
-   "srwhiskeybottleloop":
-      suggestedMarkers = ["FTX", "WB8", "WB8X", "WB4", "DX2", "DX3", "BH1", "BH4", "BH1X", "FTX"]
-      suggestedRouteName = "Whiskey Bottle Loop";
-      break;
-
-  case
-   "srgatewayloop":
-      suggestedMarkers = ["GTX", "G02X", "GL7", "GL1", "GL2", "PT5", "BP1", "GL3", "WP1", "GL5", "GL7", "G02X", "GTX"]
-      suggestedRouteName = "Gateway Loop";
-      break;
-
-  case
-   "srinspirationviewpoint":
-      suggestedMarkers = ["GTX", "G02X", "GL7", "GL5", "WP1", "WP3", "TT17", "WP5", "TT17", "WP3", "WP1", "GL5", "GL7", "G02X", "GTX"]
-      suggestedRouteName = "Inspiration Viewpoint";
-      break;
-
-  case
-   "srbellpassloop":
-      suggestedMarkers = ["GTX", "G02X", "GL7", "GL1", "GL2", "PT5", "BP1", "BP5", "BP7", "BP9", "WP7", "WP5", "TT17", "WP3", "WP1", "GL5", "GL7", "G02X", "GTX"]
-      suggestedRouteName = "Bell Pass Loop";
-      break;
-
-  case
-   "srscenictrailloop":
-      suggestedMarkers = ["XMTS", "XM12", "XM11", "XM10", "XM57", "XM11", "XM12", "XMTS"]
-      suggestedRouteName = "Scenic Trail Loop";
-      break;
-
-  case
-   "srwesterntrailloop":
-      suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF07", "XF23", "XF25", "XF08", "XF09", "XF11", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
-      suggestedRouteName = "Western Trail Loop";
-      break;
-
-  }
 
   // fire the markers
 

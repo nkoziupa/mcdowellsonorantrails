@@ -1473,3 +1473,18 @@ p {
     margin-top: 22px;
   }
 }
+
+/* spinner border sm suggestedroute */
+
+.spinner-border-sm-suggestedroute {
+    width: 18px;
+    height: 18px;
+    border-width: 2px;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .spinner-border-sm-suggestedroute {
+      margin-bottom: 0;
+  }
+}

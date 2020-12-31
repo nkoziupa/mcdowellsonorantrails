@@ -168,9 +168,6 @@ function viewSuggestedRoute(suggestedroute) {
 
   routePlanArray.length = 0;
 
-
-  return;
-
   // fire the markers
 
   for (var i = 0; i < suggestedMarkers.length; i++) {
@@ -187,6 +184,9 @@ function viewSuggestedRoute(suggestedroute) {
     suggestedSegment = segmentArray[i] + "polyline";
     window[suggestedSegment].addTo(suggestedGroup);
   }
+
+  return;
+
 
   map.fitBounds(suggestedGroup.getBounds());
 

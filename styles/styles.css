@@ -1439,7 +1439,7 @@ p {
 // infocontainer suggested route
 
 #infocontainer-suggestedroute-button {
-  margin-top: 27px!important;
+  margin-top: 27px;
 }
 
 @media only screen and (max-width: 767px) {

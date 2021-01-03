@@ -109,7 +109,7 @@ function viewSuggestedRoute(suggestedroute) {
 
     case
      "srwesterntrailloop":
-        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF07", "XF23", "XF25", "XF08", "XF09", "XF11", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
+        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF07", "XF23", "XF25", "XF08", "XF11", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
         suggestedRouteName = "Western Trail Loop";
         suggestedRouteButton = "#srwesterntrailloopbtn";
         break;
@@ -144,7 +144,7 @@ function viewSuggestedRoute(suggestedroute) {
 
     case
      "srsonorantrailsloop":
-        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF07", "XF23", "XF25", "XF08", "XF09", "XF11", "XF13", "XF19", "XF29", "XF18", "XF26", "XF27", "XF31", "XF16", "XM68", "XF15", "XF30", "XF17", "XF32", "XF34", "XF19", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
+        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF14", "XF13", "XF19", "XF18", "XF31", "XF16", "XM68", "XF15", "XF30", "XF17", "XF34", "XF19", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
         suggestedRouteName = "Sonoran Trails Loop";
         suggestedRouteButton = "#srsonorantrailsloopbtn";
         break;
@@ -178,10 +178,10 @@ function viewSuggestedRoute(suggestedroute) {
         break;
 
     case
-     "srwesternbikeloop":
-        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF20", "XF22", "XF21", "XF20", "XF02", "XF01", "XFAX"]
-        suggestedRouteName = "Western Bike Loop";
-        suggestedRouteButton = "#srwesternbikeloopbtn";
+     "srpromenadeoutandback":
+        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF14", "XF13", "XF19", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
+        suggestedRouteName = "Promenade Out and Back";
+        suggestedRouteButton = "#srpromenadeoutandbackbtn";
         break;
 
     case
@@ -214,7 +214,7 @@ function viewSuggestedRoute(suggestedroute) {
 
     case
      "sraderocanyontogoldeneagleoutandback":
-        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF14", "XF13", "XF19", "XF34", "XF32", "XF17", "XF30", "XF15", "XM68", "XM65", "XM66", "XM67", "XFGX", "XM67", "XM66", "XM65", "XM68", "XF15", "XF30", "XF17", "XF32", "XF34", "XF19", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
+        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF14", "XF13", "XF19", "XF34", "XF17", "XF30", "XF15", "XM68", "XM65", "XM66", "XM67", "XFGX", "XM67", "XM66", "XM65", "XM68", "XF15", "XF30", "XF17", "XF34", "XF19", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
         suggestedRouteName = "Adero Canyon to Golden Eagle Out and Back";
         suggestedRouteButton = "#sraderocanyontogoldeneagleoutandbackbtn";
         break;
@@ -235,7 +235,7 @@ function viewSuggestedRoute(suggestedroute) {
 
     case
      "srlostdogtoprospectorloop":
-        suggestedMarkers = ["LDTX", "LD1", "LDBX", "SR19", "AS3", "SR17", "SR15", "SR13", "AK5", "AK4", "XF08", "XF25", "XF23", "XF07", "XF21", "XF22", "XF20", "XF02", "XF06", "XF14", "XF13", "XF19", "XF34", "XF32", "XF17", "XF30", "XF15", "XM68", "XM65", "PP1", "PP3", "PP5", "BP7", "BP5", "BP1", "PT5", "PT3", "PT3X", "PT4X", "QT3", "QT5", "LD9", "LD7", "LD5", "LD3", "SR19", "LDBX", "LD1", "LDTX"]
+        suggestedMarkers = ["LDTX", "LD1", "LDBX", "SR19", "LD3", "LD5", "LD7", "LD9", "QT5", "QT3", "PT4X", "PT3X", "PT3", "PT5", "BP1", "BP5", "BP7", "PP5", "PP3", "PP1", "XM65", "XM68", "XF15", "XF30", "XF17", "XF34", "XF19", "XF13", "XF14", "XF06", "XF02", "XF07", "XF23", "XF25", "XF08", "AK4", "AK5", "SR13", "SR15", "SR17", "AS3", "SR19", "LDBX", "LD1", "LDTX"]
         suggestedRouteName = "Lost Dog to Prospector Loop";
         suggestedRouteButton = "#srlostdogtoprospectorloopbtn";
         break;
@@ -249,7 +249,7 @@ function viewSuggestedRoute(suggestedroute) {
 
     case
      "sraderocanyontogatewayloop":
-        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF20", "XF22", "XF21", "XF07", "XF23", "XF25", "XF08", "AK4", "AK5", "SR13", "SR15", "SR17", "AS3", "SR19", "LD3", "LD5", "LD7", "LD9", "QT5", "QT3", "PT4X", "PT3X", "PT3", "PT5", "BP1", "BP5", "BP7", "PP5", "PP3", "PP1", "XM65", "XM68", "XF15", "XF30", "XF17", "XF32", "XF34", "XF19", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
+        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF07", "XF23", "XF25", "XF08", "AK4", "AK5", "SR13", "SR15", "SR17", "AS3", "SR19", "LD3", "LD5", "LD7", "LD9", "QT5", "QT3", "PT4X", "PT3X", "PT3", "PT5", "BP1", "BP5", "BP7", "PP5", "PP3", "PP1", "XM65", "XM68", "XF15", "XF30", "XF17", "XF34", "XF19", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
         suggestedRouteName = "Adero Canyon to Gateway Loop";
         suggestedRouteButton = "#sraderocanyontogatewayloopbtn";
         break;

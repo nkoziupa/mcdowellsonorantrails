@@ -262,7 +262,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   // document.getElementById("suggestedRouteButton").innerHTML = "<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...";
 
-  document.getElementById("suggestedRouteButton").innerHTML = "Hi";
+  document.getElementById("sraderocanyontogatewayloopbtn").innerHTML = "Hi";
 
 
   // don't show the tutorials

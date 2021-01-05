@@ -1876,7 +1876,7 @@ var segmentXF03XF05latlngs = [
 ];
 var segmentXF03XF05polyline = L.polyline(segmentXF03XF05latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXF06XF07 = new CreateSegment("XF06", "XF07", "Western Loop Trail", 0.12, 109, 0);
+var segmentXF06XF07 = new CreateSegment("XF06", "XF07", "Western Loop Trail", 0.12, 72, 0);
 var segmentXF06XF07latlngs = [
   [33.622515, -111.777168],
   [33.622531, -111.777207],

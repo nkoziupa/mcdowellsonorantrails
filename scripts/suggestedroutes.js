@@ -251,7 +251,7 @@ function viewSuggestedRoute(suggestedroute) {
      "sraderocanyontogatewayloop":
         suggestedMarkers = ["XFAX", "XF01", "XF02", "XF07", "XF23", "XF25", "XF08", "AK4", "AK5", "SR13", "SR15", "SR17", "AS3", "SR19", "LD3", "LD5", "LD7", "LD9", "QT5", "QT3", "PT4X", "PT3X", "PT3", "PT5", "BP1", "BP5", "BP7", "PP5", "PP3", "PP1", "XM65", "XM68", "XF15", "XF30", "XF17", "XF34", "XF19", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
         suggestedRouteName = "Adero Canyon to Gateway Loop";
-        suggestedRouteButton = "#sraderocanyontogatewayloopbtn";
+        suggestedRouteButton = "sraderocanyontogatewayloopbtn";
         break;
 
   }

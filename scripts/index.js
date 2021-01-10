@@ -939,7 +939,6 @@ var markerXM81 = L.circle([33.667336, -111.698931], new CreateMarker("XM81", "Fi
 var markerXM79 = L.circle([33.667050, -111.699146], new CreateMarker("XM79", "Start", 1647, ["XMCS", "XM81", "XM80"])).addTo(map).on("click", onMapClick);
 var markerXM80 = L.circle([33.660962, -111.704076], new CreateMarker("XM80", "Intersection", 1659, ["XM78", "XM79", "XM81"])).addTo(map).on("click", onMapClick);
 
-
 // mcdowell mountain park trailheads
 
 var markerXMCS = L.circle([33.667963, -111.700476], new CreateMarkerTrailhead("XMCS", "Trailhead", 1662, ["XM75", "XM77", "XM70", "XM81", "XM79"])).addTo(map).on("click", onMapClick);
@@ -960,7 +959,7 @@ var markerXF11 = L.circle([33.625412, -111.780844], new CreateMarker("XF11", "WL
 var markerXF13 = L.circle([33.628826, -111.778312], new CreateMarker("XF13", "WL25", 2540, ["XF11", "XF19", "XF14"])).addTo(map).on("click", onMapClick);
 var markerXF14 = L.circle([33.625833, -111.774384], new CreateMarker("XF14", "PT9", 2519, ["XF06", "XF13"])).addTo(map).on("click", onMapClick);
 var markerXF15 = L.circle([33.637442, -111.785731], new CreateMarker("XF15", "LS8", 2614, ["XF16", "XM68", "XF30"])).addTo(map).on("click", onMapClick);
-var markerXF16 = L.circle([33.636392, -111.787500], new CreateMarker("XF16", "Intersection", 2734, ["XM68", "XF15", "XF31"])).addTo(map).on("click", onMapClick);
+var markerXF16 = L.circle([33.636392, -111.787500], new CreateMarker("XF16", "ST23", 2734, ["XM68", "XF15", "XF31"])).addTo(map).on("click", onMapClick);
 var markerXF17 = L.circle([33.63456, -111.782076], new CreateMarker("XF17", "LS5", 2474, ["XF18", "XF30", "XF34"])).addTo(map).on("click", onMapClick);
 var markerXF18 = L.circle([33.634104, -111.782477], new CreateMarker("XF18", "Intersection", 2513, ["XF19", "XF31", "XF17"])).addTo(map).on("click", onMapClick);
 var markerXF19 = L.circle([33.629652, -111.778399], new CreateMarker("XF19", "ST1 / LS1", 2522, ["XF13", "XF18", "XF34"])).addTo(map).on("click", onMapClick);

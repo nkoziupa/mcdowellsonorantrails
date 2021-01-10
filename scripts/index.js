@@ -972,7 +972,7 @@ var markerXF30 = L.circle([33.635294, -111.781874], new CreateMarker("XF30", "In
 var markerXF31 = L.circle([33.634606, -111.784923], new CreateMarker("XF31", "Intersection", 2704, ["XF16", "XF18"])).addTo(map).on("click", onMapClick);
 var markerXF34 = L.circle([33.631565, -111.779500], new CreateMarker("XF34", "Intersection", 2474, ["XF35", "XF17", "XF19"])).addTo(map).on("click", onMapClick);
 var markerXF37 = L.circle([33.620180, -111.772606], new CreateMarker("XF37", "RT1", 2593, ["XF03", "XF38", "XF39"])).addTo(map).on("click", onMapClick);
-var markerXF38 = L.circle([33.619655, -111.772201], new CreateMarker("XF38", "Scenic Point", 2591, ["XF37"])).addTo(map).on("click", onMapClick);
+var markerXF38 = L.circle([33.619694, -111.772113], new CreateMarker("XF38", "Scenic Point", 2591, ["XF37"])).addTo(map).on("click", onMapClick);
 var markerXF39 = L.circle([33.614644, -111.765800], new CreateMarker("XF39", "RT3", 2458, ["XF37", "XF40", "XF41"])).addTo(map).on("click", onMapClick);
 var markerXF40 = L.circle([33.614151, -111.765431], new CreateMarker("XF40", "Loop Point", 2465, ["XF39", "XF41"])).addTo(map).on("click", onMapClick);
 var markerXF41 = L.circle([33.614025, -111.764417], new CreateMarker("XF41", "Intersection", 2485, ["XF39", "XF40", "XF42"])).addTo(map).on("click", onMapClick);
@@ -984,22 +984,7 @@ var markerXFWX = L.circle([33.621305, -111.774858], new CreateMarker("XFWX", "Sc
 var markerXFAX = L.circle([33.621149, -111.776984], new CreateMarkerTrailhead("XFAX", "Trailhead", 2459, ["XF01"])).addTo(map).on("click", onMapClick);
 var markerXFGX = L.circle([33.635479, -111.768508], new CreateMarkerTrailhead("XFGX", "Trailhead", 2137, ["XM67"])).addTo(map).on("click", onMapClick);
 
-
-map.dragging.disable();
-
-markerXF38.on({
-          mousedown: function () {
-            map.on('mousemove', function (e) {
-              markerXF38.setLatLng(e.latlng);
-            });
-          }
-       });
-       map.on('mouseup',function(e){
-         map.removeEventListener('mousemove');
-         alert(e.latlng);
-       })
-
-
+// change parameters based on zoom level
 
 var mapZoomLevel;
 map.on("zoomend", function () {

@@ -18889,7 +18889,7 @@ var segmentXM65XM68latlngs = [
 ];
 var segmentXM65XM68polyline = L.polyline(segmentXM65XM68latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentXM66XM67 = new CreateSegment("XM66", "XM67", "Dixie Mine Trail", 0.52, 57, 21);
+var segmentXM66XM67 = new CreateSegment("XM66", "XM67", "Sidewalk", 0.52, 57, 21);
 var segmentXM66XM67latlngs = [
   [33.639652, -111.768385],
   [33.639600, -111.768376],

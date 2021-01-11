@@ -983,6 +983,21 @@ var markerXFWX = L.circle([33.621305, -111.774858], new CreateMarker("XFWX", "Sc
 var markerXFAX = L.circle([33.621149, -111.776984], new CreateMarkerTrailhead("XFAX", "Trailhead", 2459, ["XF01"])).addTo(map).on("click", onMapClick);
 var markerXFGX = L.circle([33.635479, -111.768508], new CreateMarkerTrailhead("XFGX", "Trailhead", 2137, ["XM67"])).addTo(map).on("click", onMapClick);
 
+map.dragging.disable();
+
+markerXF01.on({
+          mousedown: function () {
+            map.on('mousemove', function (e) {
+              markerXF01.setLatLng(e.latlng);
+            });
+          }
+       });
+       map.on('mouseup',function(e){
+         map.removeEventListener('mousemove');
+         alert(e.latlng);
+       })
+
+
 // change parameters based on zoom level
 
 var mapZoomLevel;

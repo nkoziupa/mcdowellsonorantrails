@@ -949,7 +949,7 @@ var markerXMTS = L.circle([33.690353, -111.717885], new CreateMarkerTrailhead("X
 
 var markerXF35 = L.circle([33.631317, -111.779215], new CreateMarker("XF35", "Scenic Point", 2457, ["XF34"])).addTo(map).on("click", onMapClick);
 var markerXF02 = L.circle([33.621579, -111.776394], new CreateMarker("XF02", "Intersection", 2487, ["XF01", "XF07", "XF06"])).addTo(map).on("click", onMapClick);
-var markerXF01 = L.circle([33.621368, -111.776442], new CreateMarker("XF01", "OT1", 2477, ["XFAX", "XF02", "XFWX"])).addTo(map).on("click", onMapClick);
+var markerXF01 = L.circle([33.621249, -111.776522], new CreateMarker("XF01", "OT1", 2477, ["XFAX", "XF02", "XFWX"])).addTo(map).on("click", onMapClick);
 var markerXF03 = L.circle([33.621006, -111.774359], new CreateMarker("XF03", "OT7", 2507, ["XFWX", "XF04", "XF37"])).addTo(map).on("click", onMapClick);
 var markerXF04 = L.circle([33.621038, -111.772823], new CreateMarker("XF04", "Scenic Point", 2511, ["XF03"])).addTo(map).on("click", onMapClick);
 var markerXF24 = L.circle([33.622571, -111.778572], new CreateMarker("XF24", "Scenic Point", 2650, ["XF25", "XF23"])).addTo(map).on("click", onMapClick);
@@ -982,21 +982,6 @@ var markerXFWX = L.circle([33.621305, -111.774858], new CreateMarker("XFWX", "Sc
 
 var markerXFAX = L.circle([33.621149, -111.776984], new CreateMarkerTrailhead("XFAX", "Trailhead", 2459, ["XF01"])).addTo(map).on("click", onMapClick);
 var markerXFGX = L.circle([33.635479, -111.768508], new CreateMarkerTrailhead("XFGX", "Trailhead", 2137, ["XM67"])).addTo(map).on("click", onMapClick);
-
-map.dragging.disable();
-
-markerXF01.on({
-          mousedown: function () {
-            map.on('mousemove', function (e) {
-              markerXF01.setLatLng(e.latlng);
-            });
-          }
-       });
-       map.on('mouseup',function(e){
-         map.removeEventListener('mousemove');
-         alert(e.latlng);
-       })
-
 
 // change parameters based on zoom level
 

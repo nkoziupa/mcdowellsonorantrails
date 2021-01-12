@@ -1057,7 +1057,7 @@ var segmentGN19GN21latlngs = [
 ];
 var segmentGN19GN21polyline = L.polyline(segmentGN19GN21latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentGN2GN3 = new CreateSegment("GN2", "GN3", "Gooseneck Trail", 0.02, 0, 2);
+var segmentGN2GN3 = new CreateSegment("GN2", "GN3", "Gooseneck Trail", 0.02, 0, 0);
 var segmentGN2GN3latlngs = [
     [33.741460, -111.804173],
     [33.741415, -111.804190],
@@ -1984,7 +1984,7 @@ var segmentML5TH3Xlatlngs = [
 ];
 var segmentML5TH3Xpolyline = L.polyline(segmentML5TH3Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentMM1SN11 = new CreateSegment("MM1", "SN11", "County Park Connector", 0.41, 31, 0);
+var segmentMM1SN11 = new CreateSegment("MM1", "SN11", "County Park Connector", 0.41, 42, 8);
 var segmentMM1SN11latlngs = [
     [33.716580, -111.787415],
     [33.716640, -111.787488],
@@ -2400,7 +2400,7 @@ var segmentRB7SV5latlngs = [
 ];
 var segmentRB7SV5polyline = L.polyline(segmentRB7SV5latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentRB7SV3 = new CreateSegment("RB7", "SV3", "Service Road #3", 0.59, 6, 61);
+var segmentRB7SV3 = new CreateSegment("RB7", "SV3", "Service Road #3", 0.59, 12, 69);
 var segmentRB7SV3latlngs = [
     [33.721980, -111.815513],
     [33.722036, -111.815390],
@@ -2807,7 +2807,7 @@ var segmentTH1XTH3Xlatlngs = [
 ];
 var segmentTH1XTH3Xpolyline = L.polyline(segmentTH1XTH3Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentTT1TT2 = new CreateSegment("TT1", "TT2", "Tom's Thumb Trail", 0.35, 130, 0);
+var segmentTT1TT2 = new CreateSegment("TT1", "TT2", "Tom's Thumb Trail", 0.35, 130, 2);
 var segmentTT1TT2latlngs = [
     [33.692924, -111.802534],
     [33.692874, -111.802633],
@@ -2872,7 +2872,7 @@ var segmentTT1TT2latlngs = [
 ];
 var segmentTT1TT2polyline = L.polyline(segmentTT1TT2latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentTT1TTTX = new CreateSegment("TT1", "TTTX", "Tom's Thumb Trail", 0.12, 0, 40);
+var segmentTT1TTTX = new CreateSegment("TT1", "TTTX", "Tom's Thumb Trail", 0.12, 0, 34);
 var segmentTT1TTTXlatlngs = [
     [33.692926, -111.802534],
     [33.693011, -111.802489],

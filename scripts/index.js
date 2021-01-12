@@ -292,6 +292,19 @@ var options = {
 };
 layerMMRP = L.tileLayer('../maptiles/mmrp/{z}/{x}/{y}.png', options).addTo(map);
 
+map.createPane('labels-fh');
+map.getPane('labels-fh').style.zIndex = 650;
+map.getPane('labels-fh').style.pointerEvents = 'none';
+var layerFH;
+var options = {
+      minZoom: 10,
+      maxZoom: 17,
+      opacity: 1.0,
+      pane: 'labels-fh',
+      tms: false
+};
+layerFH = L.tileLayer('../maptiles/fh/{z}/{x}/{y}.png', options).addTo(map);
+
 // remove attributions
 
 map.attributionControl.remove();

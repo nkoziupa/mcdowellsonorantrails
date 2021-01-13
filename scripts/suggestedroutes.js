@@ -53,7 +53,7 @@ function viewSuggestedRoute(suggestedroute) {
 
     case
      "sroverlookeasyaccessoutandback":
-        suggestedMarkers = ["XFAX", "XF01", "XF03", "XF04", "XF03", "XF01", "XFAX"]
+        suggestedMarkers = ["XFAX", "XF01", "XFWX", "XF03", "XF04", "XF03", "XFWX", "XF01", "XFAX"]
         suggestedRouteName = "Overlook / Easy Access Out and Back";
         suggestedRouteButton = "#sroverlookeasyaccessoutandbackbtn";
         break;

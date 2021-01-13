@@ -180,8 +180,8 @@ a.inlinemodallink:hover {
 }
 
 #splashlogoimg {
-  width: 150px;
-  margin-left: -75px;
+  width: 120px;
+  margin-left: -60px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -194,8 +194,8 @@ a.inlinemodallink:hover {
 
 @media only screen and (max-width: 767px) {
   #splashlogoimg {
-    width: 100px;
-    margin-left: -50px;
+    width: 80px;
+    margin-left: -40px;
   }
 }
 

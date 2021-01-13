@@ -173,6 +173,11 @@ a.inlinemodallink:hover {
   height: 100%;
 }
 
+#splashlogo {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 #splashheader {
   font-family: 'Lato', sans-serif;
   font-size: 48px;

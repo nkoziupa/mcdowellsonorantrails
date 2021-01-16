@@ -2,6 +2,9 @@
 
 function viewSuggestedRoute(suggestedroute) {
 
+
+
+function firstSR() {
   var fireMarker = "";
   var suggestedMarkers = [];
   var suggestedMarker = "";
@@ -320,6 +323,13 @@ function viewSuggestedRoute(suggestedroute) {
 
   routePlanArray.length = 0;
 
+}
+
+firstSR();
+
+
+function secondSR() {
+
   // fire the markers
 
   for (var i = 0; i < suggestedMarkers.length; i++) {
@@ -398,5 +408,17 @@ function viewSuggestedRoute(suggestedroute) {
       infoContainer2Visible = true;
     });
   });
+
+}
+
+secondSR();
+
+
+
+
+
+
+
+
 
 }

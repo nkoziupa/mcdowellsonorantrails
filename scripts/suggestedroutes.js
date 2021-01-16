@@ -341,11 +341,13 @@ function secondSR() {
 
   for (var i = 0; i < suggestedMarkers.length; i++) {
     $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
-    // fireMarker = "marker" + suggestedMarkers[i];
-    // window[fireMarker].fire('click');
+    fireMarker = "marker" + suggestedMarkers[i];
+    window[fireMarker].fire('click');
   }
 
   // determine selected marker and segment extents and zoom in to fit
+
+/*
 
   markerArray = ["XFAX", "XF01", "XF02", "XF07", "XF23", "XF25", "XF08", "AK4", "AK5", "SR13", "SR15", "SR17", "AS3", "SR19", "LD3", "LD5", "LD7", "LD9", "QT5", "QT3", "PT4X", "PT3X", "PT3", "PT5", "BP1", "BP5", "BP7", "PP5", "PP3", "PP1", "XM65", "XM68", "XF15", "XF30", "XF17", "XF34", "XF19", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"];
   segmentArray = ["segmentXF01XFAX", "segmentXF01XF02", "segmentXF02XF07", "segmentXF07XF23", "segmentXF23XF25", "segmentXF08XF25", "segmentAK4XF08", "segmentAK4AK5", "segmentAK5SR13", "segmentSR13SR15", "segmentSR15SR17", "segmentAS3SR17", "segmentAS3SR19", "segmentLD3SR19", "segmentLD3LD5", "segmentLD5LD7", "segmentLD7LD9", "segmentLD9QT5", "segmentQT3QT5", "segmentPT4XQT3", "segmentPT3XPT4X", "segmentPT3PT3X", "segmentPT3PT5", "segmentBP1PT5", "segmentBP1BP5", "segmentBP5BP7", "segmentBP7PP5", "segmentPP3PP5", "segmentPP1PP3", "segmentPP1XM65", "segmentXM65XM68", "segmentXF15XM68", "segmentXF15XF30", "segmentXF17XF30", "segmentXF17XF34", "segmentXF19XF34", "segmentXF13XF19", "segmentXF13XF14", "segmentXF06XF14", "segmentXF02XF06", "segmentXF01XF02", "segmentXF01XFAX"];
@@ -362,6 +364,8 @@ function secondSR() {
   }
 
   map.fitBounds(suggestedGroup.getBounds());
+
+*/
 
   // hide modal
 

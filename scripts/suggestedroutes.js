@@ -12,6 +12,10 @@ function viewSuggestedRoute(suggestedroute) {
   var suggestedRouteLength = 0;
   var suggestedRouteElevGain = 0;
 
+
+$(#sraderocanyontogatewayloopbtn).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
+
+
 function firstSR() {
 
 

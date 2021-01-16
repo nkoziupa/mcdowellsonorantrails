@@ -258,8 +258,7 @@ function viewSuggestedRoute(suggestedroute) {
 
   // change selected button text to spinner and loading text
 
-  // $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
-  $(suggestedRouteButton).html("Loading...");
+  $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
 
   // don't show the tutorials
 
@@ -320,11 +319,6 @@ function viewSuggestedRoute(suggestedroute) {
   // reset route plan
 
   routePlanArray.length = 0;
-
-
-
-  return;
-
 
   // fire the markers
 
@@ -387,7 +381,6 @@ function viewSuggestedRoute(suggestedroute) {
   $("#infocontainer-2").removeClass("display-visible");
   $("#infocontainer-suggestedroute").addClass("display-visible");
   $("#infocontainer-suggestedroute").removeClass("display-invisible");
-
   infoContainer2Visible = false;
 
   // add map overlay and remove when button is selected

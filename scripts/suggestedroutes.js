@@ -341,8 +341,8 @@ function secondSR() {
 
   for (var i = 0; i < suggestedMarkers.length; i++) {
     $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
-    fireMarker = "marker" + suggestedMarkers[i];
-    window[fireMarker].fire('click');
+    // fireMarker = "marker" + suggestedMarkers[i];
+    // window[fireMarker].fire('click');
   }
 
   // determine selected marker and segment extents and zoom in to fit

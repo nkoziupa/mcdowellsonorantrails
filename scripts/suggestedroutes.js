@@ -321,6 +321,11 @@ function viewSuggestedRoute(suggestedroute) {
 
   routePlanArray.length = 0;
 
+
+
+  return;
+
+
   // fire the markers
 
   for (var i = 0; i < suggestedMarkers.length; i++) {

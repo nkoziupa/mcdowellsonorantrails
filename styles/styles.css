@@ -173,6 +173,8 @@ a.inlinemodallink:hover {
   height: 100%;
 }
 
+/*
+
 #splashlogo {
   position: absolute;
   top: 20%;
@@ -196,6 +198,29 @@ a.inlinemodallink:hover {
   #splashlogoimg {
     width: 80px;
     margin-left: -40px;
+  }
+}
+
+*/
+
+#splashheaderimage {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#splashheaderimg {
+  width: 600px;
+}
+
+@media only screen and (max-width: 767px) {
+  #splashheaderimage {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #splashheaderimg {
+    width: 300px;
   }
 }
 

@@ -214,13 +214,15 @@ a.inlinemodallink:hover {
 
 @media only screen and (max-width: 767px) {
   #splashheaderimage {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   #splashheaderimg {
-    width: 300px;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -440,6 +442,13 @@ h5.modal-title {
 .navbar-brand>img {
   height: 25px;
   width: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-brand>img {
+    height: 20px;
+    width: auto;
+  }
 }
 
 .navbar-nav a {

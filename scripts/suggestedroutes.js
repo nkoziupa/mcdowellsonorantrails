@@ -334,6 +334,8 @@ firstSR();
 
 function secondSR() {
 
+  alert("Hi!");
+
   // fire the markers
 
   for (var i = 0; i < suggestedMarkers.length; i++) {

@@ -329,7 +329,7 @@ a.inlinemodallink:hover {
 @media only screen and (max-width: 767px) {
   #splash-button {
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     padding: 6px 14px;
     font-weight: 700;
   }

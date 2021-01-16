@@ -2,9 +2,6 @@
 
 function viewSuggestedRoute(suggestedroute) {
 
-
-
-function firstSR() {
   var fireMarker = "";
   var suggestedMarkers = [];
   var suggestedMarker = "";
@@ -14,6 +11,9 @@ function firstSR() {
   var suggestedRouteButton = "";
   var suggestedRouteLength = 0;
   var suggestedRouteElevGain = 0;
+
+function firstSR() {
+
 
   // assign values
 
@@ -326,6 +326,10 @@ function firstSR() {
 }
 
 firstSR();
+
+
+
+
 
 
 function secondSR() {

@@ -13,7 +13,7 @@ function viewSuggestedRoute(suggestedroute) {
   var suggestedRouteElevGain = 0;
 
 
-$(#sraderocanyontogatewayloopbtn).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
+$("#sraderocanyontogatewayloopbtn").html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
 
 
 function firstSR() {

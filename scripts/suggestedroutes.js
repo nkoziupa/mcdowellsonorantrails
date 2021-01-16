@@ -323,18 +323,20 @@ function firstSR() {
 
   routePlanArray.length = 0;
 
+
+
 }
 
 firstSR();
 
 
 
-
+  alert("Hi!");
 
 
 function secondSR() {
 
-  alert("Hi!");
+
 
   // fire the markers
 

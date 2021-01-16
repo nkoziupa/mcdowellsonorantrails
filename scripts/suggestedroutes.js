@@ -347,6 +347,8 @@ function secondSR() {
 
   // determine selected marker and segment extents and zoom in to fit
 
+/*
+
   for (var i = 0; i < markerArray.length; i++) {
     suggestedMarker = "marker" + markerArray[i];
     window[suggestedMarker].addTo(suggestedGroup);
@@ -358,6 +360,8 @@ function secondSR() {
   }
 
   map.fitBounds(suggestedGroup.getBounds());
+
+*/
 
   // hide modal
 

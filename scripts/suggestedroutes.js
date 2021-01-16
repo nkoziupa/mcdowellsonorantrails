@@ -331,7 +331,6 @@ firstSR();
 
 
 
-  alert("Hi!");
 
 
 function secondSR() {
@@ -341,6 +340,7 @@ function secondSR() {
   // fire the markers
 
   for (var i = 0; i < suggestedMarkers.length; i++) {
+    $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
     fireMarker = "marker" + suggestedMarkers[i];
     window[fireMarker].fire('click');
   }

@@ -260,6 +260,8 @@ function viewSuggestedRoute(suggestedroute) {
 
   $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
 
+  function drawSuggestedRoute() {
+
   // don't show the tutorials
 
   infoContainer1MapOverlayShown = true;
@@ -397,5 +399,9 @@ function viewSuggestedRoute(suggestedroute) {
       infoContainer2Visible = true;
     });
   });
+
+}
+
+setTimeout(drawSuggestedRoute, 500);
 
 }

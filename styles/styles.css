@@ -210,8 +210,8 @@ a.inlinemodallink:hover {
 
 #splashheaderimg {
   width: 600px;
-  webkit-filter: drop-shadow(5px 5px 5px #000000);
-  filter: drop-shadow(5px 5px 5px #000000);
+  webkit-filter: drop-shadow(0 0 5px #000000);
+  filter: drop-shadow(0 0 5px #000000);
 }
 
 @media only screen and (max-width: 767px) {

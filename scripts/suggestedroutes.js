@@ -157,6 +157,13 @@ function viewSuggestedRoute(suggestedroute) {
         break;
 
     case
+     "sraderocanyontosunrisepeak":
+        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF07", "XF23", "XF25", "XF08", "AK4", "AK5", "SR13", "SR11", "SR10", "SSPX", "SR10", "SR11", "SR13", "AK5", "AK4", "XF08", "XF25", "XF23", "XF07", "XF06", "XF02", "XF01", "XFAX"]
+        suggestedRouteName = "Adero Canyon to Sunrise Peak";
+        suggestedRouteButton = "#sraderocanyontosunrisepeakbtn";
+        break;
+
+    case
      "srfraesfieldtogranitemountainloop":
         suggestedMarkers = ["FTX", "FTAX", "BH2X", "MT1", "MV1", "DX5", "MG1", "TP1", "TP2X", "TP3X", "BH2", "DX3", "BH1", "BH4", "BH1X", "FTX"]
         suggestedRouteName = "Fraesfield to Granite Mountain Loop";

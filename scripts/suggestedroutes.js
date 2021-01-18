@@ -53,7 +53,7 @@ function viewSuggestedRoute(suggestedroute) {
 
     case
      "sroverlookeasyaccessoutandback":
-        suggestedMarkers = ["XFAX", "XF01", "XF03", "XF04", "XF03", "XF01", "XFAX"]
+        suggestedMarkers = ["XFAX", "XF01", "XFWX", "XF03", "XF04", "XF03", "XFWX", "XF01", "XFAX"]
         suggestedRouteName = "Overlook / Easy Access Out and Back";
         suggestedRouteButton = "#sroverlookeasyaccessoutandbackbtn";
         break;
@@ -115,6 +115,13 @@ function viewSuggestedRoute(suggestedroute) {
         break;
 
     case
+     "srridgelinetrailoutandback":
+        suggestedMarkers = ["XFAX", "XF01", "XFWX", "XF03", "XF37", "XF39", "XF41", "XF42", "XF41", "XF39", "XF37", "XF03", "XFWX", "XF01", "XFAX"]
+        suggestedRouteName = "Ridgeline Trail Out and Back";
+        suggestedRouteButton = "#srridgelinetrailoutandbackbtn";
+        break;
+
+    case
      "srgranitemountainloop":
         suggestedMarkers = ["GMTX", "GT3X", "GT4X", "BL1X", "BL2", "GM3", "GM2", "GM9", "GM7", "GM6", "GM5", "GM10", "GM4", "BL2", "BL1X", "GT4X", "GT3X", "GMTX"]
         suggestedRouteName = "Granite Mountain Loop";
@@ -147,6 +154,13 @@ function viewSuggestedRoute(suggestedroute) {
         suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF14", "XF13", "XF19", "XF18", "XF31", "XF16", "XM68", "XF15", "XF30", "XF17", "XF34", "XF19", "XF13", "XF14", "XF06", "XF02", "XF01", "XFAX"]
         suggestedRouteName = "Sonoran Trails Loop";
         suggestedRouteButton = "#srsonorantrailsloopbtn";
+        break;
+
+    case
+     "sraderocanyontosunrisepeak":
+        suggestedMarkers = ["XFAX", "XF01", "XF02", "XF06", "XF07", "XF23", "XF25", "XF08", "AK4", "AK5", "SR13", "SR11", "SR10", "SSPX", "SR10", "SR11", "SR13", "AK5", "AK4", "XF08", "XF25", "XF23", "XF07", "XF06", "XF02", "XF01", "XFAX"]
+        suggestedRouteName = "Adero Canyon to Sunrise Peak";
+        suggestedRouteButton = "#sraderocanyontosunrisepeakbtn";
         break;
 
     case
@@ -259,6 +273,8 @@ function viewSuggestedRoute(suggestedroute) {
   // change selected button text to spinner and loading text
 
   $(suggestedRouteButton).html("<span class='spinner-border spinner-border-sm-suggestedroute' role='status' aria-hidden='true'></span> Loading...");
+
+  function drawSuggestedRoute() {
 
   // don't show the tutorials
 
@@ -381,7 +397,6 @@ function viewSuggestedRoute(suggestedroute) {
   $("#infocontainer-2").removeClass("display-visible");
   $("#infocontainer-suggestedroute").addClass("display-visible");
   $("#infocontainer-suggestedroute").removeClass("display-invisible");
-
   infoContainer2Visible = false;
 
   // add map overlay and remove when button is selected
@@ -398,5 +413,9 @@ function viewSuggestedRoute(suggestedroute) {
       infoContainer2Visible = true;
     });
   });
+
+}
+
+setTimeout(drawSuggestedRoute, 500);
 
 }

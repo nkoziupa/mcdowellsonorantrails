@@ -25,6 +25,10 @@
     <meta property="og:image:width" content="1440" />
     <meta property="og:image:height" content="1080" />
     <meta property="og:image:alt" content="Sonoran desert landscape with trails" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -54,26 +58,21 @@
 <!-- End Facebook Pixel Code -->
   </head>
   <body>
-    <!-- <div id="rotatemessage"> -->
-      <!-- <div class="rotatemessagedevice"></div> -->
-      <!-- <div class="rotatemessagetext">Please rotate your device</div> -->
-    <!-- </div> -->
     <div id="cookiebanner" style="display: none">
       <p id="cookietext">By using this website, you agree with the <a class="underlinedtext pointer" data-toggle="modal" data-target="#privacypolicyModal">Privacy Policy</a> and <a class="underlinedtext pointer" data-toggle="modal" data-target="#termsofuseModal">Terms of Use</a>.</p>
       <div id="cookiebuttondiv"><button type="button" id="cookie-button" class="btn btn-info modal-button-label shadow" onclick="policyAccepted()">Ok</button></div>
     </div>
     <div id="splashscreen">
       <div id="splashcontainer" class="d-flex flex-column justify-content-end">
-        <h1 id="splashheader">McDowell Sonoran Trails</h1>
-        <h2 id="splashsubheader">Route Planner</h2>
+        <h1 id="splashheaderimage"><img id="splashheaderimg" src="/images/splash-logo.png" alt="McDowell Sonoran Trails Route Planner"></h1>
         <div id="splashinfo">Featuring the McDowell Sonoran Preserve, the Fountain Hills McDowell Mountain Preserve, and McDowell Mountain Regional Park</div>
         <div id="splashbuttondiv"><button type="button" id="splash-button" class="btn btn-success modal-button-label shadow" disabled><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...</button></div>
-        <div id="splashsocialicons"><span class="splashsocialicon"><a href="https://www.instagram.com/mcdowellsonorantrails/" target="_blank"><img src="../images/logo-instagram-72.png" alt="Instagram" width="30" height="30"></a></span><span class="splashsocialicon"><a href="https://www.facebook.com/mcdowellsonorantrails/" target="_blank"><img src="../images/logo-facebook-72.png" alt="Facebook" width="30" height="30"></a></span></div>
+        <div id="splashsocialicons"><span class="splashsocialicon"><a href="https://www.instagram.com/mcdowellsonorantrails/" target="_blank"><img src="/images/logo-instagram-72.png" alt="Instagram" width="30" height="30"></a></span><span class="splashsocialicon"><a href="https://www.facebook.com/mcdowellsonorantrails/" target="_blank"><img src="/images/logo-facebook-72.png" alt="Facebook" width="30" height="30"></a></span></div>
         <div id="splashcopyright">Copyright © 2021 Nick Koziupa. All rights reserved.</div>
       </div>
     </div>
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand">McDowell Sonoran Trails</a>
+      <a class="navbar-brand"><img src="/images/header-logo.png" alt="McDowell Sonoran Trails"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -82,11 +81,9 @@
           <li class="nav-item">
             <a class="nav-link pointer" data-toggle="modal" data-target="#aboutModal">About</a>
           </li>
-          <!--
           <li class="nav-item">
             <a class="nav-link pointer" data-toggle="modal" data-target="#suggestedroutesModal">Suggested Routes</a>
           </li>
-          -->
           <li class="nav-item">
             <a class="nav-link pointer" data-toggle="modal" data-target="#resourcesModal">Resources</a>
           </li>
@@ -332,7 +329,6 @@
                 <p class="modalp">Select the location icon on the map to temporarily display your current location.</p>
                 <p class="modalp">If you have only selected one marker and you have moved the map, select the marker details in the info panel to re-center the map on the marker.</p>
                 <p class="modalh">Technical Notes</p>
-                <p class="modalp">To the best of my knowledge, the site works well on all of the latest common iOS and Android devices and browsers. On desktop, the site works best on Google Chrome, Microsoft Edge, and Firefox. On Safari, it is slow but still usable.</p>
                 <p class="modalp">Trail segments were created with Google Earth.</p>
                 <p class="modalp">Some crowded markers have been slightly shifted for clarity and usability.</p>
                 <p class="modalp">Trailhead marker locations and elevations represent Google Earth data and may differ from the locations and elevations listed on the trailhead map labels.</p>
@@ -351,6 +347,7 @@
                 <p class="modalp"><a href="https://www.scottsdaleaz.gov/" target="_blank">City of Scottsdale</a></p>
                 <p class="modalp"><a href="https://www.maricopacountyparks.net/" target="_blank">Maricopa County Parks and Recreation</a></p>
                 <p class="modalp"><a href="https://www.fh.az.gov/" target="_blank">Town of Fountain Hills</a></p>
+                <p class="modalp"><a href="https://beckyankeny.myportfolio.com/" target="_blank">Becky Ankeny Design</a></p>
                 <p class="modalh">Social Media</p>
                 <p class="modalp">Visit McDowell Sonoran Trails on <a href="https://www.instagram.com/mcdowellsonorantrails/" target="_blank">Instagram</a> and <a href="https://www.facebook.com/mcdowellsonorantrails/" target="_blank">Facebook</a>!</p>
                 <p class="modalh">About Me</p>
@@ -426,7 +423,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Tom's Thumb Trailhead Short Loop</p>
                     <p class="suggestedroutemodaltrailhead">Tom's Thumb Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Hiking &ndash; 1.06 Miles &ndash; 137' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 1.06 Miles &ndash; 131' Elev Gain</p>
                     <p class="modalp">This easy hike begins along Tom's Thumb Trail then circles counterclockwise along Mesquite Canyon, Feldspar, and Marcus Landslide trails before returning to the trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srtomsthumbtrailheadshortloopbtn" onclick="viewSuggestedRoute('srtomsthumbtrailheadshortloop')">View Route</button>
                   </div>
@@ -442,7 +439,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Hilltop Trail Loop</p>
                     <p class="suggestedroutemodaltrailhead">Trailhead Staging Area</p>
-                    <p class="suggestedroutemodalinfo">Hiking &ndash; 0.6 Miles &ndash; 101' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 0.6 Miles &ndash; 66' Elev Gain</p>
                     <p class="modalp">This short climb from the trailhead provides a great view of McDowell Mountain Park.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srhilltoptrailloopbtn" onclick="viewSuggestedRoute('srhilltoptrailloop')">View Route</button>
                   </div>
@@ -450,7 +447,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Overlook / Easy Access Out and Back</p>
                     <p class="suggestedroutemodaltrailhead">Adero Canyon Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Hiking &ndash; 0.72 Miles &ndash; 120' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 0.7 Miles &ndash; 87' Elev Gain</p>
                     <p class="modalp">This easy three-quarter mile out-and-back hike features a fantastic view of Fountain Hills.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="sroverlookeasyaccessoutandbackbtn" onclick="viewSuggestedRoute('sroverlookeasyaccessoutandback')">View Route</button>
                   </div>
@@ -474,7 +471,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Tom's Thumb Summit</p>
                     <p class="suggestedroutemodaltrailhead">Tom's Thumb Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Hiking &ndash; 4.36 Miles &ndash; 1,310' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 4.36 Miles &ndash; 1,306' Elev Gain</p>
                     <p class="modalp">This is one of the most popular, but never particularly busy, hikes in the preserve. It's a strenuous hike, with some slippery gravel on the northern switchbacks. Multiple viewpoints offer great scenic rest stops along the way.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srtomsthumbsummitbtn" onclick="viewSuggestedRoute('srtomsthumbsummit')">View Route</button>
                   </div>
@@ -506,7 +503,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Scenic Trail Loop</p>
                     <p class="suggestedroutemodaltrailhead">Trailhead Staging Area</p>
-                    <p class="suggestedroutemodalinfo">Hiking &ndash; 4.65 Miles &ndash; 435' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 4.65 Miles &ndash; 361' Elev Gain</p>
                     <p class="modalp">Starting with a relatively flat mile-long walk along Pemberton Trail, this hike offers beautiful valley and vista views of McDowell Mountain Regional Park, Rio Verde, and Fountain Hills. After several mild ascents and descents, this route ends with an easy mile-plus hike along Scenic and Pemberton Trails leading back to the trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srscenictrailloopbtn" onclick="viewSuggestedRoute('srscenictrailloop')">View Route</button>
                   </div>
@@ -514,9 +511,17 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Western Trail Loop</p>
                     <p class="suggestedroutemodaltrailhead">Adero Canyon Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Hiking &ndash; 2.27 Miles &ndash; 786' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 2.27 Miles &ndash; 648' Elev Gain</p>
                     <p class="modalp">This moderate hike leads up to a fantastic view of Fountain Hills. The route (and views) continue down the northern side of the mountain, then back along the Promenade Trail to the trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srwesterntrailloopbtn" onclick="viewSuggestedRoute('srwesterntrailloop')">View Route</button>
+                  </div>
+                  <div class="all hiking mediumroute fh">
+                    <hr class="suggestedroutehr">
+                    <p class="suggestedroutemodalregion">Ridgeline Trail Out and Back</p>
+                    <p class="suggestedroutemodaltrailhead">Adero Canyon Trailhead</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 4.0 Miles &ndash; 1,108' Elev Gain</p>
+                    <p class="modalp">This moderately strenuous hike leads up to a great scenic summit view of Fountain Hills. There are plenty of ups and downs along the way.</p>
+                    <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srridgelinetrailoutandbackbtn" onclick="viewSuggestedRoute('srridgelinetrailoutandback')">View Route</button>
                   </div>
                   <div class="all hiking longroute northernregion">
                     <hr class="suggestedroutehr">
@@ -530,7 +535,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">East End / Windgate / Tom's Thumb Loop</p>
                     <p class="suggestedroutemodaltrailhead">Tom's Thumb Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Hiking &ndash; 9.82 Miles &ndash; 2,959' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 9.82 Miles &ndash; 2,955' Elev Gain</p>
                     <p class="modalp">This is a long, strenuous route, perfect training for a Grand Canyon hike. After a big climb up Tom's Thumb Trail, the route descends along East End, then takes a relatively easier path westward along Windgate Pass. The route passes Inspiration Point, a popular destination from Gateway Trail, then ascends north up Tom's Thumb Trail towards Tom's Thumb before descending back down to the trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="sreastendwindgatetomsthumbloopbtn" onclick="viewSuggestedRoute('sreastendwindgatetomsthumbloop')">View Route</button>
                   </div>
@@ -546,7 +551,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Granite Trail Campground Loop</p>
                     <p class="suggestedroutemodaltrailhead">Trailhead Staging Area</p>
-                    <p class="suggestedroutemodalinfo">Hiking &ndash; 6.84 Miles &ndash; 495' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 6.84 Miles &ndash; 442' Elev Gain</p>
                     <p class="modalp">This easy-to-moderate hike begins by heading south along Pemberton Trail for just over half a mile, then leads west up a gradual climb along Granite Trail south of the campground to Bluff Trail. The route then rejoins Granite Trail to Wagner Trail on the northside of the campground and continues along Tortoise Trail back to the trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srgranitetrailcampgroundloopbtn" onclick="viewSuggestedRoute('srgranitetrailcampgroundloop')">View Route</button>
                   </div>
@@ -554,9 +559,17 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Sonoran Trails Loop</p>
                     <p class="suggestedroutemodaltrailhead">Adero Canyon Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Hiking &ndash; 5.72 Miles &ndash; 1,277' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 5.72 Miles &ndash; 937' Elev Gain</p>
                     <p class="modalp">This is a beautiful moderate route into the northern area of the Fountain Hills McDowell Mountain Preserve. The route ascends the Promenade Trail and features plenty of ups and downs along the Sonoran and Lower Sonoran trails. Two crossover trails allow hikers to shorten their routes, if desired.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srsonorantrailsloopbtn" onclick="viewSuggestedRoute('srsonorantrailsloop')">View Route</button>
+                  </div>
+                  <div class="all hiking longroute fh">
+                    <hr class="suggestedroutehr">
+                    <p class="suggestedroutemodalregion">Adero Canyon to Sunrise Peak</p>
+                    <p class="suggestedroutemodaltrailhead">Adero Canyon Trailhead</p>
+                    <p class="suggestedroutemodalinfo">Hiking &ndash; 6.34 Miles &ndash; 1,215' Elev Gain</p>
+                    <p class="modalp">This out and back route leads from the Adero Canyon trailhead in Fountain Hills to Sunrise Peak in the McDowell Sonoran Preserve. It is one of the most beautiful hikes in the area with a strenuous final climb to incredible 360-degree views of the entire valley.</p>
+                    <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="sraderocanyontosunrisepeakbtn" onclick="viewSuggestedRoute('sraderocanyontosunrisepeak')">View Route</button>
                   </div>
                   <div class="all biking shortroute northernregion">
                     <hr class="suggestedroutehr">
@@ -570,7 +583,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Tom's Thumb / Feldspar Loop</p>
                     <p class="suggestedroutemodaltrailhead">Tom's Thumb Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Biking &ndash; 1.96 Miles &ndash; 287' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Biking &ndash; 1.96 Miles &ndash; 281' Elev Gain</p>
                     <p class="modalp">This is a quick ride along a trail mostly used by hikers climbing up to Tom's Thumb. After about a half-mile, the route turns left along Feldspar Trail then briefly heads east along Marcus Landslide Trail past Mushroom Rock Scenic Point. Caballo Trail then heads west to a connector trail back to the trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srtomsthumbfeldsparloopbtn" onclick="viewSuggestedRoute('srtomsthumbfeldsparloop')">View Route</button>
                   </div>
@@ -586,7 +599,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Staging Areas Loop</p>
                     <p class="suggestedroutemodaltrailhead">Four Peaks Staging Area</p>
-                    <p class="suggestedroutemodalinfo">Biking &ndash; 4.25 Miles &ndash; 310' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Biking &ndash; 4.25 Miles &ndash; 222' Elev Gain</p>
                     <p class="modalp">This relatively easy route begins at the Four Peaks Staging Area near the entrance of McDowell Mountain Park and visits the Trailhead Staging Area along Pemberton trail. It's a fairly easy route, starting northwest along Shallmo Wash Trail. The route then continues north for a short distance along Pemberton Trail, then heads east along Scenic Trail to the Cinch and Escondido trails back to the trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srstagingareasloopbtn" onclick="viewSuggestedRoute('srstagingareasloop')">View Route</button>
                   </div>
@@ -594,7 +607,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Promenade Out and Back</p>
                     <p class="suggestedroutemodaltrailhead">Adero Canyon Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Biking &ndash; 1.86 Miles &ndash; 506' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Biking &ndash; 1.86 Miles &ndash; 171' Elev Gain</p>
                     <p class="modalp">This moderate route ascends the wide Promenade Trail to a great view of Fountain Hills.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srpromenadeoutandbackbtn" onclick="viewSuggestedRoute('srpromenadeoutandback')">View Route</button>
                   </div>
@@ -610,7 +623,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Gooseneck / Redbird Loop</p>
                     <p class="suggestedroutemodaltrailhead">Fraesfield Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Biking &ndash; 7.03 Miles &ndash; 309' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Biking &ndash; 7.03 Miles &ndash; 313' Elev Gain</p>
                     <p class="modalp">This easy-to-moderate route begins at Fraesfield Trailhead in the northern region of the McDowell Sonoran Preserve. Heading south, Gooseneck Trail leads to Rio Verde Drive at 128th St. After crossing the road, continue along Gooseneck Trail for almost a mile, then head west and then south along Red Bird Trail. The route then continues on an awesome scenic descent along Service Roads #3 and #2 before rejoining Gooseneck Trail north across Rio Verde Drive back to the trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srgooseneckredbirdloopbtn" onclick="viewSuggestedRoute('srgooseneckredbirdloop')">View Route</button>
                   </div>
@@ -626,7 +639,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Granite / Delsie / Pemberton Loop</p>
                     <p class="suggestedroutemodaltrailhead">Trailhead Staging Area</p>
-                    <p class="suggestedroutemodalinfo">Biking &ndash; 12.23 Miles &ndash; 652' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Biking &ndash; 12.23 Miles &ndash; 638' Elev Gain</p>
                     <p class="modalp">This easy-to-moderate route starts south on Pemberton Trail then gradually ascends Granite and Delsie Trails before turning north onto Pemberton trail for a fast, flowy descent back to the trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srgranitedelsiepembertonloopbtn" onclick="viewSuggestedRoute('srgranitedelsiepembertonloop')">View Route</button>
                   </div>
@@ -634,7 +647,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Adero Canyon to Golden Eagle Out and Back</p>
                     <p class="suggestedroutemodaltrailhead">Adero Canyon Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Biking &ndash; 10.10 Miles &ndash; 2,676' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Biking &ndash; 10.10 Miles &ndash; 1,484' Elev Gain</p>
                     <p class="modalp"><strong>This is a challenging route along trails mostly used by hikers.</strong> It begins with a climb up the wide Promenade Trail, then continues along the narrow, up and down Lower Sonoran Trail. It then connects to Sonoran Trail and Dixie Mine Trail and continues along a neighborhood path to Golden Eagle Trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="sraderocanyontogoldeneagleoutandbackbtn" onclick="viewSuggestedRoute('sraderocanyontogoldeneagleoutandback')">View Route</button>
                   </div>
@@ -650,7 +663,7 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Pemberton to Central Loop</p>
                     <p class="suggestedroutemodaltrailhead">Tom's Thumb Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Biking &ndash; 13.66 Miles &ndash; 894' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Biking &ndash; 13.66 Miles &ndash; 945' Elev Gain</p>
                     <p class="modalp">This moderate route from Tom's Thumb Trailhead enters McDowell Mountain Regional Park, so be sure to purchase a park pass beforehand. The route follows the northwestern part of Pemberton Trail, then heads west back into and around almost the entire central region of the McDowell Sonoran Preserve.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srpembertontocentralbtn" onclick="viewSuggestedRoute('srpembertontocentral')">View Route</button>
                   </div>
@@ -658,15 +671,15 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Lost Dog to Prospector Loop</p>
                     <p class="suggestedroutemodaltrailhead">Lost Dog Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Biking &ndash; 20.29 Miles &ndash; 4,243' Elev Gain</p>
-                    <p class="modalp"><strong>This is a challenging route along trails mostly used by hikers.</strong> Text.</p>
+                    <p class="suggestedroutemodalinfo">Biking &ndash; 20.29 Miles &ndash; 3,519' Elev Gain</p>
+                    <p class="modalp"><strong>This is a challenging route along trails mostly used by hikers.</strong> The route begins at Lost Dog Wash Trailhead and leads northwest up Lost Dog Wash Trail to Quartz Trail, then heads north along Paradise Trail to Gateway Trail and on to Bell Pass Trail. At its northernmost point, the route turns east along Prospector Trail, then south along Dixie Mine Trail, continuing on to Sonoran Trail. Several climbs and descents later along the tight Lower Sonoran Trail, the route joins Promenade Trail to Adero Canyon Trailhead, then heads west and south along the Andrews-Kinsey Trail to Sunrise Trail back to Lost Dog Wash Trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srlostdogtoprospectorloopbtn" onclick="viewSuggestedRoute('srlostdogtoprospectorloop')">View Route</button>
                   </div>
                   <div class="all biking longroute mmrp">
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Pemberton Loop</p>
                     <p class="suggestedroutemodaltrailhead">MMRP Trailhead Staging Area</p>
-                    <p class="suggestedroutemodalinfo">Biking &ndash; 15.38 Miles &ndash; 917' Elev Gain</p>
+                    <p class="suggestedroutemodalinfo">Biking &ndash; 15.38 Miles &ndash; 920' Elev Gain</p>
                     <p class="modalp">This is one of the most popular biking (and for the very well-heeled, hiking) trails in Arizona. This clockwise loop features a rocky ascent on the trail's southside, but after a quick stop at Jackass Junction (you'll know it when you see it), the route rewards bikers with a fast, flowing descent back to the trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="srpembertonloopbtn" onclick="viewSuggestedRoute('srpembertonloop')">View Route</button>
                   </div>
@@ -674,8 +687,8 @@
                     <hr class="suggestedroutehr">
                     <p class="suggestedroutemodalregion">Adero Canyon to Gateway Loop</p>
                     <p class="suggestedroutemodaltrailhead">Adero Canyon Trailhead</p>
-                    <p class="suggestedroutemodalinfo">Biking &ndash; 19.97 Miles &ndash; 4,315' Elev Gain</p>
-                    <p class="modalp"><strong>This is a challenging route along trails mostly used by hikers.</strong> Text.</p>
+                    <p class="suggestedroutemodalinfo">Biking &ndash; 19.97 Miles &ndash; 3,528' Elev Gain</p>
+                    <p class="modalp"><strong>This is a challenging route along trails mostly used by hikers.</strong> The route begins at Adero Canyon Trailhead and heads west and south along the Andrews-Kinsey Trail to Sunrise Trail toward Lost Dog Wash Trailhead. From just outside the trailhead, the route heads northwest up Lost Dog Wash Trail to Quartz Trailhead, then continues north along Paradise Trail to Gateway Trail and on to Bell Pass Trail. At its northernmost point, the route turns east along Prospector Trail, then south along Dixie Mine Trail, continuing on to Sonoran Trail. Several climbs and descents later along the tight Lower Sonoran Trail, the route joins Promenade Trail back to Adero Canyon Trailhead.</p>
                     <button type="button" class="btn btn-sm btn-success modal-button-label viewroutebutton" id="sraderocanyontogatewayloopbtn" onclick="viewSuggestedRoute('sraderocanyontogatewayloop')">View Route</button>
                   </div>
                 </div>

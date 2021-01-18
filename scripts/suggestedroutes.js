@@ -115,6 +115,13 @@ function viewSuggestedRoute(suggestedroute) {
         break;
 
     case
+     "srridgelinetrailoutandback":
+        suggestedMarkers = ["XFAX", "XF01", "XFWX", "XF03", "XF37", "XF39", "XF41", "XF42", "XF41", "XF39", "XF37", "XF03", "XFWX", "XF01", "XFAX"]
+        suggestedRouteName = "Ridgeline Trail Out and Back";
+        suggestedRouteButton = "#srridgelinetrailoutandbackbtn";
+        break;
+
+    case
      "srgranitemountainloop":
         suggestedMarkers = ["GMTX", "GT3X", "GT4X", "BL1X", "BL2", "GM3", "GM2", "GM9", "GM7", "GM6", "GM5", "GM10", "GM4", "BL2", "BL1X", "GT4X", "GT3X", "GMTX"]
         suggestedRouteName = "Granite Mountain Loop";

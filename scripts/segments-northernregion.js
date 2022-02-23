@@ -25441,34 +25441,6 @@ var segmentPD5XPD7Xlatlngs = [
 ];
 var segmentPD5XPD7Xpolyline = L.polyline(segmentPD5XPD7Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentPD5XPD6X = new CreateSegment("PD5X", "PD6X", "Connector Trail", 0.02, 0.17, 2.05);
-var segmentPD5XPD6Xlatlngs = [
-    [0.0, 0.0],
-    [0.0, 0.0]
-];
-var segmentPD5XPD6Xpolyline = L.polyline(segmentPD5XPD6Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
-
-var segmentPD6XPDTX = new CreateSegment("PD6X", "PDTX", "Connector Trail", 0.02, 0.04, 3.15);
-var segmentPD6XPDTXlatlngs = [
-    [0.0, 0.0],
-    [0.0, 0.0]
-];
-var segmentPD6XPDTXpolyline = L.polyline(segmentPD6XPDTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
-
-var segmentHW1XPDTX = new CreateSegment("HW1X", "PDTX", "Connector Trail", 0.02, 0, 2.2);
-var segmentHW1XPDTXlatlngs = [
-    [0.0, 0.0],
-    [0.0, 0.0]
-];
-var segmentHW1XPDTXpolyline = L.polyline(segmentHW1XPDTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
-
-var segmentAG1XPDTX = new CreateSegment("AG1X", "PDTX", "Connector Trail", 0.02, 0.4, 1.25);
-var segmentAG1XPDTXlatlngs = [
-    [0.0, 0.0],
-    [0.0, 0.0]
-];
-var segmentAG1XPDTXpolyline = L.polyline(segmentAG1XPDTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
-
 var segmentPD1XPD2X = new CreateSegment("PD1X", "PD2X", "Connector Trail", 0.01, 1.26, 0);
 var segmentPD1XPD2Xlatlngs = [
     [0.0, 0.0],
@@ -25510,20 +25482,6 @@ var segmentPDHXRH1Xlatlngs = [
     [0.0, 0.0]
 ];
 var segmentPDHXRH1Xpolyline = L.polyline(segmentPDHXRH1Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
-
-var segmentAG1XAG2X = new CreateSegment("AG1X", "AG2X", "Axle Grease Trail", 0.05, 4.79, 2.15);
-var segmentAG1XAG2Xlatlngs = [
-    [0.0, 0.0],
-    [0.0, 0.0]
-];
-var segmentAG1XAG2Xpolyline = L.polyline(segmentAG1XAG2Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
-
-var segmentHW1XHW2X = new CreateSegment("HW1X", "HW2X", "Hawknest Trail", 0.04, 4.4, 0.60);
-var segmentHW1XHW2Xlatlngs = [
-    [0.0, 0.0],
-    [0.0, 0.0]
-];
-var segmentHW1XHW2Xpolyline = L.polyline(segmentHW1XHW2Xlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
 var segmentAG2XPD4X = new CreateSegment("AG2X", "PD4X", "Connector Trail", 0.03, 1.02, 2.5);
 var segmentAG2XPD4Xlatlngs = [
@@ -25846,3 +25804,24 @@ var segmentRH2RH3latlngs = [
     [0.0, 0.0]
 ];
 var segmentRH2RH3polyline = L.polyline(segmentRH2RH3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
+
+var segmentAG2XPDTX = new CreateSegment("AG2X", "PDTX", "Axle Grease Trail", 0, 0, 0);
+var segmentAG2XPDTXlatlngs = [
+    [0.0, 0.0],
+    [0.0, 0.0]
+];
+var segmentAG2XPDTXpolyline = L.polyline(segmentAG2XPDTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
+
+var segmentHW2XPDTX = new CreateSegment("HW2X", "PDTX", "Hawknest Trail", 0, 0, 0);
+var segmentHW2XPDTXlatlngs = [
+    [0.0, 0.0],
+    [0.0, 0.0]
+];
+var segmentHW2XPDTXpolyline = L.polyline(segmentHW2XPDTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
+
+var segmentPD5XPDTX = new CreateSegment("PD5X", "PDTX", "Connector Trail", 0, 0, 0);
+var segmentPD5XPDTXlatlngs = [
+    [0.0, 0.0],
+    [0.0, 0.0]
+];
+var segmentPD5XPDTXpolyline = L.polyline(segmentPD5XPDTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();

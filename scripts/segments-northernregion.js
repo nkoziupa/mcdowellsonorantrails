@@ -25644,13 +25644,6 @@ var segmentAG15AG17latlngs = [
 ];
 var segmentAG15AG17polyline = L.polyline(segmentAG15AG17latlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentAG15STR3 = new CreateSegment("AG15", "STR3", "State Land Temporary Road", 0.08, 1.1, 10.5);
-var segmentAG15STR3latlngs = [
-    [0.0, 0.0],
-    [0.0, 0.0]
-];
-var segmentAG15STR3polyline = L.polyline(segmentAG15STR3latlngs, segmentPolylineOptions).addTo(map).bringToBack();
-
 var segmentAG17STR3 = new CreateSegment("AG17", "STR3", "Connector Trail", 0.03, 7.36, 0.12);
 var segmentAG17STR3latlngs = [
     [0.0, 0.0],

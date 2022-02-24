@@ -365,7 +365,7 @@ CreateMarkerTrailhead.prototype.renderer = myRenderer;
 
 // use this code to reposition markers
 
-// map.dragging.disable();
+map.dragging.disable();
 
 /* markerBP1X.on({
           mousedown: function () {
@@ -740,6 +740,21 @@ var markerUR8 = L.circle([33.781390, -111.845558], new CreateMarker("UR8", "UR8"
 var markerVD3 = L.circle([33.748487, -111.890281], new CreateMarker("VD3", "VD3", 2315, ["VD3X", "RH1", "RH1X"])).addTo(map).on("click", onMapClick);
 var markerVD3X = L.circle([33.748464, -111.890846], new CreateMarker("VD3X", "Stepover Gate", 2312, ["VD3"])).addTo(map).on("click", onMapClick);
 var markerVD7 = L.circle([33.74902269, -111.8787307], new CreateMarker("VD7", "VD7", 2395, ["LG29", "PR4X", "VD7X", "PDXX"])).addTo(map).on("click", onMapClick);
+
+markerVD7.on({
+          mousedown: function () {
+            map.on('mousemove', function (e) {
+              markerVD7.setLatLng(e.latlng);
+            });
+          }
+       });
+       map.on('mouseup',function(e){
+         map.removeEventListener('mousemove');
+         alert(e.latlng);
+       })
+
+
+
 var markerVD7X = L.circle([33.748702, -111.878599], new CreateMarker("VD7X", "Stepover Gate", 2399, ["VD7"])).addTo(map).on("click", onMapClick);
 var markerVT1 = L.circle([33.773685, -111.837659], new CreateMarker("VT1", "VT1", 2749, ["BT1", "BT2", "BR6", "VT3"])).addTo(map).on("click", onMapClick);
 var markerVT3 = L.circle([33.769955, -111.826044], new CreateMarker("VT3", "VT3", 2769, ["VT1", "BR5", "CW7", "WB1"])).addTo(map).on("click", onMapClick);

@@ -442,6 +442,19 @@ var markerSTR5 = L.circle([33.768293, -111.880861], new CreateMarker("STR5", "ST
 var markerAG11 = L.circle([33.768387, -111.879971], new CreateMarker("AG11", "AG11", 2441, ["STR5", "AG9", "RH7", "AG13"])).addTo(map).on("click", onMapClick);
 var markerAG13 = L.circle([33.764382, -111.882933], new CreateMarker("AG13", "AG13", 2423, ["AG11", "AG14"])).addTo(map).on("click", onMapClick);
 var markerAG14 = L.circle([33.762595, -111.883992], new CreateMarker("AG14", "AG14", 2397, ["AG15", "AG13", "RH5"])).addTo(map).on("click", onMapClick);
+
+markerAG14.on({
+          mousedown: function () {
+            map.on('mousemove', function (e) {
+              markerAG14.setLatLng(e.latlng);
+            });
+          }
+       });
+       map.on('mouseup',function(e){
+         map.removeEventListener('mousemove');
+         alert(e.latlng);
+       })
+
 var markerSTR3 = L.circle([33.75985489, -111.8892538], new CreateMarker("STR3", "STR3", 2369, ["AG15", "AG17", "STRX"])).addTo(map).on("click", onMapClick);
 var markerAG15 = L.circle([33.760717, -111.888380], new CreateMarker("AG15", "AG15", 2379, ["STR3", "STR5", "AG14", "AG17"])).addTo(map).on("click", onMapClick);
 var markerAG17 = L.circle([33.75937, -111.889014], new CreateMarker("AG17", "AG17", 2361, ["STR3", "AG15", "RH3"])).addTo(map).on("click", onMapClick);
@@ -657,22 +670,9 @@ var markerOP1 = L.circle([33.791276, -111.787323], new CreateMarker("OP1", "OP1"
 var markerOP3 = L.circle([33.794492, -111.790391], new CreateMarker("OP3", "OP3", 2666, ["RG1", "OP5", "BA1", "OP1"])).addTo(map).on("click", onMapClick);
 var markerOP5 = L.circle([33.797710, -111.794445], new CreateMarker("OP5", "OP5", 2712, ["RG5", "OP7", "OP3"])).addTo(map).on("click", onMapClick);
 var markerOP11 = L.circle([33.806065, -111.806314], new CreateMarker("OP11", "OP11", 2816, ["DV13", "HW4", "OP9"])).addTo(map).on("click", onMapClick);
-var markerPD1X = L.circle([33.746265, -111.887555], new CreateMarker("PD1X", "Access Point", 2330, ["PD2X"])).addTo(map).on("click", onMapClick);
-
-markerPD1X.on({
-          mousedown: function () {
-            map.on('mousemove', function (e) {
-              markerPD1X.setLatLng(e.latlng);
-            });
-          }
-       });
-       map.on('mouseup',function(e){
-         map.removeEventListener('mousemove');
-         alert(e.latlng);
-       })
-
-var markerPD2X = L.circle([33.746471, -111.887330], new CreateMarker("PD2X", "Intersection", 2331, ["PD1X", "PD3X", "PDTX"])).addTo(map).on("click", onMapClick);
+var markerPD1X = L.circle([33.746212, -111.887555], new CreateMarker("PD1X", "Access Point", 2330, ["PD2X"])).addTo(map).on("click", onMapClick);
 var markerPD3X = L.circle([33.746685, -111.887609], new CreateMarker("PD3X", "Intersection", 2330, ["PDHX", "PD4X", "PD2X"])).addTo(map).on("click", onMapClick);
+var markerPD2X = L.circle([33.746471, -111.887330], new CreateMarker("PD2X", "Intersection", 2331, ["PD1X", "PD3X", "PDTX"])).addTo(map).on("click", onMapClick);
 var markerPD4X = L.circle([33.747220, -111.887308], new CreateMarker("PD4X", "Intersection", 2337, ["PD3X", "RH1X", "AG2X"])).addTo(map).on("click", onMapClick);
 var markerPD5X = L.circle([33.746698, -111.886284], new CreateMarker("PD5X", "Intersection", 2340, ["PDTX", "HW2X", "PR5X", "HV75", "PD7X"])).addTo(map).on("click", onMapClick);
 var markerPD7X = L.circle([33.746302, -111.886432], new CreateMarker("PD7X", "Intersection", 2334, ["PDTX", "PD5X", "PD8X"])).addTo(map).on("click", onMapClick);

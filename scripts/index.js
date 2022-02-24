@@ -365,7 +365,7 @@ CreateMarkerTrailhead.prototype.renderer = myRenderer;
 
 // use this code to reposition markers
 
-map.dragging.disable();
+// map.dragging.disable();
 
 /* markerBP1X.on({
           mousedown: function () {

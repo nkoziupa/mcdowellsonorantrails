@@ -865,6 +865,7 @@ p {
 @media only screen and (max-width: 767px) {
   #infocontainer-2-markercontainer-2 {
     text-align: center;
+    margin-top: -5px;
     display: none;
   }
 }

@@ -1455,7 +1455,9 @@ $("#markercontainer-1").on("click", function() {
 
 });
 
-$("#infocontainer").on("click", function() {
+// $("#infocontainer").on("click", function() {
+
+$("#infocontainer-infoandactions-button").on("click", function() {
 
   // if the second info overlay has been shown and segments are showing in the info panel, show the route plan modal
 

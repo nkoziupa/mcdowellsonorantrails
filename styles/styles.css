@@ -1181,6 +1181,22 @@ p {
   }
 }
 
+/* info and actions button container */
+
+/* desktop */
+
+#infoandactionscontainer {
+  padding-top: 10px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+  #infoandactionscontainer {
+    padding-top: 10px;
+  }
+}
+
 /* info icon container */
 
 /* desktop */

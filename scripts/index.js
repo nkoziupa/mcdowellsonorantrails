@@ -174,10 +174,10 @@ if ($(window).width() >= 992) {
     $("#mapcontainer").css("height", mainContainerHeight);
   }
   else if ($(window).width() >= 768 && $(window).width() < 992) {
-    $("#mapcontainer").css("height", mainContainerHeight - 320);
+    $("#mapcontainer").css("height", mainContainerHeight - 330);
   }
   else {
-    $("#mapcontainer").css("height", mainContainerHeight - 230);
+    $("#mapcontainer").css("height", mainContainerHeight - 240);
   };
 
 // if window is resized, maintain header and main container height as full screen height
@@ -190,10 +190,10 @@ $(window).resize(function() {
     $("#mapcontainer").css("height", mainContainerHeightResized);
   }
   else if ($(window).width() >= 768 && $(window).width() < 992) {
-    $("#mapcontainer").css("height", mainContainerHeightResized - 320);
+    $("#mapcontainer").css("height", mainContainerHeightResized - 330);
   }
   else {
-    $("#mapcontainer").css("height", mainContainerHeightResized - 230);
+    $("#mapcontainer").css("height", mainContainerHeightResized - 240);
   }
 });
 

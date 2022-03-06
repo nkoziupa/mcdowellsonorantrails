@@ -30,6 +30,26 @@ function viewSuggestedRoute(suggestedroute) {
         suggestedRouteButton = "#srfraesfieldinterpretivetrailloopbtn";
         break;
 
+
+
+
+
+    case
+     "sraxlegreaseviadonahawknestloop":
+        suggestedMarkers = ["PDTX", "AG2X", "AG19", "HW46", "HW2X", "PDTX"]
+        suggestedRouteName = "Axle Grease / Via Dona / Hawknest Loop";
+        suggestedRouteButton = "#sraxlegreaseviadonahawknestloopbtn";
+        break;
+
+    case
+     "srpimadynamitescenicoutandback":
+        suggestedMarkers = ["PDTX", "PD5X", "HV75", "LG29", "LG28", "SW2X", "CSX", "SW1", "SW4X", "SW5X", "SW3X", "SWOX", "SW3X", "SW1X", "SW1", "SW2X", "LG28", "LG29", "HV75", "PD5X", "PDTX"]
+        suggestedRouteName = "Pima Dynamite Scenic Out and Back";
+        suggestedRouteButton = "#srpimadynamitescenicoutandbackbtn";
+        break;
+
+
+
     case
      "srtomsthumbtrailheadshortloop":
         suggestedMarkers = ["TTTX", "TT1", "FS1", "ML3", "ML1", "TTTX"]

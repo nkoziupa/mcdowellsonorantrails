@@ -184,16 +184,12 @@ function viewSuggestedRoute(suggestedroute) {
         suggestedRouteButton = "#srfraesfieldtogranitemountainloopbtn";
         break;
 
-
-
     case
      "sraxlegreasewestexpresslatigoloop":
         suggestedMarkers = ["PDTX", "AG2X", "AG19", "RH3", "AG17", "AG15", "AG14", "AG13", "AG11", "AG9", "AG7", "AG5", "AG3", "AG1", "AGWX", "RH13", "HW35", "WE17", "WE19", "WE21", "WE23", "LG21", "LG24", "LG25", "LG28", "LG29", "HV75", "PD5X", "PDTX"]
         suggestedRouteName = "Axle Grease / West Express / Latigo Loop";
         suggestedRouteButton = "#sraxlegreasewestexpresslatigoloopbtn";
         break;
-
-
 
     case
      "srtomsthumbfeldsparloop":
@@ -230,14 +226,12 @@ function viewSuggestedRoute(suggestedroute) {
         suggestedRouteButton = "#srgranitemountainhawknestloopbtn";
         break;
 
-
     case
      "srstagecoachfigureeight":
         suggestedMarkers = ["PDTX", "AG2X", "AG19", "RH3", "AG17", "AG15", "AG14", "AG13", "AG11", "AG9", "AG7", "AG5", "AG3", "AG1", "AGWX", "WE13", "WE11", "BR9", "RH17", "HW28", "HW26", "CL5", "CL3", "HD1", "HD3", "HW16", "OC7", "DV23", "SC7", "SC17", "SC27", "WE7", "WE9", "WE11", "WE13", "AGWX", "RH13", "HW35", "WE17", "WE19", "WE21", "WE23", "LG21", "LG24", "LG25", "LG28", "LG29", "HV75", "PD5X", "PDTX"]
         suggestedRouteName = "Stagecoach Figure-Eight";
         suggestedRouteButton = "#srstagecoachfigureeightbtn";
         break;
-
 
     case
      "srgooseneckredbirdloop":

@@ -30,10 +30,6 @@ function viewSuggestedRoute(suggestedroute) {
         suggestedRouteButton = "#srfraesfieldinterpretivetrailloopbtn";
         break;
 
-
-
-
-
     case
      "sraxlegreaseviadonahawknestloop":
         suggestedMarkers = ["PDTX", "AG2X", "AG19", "HW46", "HW2X", "PDTX"]
@@ -47,8 +43,6 @@ function viewSuggestedRoute(suggestedroute) {
         suggestedRouteName = "Pima Dynamite Scenic Out and Back";
         suggestedRouteButton = "#srpimadynamitescenicoutandbackbtn";
         break;
-
-
 
     case
      "srtomsthumbtrailheadshortloop":

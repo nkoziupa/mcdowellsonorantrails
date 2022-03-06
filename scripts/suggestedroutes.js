@@ -31,6 +31,20 @@ function viewSuggestedRoute(suggestedroute) {
         break;
 
     case
+     "sraxlegreaseviadonahawknestloop":
+        suggestedMarkers = ["PDTX", "AG2X", "AG19", "HW46", "HW2X", "PDTX"]
+        suggestedRouteName = "Axle Grease / Via Dona / Hawknest Loop";
+        suggestedRouteButton = "#sraxlegreaseviadonahawknestloopbtn";
+        break;
+
+    case
+     "srpimadynamitescenicoutandback":
+        suggestedMarkers = ["PDTX", "PD5X", "HV75", "LG29", "LG28", "SW2X", "CSX", "SW1", "SW4X", "SW5X", "SW3X", "SWOX", "SW3X", "SW1X", "SW1", "SW2X", "LG28", "LG29", "HV75", "PD5X", "PDTX"]
+        suggestedRouteName = "Pima Dynamite Scenic Out and Back";
+        suggestedRouteButton = "#srpimadynamitescenicoutandbackbtn";
+        break;
+
+    case
      "srtomsthumbtrailheadshortloop":
         suggestedMarkers = ["TTTX", "TT1", "FS1", "ML3", "ML1", "TTTX"]
         suggestedRouteName = "Tom's Thumb Trailhead Short Loop";
@@ -171,6 +185,13 @@ function viewSuggestedRoute(suggestedroute) {
         break;
 
     case
+     "sraxlegreasewestexpresslatigoloop":
+        suggestedMarkers = ["PDTX", "AG2X", "AG19", "RH3", "AG17", "AG15", "AG14", "AG13", "AG11", "AG9", "AG7", "AG5", "AG3", "AG1", "AGWX", "RH13", "HW35", "WE17", "WE19", "WE21", "WE23", "LG21", "LG24", "LG25", "LG28", "LG29", "HV75", "PD5X", "PDTX"]
+        suggestedRouteName = "Axle Grease / West Express / Latigo Loop";
+        suggestedRouteButton = "#sraxlegreasewestexpresslatigoloopbtn";
+        break;
+
+    case
      "srtomsthumbfeldsparloop":
         suggestedMarkers = ["TTTX", "TT1", "TT2", "FS1", "ML3", "ML3X", "ML5", "TH3X", "ML1", "TTTX"]
         suggestedRouteName = "Tom's Thumb / Feldspar Loop";
@@ -203,6 +224,13 @@ function viewSuggestedRoute(suggestedroute) {
         suggestedMarkers = ["GMTX", "GT3X", "GE4X", "AH1", "DV2", "DV3", "CP3", "RG1", "OP3", "BA1", "HW1", "HW4", "HW10", "DV17", "HD5", "TD4", "TD2", "TD1", "GM7", "GM9", "GM2", "GM1", "GM9X", "GM8X", "TP1X", "GMTX"]
         suggestedRouteName = "Granite Mountain Hawknest Loop";
         suggestedRouteButton = "#srgranitemountainhawknestloopbtn";
+        break;
+
+    case
+     "srstagecoachfigureeight":
+        suggestedMarkers = ["PDTX", "AG2X", "AG19", "RH3", "AG17", "AG15", "AG14", "AG13", "AG11", "AG9", "AG7", "AG5", "AG3", "AG1", "AGWX", "WE13", "WE11", "BR9", "RH17", "HW28", "HW26", "CL5", "CL3", "HD1", "HD3", "HW16", "OC7", "DV23", "SC7", "SC17", "SC27", "WE7", "WE9", "WE11", "WE13", "AGWX", "RH13", "HW35", "WE17", "WE19", "WE21", "WE23", "LG21", "LG24", "LG25", "LG28", "LG29", "HV75", "PD5X", "PDTX"]
+        suggestedRouteName = "Stagecoach Figure-Eight";
+        suggestedRouteButton = "#srstagecoachfigureeightbtn";
         break;
 
     case

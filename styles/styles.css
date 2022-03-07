@@ -34,8 +34,7 @@ a.inlinemodallink:hover {
 }
 
 .modaloverflowscroll {
-  height: 200px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .notopmargin {

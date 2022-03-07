@@ -33,6 +33,10 @@ a.inlinemodallink:hover {
   text-decoration-line: underline!important;
 }
 
+.modaloverflowscroll {
+  overflow: scroll;
+}
+
 .notopmargin {
   margin-top: 0!important;
 }

@@ -193,7 +193,7 @@ $(window).resize(function() {
     $("#mapcontainer").css("height", mainContainerHeightResized - 320);
   }
   else {
-    $("#mapcontainer").css("height", mainContainerHeightResized - 230);
+    // $("#mapcontainer").css("height", mainContainerHeightResized - 230);
   }
 });
 

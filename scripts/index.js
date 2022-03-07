@@ -190,10 +190,10 @@ $(window).resize(function() {
     $("#mapcontainer").css("height", mainContainerHeightResized);
   }
   else if ($(window).width() >= 768 && $(window).width() < 992) {
-    // $("#mapcontainer").css("height", mainContainerHeightResized - 320);
+    $("#mapcontainer").css("height", mainContainerHeightResized - 320);
   }
   else {
-    // $("#mapcontainer").css("height", mainContainerHeightResized - 230);
+    $("#mapcontainer").css("height", mainContainerHeightResized - 230);
   }
 });
 

@@ -364,6 +364,22 @@ function viewSuggestedRoute(suggestedroute) {
 
   routePlanArray.length = 0;
 
+  // reset subtotal miles
+
+  subtotalMiles = 0;
+
+  // reset subtotal elev gain
+
+  subtotalElevGain = 0;
+
+  // reset route plan miles array
+
+  routePlanMilesArray.length = 0;
+
+  // reset route plan elev gain array
+
+  routePlanElevGainArray.length = 0;
+
   // fire the markers
 
   for (var i = 0; i < suggestedMarkers.length; i++) {

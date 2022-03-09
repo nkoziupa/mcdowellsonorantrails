@@ -72,6 +72,10 @@ var routeElevGain = 0;
 var routePlanArray = [];
 var markerArray = [];
 var segmentArray = [];
+var routePlanMilesArray = [];
+var routePlanElevGainArray = [];
+var subtotalMiles = 0;
+var subtotalElevGain = 0;
 
 // set marker colors
 
@@ -1480,10 +1484,12 @@ $("#infocontainer-infoandactions-button").on("click", function() {
 
     var routePlanArrayHTML = "";
     var x = 0;
+    var y = 0;
 
     for (var i = 0; i < routePlanArray.length / 5; i++) {
-    routePlanArrayHTML = routePlanArrayHTML + "<span class='routeplanmarker'>" + routePlanArray[x] + "</span>" + " " + "<span class='routeplanseparator'>to</span>" + " " + "<span class='routeplanmarker'>" + routePlanArray[x + 1] + "</span>" + "<br>" + "<span class='routeplanseparator'>via</span>" + " " + "<span class='routeplansegment'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span class='routeplanmiles'>" + routePlanArray[x + 3] + "</span>" + "<span class='routeplanelevgain'>" + routePlanArray[x + 4] + "</span>" + "<br>" + "<br>";
+    routePlanArrayHTML = routePlanArrayHTML + "<span class='routeplanmarker'>" + routePlanArray[x] + "</span>" + " " + "<span class='routeplanseparator'>to</span>" + " " + "<span class='routeplanmarker'>" + routePlanArray[x + 1] + "</span>" + "<br>" + "<span class='routeplanseparator'>via</span>" + " " + "<span class='routeplansegment'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span class='routeplanmiles'>" + routePlanArray[x + 3] + "</span>" + "<span class='routeplanelevgain'>" + routePlanArray[x + 4] + "</span>" + "<br>" + "<span class='routeplansubtotalmiles'>" + routePlanMilesArray[y] + "</span>" + "<span class='routeplansubtotalelevgain'>" + routePlanElevGainArray[y + 1] + "</span>" + "<br>" + "<br>";
     x = x + 5;
+    y = y + 2;
     };
 
     if (routeLength === 1) {
@@ -1562,9 +1568,25 @@ function resetMap() {
 
   routeElevGain = 0;
 
+  // reset subtotal miles
+
+  subtotalMiles = 0;
+
+  // reset subtotal elev gain
+
+  subtotalElevGain = 0;
+
   // reset route plan
 
   routePlanArray.length = 0;
+
+  // reset route plan miles array
+
+  routePlanMilesArray.length = 0;
+
+  // reset route plan elev gain array
+
+  routePlanElevGainArray.length = 0;
 
   // show/hide info containers
 
@@ -1880,6 +1902,14 @@ function onMapClick(e) {
 
     routeElevGain = 0;
 
+    // reset subtotal miles
+
+    subtotalMiles = 0;
+
+    // reset subtotal elev gain
+
+    subtotalElevGain = 0;
+
   }
 
   // case 2: if markerArray has one element and the user chooses the 'current' marker ---------------
@@ -1939,6 +1969,14 @@ function onMapClick(e) {
 
     segmentArray.length = 0;
 
+    // empty routePlanMilesArray
+
+    routePlanMilesArray.length = 0;
+
+    // empty routePlanElevGainArray
+
+    routePlanElevGainArray.length = 0;
+
     // show segmentArray values in the console for debugging
 
     console.log(segmentArray);
@@ -1946,6 +1984,14 @@ function onMapClick(e) {
     // reset route elev gain
 
     routeElevGain = 0;
+
+    // reset subtotal miles
+
+    subtotalMiles = 0;
+
+    // reset subtotal elev gain
+
+    subtotalElevGain = 0;
 
     // show/hide info containers
 
@@ -2220,6 +2266,12 @@ function onMapClick(e) {
 
         $("#routeelevgain").text(routeElevGain.toFixed(0) + "' elev gain");
 
+        // update subtotalElevGain
+
+        subtotalElevGain = subtotalElevGain + window[segmentID].segmentElevGainA;
+
+        routePlanElevGainArray.push(subtotalElevGain.toFixed(0) + "' elev gain");
+
       }
 
     }
@@ -2273,6 +2325,12 @@ function onMapClick(e) {
 
       $("#routeelevgain").text(routeElevGain.toFixed(0) + "' elev gain");
 
+      // update subtotalElevGain
+
+      subtotalElevGain = subtotalElevGain + window[segmentID].segmentElevGainB;
+
+      routePlanElevGainArray.push(subtotalElevGain.toFixed(0) + "' elev gain");
+
     }
 
     // update route length
@@ -2284,6 +2342,17 @@ function onMapClick(e) {
     }
     else {
       $("#routelength").text(routeLength.toFixed(2) + " miles");
+    }
+
+    // update subtotalMiles
+
+    subtotalMiles = (subtotalMiles * 10 + window[segmentID].segmentLength * 10) / 10;
+
+    if (subtotalMiles === 1) {
+      routePlanMilesArray.push(subtotalMiles.toFixed(2) + " mile");
+    }
+    else {
+      routePlanMilesArray.push(subtotalMiles.toFixed(2) + " miles");
     }
 
   }
@@ -2426,6 +2495,14 @@ function onMapClick(e) {
     // remove last five elements from routePlanArray
 
     routePlanArray.splice(-5);
+
+    // remove last element from routePlanMilesArray
+
+    routePlanMilesArray.splice(-1);
+
+    // remove last five elements from routePlanElevGainArray
+
+    routePlanElevGainArray.splice(-1);
 
     // show markerArray values in the console for debugging
 

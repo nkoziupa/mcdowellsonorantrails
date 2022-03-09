@@ -526,6 +526,15 @@ p {
   font-size: 16px;
 }
 
+.routeplansubtotalmiles {
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.routeplansubtotalelevgain {
+  font-size: 16px;
+}
+
 .routeplanhr {
   margin-top: 0;
 }

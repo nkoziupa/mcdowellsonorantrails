@@ -526,6 +526,11 @@ p {
   font-size: 16px;
 }
 
+.routeplansubtotals{
+  font-weight: 700;
+  font-size: 12px;  
+}
+
 .routeplansubtotalmiles {
   font-size: 16px;
   margin-right: 12px;

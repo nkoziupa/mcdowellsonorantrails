@@ -1487,7 +1487,7 @@ $("#infocontainer-infoandactions-button").on("click", function() {
     var y = 0;
 
     for (var i = 0; i < routePlanArray.length / 5; i++) {
-    routePlanArrayHTML = routePlanArrayHTML + "<span class='routeplanmarker'>" + routePlanArray[x] + "</span>" + " " + "<span class='routeplanseparator'>to</span>" + " " + "<span class='routeplanmarker'>" + routePlanArray[x + 1] + "</span>" + "<br>" + "<span class='routeplanseparator'>via</span>" + " " + "<span class='routeplansegment'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span class='routeplanmiles'>" + routePlanArray[x + 3] + "</span>" + "<span class='routeplanelevgain'>" + routePlanArray[x + 4] + "</span>" + "<br>" + "<span class='routeplansubtotalmiles'>" + routePlanMilesArray[y] + "</span>" + "<span class='routeplansubtotalelevgain'>" + routePlanElevGainArray[y] + "</span>" + "<br>" + "<br>";
+    routePlanArrayHTML = routePlanArrayHTML + "<span class='routeplanmarker'>" + routePlanArray[x] + "</span>" + " " + "<span class='routeplanseparator'>to</span>" + " " + "<span class='routeplanmarker'>" + routePlanArray[x + 1] + "</span>" + "<br>" + "<span class='routeplanseparator'>via</span>" + " " + "<span class='routeplansegment'>" + routePlanArray[x + 2] + "</span>" + "<br>" + "<span class='routeplanmiles'>" + routePlanArray[x + 3] + "</span>" + "<span class='routeplanelevgain'>" + routePlanArray[x + 4] + "</span>" + "<br>" + "<span class='routeplansubtotals'>Subtotals</span>" + "<br>" + "<span class='routeplansubtotalmiles'>" + routePlanMilesArray[y] + "</span>" + "<span class='routeplansubtotalelevgain'>" + routePlanElevGainArray[y] + "</span>" + "<br>" + "<br>";
     x = x + 5;
     y = y + 1;
     };

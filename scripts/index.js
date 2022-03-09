@@ -2498,11 +2498,11 @@ function onMapClick(e) {
 
     // remove last element from routePlanMilesArray
 
-    routePlanMilesArray.splice(-1);
+    routePlanMilesArray.pop();
 
     // remove last element from routePlanElevGainArray
 
-    routePlanElevGainArray.splice(-1);
+    routePlanElevGainArray.pop();
 
     // show markerArray values in the console for debugging
 

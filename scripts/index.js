@@ -2463,11 +2463,19 @@ function onMapClick(e) {
 
         routeLength = (routeLength * 10 - window[segmentID].segmentLength * 10) / 10;
 
+        // update subtotalMiles
+
+        subtotalMiles = (subtotalMiles * 10 - window[segmentID].segmentLength * 10) / 10;
+
         // update route elev gain
 
         routeElevGain = routeElevGain - window[segmentID].segmentElevGainA;
 
         $("#routeelevgain").text(routeElevGain.toFixed(0) + "' elev gain");
+
+        // update subtotalElevGain
+
+        subtotalElevGain = subtotalElevGain - window[segmentID].segmentElevGainA;
 
       }
 
@@ -2480,11 +2488,19 @@ function onMapClick(e) {
 
       routeLength = (routeLength * 10 - window[segmentID].segmentLength * 10) / 10;
 
+      // update subtotalMiles
+
+      subtotalMiles = (subtotalMiles * 10 - window[segmentID].segmentLength * 10) / 10;
+
       // update route elev gain
 
       routeElevGain = routeElevGain - window[segmentID].segmentElevGainB;
 
       $("#routeelevgain").text(routeElevGain.toFixed(0) + "' elev gain");
+
+      // update subtotalElevGain
+
+      subtotalElevGain = subtotalElevGain - window[segmentID].segmentElevGainB;
 
     }
 

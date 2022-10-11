@@ -65,7 +65,7 @@ if (getCookie("hasPolicyBeenAccepted") != "yes") {
 
 // variables
 
-var myRenderer = L.canvas({ padding: 0.5 });
+var myRenderer = L.svg({ padding: 0.5 });
 
 var routeLength = 0;
 var routeElevGain = 0;
@@ -239,7 +239,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/nkoziupa/{id}/tiles/{z}/{x}/{y}?ac
     id: 'cjxqb3a8c5eaf1cqqf5y44qej',
     accessToken: 'pk.eyJ1Ijoibmtveml1cGEiLCJhIjoiY2p2Mncxajc0MDFoYzQ0cDQ0dm5qdmpqeSJ9.1Krz0peP4ShVr8rYaNmQvA',
     opacity: 1.0,
-    renderer: L.canvas()
+    renderer: L.svg()
 }).addTo(map);
 
 // create custom map tile panes and add transparent label tiles

@@ -25732,7 +25732,7 @@ var segmentPD7XPDTXlatlngs = [
 ];
 var segmentPD7XPDTXpolyline = L.polyline(segmentPD7XPDTXlatlngs, segmentPolylineOptions).addTo(map).bringToBack();
 
-var segmentPD5XPD7X = new CreateSegment("PD5X", "PD7X", "Connector Trail", 0.32, 2, 8);
+var segmentPD5XPD7X = new CreateSegment("PD5X", "PD7X", "Connector Trail", 0.03, 2, 8);
 var segmentPD5XPD7Xlatlngs = [
     [33.746697, -111.886284],
     [33.746614, -111.886267],

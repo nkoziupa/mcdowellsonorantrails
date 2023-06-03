@@ -1722,6 +1722,23 @@ L.Control.zoomHome = L.Control.extend({
 
 });
 
+// test -------------------------------------------------------------------------------------------------------
+
+const popup = L.popup()
+.setLatLng([51.513, -0.09])
+.setContent('I am a standalone popup.')
+.openOn(map);
+
+function onMapClick(e) {
+popup
+  .setLatLng(e.latlng)
+  .setContent(`You clicked the map at ${e.latlng.toString()}`)
+  .openOn(map);
+}
+
+map.on('click', onMapClick);
+
+
 var zoomHome = new L.Control.zoomHome();
 zoomHome.addTo(map);
 

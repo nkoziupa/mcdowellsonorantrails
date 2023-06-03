@@ -1730,10 +1730,7 @@ L.Control.zoomHome = L.Control.extend({
 // .openOn(map);
 
 function onMapClick(e) {
-popup
-  .setLatLng(e.latlng)
-  .setContent(`You clicked the map at ${e.latlng.toString()}`)
-  .openOn(map);
+  console.log(e.latlng);
 }
 
 map.on('click', onMapClick);

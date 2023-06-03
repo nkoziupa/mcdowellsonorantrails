@@ -1724,16 +1724,12 @@ L.Control.zoomHome = L.Control.extend({
 
 // test -------------------------------------------------------------------------------------------------------
 
-// const popup = L.popup()
-// .setLatLng([51.513, -0.09])
-// .setContent('I am a standalone popup.')
-// .openOn(map);
-
-function onMapClick(e) {
-  console.log(e.latlng);
-}
-
-map.on('click', onMapClick);
+map.on('click', function(e) {
+  var lat = e.latlng.lat;
+  var lng = e.latlng.lng;
+  
+  console.log("Latitude: " + lat + " Longitude: " + lng);
+});
 
 
 var zoomHome = new L.Control.zoomHome();

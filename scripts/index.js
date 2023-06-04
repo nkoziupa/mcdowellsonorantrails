@@ -1722,16 +1722,6 @@ L.Control.zoomHome = L.Control.extend({
 
 });
 
-// test -------------------------------------------------------------------------------------------------------
-
-map.on('click', function(e) {
-  var lat = e.latlng.lat;
-  var lng = e.latlng.lng;
-  
-  console.log("Latitude: " + lat + " Longitude: " + lng);
-});
-
-
 var zoomHome = new L.Control.zoomHome();
 zoomHome.addTo(map);
 

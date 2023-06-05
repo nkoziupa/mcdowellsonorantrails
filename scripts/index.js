@@ -1673,6 +1673,8 @@ function onLocationFound(e) {
     });
   }, 10000);
 
+  checkProximity(e.latlng); // check proximity after location is found
+
 }
 
 function onLocationError(e) {

@@ -1602,6 +1602,8 @@ function resetMap() {
   $("#infocontainer-2").removeClass("display-visible");
   $("#infocontainer-suggestedroute").addClass("display-invisible");
   $("#infocontainer-suggestedroute").removeClass("display-visible");
+  $("#infocontainer-trailidentifier").addClass("display-invisible");
+  $("#infocontainer-trailidentifier").removeClass("display-visible");
 
   infoContainer2Visible = false;
 
@@ -1898,6 +1900,8 @@ function onMapClick(e) {
     $("#infocontainer-2").removeClass("display-visible");
     $("#infocontainer-suggestedroute").addClass("display-invisible");
     $("#infocontainer-suggestedroute").removeClass("display-visible");
+    $("#infocontainer-trailidentifier").addClass("display-invisible");
+    $("#infocontainer-trailidentifier").removeClass("display-visible");
 
     // update info
 
@@ -2009,6 +2013,8 @@ function onMapClick(e) {
     $("#infocontainer-2").removeClass("display-visible");
     $("#infocontainer-suggestedroute").addClass("display-invisible");
     $("#infocontainer-suggestedroute").removeClass("display-visible");
+    $("#infocontainer-trailidentifier").addClass("display-invisible");
+    $("#infocontainer-trailidentifier").removeClass("display-visible");
 
     infoContainer2Visible = false;
 
@@ -2204,6 +2210,8 @@ function onMapClick(e) {
     $("#infocontainer-2").removeClass("display-invisible");
     $("#infocontainer-suggestedroute").addClass("display-invisible");
     $("#infocontainer-suggestedroute").removeClass("display-visible");
+    $("#infocontainer-trailidentifier").addClass("display-invisible");
+    $("#infocontainer-trailidentifier").removeClass("display-visible");
 
     // update info
 
@@ -2541,6 +2549,8 @@ function onMapClick(e) {
       $("#infocontainer-2").removeClass("display-invisible");
       $("#infocontainer-suggestedroute").addClass("display-invisible");
       $("#infocontainer-suggestedroute").removeClass("display-visible");
+      $("#infocontainer-trailidentifier").addClass("display-invisible");
+      $("#infocontainer-trailidentifier").removeClass("display-visible");
       infoContainer2Visible = true;
     }
     else {
@@ -2552,6 +2562,8 @@ function onMapClick(e) {
       $("#infocontainer-2").removeClass("display-visible");
       $("#infocontainer-suggestedroute").addClass("display-invisible");
       $("#infocontainer-suggestedroute").removeClass("display-visible");
+      $("#infocontainer-trailidentifier").addClass("display-invisible");
+      $("#infocontainer-trailidentifier").removeClass("display-visible");
       infoContainer2Visible = false;
     }
 

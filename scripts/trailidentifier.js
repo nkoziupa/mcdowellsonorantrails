@@ -93,7 +93,7 @@ function checkProximity(latlng) {
   $("#infocontainer-trailidentifier").addClass("display-visible");
   $("#infocontainer-trailidentifier").removeClass("display-invisible");
 
-  alert(infoContainer0Visible, infoContainer1Visible, infoContainer2Visible, infoContainerSuggestedRouteVisible);
+  alert(infoContainer0Visible + infoContainer1Visible + infoContainer2Visible + infoContainerSuggestedRouteVisible);
 
 
   if (infoContainer0Visible = true) {

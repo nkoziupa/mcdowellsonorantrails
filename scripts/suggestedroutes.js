@@ -441,7 +441,12 @@ function viewSuggestedRoute(suggestedroute) {
   $("#infocontainer-2").removeClass("display-visible");
   $("#infocontainer-suggestedroute").addClass("display-visible");
   $("#infocontainer-suggestedroute").removeClass("display-invisible");
+
+  infoContainer0Visible = false;
+  infoContainer1Visible = false;
   infoContainer2Visible = false;
+  infoContainerSuggestedRouteVisible = true;
+  infoContainerTrailIdentifierVisible = false;
 
   // add map overlay and remove when button is selected
 
@@ -454,7 +459,12 @@ function viewSuggestedRoute(suggestedroute) {
       $("#infocontainer-suggestedroute").removeClass("display-visible");
       $("#infocontainer-2").addClass("display-visible");
       $("#infocontainer-2").removeClass("display-invisible");
+
+      infoContainer0Visible = false;
+      infoContainer1Visible = false;
       infoContainer2Visible = true;
+      infoContainerSuggestedRouteVisible = false;
+      infoContainerTrailIdentifierVisible = false;
     });
   });
 

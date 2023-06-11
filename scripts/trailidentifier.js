@@ -26,8 +26,29 @@ polylines.push(segmentAG1AG3polyline, segmentAG1AGWXpolyline, segmentAG3AG5polyl
 //     }
 // });
 
+// function checkProximity(latlng) {
+//   let minDistance = Infinity;
+//   let closestPolyline;
 
+//   for(let i = 0; i < polylines.length; i++) {
+//       let closest = L.GeometryUtil.closest(map, polylines[i], latlng);
 
+//       if(closest.distance < minDistance) {
+//           minDistance = closest.distance;
+//           closestPolyline = polylines[i];
+//       }
+//   }
+
+//   if(minDistance < 5) {
+//     alert("You're on " + closestPolyline.segmentName + ".");
+//   }
+//   else if(minDistance < 20) {
+//     alert("You're near " + closestPolyline.segmentName + ".");
+//   }
+//   else {
+//     alert("You're closest to " + closestPolyline.segmentName + ".");
+//   }
+// }
 
 function checkProximity(latlng) {
   let minDistance = Infinity;
@@ -42,13 +63,35 @@ function checkProximity(latlng) {
       }
   }
 
+  // determine promixity
+
   if(minDistance < 5) {
-    alert("You're on " + closestPolyline.segmentName + ".");
+    segmentProximity = "You're on";
   }
   else if(minDistance < 20) {
-    alert("You're near " + closestPolyline.segmentName + ".");
+    segmentProximity = "You're near";
   }
   else {
-    alert("You're closest to " + closestPolyline.segmentName + ".");
+    segmentProximity = "You're closest to";
   }
+
+  // add trail proximity and trail name
+
+  $("#trailidentifierproximity").text(segmentProximity);
+  $("#trailidentifiername").text(closestPolyline.segmentName);
+
+  // show trail identifier info container
+
+  $("#infocontainer-0").addClass("display-invisible");
+  $("#infocontainer-0").removeClass("display-visible");
+  $("#infocontainer-1").addClass("display-invisible");
+  $("#infocontainer-1").removeClass("display-visible");
+  $("#infocontainer-2").addClass("display-invisible");
+  $("#infocontainer-2").removeClass("display-visible");
+  $("#infocontainer-suggestedroute").addClass("display-invisible");
+  $("#infocontainer-suggestedroute").removeClass("display-visible");
+  $("#infocontainer-trailidentifier").addClass("display-visible");
+  $("#infocontainer-trailidentifier").removeClass("display-invisible");
+
+  
 }

@@ -77,6 +77,8 @@ var routePlanElevGainArray = [];
 var subtotalMiles = 0;
 var subtotalElevGain = 0;
 
+var segmentProximity = "";
+
 // set marker colors
 
 var markerColorUnselectable = "#998b68";
@@ -211,6 +213,8 @@ $("#infocontainer-2").addClass("display-invisible");
 $("#infocontainer-2").removeClass("display-visible");
 $("#infocontainer-suggestedroute").addClass("display-invisible");
 $("#infocontainer-suggestedroute").removeClass("display-visible");
+$("#infocontainer-trailidentifier").addClass("display-invisible");
+$("#infocontainer-trailidentifier").removeClass("display-visible");
 
 // set initial marker radii and map view
 

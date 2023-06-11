@@ -445,7 +445,7 @@ function viewSuggestedRoute(suggestedroute) {
   infoContainer0Visible = false;
   infoContainer1Visible = false;
   infoContainer2Visible = false;
-  infoContainerSuggestedRouteVisible = true;
+  infoContainerSuggestedRouteVisible = false;
   infoContainerTrailIdentifierVisible = false;
 
   // add map overlay and remove when button is selected

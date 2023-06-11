@@ -139,19 +139,19 @@ function checkProximity(latlng) {
     }, 10000);
   };
 
-  if (infoContainerSuggestedRouteVisible = true) {
-    setTimeout(function() {
-      $("#infocontainer-0").addClass("display-invisible");
-      $("#infocontainer-0").removeClass("display-visible");
-      $("#infocontainer-1").addClass("display-invisible");
-      $("#infocontainer-1").removeClass("display-visible");
-      $("#infocontainer-2").addClass("display-invisible");
-      $("#infocontainer-2").removeClass("display-visible");
-      $("#infocontainer-suggestedroute").addClass("display-visible");
-      $("#infocontainer-suggestedroute").removeClass("display-invisible");
-      $("#infocontainer-trailidentifier").addClass("display-invisible");
-      $("#infocontainer-trailidentifier").removeClass("display-visible");
-    }, 10000);
-  };
+  // if (infoContainerSuggestedRouteVisible = true) {
+  //   setTimeout(function() {
+  //     $("#infocontainer-0").addClass("display-invisible");
+  //     $("#infocontainer-0").removeClass("display-visible");
+  //     $("#infocontainer-1").addClass("display-invisible");
+  //     $("#infocontainer-1").removeClass("display-visible");
+  //     $("#infocontainer-2").addClass("display-invisible");
+  //     $("#infocontainer-2").removeClass("display-visible");
+  //     $("#infocontainer-suggestedroute").addClass("display-visible");
+  //     $("#infocontainer-suggestedroute").removeClass("display-invisible");
+  //     $("#infocontainer-trailidentifier").addClass("display-invisible");
+  //     $("#infocontainer-trailidentifier").removeClass("display-visible");
+  //   }, 10000);
+  // };
 
 }

@@ -93,17 +93,65 @@ function checkProximity(latlng) {
   $("#infocontainer-trailidentifier").addClass("display-visible");
   $("#infocontainer-trailidentifier").removeClass("display-invisible");
 
-  setTimeout(function() {
-    $("#infocontainer-0").addClass("display-visible");
-    $("#infocontainer-0").removeClass("display-invisible");
-    $("#infocontainer-1").addClass("display-invisible");
-    $("#infocontainer-1").removeClass("display-visible");
-    $("#infocontainer-2").addClass("display-invisible");
-    $("#infocontainer-2").removeClass("display-visible");
-    $("#infocontainer-suggestedroute").addClass("display-invisible");
-    $("#infocontainer-suggestedroute").removeClass("display-visible");
-    $("#infocontainer-trailidentifier").addClass("display-invisible");
-    $("#infocontainer-trailidentifier").removeClass("display-visible");
-  }, 10000); // Execute after 10000 milliseconds (10 seconds)
-  
+
+  if (infoContainer0Visible = true) {
+    setTimeout(function() {
+      $("#infocontainer-0").addClass("display-visible");
+      $("#infocontainer-0").removeClass("display-invisible");
+      $("#infocontainer-1").addClass("display-invisible");
+      $("#infocontainer-1").removeClass("display-visible");
+      $("#infocontainer-2").addClass("display-invisible");
+      $("#infocontainer-2").removeClass("display-visible");
+      $("#infocontainer-suggestedroute").addClass("display-invisible");
+      $("#infocontainer-suggestedroute").removeClass("display-visible");
+      $("#infocontainer-trailidentifier").addClass("display-invisible");
+      $("#infocontainer-trailidentifier").removeClass("display-visible");
+    }, 10000);
+  };
+
+  if (infoContainer1Visible = true) {
+    setTimeout(function() {
+      $("#infocontainer-0").addClass("display-invisible");
+      $("#infocontainer-0").removeClass("display-visible");
+      $("#infocontainer-1").addClass("display-visible");
+      $("#infocontainer-1").removeClass("display-invisible");
+      $("#infocontainer-2").addClass("display-invisible");
+      $("#infocontainer-2").removeClass("display-visible");
+      $("#infocontainer-suggestedroute").addClass("display-invisible");
+      $("#infocontainer-suggestedroute").removeClass("display-visible");
+      $("#infocontainer-trailidentifier").addClass("display-invisible");
+      $("#infocontainer-trailidentifier").removeClass("display-visible");
+    }, 10000);
+  };
+
+  if (infoContainer2Visible = true) {
+    setTimeout(function() {
+      $("#infocontainer-0").addClass("display-invisible");
+      $("#infocontainer-0").removeClass("display-visible");
+      $("#infocontainer-1").addClass("display-invisible");
+      $("#infocontainer-1").removeClass("display-visible");
+      $("#infocontainer-2").addClass("display-visible");
+      $("#infocontainer-2").removeClass("display-invisible");
+      $("#infocontainer-suggestedroute").addClass("display-invisible");
+      $("#infocontainer-suggestedroute").removeClass("display-visible");
+      $("#infocontainer-trailidentifier").addClass("display-invisible");
+      $("#infocontainer-trailidentifier").removeClass("display-visible");
+    }, 10000);
+  };
+
+  if (infoContainerSuggestedRouteVisible = true) {
+    setTimeout(function() {
+      $("#infocontainer-0").addClass("display-invisible");
+      $("#infocontainer-0").removeClass("display-visible");
+      $("#infocontainer-1").addClass("display-invisible");
+      $("#infocontainer-1").removeClass("display-visible");
+      $("#infocontainer-2").addClass("display-invisible");
+      $("#infocontainer-2").removeClass("display-visible");
+      $("#infocontainer-suggestedroute").addClass("display-visible");
+      $("#infocontainer-suggestedroute").removeClass("display-invisible");
+      $("#infocontainer-trailidentifier").addClass("display-invisible");
+      $("#infocontainer-trailidentifier").removeClass("display-visible");
+    }, 10000);
+  };
+
 }

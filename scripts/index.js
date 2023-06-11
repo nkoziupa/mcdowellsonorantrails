@@ -6,7 +6,12 @@ $("#splash-button").on("click", function() {
 
 var infoContainer1MapOverlayShown = false;
 var infoContainer2MapOverlayShown = false;
+
+var infoContainer0Visible = true;
+var infoContainer1Visible = false;
 var infoContainer2Visible = false;
+var infoContainerSuggestedRouteVisible = false;
+var infoContainerTrailIdentifierVisible = false;
 
 // cookie code
 
@@ -215,6 +220,12 @@ $("#infocontainer-suggestedroute").addClass("display-invisible");
 $("#infocontainer-suggestedroute").removeClass("display-visible");
 $("#infocontainer-trailidentifier").addClass("display-invisible");
 $("#infocontainer-trailidentifier").removeClass("display-visible");
+
+infoContainer0Visible = true;
+infoContainer1Visible = false;
+infoContainer2Visible = false;
+infoContainerSuggestedRouteVisible = false;
+infoContainerTrailIdentifierVisible = false;
 
 // set initial marker radii and map view
 
@@ -1605,7 +1616,11 @@ function resetMap() {
   $("#infocontainer-trailidentifier").addClass("display-invisible");
   $("#infocontainer-trailidentifier").removeClass("display-visible");
 
+  infoContainer0Visible = true;
+  infoContainer1Visible = false;
   infoContainer2Visible = false;
+  infoContainerSuggestedRouteVisible = false;
+  infoContainerTrailIdentifierVisible = false;
 
   // reset map view
 
@@ -1903,6 +1918,12 @@ function onMapClick(e) {
     $("#infocontainer-trailidentifier").addClass("display-invisible");
     $("#infocontainer-trailidentifier").removeClass("display-visible");
 
+    infoContainer0Visible = false;
+    infoContainer1Visible = true;
+    infoContainer2Visible = false;
+    infoContainerSuggestedRouteVisible = false;
+    infoContainerTrailIdentifierVisible = false;
+
     // update info
 
     $("#markername").text(marker.options.name);
@@ -2016,7 +2037,11 @@ function onMapClick(e) {
     $("#infocontainer-trailidentifier").addClass("display-invisible");
     $("#infocontainer-trailidentifier").removeClass("display-visible");
 
+    infoContainer0Visible = true;
+    infoContainer1Visible = false;
     infoContainer2Visible = false;
+    infoContainerSuggestedRouteVisible = false;
+    infoContainerTrailIdentifierVisible = false;
 
   }
 
@@ -2046,7 +2071,11 @@ function onMapClick(e) {
         infoContainer2MapOverlayShown = true;
       }
 
+    infoContainer0Visible = false;
+    infoContainer1Visible = false;
     infoContainer2Visible = true;
+    infoContainerSuggestedRouteVisible = false;
+    infoContainerTrailIdentifierVisible = false;
 
     // make the previous neighbors 'unselectable'
 
@@ -2212,6 +2241,12 @@ function onMapClick(e) {
     $("#infocontainer-suggestedroute").removeClass("display-visible");
     $("#infocontainer-trailidentifier").addClass("display-invisible");
     $("#infocontainer-trailidentifier").removeClass("display-visible");
+
+    infoContainer0Visible = false;
+    infoContainer1Visible = false;
+    infoContainer2Visible = true;
+    infoContainerSuggestedRouteVisible = false;
+    infoContainerTrailIdentifierVisible = false;
 
     // update info
 
@@ -2551,7 +2586,12 @@ function onMapClick(e) {
       $("#infocontainer-suggestedroute").removeClass("display-visible");
       $("#infocontainer-trailidentifier").addClass("display-invisible");
       $("#infocontainer-trailidentifier").removeClass("display-visible");
+
+      infoContainer0Visible = false;
+      infoContainer1Visible = false;
       infoContainer2Visible = true;
+      infoContainerSuggestedRouteVisible = false;
+      infoContainerTrailIdentifierVisible = false;
     }
     else {
       $("#infocontainer-0").addClass("display-invisible");
@@ -2564,7 +2604,12 @@ function onMapClick(e) {
       $("#infocontainer-suggestedroute").removeClass("display-visible");
       $("#infocontainer-trailidentifier").addClass("display-invisible");
       $("#infocontainer-trailidentifier").removeClass("display-visible");
+
+      infoContainer0Visible = false;
+      infoContainer1Visible = true;
       infoContainer2Visible = false;
+      infoContainerSuggestedRouteVisible = false;
+      infoContainerTrailIdentifierVisible = false;
     }
 
     // update info

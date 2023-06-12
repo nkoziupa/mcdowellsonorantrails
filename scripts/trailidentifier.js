@@ -93,11 +93,6 @@ function checkProximity(latlng) {
   $("#infocontainer-trailidentifier").addClass("display-visible");
   $("#infocontainer-trailidentifier").removeClass("display-invisible");
 
-  console.log(infoContainer0Visible);
-  console.log(infoContainer1Visible);
-  console.log(infoContainer2Visible);
-  console.log(infoContainerSuggestedRouteVisible);
-
   setTimeout(function() {
     if (infoContainer0Visible === true) {
       $("#infocontainer-0").addClass("display-visible");
@@ -119,6 +114,6 @@ function checkProximity(latlng) {
       $("#infocontainer-suggestedroute").removeClass("display-invisible");
       $("#infocontainer-0, #infocontainer-1, #infocontainer-2, #infocontainer-trailidentifier").addClass("display-invisible").removeClass("display-visible");
     }
-  }, 10000);
+  }, 5000);
   
 }

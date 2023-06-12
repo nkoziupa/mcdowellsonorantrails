@@ -1682,7 +1682,7 @@ function onLocationFound(e) {
     $(".locationCircleHide").animate({ opacity: 0 }, 1000, function() {
        // Animation complete.
     });
-  }, 10000);
+  }, 5000);
   var myLocationIcon = document.querySelector('.my-location-icon');
   // setTimeout (function() {
   //   myLocationIcon.style.opacity = 0
@@ -1692,7 +1692,7 @@ function onLocationFound(e) {
     $(".my-location-icon").animate({ opacity: 0 }, 1000, function() {
        // Animation complete.
     });
-  }, 10000);
+  }, 5000);
 
   checkProximity(e.latlng); // check proximity after location is found
 

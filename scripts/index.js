@@ -6,7 +6,12 @@ $("#splash-button").on("click", function() {
 
 var infoContainer1MapOverlayShown = false;
 var infoContainer2MapOverlayShown = false;
+
+var infoContainer0Visible = true;
+var infoContainer1Visible = false;
 var infoContainer2Visible = false;
+var infoContainerSuggestedRouteVisible = false;
+var infoContainerTrailIdentifierVisible = false;
 
 // cookie code
 
@@ -76,6 +81,8 @@ var routePlanMilesArray = [];
 var routePlanElevGainArray = [];
 var subtotalMiles = 0;
 var subtotalElevGain = 0;
+
+var segmentProximity = "";
 
 // set marker colors
 
@@ -211,6 +218,14 @@ $("#infocontainer-2").addClass("display-invisible");
 $("#infocontainer-2").removeClass("display-visible");
 $("#infocontainer-suggestedroute").addClass("display-invisible");
 $("#infocontainer-suggestedroute").removeClass("display-visible");
+$("#infocontainer-trailidentifier").addClass("display-invisible");
+$("#infocontainer-trailidentifier").removeClass("display-visible");
+
+infoContainer0Visible = true;
+infoContainer1Visible = false;
+infoContainer2Visible = false;
+infoContainerSuggestedRouteVisible = false;
+infoContainerTrailIdentifierVisible = false;
 
 // set initial marker radii and map view
 
@@ -1598,8 +1613,14 @@ function resetMap() {
   $("#infocontainer-2").removeClass("display-visible");
   $("#infocontainer-suggestedroute").addClass("display-invisible");
   $("#infocontainer-suggestedroute").removeClass("display-visible");
+  $("#infocontainer-trailidentifier").addClass("display-invisible");
+  $("#infocontainer-trailidentifier").removeClass("display-visible");
 
+  infoContainer0Visible = true;
+  infoContainer1Visible = false;
   infoContainer2Visible = false;
+  infoContainerSuggestedRouteVisible = false;
+  infoContainerTrailIdentifierVisible = false;
 
   // reset map view
 
@@ -1661,7 +1682,7 @@ function onLocationFound(e) {
     $(".locationCircleHide").animate({ opacity: 0 }, 1000, function() {
        // Animation complete.
     });
-  }, 10000);
+  }, 5000);
   var myLocationIcon = document.querySelector('.my-location-icon');
   // setTimeout (function() {
   //   myLocationIcon.style.opacity = 0
@@ -1671,7 +1692,9 @@ function onLocationFound(e) {
     $(".my-location-icon").animate({ opacity: 0 }, 1000, function() {
        // Animation complete.
     });
-  }, 10000);
+  }, 5000);
+
+  checkProximity(e.latlng); // check proximity after location is found
 
 }
 
@@ -1892,6 +1915,14 @@ function onMapClick(e) {
     $("#infocontainer-2").removeClass("display-visible");
     $("#infocontainer-suggestedroute").addClass("display-invisible");
     $("#infocontainer-suggestedroute").removeClass("display-visible");
+    $("#infocontainer-trailidentifier").addClass("display-invisible");
+    $("#infocontainer-trailidentifier").removeClass("display-visible");
+
+    infoContainer0Visible = false;
+    infoContainer1Visible = true;
+    infoContainer2Visible = false;
+    infoContainerSuggestedRouteVisible = false;
+    infoContainerTrailIdentifierVisible = false;
 
     // update info
 
@@ -2003,8 +2034,14 @@ function onMapClick(e) {
     $("#infocontainer-2").removeClass("display-visible");
     $("#infocontainer-suggestedroute").addClass("display-invisible");
     $("#infocontainer-suggestedroute").removeClass("display-visible");
+    $("#infocontainer-trailidentifier").addClass("display-invisible");
+    $("#infocontainer-trailidentifier").removeClass("display-visible");
 
+    infoContainer0Visible = true;
+    infoContainer1Visible = false;
     infoContainer2Visible = false;
+    infoContainerSuggestedRouteVisible = false;
+    infoContainerTrailIdentifierVisible = false;
 
   }
 
@@ -2034,7 +2071,11 @@ function onMapClick(e) {
         infoContainer2MapOverlayShown = true;
       }
 
+    infoContainer0Visible = false;
+    infoContainer1Visible = false;
     infoContainer2Visible = true;
+    infoContainerSuggestedRouteVisible = false;
+    infoContainerTrailIdentifierVisible = false;
 
     // make the previous neighbors 'unselectable'
 
@@ -2198,6 +2239,14 @@ function onMapClick(e) {
     $("#infocontainer-2").removeClass("display-invisible");
     $("#infocontainer-suggestedroute").addClass("display-invisible");
     $("#infocontainer-suggestedroute").removeClass("display-visible");
+    $("#infocontainer-trailidentifier").addClass("display-invisible");
+    $("#infocontainer-trailidentifier").removeClass("display-visible");
+
+    infoContainer0Visible = false;
+    infoContainer1Visible = false;
+    infoContainer2Visible = true;
+    infoContainerSuggestedRouteVisible = false;
+    infoContainerTrailIdentifierVisible = false;
 
     // update info
 
@@ -2535,7 +2584,14 @@ function onMapClick(e) {
       $("#infocontainer-2").removeClass("display-invisible");
       $("#infocontainer-suggestedroute").addClass("display-invisible");
       $("#infocontainer-suggestedroute").removeClass("display-visible");
+      $("#infocontainer-trailidentifier").addClass("display-invisible");
+      $("#infocontainer-trailidentifier").removeClass("display-visible");
+
+      infoContainer0Visible = false;
+      infoContainer1Visible = false;
       infoContainer2Visible = true;
+      infoContainerSuggestedRouteVisible = false;
+      infoContainerTrailIdentifierVisible = false;
     }
     else {
       $("#infocontainer-0").addClass("display-invisible");
@@ -2546,7 +2602,14 @@ function onMapClick(e) {
       $("#infocontainer-2").removeClass("display-visible");
       $("#infocontainer-suggestedroute").addClass("display-invisible");
       $("#infocontainer-suggestedroute").removeClass("display-visible");
+      $("#infocontainer-trailidentifier").addClass("display-invisible");
+      $("#infocontainer-trailidentifier").removeClass("display-visible");
+
+      infoContainer0Visible = false;
+      infoContainer1Visible = true;
       infoContainer2Visible = false;
+      infoContainerSuggestedRouteVisible = false;
+      infoContainerTrailIdentifierVisible = false;
     }
 
     // update info

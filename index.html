@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script src="https://kit.fontawesome.com/6ac0335f5a.js" crossorigin="anonymous"></script>
+    <script src="leaflet.geometryutil.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
     <!-- Facebook Pixel Code -->
     <script>
@@ -244,6 +245,14 @@
             </div>
             <div id="infocontainer-suggestedroute-continuebutton">
               <button type="button" id="infocontainer-suggestedroute-button" class="btn btn-info modal-button-label">Continue</button>
+            </div>
+          </div>
+          <div id="infocontainer-trailidentifier" class="d-inline-flex flex-column justify-content-center align-items-center">
+            <div id="infocontainer-trailidentifier-proximity">
+              <p id="trailidentifierproximity">Segment Proximity</p>
+            </div>
+            <div id="infocontainer-trailidentifier-name">
+              <p id="trailidentifiername">Segment Name</p>
             </div>
           </div>
         </div>
@@ -862,6 +871,7 @@
     <script src="scripts/segments-southernregion.js"></script>
     <script src="scripts/segments-mmrpfountainhills.js"></script>
     <script src="scripts/suggestedroutes.js"></script>
+    <script src="scripts/trailidentifier.js"></script>
     <script src="scripts/loadingcomplete.js" defer></script>
   </body>
 </html>
